@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="Canasta Basica Alimentaria y Canasta Basica Total" />
+        <meta
+            name="keywords"
+            content="CBA, CBT, IPC, Canasta Basica Alimentaria, Canasta Basica Total, Canasta Basica Total mas Alquiler, Canasta Basica Alimentaria mas Alquiler, Linea de pobreza, linea de indigencia, linea de clase media"
+        />
+        <meta name="author" content="escribroid" />
+        <title>CANASTAS</title>
+
+        <!-- CSS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <link rel="stylesheet" href="./css/reset.css" />
+
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            as="style"
+            onload="this.rel='stylesheet'"
+        />
+        <noscript>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+        </noscript>
+        <link rel="stylesheet" href="./css/design-system.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/media-desktop.css" />
+    </head>
+    <!-- BODY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <body class="">
+        <!-- <div class="shadow-top"></div> -->
+        <div class="indices_short_container">
+            <div class="indices_top">
+                <span class="indices_short">ipc </span><span class="indices_short_ipc_percent"> </span>
+            </div>
+            <span>|</span>
+            <div class="indices_top">
+                <span class="indices_short">cba </span><span class="indices_short_cba"></span>
+            </div>
+            <span>|</span>
+            <div class="indices_top">
+                <span class="indices_short">cbt </span><span class="indices_short_cbt"></span>
+            </div>
+        </div>
+        <!-- HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <header class="bg-black rounded-4">
+            <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <nav class="navbar navbar-dark rounded-4 w-100 bg-black">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="./index.html"
+                        ><img class="logo-img" src="img/iso_logo.svg" alt="" />CANASTAS</a
+                    >
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar"
+                        aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="offcanvas offcanvas-end text-bg-dark bg-black"
+                        tabindex="-1"
+                        id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel"
+                    >
+                        <div class="offcanvas-header">
+                            <h3 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h3>
+                            <button
+                                type="button"
+                                class="btn-close btn-close-white"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="offcanvas-body rounded-4">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#canasta_custom">Canasta personalizada</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a
+                                        class="nav-link dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        Canasta básica total + alquiler
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider" />
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="nav-link-cbt" href="#canasta_cbt">Canasta básica total</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <!-- <p class="info_site">Sitio hecho con ... una Pc</p>
+                                    <p class="info_site">Sitio hecho por ... chatGPT</p>
+                                    <p class="info_site">y con muy poco ♥</p> -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <main id="canasta_custom">
+            <!-- Card 1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="card w-100 rounded-4 card_main">
+                <ul class="list-group list-group-flush rounded-4">
+                    <li class="list-group-item d-flex flex-column">
+                        <h2 class="canasta-custom-person-add-title text-center fs-5">
+                            Calculá la Canasta de tu Hogar y tu Sector Socioeconómico
+                        </h2>
+                        <div class="canasta_vivienda_container">
+                            <div class="canasta_txt_vivienda_container">
+                                <span>
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary aclaracion_icons"
+                                        data-bs-toggle="tooltip"
+                                        data-bs-placement="top"
+                                        aria-label="aclaracion_icons"
+                                        data-bs-custom-class="custom-tooltip"
+                                        data-bs-title="Elegí en el recuadro verde si Alquilas o No. Si alquilas ingresá el monto de alquiler en la caja de al lado. O elegí entre los valores promedio de alquiler suministrados."
+                                    >
+                                        <div>
+                                            <!-- SVG CASA -->
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="35"
+                                                height="35"
+                                                fill="#4CAF50"
+                                                class="bi bi-house-fill icon-svg-hause"
+                                                viewBox="0 0 16 16"
+                                            >
+                                                <path
+                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"
+                                                />
+                                                <path
+                                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </span>
+
+                                <p class="canasta_txt_vivienda">Casa propia o alquilada</p>
+                                <div class="btn-reset-container" id="btn-reset-person">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="45"
+                                        height="45"
+                                        fill="#FF3366"
+                                        class="bi bi-x-square icon-svg-reset"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                                        />
+                                        <path
+                                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="table_alquiler">
+                                <label class="w-50">
+                                    <select
+                                        aria-label="canasta_alquiler"
+                                        name="canasta_alquiler"
+                                        id="select_canasta_alquiler"
+                                        title="Seleccioná si ALquilas o No ALquilas."
+                                        class="form-select select_canasta_alquiler"
+                                    >
+                                        <option class="option_alquiler" value="siAlquilo">• Alquilada</option>
+                                        <option class="option_alquiler" value="noAlquilo">• No Alquilada</option>
+                                        <option class="option_alquiler" value="" disabled>
+                                            == Datos Promedio CABA ▼▼
+                                        </option>
+                                        <option class="option_alquiler" value="AlquilerProm3amb">
+                                            CABA Alquiler promedio 3 Amb
+                                        </option>
+                                        <option class="option_alquiler" value="AlquilerProm2amb">
+                                            CABA Alquiler promedio 2 Amb
+                                        </option>
+                                        <option class="option_alquiler" value="AlquilerProm1amb">
+                                            CABA Alquiler promedio 1 Amb
+                                        </option>
+                                        <option class="option_alquiler" value="" disabled>
+                                            == Datos Promedio GBA Norte ▼▼
+                                        </option>
+                                        <option class="option_alquiler" value="" disabled>
+                                            == Datos Promedio GBA Oeste ▼▼
+                                        </option>
+                                        <option class="option_alquiler" value="" disabled>
+                                            == Datos Promedio GBA Sur ▼▼
+                                        </option>
+                                        <option class="option_alquiler" value="" disabled>
+                                            == Datos Promedio Cordoba ▼▼
+                                        </option>
+                                        <option class="option_alquiler" value="" disabled>
+                                            == Datos Promedio Rosario ▼▼
+                                        </option>
+                                    </select>
+                                </label>
+                                <div id="total-alquiler" class="table-header">
+                                    <label class="d-flex justify-content-end">
+                                        <input
+                                            type="text"
+                                            inputmode="numeric"
+                                            pattern="\d*"
+                                            name="alquiler_in"
+                                            id="alquiler_in"
+                                            class="partial_sumable alquiler_in form-control"
+                                            value=""
+                                            placeholder="$ valor Alquiler"
+                                            title="Si alquilas, ingresá el monto del alquiler."
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="person-form">
+                            <div class="canasta_container_person">
+                                <div class="canasta_txt_vivienda_container">
+                                    <span class="">
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary aclaracion_icons"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            aria-label="aclaracion_icons"
+                                            data-bs-custom-class="custom-tooltip"
+                                            data-bs-title="Ingresá presionando el botón más (+), de color naranja, a cada miembro de tu hogar, su género y edad, para calcular tu Canasta Real. El valor de la canasta varia sustancialmente de acuerdo a la edad y el género de las personas."
+                                        >
+                                            <span>
+                                                <!-- SVG PERSON -->
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="35"
+                                                    height="35"
+                                                    fill="#FF5500"
+                                                    class="bi bi-person-fill icon-svg-person"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </span>
+                                    <p class="canasta_txt_familia">Ingresá los miembros del hogar</p>
+                                </div>
+                                <div class="fieldset">
+                                    <div class="gender-form-group">
+                                        <!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
+                                        <label class="w-100">
+                                            <select
+                                                aria-label="selected-gender"
+                                                name="selected-gender"
+                                                id="selected-gender"
+                                                class="form-select selected-gender"
+                                                title="Ingresá el género de la persona"
+                                            >
+                                                <!-- <option value="" class="gender-option" selected disabled>
+                                                    • Persona
+                                                </option> -->
+
+                                                <option value="Femenino" class="gender-option" selected>
+                                                    Femenino
+                                                </option>
+                                                <option value="Masculino" class="gender-option">Masculino</option>
+                                            </select>
+                                        </label>
+                                        <input type="hidden" name="gender" id="gender" required />
+                                    </div>
+                                    <div class="age_add_container">
+                                        <div class="age-form-group">
+                                            <label for="selected-age" class="d-block">
+                                                <select
+                                                    aria-label="selected-age"
+                                                    name="selected-age"
+                                                    id="selected-age"
+                                                    class="form-select selected-age rounded"
+                                                    title="Ingresá la edad de la persona"
+                                                >
+                                                    <option value="" class="age-option-selected" selected disabled>
+                                                        Edad
+                                                    </option>
+                                                    <option value="0" class="age-option">0 a 11 meses</option>
+                                                    <option value="1" class="age-option">1 año</option>
+                                                    <option value="2" class="age-option">2 años</option>
+                                                    <option value="3" class="age-option">3 años</option>
+                                                    <option value="4" class="age-option">4 años</option>
+                                                    <option value="5" class="age-option">5 años</option>
+                                                    <option value="6" class="age-option">6 años</option>
+                                                    <option value="7" class="age-option">7 años</option>
+                                                    <option value="8" class="age-option">8 años</option>
+                                                    <option value="9" class="age-option">9 años</option>
+                                                    <option value="10" class="age-option">10 años</option>
+                                                    <option value="11" class="age-option">11 años</option>
+                                                    <option value="12" class="age-option">12 años</option>
+                                                    <option value="13" class="age-option">13 años</option>
+                                                    <option value="14" class="age-option">14 años</option>
+                                                    <option value="15" class="age-option">15 años</option>
+                                                    <option value="16" class="age-option">16 años</option>
+                                                    <option value="17" class="age-option">17 años</option>
+                                                    <option value="18" class="age-option">18 años</option>
+                                                    <option value="19" class="age-option">19 años</option>
+                                                    <option value="20" class="age-option">20 años</option>
+                                                    <option value="21" class="age-option">21 años</option>
+                                                    <option value="22" class="age-option">22 años</option>
+                                                    <option value="23" class="age-option">23 años</option>
+                                                    <option value="24" class="age-option">24 años</option>
+                                                    <option value="25" class="age-option">25 años</option>
+                                                    <option value="26" class="age-option">26 años</option>
+                                                    <option value="27" class="age-option">27 años</option>
+                                                    <option value="28" class="age-option">28 años</option>
+                                                    <option value="29" class="age-option">29 años</option>
+                                                    <option value="30" class="age-option">30 años</option>
+                                                    <option value="31" class="age-option">31 años</option>
+                                                    <option value="32" class="age-option">32 años</option>
+                                                    <option value="33" class="age-option">33 años</option>
+                                                    <option value="34" class="age-option">34 años</option>
+                                                    <option value="35" class="age-option">35 años</option>
+                                                    <option value="36" class="age-option">36 años</option>
+                                                    <option value="37" class="age-option">37 años</option>
+                                                    <option value="38" class="age-option">38 años</option>
+                                                    <option value="39" class="age-option">39 años</option>
+                                                    <option value="40" class="age-option">40 años</option>
+                                                    <option value="41" class="age-option">41 años</option>
+                                                    <option value="42" class="age-option">42 años</option>
+                                                    <option value="43" class="age-option">43 años</option>
+                                                    <option value="44" class="age-option">44 años</option>
+                                                    <option value="45" class="age-option">45 años</option>
+                                                    <option value="46" class="age-option">46 años</option>
+                                                    <option value="47" class="age-option">47 años</option>
+                                                    <option value="48" class="age-option">48 años</option>
+                                                    <option value="49" class="age-option">49 años</option>
+                                                    <option value="50" class="age-option">50 años</option>
+                                                    <option value="51" class="age-option">51 años</option>
+                                                    <option value="52" class="age-option">52 años</option>
+                                                    <option value="53" class="age-option">53 años</option>
+                                                    <option value="54" class="age-option">54 años</option>
+                                                    <option value="55" class="age-option">55 años</option>
+                                                    <option value="56" class="age-option">56 años</option>
+                                                    <option value="57" class="age-option">57 años</option>
+                                                    <option value="58" class="age-option">58 años</option>
+                                                    <option value="59" class="age-option">59 años</option>
+                                                    <option value="60" class="age-option">60 años</option>
+                                                    <option value="61" class="age-option">61 años</option>
+                                                    <option value="62" class="age-option">62 años</option>
+                                                    <option value="63" class="age-option">63 años</option>
+                                                    <option value="64" class="age-option">64 años</option>
+                                                    <option value="65" class="age-option">65 años</option>
+                                                    <option value="66" class="age-option">66 años</option>
+                                                    <option value="67" class="age-option">67 años</option>
+                                                    <option value="68" class="age-option">68 años</option>
+                                                    <option value="69" class="age-option">69 años</option>
+                                                    <option value="70" class="age-option">70 años</option>
+                                                    <option value="71" class="age-option">71 años</option>
+                                                    <option value="72" class="age-option">72 años</option>
+                                                    <option value="73" class="age-option">73 años</option>
+                                                    <option value="74" class="age-option">74 años</option>
+                                                    <option value="75" class="age-option">75 años</option>
+                                                    <option value="76" class="age-option">76 años</option>
+                                                    <option value="77" class="age-option">77 años</option>
+                                                    <option value="78" class="age-option">78 años</option>
+                                                    <option value="79" class="age-option">79 años</option>
+                                                    <option value="80" class="age-option">80 años</option>
+                                                    <option value="81" class="age-option">81 años</option>
+                                                    <option value="82" class="age-option">82 años</option>
+                                                    <option value="83" class="age-option">83 años</option>
+                                                    <option value="84" class="age-option">84 años</option>
+                                                    <option value="85" class="age-option">85 años</option>
+                                                    <option value="86" class="age-option">86 años</option>
+                                                    <option value="87" class="age-option">87 años</option>
+                                                    <option value="88" class="age-option">88 años</option>
+                                                    <option value="89" class="age-option">89 años</option>
+                                                    <option value="90" class="age-option">90 años</option>
+                                                    <option value="91" class="age-option">91 años</option>
+                                                    <option value="92" class="age-option">92 años</option>
+                                                    <option value="93" class="age-option">93 años</option>
+                                                    <option value="94" class="age-option">94 años</option>
+                                                    <option value="95" class="age-option">95 años</option>
+                                                    <option value="96" class="age-option">96 años</option>
+                                                    <option value="97" class="age-option">97 años</option>
+                                                    <option value="98" class="age-option">98 años</option>
+                                                    <option value="99" class="age-option">99 años</option>
+                                                    <option value="100" class="age-option">100 a 122</option>
+                                                </select>
+                                            </label>
+                                            <input type="hidden" name="age" id="age" required />
+                                            <!-- message error -->
+                                            <div id="message_error_age" class="message_error_age"></div>
+                                            <!-- Overlay for the age options ++++++++++++++++++++++++-->
+                                            <div id="overlay-age" class="overlay"></div>
+                                            <div id="overlay-gender" class="overlay"></div>
+                                        </div>
+                                        <button
+                                            id="person-form-submit"
+                                            type="submit"
+                                            class="btn-add-person"
+                                            aria-label="Person"
+                                            name="boton_add_person"
+                                        >
+                                            <span class="">
+                                                <!-- SVG ADD PERSON -->
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="45"
+                                                    height="45"
+                                                    fill="#FF8800dd "
+                                                    class="bi bi-plus-square icon-svg-add"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                                                    />
+                                                    <path
+                                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
+                            <div class="table-responsive overflow-auto">
+                                <table class="table table_detalles table-hover overflow-hidden table-header w-100">
+                                    <thead class="">
+                                        <tr class="">
+                                            <th class="detalle_personal_container col-3 p-0 m-0" scope="col">
+                                                <select
+                                                    name="detalle_personal"
+                                                    id="detalle_personal"
+                                                    title="Seleccione el detalle personal"
+                                                    class="detalle_personal_select"
+                                                >
+                                                    <option class="detalle_personal_option" value="" disabled>
+                                                        Detalle individual ▼▼
+                                                    </option>
+                                                    <option class="detalle_personal_option" value="indigencia">
+                                                        • CBA - Linea de indigencia
+                                                    </option>
+                                                    <option class="detalle_personal_option" value="pobreza" selected>
+                                                        • CBT - Linea de pobreza
+                                                    </option>
+
+                                                    <option class="detalle_personal_option" value="clase_baja">
+                                                        • Clase Baja
+                                                    </option>
+                                                    <option class="detalle_personal_option" value="clase_media_fragil">
+                                                        • Clase Media Fragil
+                                                    </option>
+                                                    <option class="detalle_personal_option" value="clase_media">
+                                                        • Clase Media
+                                                    </option>
+                                                </select>
+                                            </th>
+                                            <th class="table-header col-1 p-1 m-0" scope="col-1">Edad</th>
+                                            <th class="table-header p-0 m-0" scope="col">$ detalle $</th>
+                                            <th class="table-header col-1 p-0 m-0" scope="col">
+                                                <!-- SVG DELETE -->
+                                                <svg
+                                                    class="detalles_delete_head"
+                                                    width="20px"
+                                                    height="20px"
+                                                    viewBox="0 0 24 24"
+                                                    fill="#000000"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                    <g
+                                                        id="SVGRepo_tracerCarrier"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    ></g>
+                                                    <g id="SVGRepo_iconCarrier">
+                                                        <path
+                                                            d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16"
+                                                            stroke="#ffffff"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        ></path>
+                                                    </g>
+                                                </svg>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="person-list" class=""></tbody>
+                                    <tfoot>
+                                        <tr class="row_mostrar_alquiler">
+                                            <th class="table-header" scope="col">Alquiler</th>
+                                            <th class="table-header col-1" scope="col"></th>
+                                            <th id="alquiler_out" class="table-header" scope="col"></th>
+                                            <th class="table-header col-1" scope="col"></th>
+                                        </tr>
+                                        <tr class="table-group-divider">
+                                            <th class="table-header" scope="col">Total</th>
+                                            <th class="table-header col-1" scope="col"></th>
+                                            <th id="total-canasta" class="table-header" scope="col"></th>
+                                            <th class="table-header col-1" scope="col"></th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </form>
+
+                        <!-- Tabla clases sociales -->
+                        <div class="pt-2 mt-3 text-center table-all-canastas">
+                            <div class="row m-0 mb-2 p-0 w-100">
+                                <div class="col pb-1 fs-5 text-center text-shadow">Clase Socio Económica</div>
+                            </div>
+                            <div class="row m-0 mb-0 p-0 w-100 show_indigencia">
+                                <div
+                                    class="m-0 p-0 show_indigencia_min d-flex justify-content-center align-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_indigencia"
+                                >
+                                    <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Indigente<span
+                                        class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 show_indigencia_max justify-content-center align-content-center align-items-center"
+                                ></div>
+                            </div>
+                            <div class="row m-0 p-0 w-100 show_pobreza">
+                                <div
+                                    class="m-0 p-0 show_pobreza_min justify-content-center align-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_pobreza"
+                                >
+                                    <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Pobreza<span
+                                        class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div class="m-0 p-0 show_pobreza_max align-content-center align-items-center"></div>
+                            </div>
+                            <div class="row m-0 p-0 w-100 show_clase_baja">
+                                <div
+                                    class="m-0 p-0 show_clase_baja_min justify-content-center align-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_baja"
+                                >
+                                    <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Clase Baja<span
+                                        class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 show_clase_baja_max justify-content-center align-content-center align-items-center"
+                                ></div>
+                            </div>
+                            <div class="row m-0 p-0 w-100 show_clase_media_fragil">
+                                <div
+                                    class="m-0 p-0 suma_clase_media_fragil_min justify-content-center align-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_fragil"
+                                >
+                                    <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media fragil<span
+                                        class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 suma_clase_media_fragil_max justify-content-center align-content-center align-items-center"
+                                ></div>
+                            </div>
+                            <div class="row m-0 p-0 w-100 show_clase_media">
+                                <div
+                                    class="m-0 p-0 suma_clase_media_min justify-content-center align-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media"
+                                >
+                                    <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media<span
+                                        class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 suma_clase_media_max justify-content-center align-content-center align-items-center"
+                                ></div>
+                            </div>
+                            <div class="row m-0 p-0 w-100 show_clase_media_alta">
+                                <div
+                                    class="m-0 p-0 suma_clase_media_alta_min justify-content-center align-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_alta"
+                                >
+                                    <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>
+                                    Media alta<span class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 suma_clase_media_alta_max justify-content-center align-content-center align-items-center"
+                                ></div>
+                            </div>
+                            <div class="row m-0 p-0 w-100 show_clase_alta">
+                                <div
+                                    class="m-0 p-0 suma_clase_alta_min justify-content-center align-items-center"
+                                ></div>
+                                <div
+                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_alta"
+                                >
+                                    <span
+                                        class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor"
+                                        >≤</span
+                                    >Alta baja<span class="text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 suma_clase_alta_max justify-content-center align-content-center align-items-center"
+                                ></div>
+                            </div>
+
+                            <div class="row w-100 text-body-tertiary">
+                                <div
+                                    class="m-0 p-0 py-2 suma_clase_alta_min_info bg-black justify-content-center align-items-center"
+                                >
+                                    <span class="">
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary aclaracion_table_sectores"
+                                            data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip"
+                                            data-bs-title="Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el ingreso máximo para pertenecer a ese sector socioeconómico."
+                                        >
+                                            i
+                                        </button>
+                                    </span>
+
+                                    Minimo
+                                </div>
+                                <div
+                                    class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text-shadow"
+                                >
+                                    <span
+                                        class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor"
+                                        >≤</span
+                                    >Clase social<span
+                                        class="bg-black text-center h-100 align-content-center mayor_menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div
+                                    class="m-0 p-0 suma_clase_alta_max_info bg-black fs-6 justify-content-center align-content-center align-items-center"
+                                >
+                                    Maximo
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TOOLTIP -->
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-center row w-100">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <label>
+                                    <input
+                                        id="ingresos_input"
+                                        class="ingresos_input form-control me-2 text-center"
+                                        type="number"
+                                        pattern="\d+"
+                                        placeholder="$ ingreso total $"
+                                        title="Ingresa tu salario mensual familiar"
+                                    />
+                                </label>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary aclaracion_ingresos"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip"
+                                    data-bs-title="Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector socioeconómico."
+                                >
+                                    i
+                                </button>
+                            </div>
+                            <span class="pt-2 text-center"
+                                >Ingresá el Salario de tu hogar. Se remarcará su Clase Socioeconómico</span
+                            >
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 2 Pesos Dolares +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <!-- <div class="card rounded-4 p-0">
+                <div class="card-header rounded-4 p-0">
+                    <div class="btn-group w-100" role="group" aria-label="Basic radio toggle button group">
+                        <input
+                            type="radio"
+                            class="btn-check"
+                            name="btnradio"
+                            id="btnradio1"
+                            autocomplete="off"
+                            checked
+                        />
+                        <label class="btn btn-outline-primary rounded-start-4" for="btnradio1">Pesos</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+                        <label class="btn btn-outline-primary" for="btnradio2">u$s</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
+                        <label class="btn btn-outline-primary" for="btnradio3">MEP</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
+                        <label class="btn btn-outline-primary rounded-end-4" for="btnradio4">CCL</label>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Card 2 Pesos Dolares +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="card rounded-4 card_main_compare">
+                <ul class="list-group list-group-flush rounded-4">
+                    <li class="list-group-item d-flex justify-content-center">
+                        <h2 class="canasta-custom-compare-title text-center fs-5">Tu Canasta en el Tiempo</h2>
+                    </li>
+                    <li class="d-flex justify-content-center text-center p-1">
+                        <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cba">cba</span>
+                        <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cbt">cbt</span>
+                        <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cbaja"
+                            >c_Baja</span
+                        >
+                    </li>
+                    <div class="canasta_date_container">
+                        <select id="canasta_date_month" class="form-select canasta_date_month" aria-label="Month">
+                            <option class="canasta_month_option" value="month" selected disabled>Mes</option>
+
+                            <option class="canasta_month_option" value="1">Enero</option>
+                            <option class="canasta_month_option" value="2">Febrero</option>
+                            <option class="canasta_month_option" value="3">Marzo</option>
+                            <option class="canasta_month_option" value="4">Abril</option>
+                            <option class="canasta_month_option" value="5">Mayo</option>
+                            <option class="canasta_month_option" value="6">Junio</option>
+                            <option class="canasta_month_option" value="7">Julio</option>
+                            <option class="canasta_month_option" value="8">Agosto</option>
+                            <option class="canasta_month_option" value="9">Septiembre</option>
+                            <option class="canasta_month_option" value="10">Octubre</option>
+                            <option class="canasta_month_option" value="11">Noviembre</option>
+                            <option class="canasta_month_option" value="12">Diciembre</option>
+                        </select>
+
+                        <label for="canasta_date_year"></label>
+                        <select id="canasta_date_year" class="form-select canasta_date_year" aria-label="Year"></select>
+                        <span class="canasta_compare_info"
+                            ><button
+                                type="button"
+                                class="btn btn-secondary aclaracion_date_month"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-html="true"
+                                data-bs-title="Tu situación hace un año, o dos, ¿estabas mejor? ¿En la misma Clase social? Desde abril de 2016 podes revisar. Tenes que recordar tu salario en la esa fecha solamente."
+                            >
+                                i
+                            </button></span
+                        >
+                    </div>
+                    <li class="list-group-item canasta_compare_date">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <label>
+                                <input
+                                    id="canasta_compare_ingresos_input"
+                                    class="canasta_compare_ingresos_input form-control me-2 text-center"
+                                    type="number"
+                                    pattern="\d+"
+                                    placeholder="$ ingresos $"
+                                    title="Ingresa tu salario en ese mes y año."
+                                />
+                            </label>
+                            <button
+                                type="button"
+                                class="btn btn-secondary aclaracion_ingresos"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="Ingresá tu Ingreso mensual del hogar en ese mes y año para comparar con tu Canasta en esa fecha."
+                            >
+                                i
+                            </button>
+                        </div>
+                    </li>
+
+                    <!-- Tabla clases sociales pasadas-->
+                    <div class="pt-2 mt-3 text-center table-all-canastas-past">
+                        <div class="row m-0 mb-2 p-0 w-100">
+                            <div class="col pb-1 fs-5 text-center text-shadow">Clase Socio Económica</div>
+                        </div>
+                        <div class="row m-0 mb-0 p-0 w-100 show_indigencia">
+                            <div
+                                class="m-0 p-0 show_indigencia_min_past d-flex justify-content-center align-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_indigencia"
+                            >
+                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Indigente<span
+                                    class="text-center h-100 align-content-center mayor_menor"
+                                    >&lt;</span
+                                >
+                            </div>
+                            <div
+                                class="m-0 p-0 show_indigencia_max_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 show_pobreza">
+                            <div
+                                class="m-0 p-0 show_pobreza_min_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_pobreza"
+                            >
+                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Pobreza<span
+                                    class="text-center h-100 align-content-center mayor_menor"
+                                    >&lt;</span
+                                >
+                            </div>
+                            <div class="m-0 p-0 show_pobreza_max_past align-content-center align-items-center"></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 show_clase_baja">
+                            <div
+                                class="m-0 p-0 show_clase_baja_min_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_baja"
+                            >
+                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Clase Baja<span
+                                    class="text-center h-100 align-content-center mayor_menor"
+                                    >&lt;</span
+                                >
+                            </div>
+                            <div
+                                class="m-0 p-0 show_clase_baja_max_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 show_clase_media_fragil">
+                            <div
+                                class="m-0 p-0 suma_clase_media_fragil_min_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_fragil"
+                            >
+                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media fragil<span
+                                    class="text-center h-100 align-content-center mayor_menor"
+                                    >&lt;</span
+                                >
+                            </div>
+                            <div
+                                class="m-0 p-0 suma_clase_media_fragil_max_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 show_clase_media">
+                            <div
+                                class="m-0 p-0 suma_clase_media_min_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media"
+                            >
+                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media<span
+                                    class="text-center h-100 align-content-center mayor_menor"
+                                    >&lt;</span
+                                >
+                            </div>
+                            <div
+                                class="m-0 p-0 suma_clase_media_max_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 show_clase_media_alta">
+                            <div
+                                class="m-0 p-0 suma_clase_media_alta_min_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_alta"
+                            >
+                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>
+                                Media alta<span class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            </div>
+                            <div
+                                class="m-0 p-0 suma_clase_media_alta_max_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 show_clase_alta">
+                            <div
+                                class="m-0 p-0 suma_clase_alta_min_past justify-content-center align-items-center"
+                            ></div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_alta"
+                            >
+                                <span
+                                    class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor"
+                                    >≤</span
+                                >Alta baja<span class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            </div>
+                            <div
+                                class="m-0 p-0 suma_clase_alta_max_past justify-content-center align-content-center align-items-center"
+                            ></div>
+                        </div>
+
+                        <div class="row w-100 text-body-tertiary">
+                            <div
+                                class="m-0 p-0 py-2 suma_clase_alta_min_info bg-black justify-content-center align-items-center"
+                            >
+                                <span class="">
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary aclaracion_table_sectores"
+                                        data-bs-toggle="tooltip"
+                                        data-bs-placement="top"
+                                        data-bs-custom-class="custom-tooltip"
+                                        data-bs-title="Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el ingreso máximo para pertenecer a ese sector socioeconómico."
+                                    >
+                                        i
+                                    </button>
+                                </span>
+
+                                Minimo
+                            </div>
+                            <div
+                                class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text-shadow"
+                            >
+                                <span
+                                    class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor"
+                                    >≤</span
+                                >Clase social<span class="bg-black text-center h-100 align-content-center mayor_menor"
+                                    >&lt;</span
+                                >
+                            </div>
+                            <div
+                                class="m-0 p-0 suma_clase_alta_max_info bg-black fs-6 justify-content-center align-content-center align-items-center"
+                            >
+                                Maximo
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <!-- Card titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="card rounded-4 card_titulo_canastas_generic card-solapada-1">
+                <div class="card-header rounded-4">
+                    <h2 class="card_header_title_generic">Canastas para Hogar "Tipo":</h2>
+                    <h3 class="card_header_sub_generic">De 4 integrantes según indec</h3>
+                    <h4 class="card_header_generic_txt">Varon 35 años, Mujer 31, Niña 8, Niño 6</h4>
+                </div>
+            </div>
+
+            <!-- Card 3 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="card rounded-4 card_cba card-solapada-2">
+                <div class="card-header rounded-4">
+                    <h2 class="card_header_title">Canasta Básica Alimentaria</h2>
+                    <h3 class="card_header_sub">
+                        • CBA - Linea de indigencia [Li]
+                        <span
+                            ><button
+                                type="button"
+                                class="btn btn-secondary aclaracion_edades"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-html="true"
+                                data-bs-title="CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de su hogar la puede calcular <a href='#canasta_custom'>aquí</a>."
+                            >
+                                i
+                            </button></span
+                        >
+                    </h3>
+                    <div class="card_subtitle py-1 pb-0">
+                        • Con Casa Propia
+                        <div class="view_cba"></div>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush rounded-4">
+                    <li class="list-group-item list-group-item-acordion p-0"></li>
+                    <li class="list-group-item lineas_info linea_indigencia"></li>
+                </ul>
+            </div>
+
+            <!-- Card 4 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div id="canasta_cbt" class="card rounded-4 card_cbt card-solapada-3">
+                <div class="card-header rounded-4">
+                    <h2 class="card_header_title">Canasta Básica Total</h2>
+                    <h3 class="card_header_sub">
+                        • CBT - Linea de Pobreza [LP]
+                        <span
+                            ><button
+                                type="button"
+                                class="btn btn-secondary aclaracion_edades"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-html="true"
+                                data-bs-title="CBT es la Canasta Básica Total, es el umbral de la Linea de pobreza. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de su hogar la puede calcular <a href='#canasta_custom'>aquí</a>."
+                            >
+                                i
+                            </button></span
+                        >
+                    </h3>
+                    <div class="card_subtitle fs-6 py-1 pb-0">
+                        • Con Casa Propia
+                        <div class="view_cbt"></div>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush rounded-4">
+                    <li class="list-group-item list-group-item-acordion p-0"></li>
+                    <li class="list-group-item lineas_info linea_pobreza"></li>
+                </ul>
+            </div>
+
+            <!-- Card 5 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <div class="card rounded-4 card_cbta card-solapada-4">
+                <div class="card-header rounded-4">
+                    <h2 class="card_header_title">Canasta Básica Total <span class="fs-6">+ Alquiler</span></h2>
+                    <h3 class="card_header_sub">
+                        • Linea Pobreza Alquilando [LPA]
+                        <span
+                            ><button
+                                type="button"
+                                class="btn btn-secondary aclaracion_edades"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-html="true"
+                                data-bs-title="CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes en CABA, marca el umbral de la Linea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de su hogar la puede calcular <a href='#canasta_custom'>aquí</a>."
+                            >
+                                i
+                            </button></span
+                        >
+                    </h3>
+                    <div class="card_subtitle fs-6 py-1 pb-0">
+                        • 3 amb Promedio
+                        <div class="view_cbt_alquiler_3amb"></div>
+                    </div>
+                </div>
+                <ul class="list-group list-group-flush rounded-4">
+                    <li class="list-group-item list-group-item-acordion p-0"></li>
+                    <li class="list-group-item lineas_info linea_pobreza_alquilando"></li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <footer class="rounded-4 p-0">
+            <div class="container-fluid rounded-4 p-2">
+                <span class="m-1 text-center fs-6 indices_date"></span>
+                <span></span>
+                <span class="version"></span>
+            </div>
+        </footer>
+
+        <!-- JS ------------------------------------------------------------------------>
+        <!-- BOOTSTRAP -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script type="module" src="./js/main.js"></script>
+        <script type="module" src="./js/cba-calc.js"></script>
+        <script type="module" src="./js/fetch-data.js"></script>
+
+        <script type="module" src="./js/mod-date.js"></script>
+        <!-- <script type="module" src="./js/mod-canasta-custom.js"></script> -->
+    </body>
+</html>
