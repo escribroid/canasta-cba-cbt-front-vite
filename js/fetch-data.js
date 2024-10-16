@@ -1,14 +1,12 @@
-import indices_manuales from "./mod-indices.js"
+import indices_manuales from "./mod-indices.js";
 
 let url_ipc = "https://apis.datos.gob.ar/series/api/series/?ids=148.3_INIVELNAL_DICI_M_26&limit=500&format=json";
 
 let ipc_percent = 0;
 let ipc_percent_txt;
 
-
 ipc_percent_txt = ipc_percent.toLocaleString("es-AR", { minimumFractionDigits: 2 });
-        document.querySelector(".indices_short_ipc_percent").textContent = indices_manuales.ipc_manual + "%";
-
+document.querySelector(".indices_short_ipc_percent").textContent = indices_manuales.ipc_manual + "%";
 
 // fetch(url_ipc)
 //     .then((response) => response.json())
