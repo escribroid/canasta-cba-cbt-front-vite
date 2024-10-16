@@ -746,10 +746,21 @@
 
             <!-- Card 2 Pesos Dolares +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="card rounded-4 card_main_compare">
-                <ul class="list-group list-group-flush rounded-4">
-                    <li class="list-group-item d-flex justify-content-center">
+                <ul class="list-group list-group-flush rounded-4 ">
+                    <li class="list-group-item d-flex justify-content-center card-compare-header">
+                        <div class="form-check form-switch">
+                            <input
+                                class="form-check-input border border-2 border-primary rounded-4"
+                                type="checkbox"
+                                role="switch"
+                                id="SwitchCompareCba"
+                            />
+                            <label class="form-check-label" for="flexSwitchCheckDefault" aria-label="Switch"></label>
+                        </div>
+
                         <h2 class="canasta-custom-compare-title text-center fs-5">Tu Canasta en el Tiempo</h2>
                     </li>
+                    <div class="card-compare-table-body">
                     <li class="d-flex justify-content-center text-center p-1">
                         <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cba">cba</span>
                         <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cbt">cbt</span>
@@ -966,6 +977,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </ul>
             </div>
 
@@ -1091,8 +1103,10 @@
         <script type="module" src="./js/main.js"></script>
         <script type="module" src="./js/cba-calc.js"></script>
         <script type="module" src="./js/fetch-data.js"></script>
-
         <script type="module" src="./js/mod-date.js"></script>
+        <script src="./js/utils.js"></script>
+
+
         <!-- <script type="module" src="./js/mod-canasta-custom.js"></script> -->
     </body>
 </html>

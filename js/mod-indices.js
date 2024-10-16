@@ -4,6 +4,7 @@ const cba_manual = 138744;
 const cbt_manual = 312175;
 const mesAlquilerManual = 8;
 const alquilerProm2amb = 507422;
+const ipc_manual = 3.5;
 
 const linea_indigencia = Math.round(cba_manual);
 const linea_pobreza = Math.round(cbt_manual);
@@ -17,7 +18,6 @@ const linea_clase_alta_baja = Math.round(cbt_manual * 10);
 // Alquiler medio: 1amb 40m2, 2amb 50m2, 3amb 70m2
 const alquilerProm3amb = Math.round(alquilerProm2amb * (7 / 5) * 0.965);
 const alquilerProm1amb = Math.round((alquilerProm2amb * (4 / 5)) / 0.955);
-const ipc_manual = 4.03;
 
 const days = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,

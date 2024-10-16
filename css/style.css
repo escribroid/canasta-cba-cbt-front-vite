@@ -452,6 +452,13 @@ header {
     z-index: 1;
 }
 
+.card-compare-table-body {
+    display: none;
+}
+.card-compare-header {
+    border-radius: 1rem;
+}
+
 [data-bs-theme="dark"] .carousel .carousel-control-next-icon,
 [data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
 [data-bs-theme="dark"].carousel .carousel-control-next-icon,

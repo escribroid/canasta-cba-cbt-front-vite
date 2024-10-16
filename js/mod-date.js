@@ -59,7 +59,7 @@ fetchDataFromAPI(
 
         for (let i = 0; i < data.length; i++) {
             if (data[i].fecha == "2022-05-01") {
-                console.log("date[i][0]", data[i].fecha);
+                //console.log("date[i][0]", data[i].fecha);
             }
         }
     },
@@ -183,13 +183,13 @@ function handleMonthChange(callbackMonth, callbackYear, callCba, callCbt) {
                     selectedMonth = "0" + selectedMonth;
                 }
 
-                for (let inn = 0; inn < data.data.length; inn++) {
-                    if (data.data[inn][0] == `${selectedYear}-${selectedMonth}-01`) {
-                        // console.log("date[i][0]", data.data[inn][0]);
-                        // console.log("date[i][0]", data.data[inn][1]);
-                        // console.log("cba_cbt[i][1]", data.data[inn][2]);
-                        canasta_compare_cba.innerHTML = `${data.data[inn][1]}`;
-                        canasta_compare_cbt.innerHTML = `${data.data[inn][2]}`;
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].fecha == `${selectedYear}-${selectedMonth}-01`) {
+                        console.log("data[i].fecha", data[i].fecha);
+                        // console.log("date[i][0]", data.data[i][1]);
+                        // console.log("cba_cbt[i][1]", data.data[i][2]);
+                        canasta_compare_cba.innerHTML = `${data[i].cba}`;
+                        canasta_compare_cbt.innerHTML = `${data[i].cbt}`;
                     }
                 }
             },
@@ -260,13 +260,13 @@ function handleMonthChange(callbackMonth, callbackYear, callCba, callCbt) {
                 //             selectedMonth = "0" + selectedMonth;
                 //         }
 
-                //         for (let inn = 0; inn < data.data.length; inn++) {
-                //             if (data.data[inn][0] == `${selectedYear}-${selectedMonth}-01`) {
-                //                 console.log("date[i][0]", data.data[inn][0]);
-                //                 console.log("date[i][0]", data.data[inn][1]);
-                //                 console.log("cba_cbt[i][1]", data.data[inn][2]);
-                //                 canasta_compare_cba.innerHTML = `${data.data[inn][1]}`;
-                //                 canasta_compare_cbt.innerHTML = `${data.data[inn][2]}`;
+                //         for (let i = 0; i < data.data.length; i++) {
+                //             if (data.data[i][0] == `${selectedYear}-${selectedMonth}-01`) {
+                //                 console.log("date[i][0]", data.data[i][0]);
+                //                 console.log("date[i][0]", data.data[i][1]);
+                //                 console.log("cba_cbt[i][1]", data.data[i][2]);
+                //                 canasta_compare_cba.ierHTML = `${data.data[i][1]}`;
+                //                 canasta_compare_cbt.ierHTML = `${data.data[i][2]}`;
                 //             }
                 //         }
                 //     },
@@ -290,10 +290,10 @@ function handleMonthChange(callbackMonth, callbackYear, callCba, callCbt) {
                 //selectedYear = canasta_year_select.value;
 
                 // Data en TOP short cba cbt ++++++++++++++++++++++++
-                cba = Math.round(data.data[data.data.length - 1][1] * 3.09);
+                cba = Math.round(data[data.length - 1][1] * 3.09);
                 //console.log("cba 2", cba);
 
-                cbt = Math.round(data.data[data.data.length - 1][2] * 3.09);
+                cbt = Math.round(data[data.length - 1][2] * 3.09);
                 //console.log("cbt 2", cbt);
 
                 //console.log("cba_cbt", data.data[2][0]);
@@ -306,13 +306,13 @@ function handleMonthChange(callbackMonth, callbackYear, callCba, callCbt) {
                     selectedMonth = "0" + selectedMonth;
                 }
 
-                for (let i = 0; i < data.data.length; i++) {
-                    if (data.data[i][0] == `${selectedYear}-${selectedMonth}-01`) {
-                        //console.log("date[i][0]", data.data[i][0]);
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].fecha == `${selectedYear}-${selectedMonth}-01`) {
+                        //console.log("date[i][0]", data[i].fecha);
                         //console.log("date[i][0]", data.data[i][1]);
                         //console.log("cba_cbt[i][1]", data.data[i][2]);
-                        canasta_compare_cba.innerHTML = `${data.data[i][1]}`;
-                        canasta_compare_cbt.innerHTML = `${data.data[i][2]}`;
+                        canasta_compare_cba.innerHTML = `${data[i].cba}`;
+                        canasta_compare_cbt.innerHTML = `${data[i].cbt}`;
                     }
                 }
             },
