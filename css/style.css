@@ -157,8 +157,8 @@ header {
 
 .canasta_compare_input_month {
     width: 220px;
-    padding: 10px;
-    font-size: 16px;
+    padding: 0.625rem;
+    font-size: 1rem;
     color: #f2f4f7;
     border-radius: 0.5rem;
 }
@@ -239,7 +239,8 @@ header {
     cursor: pointer;
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
-    border: var(--spacing-1_0-0625) solid #ff550066;
+    border: 0.0625rem solid #ff550066;
+    margin-bottom: 1rem;
 }
 
 .canasta_compare_ingresos_input:focus {
@@ -298,24 +299,24 @@ header {
 }
 
 .card_titulo_canastas_generic {
-    outline: 1px solid #aa3366;
+    outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
 
 .card_cba {
-    outline: 1px solid #aa3366;
+    outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
 .card_cbt {
-    outline: 1px solid #aa3366;
+    outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
 
 .card_cbta {
-    outline: 1px solid #aa3366;
+    outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
@@ -459,6 +460,12 @@ header {
     border-radius: 1rem;
 }
 
+.compare-switch {
+    position: absolute;
+    top: 0.8125rem;
+    left: 0.15rem;
+}
+
 [data-bs-theme="dark"] .carousel .carousel-control-next-icon,
 [data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
 [data-bs-theme="dark"].carousel .carousel-control-next-icon,
@@ -492,7 +499,7 @@ header {
 .detalle_personal_select {
     display: flex;
     width: 100%;
-    height: 35px;
+    height: 2.25rem;
     font-size: 1.125rem;
     background-color: #ff880055;
     border: 0;
@@ -542,7 +549,7 @@ header {
 .form-select {
     background-position: right 0.2rem center;
     background-size: 1rem var(--spacing-12_0-75);
-    border: 1px solid var(--bs-border-color);
+    border: 0.0625rem solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -604,7 +611,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: #1e1e1e;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 0.625rem 0.625rem;
     color: gainsboro;
     margin-bottom: 1rem;
     box-shadow: 0 0 0.2rem 0.2rem #96969677;
@@ -637,7 +644,7 @@ header {
     cursor: pointer;
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
-    border: 1px solid #ff880099;
+    border: 0.0625rem solid #ff880099;
 }
 
 .ingresos_input:focus {
@@ -805,11 +812,11 @@ header {
 }
 
 .show_indigencia {
-    border-top: 1px solid #2c2f33;
+    border-top: 0.0625rem solid #2c2f33;
 }
 
 .show_clase_alta {
-    border-bottom: 1px solid #2c2f33;
+    border-bottom: 0.0625rem solid #2c2f33;
 }
 
 .show_pobreza,
@@ -864,7 +871,7 @@ th,
 tbody,
 thead,
 tfoot {
-    border: 1px solid #3c3f43;
+    border: 0.0625rem solid #3c3f43;
 }
 
 .table_detalles {
@@ -881,13 +888,13 @@ tfoot {
     bottom: -1px;
     left: -1px;
     border-radius: 0.5rem;
-    border: 2px solid #141414;
+    border: 0.125rem solid #141414;
     pointer-events: none; /* Evita interferencias con la interacción del usuario */
 }
 
 .table-all-canastas {
     font-size: var(--spacing-10_0-625) !important;
-    border: 1px solid #141414;
+    border: 0.0625rem solid #141414;
     border-radius: 0.5rem;
     width: 100%;
     margin: 0;
@@ -923,7 +930,7 @@ tfoot {
 
 .tooltip {
     opacity: 1 !important;
-    box-shadow: 0 0 100px 50px #000000;
+    box-shadow: 0 0 6.25rem 3.125rem #000000;
     padding: 0;
     margin: 0;
     --bs-tooltip-arrow-color: red;
@@ -937,7 +944,7 @@ tfoot {
 .custom-tooltip {
     width: auto;
     background-color: #141414;
-    border: 1px solid #ff3366;
+    border: 0.0625rem solid #ff3366;
 }
 
 .tooltip .tooltip-inner {
@@ -997,7 +1004,7 @@ option:disabled {
 .age_add_container {
     display: flex;
     width: 48%;
-    gap: 2px;
+    gap: 0.125rem;
     align-items: center;
 }
 
@@ -1025,7 +1032,7 @@ option:disabled {
 
 .select_canasta_alquiler,
 .selected-gender {
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 .select_canasta_alquiler:focus,
