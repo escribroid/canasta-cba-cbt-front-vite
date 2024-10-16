@@ -426,6 +426,59 @@ function suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in
     document.querySelector(".suma_clase_alta_max").textContent = suma_clase_alta_baja_alquilando;
 }
 
+/* let alquiler_past;
+let alquiler_past_value;
+let suma_CBA_Personas_past;
+let suma_CBT_Personas_past;
+let suma_CT_clase_baja_past;
+
+function get_tabla_compare(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler) {
+    alquiler_past_value = parseInt(document.getElementById("alquiler_past").value);
+    //alquiler_out = document.getElementById("alquiler_out");
+    if (isNaN(alquiler_past_value)) {
+        alquiler_past_value = 0;
+    } else if (alquiler_past_value < 0) {
+        alquiler_past_value = alquiler_past_value * -1;
+    }
+
+    if (!suma_CBA_Personas_past || !suma_CBT_Personas_past) {
+        suma_CBA_Personas_past = 0;
+        suma_CBT_Personas_past = 0;
+    }
+
+    suma_CT_clase_baja_past = suma_CBT_Personas_past * 1.2;
+
+    suma_indigencia_alquilando = alquiler_in_value + Math.round(suma_CBA_Personas_past);
+    suma_pobreza_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past);
+    suma_clase_baja_fragil_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past * 1.2);
+    suma_clase_baja_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past * 1.5);
+    suma_clase_media_fragil_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past * 2);
+    suma_clase_media_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past * 5);
+    suma_clase_media_alta_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past * 8);
+    suma_clase_alta_baja_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas_past * 12);
+
+    document.querySelector(".show_indigencia_min").textContent = 0;
+    document.querySelector(".show_indigencia_max").textContent = suma_indigencia_alquilando;
+
+    document.querySelector(".show_pobreza_min").textContent = suma_indigencia_alquilando;
+    document.querySelector(".show_pobreza_max").textContent = suma_pobreza_alquilando;
+
+    document.querySelector(".show_clase_baja_min").textContent = suma_pobreza_alquilando;
+    document.querySelector(".show_clase_baja_max").textContent = suma_clase_baja_alquilando;
+
+    document.querySelector(".suma_clase_media_fragil_min").textContent = suma_clase_baja_alquilando;
+    document.querySelector(".suma_clase_media_fragil_max").textContent = suma_clase_media_fragil_alquilando;
+
+    document.querySelector(".suma_clase_media_min").textContent = suma_clase_media_fragil_alquilando;
+    document.querySelector(".suma_clase_media_max").textContent = suma_clase_media_alquilando;
+
+    document.querySelector(".suma_clase_media_alta_min").textContent = suma_clase_media_alquilando;
+    document.querySelector(".suma_clase_media_alta_max").textContent = suma_clase_media_alta_alquilando;
+
+    document.querySelector(".suma_clase_alta_min").textContent = suma_clase_media_alta_alquilando;
+    document.querySelector(".suma_clase_alta_max").textContent = suma_clase_alta_baja_alquilando;
+} */
+
 // Agregar un evento al select para cambiar el estado del input
 vivienda.addEventListener("input", function () {
     vivienda = document.getElementById("select_canasta_alquiler");

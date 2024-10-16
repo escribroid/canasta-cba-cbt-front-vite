@@ -91,6 +91,10 @@ header {
     right: calc(50% - 143px);
 }
 
+.aclaracion_ingresos_compare {
+
+}
+
 /* .aclaracion_date_month {
     position: absolute;
     right: 10%;
@@ -144,10 +148,10 @@ header {
 
 .canasta_compare_date {
     display: flex;
-    position: relative;
     max-width: 220px;
     margin: 0 auto;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .canasta_compare_info {
@@ -240,7 +244,6 @@ header {
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
     border: 0.0625rem solid #ff550066;
-    margin-bottom: 1rem;
 }
 
 .canasta_compare_ingresos_input:focus {
