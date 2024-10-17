@@ -48,7 +48,8 @@ header {
 .aclaracion_edades,
 .aclaracion_ingresos,
 .aclaracion_table_sectores,
-.aclaracion_date_month {
+.aclaracion_date_month,
+.aclaracion_rent_past {
     display: inline-flex;
     position: relative;
     align-items: center;
@@ -68,7 +69,8 @@ header {
 .aclaracion_edades:hover,
 .aclaracion_ingresos:hover,
 .aclaracion_table_sectores:hover,
-.aclaracion_date_month:hover {
+.aclaracion_date_month:hover,
+.aclaracion_rent_past:hover {
     transform: scale(1.1);
     border-radius: var(--spacing-10_0-625);
     background-color: #ff4f00bb;
@@ -91,8 +93,10 @@ header {
     right: calc(50% - 143px);
 }
 
-.aclaracion_ingresos_compare {
-
+.aclaracion_rent_past {
+    position: absolute;
+    top: 0.5625rem;
+    right: calc(50% - 143px);
 }
 
 /* .aclaracion_date_month {
@@ -184,6 +188,7 @@ header {
     margin-bottom: 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     color: #fffaf0;
+    font-size: 1.5rem;
 }
 
 .canasta-custom-compare-title {
@@ -195,7 +200,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem 0;
     align-items: center;
 }
 
@@ -239,7 +244,6 @@ header {
 
 .canasta_compare_ingresos_input {
     background-color: #ff880022;
-    font-weight: bold;
     cursor: pointer;
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
@@ -376,6 +380,7 @@ header {
 .card_header_sub_generic {
     text-align: center;
     padding-bottom: 0.5rem;
+    color: #919191;
 }
 
 .card_subtitle {
@@ -466,7 +471,7 @@ header {
 .compare-switch {
     position: absolute;
     top: 0.8125rem;
-    left: 0.15rem;
+    left: 0.5rem;
 }
 
 [data-bs-theme="dark"] .carousel .carousel-control-next-icon,
@@ -643,7 +648,6 @@ header {
 
 .ingresos_input {
     background-color: #ff880022;
-    font-weight: bold;
     cursor: pointer;
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
@@ -781,10 +785,11 @@ header {
 .offcanvas-header .btn-close {
     position: relative;
     padding: var(--spacing-8_0-5) 0;
-    margin-top: calc(0 * var(--bs-offcanvas-padding-y));
+    margin-top: -2.5px;
     margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
-    margin-bottom: calc(-0.5 * var(--bs-offcanvas-padding-y));
-    box-shadow: 0 0 0.3rem var(--spacing-1_0-0625) rgba(0, 0, 0, 0.8);
+    /* margin-bottom: calc(-0.4 * var(--bs-offcanvas-padding-y)); */
+    margin-bottom: -3px;
+    box-shadow: 0 0 0.5rem 2px rgba(0, 0, 0, 0.8);
     right: var(--spacing-8_0-5);
     opacity: 1;
     background-color: #f2f4f7;
@@ -859,6 +864,10 @@ header {
 .subtitle {
     text-align: center;
     margin: 0;
+}
+
+.table_canastas_title {
+    font-size: 1.3rem;
 }
 
 .table_detalles {
@@ -994,7 +1003,8 @@ option:disabled {
 .alquiler_in,
 .selected-gender,
 .selected-age,
-.select_canasta_alquiler {
+.select_canasta_alquiler,
+.alquiler_in_past {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1018,6 +1028,12 @@ option:disabled {
 .alquiler_in {
     width: 95%;
 }
+
+.alquiler_in_past {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
 .age-form-group {
     flex: 1;
 }
@@ -1028,7 +1044,8 @@ option:disabled {
 }
 
 .select_canasta_alquiler,
-.alquiler_in {
+.alquiler_in,
+.alquiler_in_past {
     background-color: #4caf5022;
     border-color: #4caf5055;
 }
@@ -1039,7 +1056,8 @@ option:disabled {
 }
 
 .select_canasta_alquiler:focus,
-.alquiler_in:focus {
+.alquiler_in:focus,
+.alquiler_in_past:focus {
     box-shadow: 0 0 0.3125rem 0.2rem #4caf50aa;
     border-color: #4caf5033;
 }

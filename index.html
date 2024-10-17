@@ -125,9 +125,8 @@
             <div class="card w-100 rounded-4 card_main">
                 <ul class="list-group list-group-flush rounded-4">
                     <li class="list-group-item d-flex flex-column">
-                        <h2 class="canasta-custom-person-add-title text-center fs-5">
-                            Calculá la Canasta de tu Hogar y tu Sector Socioeconómico
-                        </h2>
+                        <h2 class="canasta-custom-person-add-title text-center">Tu Canasta familiar Real</h2>
+
                         <div class="canasta_vivienda_container">
                             <div class="canasta_txt_vivienda_container">
                                 <span>
@@ -161,7 +160,7 @@
                                     </button>
                                 </span>
 
-                                <p class="canasta_txt_vivienda">Casa propia o alquilada</p>
+                                <p class="canasta_txt_vivienda">Vivienda</p>
                                 <div class="btn-reset-container" id="btn-reset-person">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -189,8 +188,8 @@
                                         title="Seleccioná si ALquilas o No ALquilas."
                                         class="form-select select_canasta_alquiler"
                                     >
-                                        <option class="option_alquiler" value="siAlquilo">• Alquilada</option>
-                                        <option class="option_alquiler" value="noAlquilo">• No Alquilada</option>
+                                        <option class="option_alquiler" value="siAlquilo">Alquilada</option>
+                                        <option class="option_alquiler" value="noAlquilo">No Alquilada</option>
                                         <option class="option_alquiler" value="" disabled>
                                             == Datos Promedio CABA ▼▼
                                         </option>
@@ -268,7 +267,7 @@
                                             </span>
                                         </button>
                                     </span>
-                                    <p class="canasta_txt_familia">Ingresá los miembros del hogar</p>
+                                    <p class="canasta_txt_familia">Ingresá tu familia</p>
                                 </div>
                                 <div class="fieldset">
                                     <div class="gender-form-group">
@@ -532,7 +531,9 @@
                         <!-- Tabla clases sociales -->
                         <div class="pt-2 mt-3 text-center table-all-canastas">
                             <div class="row m-0 mb-2 p-0 w-100">
-                                <div class="col pb-1 fs-5 text-center text-shadow">Clase Socio Económica</div>
+                                <div class="col pb-1 text-center table_canastas_title text-shadow">
+                                    Conocé tu Clase Social
+                                </div>
                             </div>
                             <div class="row m-0 mb-0 p-0 w-100 show_indigencia">
                                 <div
@@ -758,7 +759,20 @@
                             <label class="form-check-label" for="SwitchCompareCba" aria-label="Switch"></label>
                         </div>
 
-                        <h2 class="canasta-custom-compare-title text-center fs-5">Tu Canasta en el Tiempo</h2>
+                        <h2 class="canasta-custom-compare-title text-center fs-5">Canasta en el Tiempo</h2>
+                        <span class="canasta_compare_info"
+                            ><button
+                                type="button"
+                                class="btn btn-secondary aclaracion_date_month"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-html="true"
+                                data-bs-title="Tu situación hace uno o cinco años, ¿era mejor? ¿peor? ¿En la misma Clase social? Desde abril de 2016 podes revisar. Tenes que recordar tu salario en la esa fecha solamente."
+                            >
+                                i
+                            </button></span
+                        >
                     </li>
                     <div class="card-compare-table-body">
                         <li class="d-flex justify-content-center text-center p-1">
@@ -804,7 +818,7 @@
                                     data-bs-placement="top"
                                     data-bs-custom-class="custom-tooltip"
                                     data-bs-html="true"
-                                    data-bs-title="Tu situación hace un año, o dos, ¿estabas mejor? ¿En la misma Clase social? Desde abril de 2016 podes revisar. Tenes que recordar tu salario en la esa fecha solamente."
+                                    data-bs-title="ingresa mes y año y obtendras la canasta en ese momento para la familia que ya ingresaste <a href='#canasta_custom'>aquí</a>."
                                 >
                                     i
                                 </button></span
@@ -812,26 +826,52 @@
                         </div>
                         <li class="list-group canasta_compare_date">
                             <div class="d-flex justify-content-center align-items-center w-100 position-relative">
+                                <label class="d-flex justify-content-end">
+                                    <input
+                                        type="text"
+                                        inputmode="numeric"
+                                        pattern="\d*"
+                                        name="alquiler_in_past"
+                                        id="alquiler_in_past"
+                                        class="partial_sumable alquiler_in_past form-control"
+                                        value=""
+                                        placeholder="$ alquiler en 02/2022"
+                                        title="Si alquilas, ingresá el monto del alquiler."
+                                    />
+                                </label>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary aclaracion_rent_past"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip"
+                                    data-bs-html="true"
+                                    data-bs-title="Ingresá el monto de alquiler, si alquilabas en esa fecha."
+                                >
+                                    i
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center w-100 position-relative">
                                 <label>
                                     <input
                                         id="canasta_compare_ingresos_input"
                                         class="canasta_compare_ingresos_input form-control me-2 text-center"
                                         type="number"
                                         pattern="\d+"
-                                        placeholder="$ ingresos $"
+                                        placeholder="$ ingresos en 02/2022"
                                         title="Ingresa tu salario en ese mes y año."
                                     />
                                 </label>
-                                    <button
-                                        type="button"
-                                        class="btn btn-secondary aclaracion_ingresos aclaracion_ingresos_compare"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-placement="top"
-                                        data-bs-custom-class="custom-tooltip"
-                                        data-bs-title="Ingresá tu Ingreso mensual del hogar en ese mes y año para comparar con tu Canasta en esa fecha."
-                                    >
-                                        i
-                                    </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-secondary aclaracion_ingresos aclaracion_ingresos_compare"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip"
+                                    data-bs-title="Ingresá el ingreso mensual del hogar en el mes y año que elegiste."
+                                >
+                                    i
+                                </button>
                             </div>
                         </li>
 
@@ -1000,7 +1040,7 @@
             <div class="card rounded-4 card_titulo_canastas_generic card-solapada-1">
                 <div class="card-header rounded-4">
                     <h2 class="card_header_title_generic">Canastas para Hogar "Tipo"</h2>
-                    <h3 class="card_header_sub_generic">De 4 integrantes del indec</h3>
+                    <h3 class="card_header_sub_generic">De 4 integrantes del indec:</h3>
                     <h4 class="card_header_generic_txt">Varon 35 años, Mujer 31, Niña 8, Niño 6</h4>
                 </div>
             </div>
@@ -1019,7 +1059,7 @@
                                 data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-html="true"
-                                data-bs-title="CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de su hogar la puede calcular <a href='#canasta_custom'>aquí</a>."
+                                data-bs-title="CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta_custom'>aquí</a>."
                             >
                                 i
                             </button></span
@@ -1050,7 +1090,7 @@
                                 data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-html="true"
-                                data-bs-title="CBT es la Canasta Básica Total, es el umbral de la Linea de pobreza. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de su hogar la puede calcular <a href='#canasta_custom'>aquí</a>."
+                                data-bs-title="CBT es la Canasta Básica Total, es el umbral de la Linea de pobreza. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta_custom'>aquí</a>."
                             >
                                 i
                             </button></span
@@ -1081,7 +1121,7 @@
                                 data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-html="true"
-                                data-bs-title="CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes en CABA, marca el umbral de la Linea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de su hogar la puede calcular <a href='#canasta_custom'>aquí</a>."
+                                data-bs-title="CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el umbral de la Linea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta_custom'>aquí</a>."
                             >
                                 i
                             </button></span

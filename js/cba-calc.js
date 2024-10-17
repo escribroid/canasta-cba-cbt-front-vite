@@ -426,7 +426,7 @@ function suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in
     document.querySelector(".suma_clase_alta_max").textContent = suma_clase_alta_baja_alquilando;
 }
 
-/* let alquiler_past;
+let alquiler_past;
 let alquiler_past_value;
 let suma_CBA_Personas_past;
 let suma_CBT_Personas_past;
@@ -477,7 +477,7 @@ function get_tabla_compare(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_val
 
     document.querySelector(".suma_clase_alta_min").textContent = suma_clase_media_alta_alquilando;
     document.querySelector(".suma_clase_alta_max").textContent = suma_clase_alta_baja_alquilando;
-} */
+}
 
 // Agregar un evento al select para cambiar el estado del input
 vivienda.addEventListener("input", function () {
