@@ -93,6 +93,7 @@ let gender_lowercase;
 let index;
 let index_array_cells = 0;
 let index_array_cells_new = 0;
+let local_persona;
 let suma_CBA_Personas = 0;
 let suma_CBT_Personas = 0;
 let suma_clase_baja = 0;
@@ -138,7 +139,7 @@ export let dataso = {
 
 const form = document.getElementById("person-form");
 const tableBody = document.getElementById("person-list");
-let personas_de_local = JSON.parse(localStorage.getItem("personas_de_local")) || [];
+let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_storage")) || [];
 
 /* Borrar Rows de la tabla ++++++++++++++++++++++++++++++++++++++++++++++ */
 tableBody.addEventListener("click", (event) => {
@@ -483,7 +484,7 @@ vivienda.addEventListener("input", function () {
 });
 
 /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-document.getElementById("person-form").addEventListener("submit", function (e) {
+document.getElementById("person-form-submit").addEventListener("click", function (e) {
     e.preventDefault();
     age = document.getElementById("selected-age").value;
     gender = document.getElementById("selected-gender").value;
@@ -629,7 +630,7 @@ document.getElementById("person-form").addEventListener("submit", function (e) {
     suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
     ingresos_input_in(ingresos);
 
-    console.log("table_rows", table_rows);
+    //console.log("table_rows", table_rows);
     // console.log("table_rows1", table_rows);
     // console.log("table_rows2", table_rows);
 
@@ -637,7 +638,7 @@ document.getElementById("person-form").addEventListener("submit", function (e) {
     //document.getElementById("person-form").reset();
 
     // LOCAL STORAGE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    const local_persona = {
+    local_persona = {
         age,
         age_mostrar_table,
         gender,
@@ -648,10 +649,14 @@ document.getElementById("person-form").addEventListener("submit", function (e) {
         alquiler_out,
         suma_con_alquiler,
     };
-    personas_de_local.push(local_persona);
-    localStorage.setItem("personas_de_local", JSON.stringify(personas_de_local));
-    return { suma_CBT_Personas, alquiler_in_value, suma_con_alquiler };
+    personas_local_storage.push(local_persona);
+    localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
+    return {suma_CBT_Personas, alquiler_in_value, suma_con_alquiler};
+    //return local_persona;
 });
+
+
+
 
 // Evento keydown prevenir caracteres no numéricos
 alquiler_in.addEventListener("keydown", function (e) {
@@ -718,9 +723,9 @@ function input_alquiler_in() {
 input_alquiler_in();
 
 document.getElementById("btn-reset-person").addEventListener("click", () => {
-    //localStorage.removeItem('personas_de_local');
-    personas_de_local = [];
-    localStorage.setItem("personas_de_local", JSON.stringify(personas_de_local));
+    //localStorage.removeItem('personas_local_storage');
+    personas_local_storage = [];
+    localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
     document.querySelector(".icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
     document.querySelector(".icon-svg-reset").style.transform = "translatex(100%)";
     setTimeout(() => {

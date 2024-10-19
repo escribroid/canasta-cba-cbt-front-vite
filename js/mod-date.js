@@ -1,6 +1,8 @@
 import indices_manuales from "./mod-indices.js";
 import tabla_equivalentes from "./mod-canasta-custom.js";
 
+
+
 export const yearGet = new Date().getFullYear();
 let monthGet = new Date().getMonth() + 1;
 
