@@ -482,7 +482,7 @@ vivienda.addEventListener("input", function () {
     suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
 });
 
-/* Agregar a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 document.getElementById("person-form").addEventListener("submit", function (e) {
     e.preventDefault();
     age = document.getElementById("selected-age").value;
