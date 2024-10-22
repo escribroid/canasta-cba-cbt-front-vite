@@ -1,9 +1,6 @@
 import indices_manuales from "./mod-indices.js";
 import tabla_equivalentes from "./mod-canasta-custom.js";
 
-//console.log("tabla_equivalentes[0].mujer", tabla_equivalentes[0].mujer);
-// console.log("in", indices_manuales.cbt_manual);
-
 const cba_equivalente = indices_manuales.cba_manual;
 const cbt_equivalente = indices_manuales.cbt_manual;
 //console.log("cba_equivalente", cba_equivalente);
@@ -86,12 +83,11 @@ let canasta_basica_clase_media_fragil_individual;
 let canasta_basica_clase_media_individual;
 let canasta_basica_clase_media_alta_individual;
 let canasta_basica_clase_alta_individual;
+let cell_select_id;
 let count_person = 0;
 let gender;
 let gender_show;
 let gender_lowercase;
-let index;
-let index_array_cells = 0;
 let index_array_cells_new = 0;
 let local_persona;
 let suma_CBA_Personas = 0;
@@ -116,6 +112,8 @@ let show_indigencia_max = document.querySelector(".show_indigencia_max");
 let ingresos = document.getElementById("ingresos_input").value;
 vivienda = document.getElementById("select_canasta_alquiler");
 document.querySelector(".row_mostrar_alquiler").style.display = "none";
+let table_value_age_gender;
+let table_value_age_gender_add = 0;
 
 let array_cba_individual = [];
 let array_cbt_individual = [];
@@ -146,34 +144,23 @@ tableBody.addEventListener("click", (event) => {
     const filas = tableBody.querySelectorAll("tr");
     let array_filas = Array.from(filas);
 
-    //console.log("filas", filas);
-
     const cells = tableBody.querySelectorAll("td");
 
-    //console.log("cells", cells);
+    let array_cells = Array.from(cells);
 
-    let array_cells = Array.from(cells); // Convertir NodeList a array
+    const clickedCell = event.target.closest("td");
 
-    const clickedCell = event.target.closest("td"); // Detectar la fila clickeada
-    const cell_select_id = clickedCell.id;
-
-    //console.log("cell_select_id=", clickedCell.id);
-
-    const clickedRow = clickedCell.parentNode; // Detectar la fila clickeada
-    const clickedRowId = clickedRow.id; // Detectar el id de la fila clickeada
-
-    //console.log("clickedRowId", clickedRowId);
+    const clickedRow = clickedCell.parentNode;
+    const clickedRowId = clickedRow.id;
 
     if (clickedCell && clickedCell.id) {
         let index_array_cells = array_cells.findIndex((cell) => cell.id === cell_select_id);
-        // console.log("index_array_cells=", index_array_cells);
 
         if (index_array_cells !== 3) {
             index_array_cells_new = (index_array_cells - 3) / 5;
         } else if (index_array_cells === 3) {
             index_array_cells_new = 0;
         }
-        // console.log("index_array_cells_new", index_array_cells_new);
 
         subsPersonToTable(array_cba_individual, array_cbt_individual, array_count_person, index_array_cells_new);
 
@@ -184,7 +171,6 @@ tableBody.addEventListener("click", (event) => {
 
 // change select detalles canastas
 document.getElementById("detalle_personal").addEventListener("change", function () {
-    //console.log("CAMBIO");
     let select_canastas = document.getElementById("detalle_personal").value;
 
     if (select_canastas == "indigencia") {
@@ -285,13 +271,9 @@ export function addPersonToTable(
 
     row.id = `person_${count_person}`;
 
-    //console.log("count_ADD", count_person);
-
     let cells = [gender_show, age_mostrar_table, canasta_basica_total_ind_pobreza];
 
     table_rows.push(cells);
-
-    //console.log("table_rows", table_rows);
 
     row.innerHTML = `<td class="p-1">${table_rows[array_count_person.length - 1][0]}</td><td class="col-1 p-1">${
         table_rows[array_count_person.length - 1][1]
@@ -324,8 +306,6 @@ function subsPersonToTable(array_cba_individual, array_cbt_individual, array_cou
 
     table_rows.splice(index_array_cells_new, 1);
 
-    console.log("table_rows-SUB:", table_rows);
-
     array_cbt_individual.splice(index_array_cells_new, 1);
     // console.log("array_cbt_individual-SUB:", array_cbt_individual);
     suma_CBT_Personas = 0;
@@ -334,7 +314,7 @@ function subsPersonToTable(array_cba_individual, array_cbt_individual, array_cou
     }
 
     array_count_person.pop();
-    console.log("array_count_person-SUB:", array_count_person);
+    //console.log("array_count_person-SUB:", array_count_person);
 
     suma_con_alquiler = 0;
 
@@ -370,8 +350,6 @@ function suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler) {
     if (isNaN(suma_con_alquiler)) {
         suma_con_alquiler = alquiler_in_value;
     }
-
-    //console.log("suma_con_alquiler", suma_con_alquiler);
 
     document.getElementById("total-canasta").innerHTML =
         "$" +
@@ -483,8 +461,30 @@ vivienda.addEventListener("input", function () {
     suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
 });
 
+// Observador el valor de ax y bx y actualizar el valor de LALALA en el módulo compartido
+class Observable {
+    constructor() {
+        this.subscribers = [];
+    }
+
+    // Método para que los observadores se suscriban
+    subscribe(callback) {
+        this.subscribers.push(callback);
+    }
+
+    // Método para notificar a todos los observadores de un cambio
+    notify(data) {
+        this.subscribers.forEach((callback) => callback(data));
+    }
+}
+
+// Crear una instancia global de Observable
+window.variableObserver = new Observable();
+
 /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 document.getElementById("person-form-submit").addEventListener("click", function (e) {
+    const valorSeleccionado = e.target.value;
+
     e.preventDefault();
     age = document.getElementById("selected-age").value;
     gender = document.getElementById("selected-gender").value;
@@ -492,18 +492,14 @@ document.getElementById("person-form-submit").addEventListener("click", function
     alquiler_in_value = alquiler_in.value;
     ingresos = document.getElementById("ingresos_input").value;
 
-    //console.log("ingresos", ingresos.value);
-
     // Evitar que se agreguen personas sin género
     if (!gender) {
         age = "";
     }
 
     if (!age || !gender) {
-        // console.log("No se puede agregar persona");
         return;
     } else {
-        // Obtener el valor de la edad seleccionada +
         age_mostrar_table = parseInt(age);
 
         if (age < 18) {
@@ -529,23 +525,29 @@ document.getElementById("person-form-submit").addEventListener("click", function
 
         count_person = count_person + 1;
         array_count_person.push(count_person);
-        // console.log("array_count_person1+", array_count_person);
-        //console.log("array_count_person_LEN", array_count_person.length);
-        // console.log("count_person", count_person);
+
+        // Actualizar la variable con los nuevos valores
+        table_value_age_gender = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
+        table_value_age_gender_add = table_value_age_gender_add + table_value_age_gender;
+
+        // Asignar ax y bx en el objeto global window
+        window.ax = table_value_age_gender_add;
+        window.bx = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
+
+        // Notificar a los observadores de los nuevos valores de ax y bx
+        window.variableObserver.notify({ ax: window.ax, bx: window.bx });
+
+        console.log("Variables en a.js: ", { ax: window.ax, bx: window.bx });
 
         canasta_basica_alimentaria_ind_indigencia =
             tabla_equivalentes[`${age_toStr}`][`${gender_lowercase}`] * cba_equivalente;
-        //console.log("canasta_basica_alimentaria_ind_indigencia", canasta_basica_alimentaria_ind_indigencia);
         array_cba_individual.push(canasta_basica_alimentaria_ind_indigencia);
         suma_CBA_Personas = 0;
         for (let i = 0; i < array_cba_individual.length; i++) {
             suma_CBA_Personas = parseFloat(suma_CBA_Personas) + parseFloat(array_cba_individual[i]);
         }
-        console.log("array_cba_individual-SUB", array_cba_individual);
-        // console.log("suma_CBA_Personas-SUB", suma_CBA_Personas);
 
         canasta_basica_total_ind_pobreza = tabla_equivalentes[`${age_toStr}`][`${gender_lowercase}`] * cbt_equivalente;
-        //console.log("canasta_basica_total_ind_pobreza", canasta_basica_total_ind_pobreza);
         array_cbt_individual.push(canasta_basica_total_ind_pobreza);
         suma_CBT_Personas = 0;
         for (let i = 0; i < array_cbt_individual.length; i++) {
@@ -592,10 +594,6 @@ document.getElementById("person-form-submit").addEventListener("click", function
             suma_clase_alta = parseFloat(suma_clase_alta) + parseFloat(array_clase_alta[i]);
         }
 
-        // console.log("suma_CBA_Personas", suma_CBA_Personas);
-        // console.log("suma_CBT_Personas", suma_CBT_Personas);
-        // console.log("suma_clase_baja", suma_clase_baja);
-
         // activar boton reset
         document.querySelector(".icon-svg-reset").style.display = "flex";
 
@@ -607,15 +605,6 @@ document.getElementById("person-form-submit").addEventListener("click", function
             // Ocultar después de la transición
         }, 300); // Esperar que la transición termine (0.5s)
     }
-    // array_cbt_individual.push(canasta_basica_total_ind_pobreza);
-    // suma_CBT_Personas = 0;
-    // for (let i = 0; i < array_cbt_individual.length; i++) {
-    //     suma_CBT_Personas = parseFloat(suma_CBT_Personas) + parseFloat(array_cbt_individual[i]);
-    // }
-
-    // console.log("array_cbt_individual", array_cbt_individual);
-    // console.log("array_cbt_individual", array_cbt_individual.length);
-    // console.log("suma_CBT_Personas", suma_CBT_Personas);
 
     // Agregar la persona a la tabla +++++++++++++++++++
     addPersonToTable(
@@ -630,13 +619,6 @@ document.getElementById("person-form-submit").addEventListener("click", function
     suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
     ingresos_input_in(ingresos);
 
-    //console.log("table_rows", table_rows);
-    // console.log("table_rows1", table_rows);
-    // console.log("table_rows2", table_rows);
-
-    // Limpiar el formulario
-    //document.getElementById("person-form").reset();
-
     // LOCAL STORAGE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     local_persona = {
         age,
@@ -649,14 +631,13 @@ document.getElementById("person-form-submit").addEventListener("click", function
         alquiler_out,
         suma_con_alquiler,
     };
+
     personas_local_storage.push(local_persona);
     localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
-    return {suma_CBT_Personas, alquiler_in_value, suma_con_alquiler};
+    return { suma_CBT_Personas, alquiler_in_value, suma_con_alquiler };
     //return local_persona;
 });
-
-
-
+//console.log("table_value_age_gender", table_value_age_gender);
 
 // Evento keydown prevenir caracteres no numéricos
 alquiler_in.addEventListener("keydown", function (e) {
@@ -866,11 +847,12 @@ document.getElementById("ingresos_input").addEventListener("input", (e) => {
 // Cerrar el offcanvas al hacer clic en cualquier enlace dentro de él
 document.addEventListener("click", function (e) {
     if (e.target.tagName === "A" && e.target.closest(".offcanvas")) {
-        e.preventDefault(); // Previene el comportamiento de scroll por defecto
-        const targetId = e.target.getAttribute("href"); // Obtiene el destino del enlace
-        const targetElement = document.querySelector(targetId); // Selecciona la sección objetivo
+        e.preventDefault();
+        const targetId = e.target.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        objetivo;
 
-        const offcanvas = e.target.closest(".offcanvas"); // Encuentra el offcanvas actual
+        const offcanvas = e.target.closest(".offcanvas");
 
         // Cierra el offcanvas
         const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
@@ -878,7 +860,7 @@ document.addEventListener("click", function (e) {
 
         setTimeout(() => {
             targetElement.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave a la sección
-        }, 200); // 300 ms para asegurarse de que el offcanvas se cierra primero
+        }, 200);
     }
 });
 

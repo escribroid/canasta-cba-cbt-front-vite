@@ -849,7 +849,21 @@ header {
 .suma_clase_alta_min,
 .suma_clase_alta_max,
 .suma_clase_alta_min_info,
-.suma_clase_alta_max_info {
+.suma_clase_alta_max_info,
+.show_indigencia_min_past,
+.show_indigencia_max_past,
+.show_pobreza_min_past,
+.show_pobreza_max_past,
+.show_clase_baja_min_past,
+.show_clase_baja_max_past,
+.suma_clase_media_fragil_min_past,
+.suma_clase_media_fragil_max_past,
+.suma_clase_media_min_past,
+.suma_clase_media_max_past,
+.suma_clase_media_alta_min_past,
+.suma_clase_media_alta_max_past,
+.suma_clase_alta_min_past,
+.suma_clase_alta_max_past {
     width: 31%;
     font-size: var(--spacing-18_1-125);
 }

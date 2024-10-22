@@ -1,7 +1,7 @@
 // main.js
 import { yearGet } from "./mod-date.js";
 import { version } from "./mod-version.js";
-import indices_manuales from "./mod-indices.js";
+//import indices_manuales from "./mod-indices.js";
 
 // yearUpdated
 //const yearUpdated = document.querySelector(".copyleftYear").innerHTML = yearGet;

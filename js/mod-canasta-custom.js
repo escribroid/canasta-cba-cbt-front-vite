@@ -1,4 +1,4 @@
-import indices_manuales from "./mod-indices.js";
+//import indices_manuales from "./mod-indices.js";
 
 // tabla equivalencias personas
 const tabla_equivalentes = {
