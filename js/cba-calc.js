@@ -251,7 +251,7 @@ document.getElementById("detalle_personal").addEventListener("change", function 
 });
 
 // Función para agregar persona a la tabla y al array de personas +++++++++++++++++++++++++++++++
-export function addPersonToTable(
+function addPersonToTable(
     gender,
     age_mostrar_table,
     canasta_basica_alimentaria_ind_indigencia,
@@ -461,30 +461,28 @@ vivienda.addEventListener("input", function () {
     suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
 });
 
-// Observador el valor de ax y bx y actualizar el valor de LALALA en el módulo compartido
-class Observable {
-    constructor() {
-        this.subscribers = [];
-    }
+// // Observador el valor de ax y bx y actualizar el valor de LALALA en el módulo compartido
+// class Observable {
+//     constructor() {
+//         this.subscribers = [];
+//     }
 
-    // Método para que los observadores se suscriban
-    subscribe(callback) {
-        this.subscribers.push(callback);
-    }
+//     // Método para que los observadores se suscriban
+//     subscribe(callback) {
+//         this.subscribers.push(callback);
+//     }
 
-    // Método para notificar a todos los observadores de un cambio
-    notify(data) {
-        this.subscribers.forEach((callback) => callback(data));
-    }
-}
+//     // Método para notificar a todos los observadores de un cambio
+//     notify(data) {
+//         this.subscribers.forEach((callback) => callback(data));
+//     }
+// }
 
-// Crear una instancia global de Observable
-window.variableObserver = new Observable();
+// // Crear una instancia global de Observable
+// window.variableObserver = new Observable();
 
 /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 document.getElementById("person-form-submit").addEventListener("click", function (e) {
-    const valorSeleccionado = e.target.value;
-
     e.preventDefault();
     age = document.getElementById("selected-age").value;
     gender = document.getElementById("selected-gender").value;
@@ -530,14 +528,16 @@ document.getElementById("person-form-submit").addEventListener("click", function
         table_value_age_gender = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
         table_value_age_gender_add = table_value_age_gender_add + table_value_age_gender;
 
+        // Emitir un evento personalizado con el valor de ax
+        const event = new CustomEvent("axUpdated", { detail: { table_value_age_gender_add: table_value_age_gender_add } });
+        window.dispatchEvent(event); // Disparar el evento
+
         // Asignar ax y bx en el objeto global window
-        window.ax = table_value_age_gender_add;
-        window.bx = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
-
+        // window.ax = table_value_age_gender_add;
+        // window.bx = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
         // Notificar a los observadores de los nuevos valores de ax y bx
-        window.variableObserver.notify({ ax: window.ax, bx: window.bx });
-
-        console.log("Variables en a.js: ", { ax: window.ax, bx: window.bx });
+        // window.variableObserver.notify({ ax: window.ax, bx: window.bx });
+        // console.log("Variables en a.js: ", { ax: window.ax, bx: window.bx });
 
         canasta_basica_alimentaria_ind_indigencia =
             tabla_equivalentes[`${age_toStr}`][`${gender_lowercase}`] * cba_equivalente;

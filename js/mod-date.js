@@ -1,5 +1,16 @@
 export const yearGet = new Date().getFullYear();
 let monthGet = new Date().getMonth() + 1;
+let table_value_age_gender_add = 1;
+
+
+// Escuchar el evento personalizado emitido desde a.js
+window.addEventListener("axUpdated", function (event) {
+    table_value_age_gender_add = event.detail.table_value_age_gender_add; // Actualizar ax con el nuevo valor
+    //actualizarZx(); // Recalcular zx
+
+    console.log("table_value_age_gender_add", table_value_age_gender_add);
+    
+});
 
 let selectedYear;
 let selectedMonth;
@@ -14,6 +25,7 @@ let cbt_Top;
 let canasta_compare_cba = document.querySelector(".canasta_compare_cba");
 let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
+let dataJsonFront = [];
 
 let alquiler_past;
 let alquiler_past_value;
@@ -29,40 +41,76 @@ let suma_clase_media_past;
 let suma_clase_media_alta_past;
 let suma_clase_alta_baja_past;
 
-// Función centralizada fetch +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-function fetchDataFromAPI(onSuccess, onError) {
-    // const url =
-    //     "https://apis.datos.gob.ar/series/api/series/?ids=150.1_CSTA_BARIA_0_D_26,150.1_CSTA_BATAL_0_D_20&collapse=month&start_date=2016-01-01&limit=1000&format=json"; // Centralizamos la URL
 
-    //const url = "http://localhost:3000/api/cba-cbt";
+// // Función para actualizar zx
+// function actualizarZx() {
+//     const year = document.getElementById("yearSelect").value;
+//     const month = document.getElementById("monthSelect").value;
 
-    const url = "https://canasta-cba-cbt-back-express.vercel.app/api/cba-cbt/";
+//     if (year && month) {
+//         const zx = ax * year * month; // Lógica de cálculo de zx
+//         document.getElementById("yearOut").textContent = zx;
+//     }
+// }
 
-    fetch(url)
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then((data) => onSuccess(data)) // Ejecuta el callback de éxito
-        .catch((error) => (onError ? onError(error) : console.error("Error:", error))); // Callback de error opcional
+// Centralizamos la URL aquí
+const API_URL = "https://canasta-cba-cbt-back-express.vercel.app/api/cba-cbt/";
+
+// Función que realiza el fetch y devuelve los datos
+async function fetchDataFromAPI() {
+    try {
+        const response = await fetch(API_URL);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data; // Devolvemos los datos para que la otra función los use
+    } catch (error) {
+        console.error("Error al obtener los datos de la API:", error);
+        throw error; // Volvemos a lanzar el error para que sea manejado donde se llame esta función
+    }
 }
 
-// Llamada a función centralizada in TOP short cba cbt++++++++++++++++++++++++++++++++++++++++++
-fetchDataFromAPI(
-    (data) => {
-        // Data en TOP short cba cbt ++++++++++++++++++++++++
-        cba_Top = Math.round(data[data.length - 1].cba * 3.09);
+// Función que usa fetchDataFromAPI para obtener los datos y actualizar la UI
+async function fetchDataAndUpdateUI() {
+    try {
+        const data = await fetchDataFromAPI(); // Llamamos a la función centralizada
+
+        // Guardar el data en dataJsonFront
+        dataJsonFront = data;
+
+        // // Actualizar valores en la UI
+        // const cba_Top = Math.round(data[data.length - 1].cba * 3.09);
+        // const cba_top_short = document.querySelector(".indices_short_cba");
+        // cba_top_short.innerHTML = `$${cba_Top}`;
+
+        // const cbt_Top = Math.round(data[data.length - 1].cbt * 3.09);
+        // const cbt_top_short = document.querySelector(".indices_short_cbt");
+        // cbt_top_short.innerHTML = `$${cbt_Top}`;
+        cba_top_process();
+    } catch (error) {
+        console.error("Error al actualizar la UI:", error); // Manejo de errores al actualizar la UI
+    }
+}
+
+// Llamamos a la función que actualiza la UI
+fetchDataAndUpdateUI();
+
+function cba_top_process() {
+    if (dataJsonFront.length > 0) {
+        // Actualizar valores en la UI
+        cba_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cba * 3.09);
         const cba_top_short = document.querySelector(".indices_short_cba");
         cba_top_short.innerHTML = `$${cba_Top}`;
 
-        cbt_Top = Math.round(data[data.length - 1].cbt * 3.09);
+        cbt_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cbt * 3.09);
         const cbt_top_short = document.querySelector(".indices_short_cbt");
         cbt_top_short.innerHTML = `$${cbt_Top}`;
-    },
-    (error) => console.log("ERROR", error)
-);
+    }
+}
+
 
 for (let i = 0; i <= yearGet; i++) {
     if (yearGet - i >= 2016) {
@@ -140,7 +188,7 @@ window.addEventListener("DOMContentLoaded", () => {
                         callCba(selectedMonth, cba_Old);
                     }
                 });
-                get_table_past(ax, bx);
+                //get_table_past(ax, bx);
 
                 canasta_year_select.addEventListener("change", function () {
                     selectedYear = canasta_year_select.value;
