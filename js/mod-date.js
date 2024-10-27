@@ -1,6 +1,6 @@
 export const yearGet = new Date().getFullYear();
 let monthGet = new Date().getMonth() + 1;
-let table_value_age_gender_add = 1;
+let table_age_gender_add = 1;
 
 let selectedYear;
 let selectedMonth;
@@ -37,7 +37,7 @@ let suma_clase_alta_baja_past;
 //     const month = document.getElementById("monthSelect").value;
 
 //     if (year && month) {
-//         const zx = table_value_age_gender_add * year * month; // Lógica de cálculo de zx
+//         const zx = table_age_gender_add * year * month; // Lógica de cálculo de zx
 //         document.getElementById("yearOut").textContent = zx;
 //     }
 // }
@@ -102,12 +102,12 @@ function cba_top_process() {
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
-    table_value_age_gender_add = event.detail.table_value_age_gender_add; // Actualizar table_value_age_gender_add con el nuevo valor
+    table_age_gender_add = event.detail.table_age_gender_add; // Actualizar table_age_gender_add con el nuevo valor
     //actualizarZx(); // Recalcular zx
 
-    console.log("table_value_age_gender_add", table_value_age_gender_add);
+    //console.log("table_age_gender_add", table_age_gender_add);
 
-    console.log("dataJsonFront|||", dataJsonFront);
+    //console.log("dataJsonFront|||", dataJsonFront);
 
     for (let i = 0; i <= yearGet; i++) {
         if (yearGet - i >= 2016) {
@@ -134,7 +134,7 @@ window.addEventListener("axUpdated", function (event) {
         }
     }
 
-    get_table_past(table_value_age_gender_add);
+    get_table_past(table_age_gender_add);
 
     // Función de callback que se ejecutará cuando cambie el valor
     function handleMonthChange(callbackMonth, callbackYear, callCba, callCbt) {
@@ -155,21 +155,17 @@ window.addEventListener("axUpdated", function (event) {
                 }
             }
 
-            
-                
-                    if (selectedMonth < 10) {
-                        selectedMonth = "0" + selectedMonth;
-                    }
+            if (selectedMonth < 10) {
+                selectedMonth = "0" + selectedMonth;
+            }
 
-                    for (let i = 0; i < dataJsonFront.length; i++) {
-                        if (dataJsonFront[i].fecha == `${selectedYear}-${selectedMonth}-01`) {
-                            cba_Old = `${dataJsonFront[i].cba}`;
-                            cbt_Old = `${dataJsonFront[i].cbt}`;
-                        }
-                    }
-                    get_table_past(table_value_age_gender_add);
-                
-            
+            for (let i = 0; i < dataJsonFront.length; i++) {
+                if (dataJsonFront[i].fecha == `${selectedYear}-${selectedMonth}-01`) {
+                    cba_Old = `${dataJsonFront[i].cba}`;
+                    cbt_Old = `${dataJsonFront[i].cbt}`;
+                }
+            }
+            get_table_past(table_age_gender_add);
 
             // Ejecuta el callback con el valor actualizado
             if (callbackMonth) {
@@ -180,7 +176,7 @@ window.addEventListener("axUpdated", function (event) {
                 callCba(selectedMonth, cba_Old);
             }
         });
-        //get_table_past(table_value_age_gender_add);
+        //get_table_past(table_age_gender_add);
 
         canasta_year_select.addEventListener("change", function () {
             selectedYear = canasta_year_select.value;
@@ -233,19 +229,17 @@ window.addEventListener("axUpdated", function (event) {
                 }
             }
 
-                    if (selectedMonth < 10) {
-                        selectedMonth = "0" + selectedMonth;
-                    }
+            if (selectedMonth < 10) {
+                selectedMonth = "0" + selectedMonth;
+            }
 
-                    for (let i = 0; i < dataJsonFront.length; i++) {
-                        if (dataJsonFront[i].fecha == `${selectedYear}-${selectedMonth}-01`) {
-                            cba_Old = `${dataJsonFront[i].cba}`;
-                            cbt_Old = `${dataJsonFront[i].cbt}`;
-                        }
-                    }
-                    get_table_past(table_value_age_gender_add);
-                
-        
+            for (let i = 0; i < dataJsonFront.length; i++) {
+                if (dataJsonFront[i].fecha == `${selectedYear}-${selectedMonth}-01`) {
+                    cba_Old = `${dataJsonFront[i].cba}`;
+                    cbt_Old = `${dataJsonFront[i].cbt}`;
+                }
+            }
+            get_table_past(table_age_gender_add);
 
             // Ejecuta el callback con el valor actualizado
             if (callbackYear) {
@@ -270,7 +264,7 @@ window.addEventListener("axUpdated", function (event) {
 
     handleMonthChange(doSomethingWithSelectedMonth, doSomethingWithSelectedYear, doCallCba, doCallCbt);
 
-    function get_table_past(table_value_age_gender_add) {
+    function get_table_past(table_age_gender_add) {
         alquiler_past_value = parseInt(document.getElementById("alquiler_past").value);
         if (isNaN(alquiler_past_value)) {
             alquiler_past_value = 0;
@@ -283,14 +277,14 @@ window.addEventListener("axUpdated", function (event) {
             suma_CBT_Personas_past = 0;
         }
 
-        suma_indigencia_past = alquiler_past_value + Math.round(table_value_age_gender_add * cba_Old);
-        suma_pobreza_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old);
-        suma_clase_baja_fragil_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old * 1.2);
-        suma_clase_baja_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old * 1.5);
-        suma_clase_media_fragil_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old * 2);
-        suma_clase_media_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old * 5);
-        suma_clase_media_alta_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old * 8);
-        suma_clase_alta_baja_past = alquiler_past_value + Math.round(table_value_age_gender_add * cbt_Old * 12);
+        suma_indigencia_past = alquiler_past_value + Math.round(table_age_gender_add * cba_Old);
+        suma_pobreza_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old);
+        suma_clase_baja_fragil_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old * 1.2);
+        suma_clase_baja_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old * 1.5);
+        suma_clase_media_fragil_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old * 2);
+        suma_clase_media_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old * 5);
+        suma_clase_media_alta_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old * 8);
+        suma_clase_alta_baja_past = alquiler_past_value + Math.round(table_age_gender_add * cbt_Old * 12);
 
         document.querySelector(".show_indigencia_min_past").textContent = 0;
         document.querySelector(".show_indigencia_max_past").textContent = suma_indigencia_past;
