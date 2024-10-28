@@ -84,6 +84,7 @@ let canasta_basica_clase_media_individual;
 let canasta_basica_clase_media_alta_individual;
 let canasta_basica_clase_alta_individual;
 let cell_select_id;
+let cells;
 let clickedCell_id;
 let count_person = 0;
 let gender;
@@ -143,56 +144,58 @@ let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_sto
 
 /* Borrar Rows de la tabla ++++++++++++++++++++++++++++++++++++++++++++++ */
 tableBody.addEventListener("click", (event) => {
-    const filas = tableBody.querySelectorAll("tr");
+    let filas = tableBody.querySelectorAll("tr");
 
     let array_filas = Array.from(filas);
 
-    // console.log("array_filas", array_filas[0].id);
-    // console.log("array_filas", array_filas[1]);
-    // console.log("array_filas", array_filas[2]);
-
-    const cells = tableBody.querySelectorAll("td");
+    cells = tableBody.querySelectorAll("td");
 
     let array_cells = Array.from(cells);
-
-    // console.log("array_cells", array_cells[0]);
-    // console.log("array_cells", array_cells[1]);
-    // console.log("array_cells", array_cells[2]);
 
     const clickedRow = event.target.closest("tr");
     const clickRow_id = clickedRow.id[7];
 
-    console.log("clickedRow", clickRow_id);
-
     const clickedCell = event.target.closest("td");
 
-    //const clickedRow = clickedCell.parentNode;
     clickedCell_id = clickedCell.id[7];
-    console.log("clickedCell", clickedCell_id);
-
-    /* table_age_gender_array.push(table_age_gender);
-    table_age_gender_add = table_age_gender_add + table_age_gender;
- */
-    /*  console.log("table_age_gender_add", table_age_gender_add);
-    console.log("table_age_gender_array", table_age_gender_array); */
 
     if (clickRow_id === clickedCell_id) {
-        //let index_array_cells = array_cells.findIndex((cell) => cell === clickedCell);
+        filas = tableBody.querySelectorAll("tr");
 
-        //console.log("array_cells", array_cells);
+        array_filas = Array.from(filas);
 
-        // for (let i = 3; i < array_cells.length; i = i + 4) {
-        //     const element = array_cells[i];
-        //     //console.log("element", element);
-        // }
+        table_age_gender_array.splice([clickRow_id - 1], 1);
 
-        // if (array_cells !== 3) {
-        //     index_array_cells_new = (array_cells - 3) / 4;
-        // } else if (array_cells === 3) {
-        //     index_array_cells_new = 0;
-        // }
+        //console.log("table_age_gender_array|||", table_age_gender_array);
 
-        //console.log("index_array_cells_new||", index_array_cells_new);
+        table_age_gender_add = table_age_gender_array.reduce((acc, cur) => acc + cur, 0);
+        if (table_age_gender_add === 0) {
+            table_age_gender_array = [];
+        }
+        //console.log("table_age_gender_add|||", table_age_gender_add);
+
+        const row_del = clickedCell.parentNode;
+        row_del.remove();
+
+        filas = tableBody.querySelectorAll("tr");
+        cells = tableBody.querySelectorAll("td");
+
+        array_filas = Array.from(filas);
+        array_cells = Array.from(cells);
+        //console.log("array_filasLL", array_filas.length);
+        console.log("array_cellsLL", array_cells.length);
+
+        for (let i = 0; i < array_filas.length; i++) {
+            array_filas[i].id = `person_${i + 1}`;
+            array_cells[(i + 1) * 4 - 1].id = `person_${i + 1}_detalles`;
+            array_cells[(i + 1) * 4 - 2].id = `detalles_monto_person_${i + 1}`;
+        }
+
+        // Emitir un evento personalizado con el valor de ax
+        const event = new CustomEvent("axUpdated", {
+            detail: { table_age_gender_add: table_age_gender_add },
+        });
+        window.dispatchEvent(event); // Disparar el evento
 
         subsPersonToTable(
             array_cba_individual,
@@ -201,22 +204,6 @@ tableBody.addEventListener("click", (event) => {
             index_array_cells_new,
             table_age_gender_array
         );
-
-        table_age_gender_array.splice([clickRow_id - 1], 1, 0);
-
-        console.log("table_age_gender_array|||", table_age_gender_array);
-
-        table_age_gender_add = table_age_gender_array.reduce((acc, cur) => acc + cur, 0);
-        console.log("table_age_gender_add|||", table_age_gender_add);
-
-        const row_del = clickedCell.parentNode;
-        row_del.remove();
-
-        // Emitir un evento personalizado con el valor de ax
-        const event = new CustomEvent("axUpdated", {
-            detail: { table_age_gender_add: table_age_gender_add },
-        });
-        window.dispatchEvent(event); // Disparar el evento
     }
 });
 
@@ -225,9 +212,9 @@ document.getElementById("detalle_personal").addEventListener("change", function 
     let select_canastas = document.getElementById("detalle_personal").value;
 
     if (select_canastas == "indigencia") {
-        console.log("indigencia");
-        console.log("array_cba_individual-2", array_cba_individual);
-        console.log("table_rows", table_rows);
+        // console.log("indigencia");
+        // console.log("array_cba_individual-2", array_cba_individual);
+        // console.log("table_rows", table_rows);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_cba_individual[i];
             let existingRow = tableBody.rows[i];
@@ -236,10 +223,10 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = suma_indigencia_alquilando;
 
-        console.log("table_rows D-", table_rows);
+        //console.log("table_rows D-", table_rows);
     } else if (select_canastas == "pobreza") {
-        console.log("pobreza");
-        console.log("array_cbt_individual", array_cbt_individual);
+        // console.log("pobreza");
+        // console.log("array_cbt_individual", array_cbt_individual);
 
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_cbt_individual[i];
@@ -249,8 +236,8 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = suma_pobreza_alquilando;
     } else if (select_canastas == "clase_baja") {
-        console.log("clase_baja");
-        console.log("array_clase_baja", array_clase_baja);
+        // console.log("clase_baja");
+        // console.log("array_clase_baja", array_clase_baja);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_baja[i];
             let existingRow = tableBody.rows[i];
@@ -259,8 +246,8 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = suma_clase_baja_alquilando;
     } else if (select_canastas == "clase_media_fragil") {
-        console.log("clase_media_fragil");
-        console.log("array_clase_media_fragil", array_clase_media_fragil);
+        // console.log("clase_media_fragil");
+        // console.log("array_clase_media_fragil", array_clase_media_fragil);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_media_fragil[i];
             let existingRow = tableBody.rows[i];
@@ -269,8 +256,8 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = suma_clase_media_fragil_alquilando;
     } else if (select_canastas == "clase_media") {
-        console.log("clase_media");
-        console.log("array_clase_media", array_clase_media);
+        // console.log("clase_media");
+        // console.log("array_clase_media", array_clase_media);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_media[i];
             let existingRow = tableBody.rows[i];
@@ -279,8 +266,8 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = suma_clase_media_alquilando;
     } else if (select_canastas == "clase_media_alta") {
-        console.log("clase_media_alta");
-        console.log("array_clase_media_alta", array_clase_media_alta);
+        // console.log("clase_media_alta");
+        // console.log("array_clase_media_alta", array_clase_media_alta);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_media_alta[i];
             let existingRow = tableBody.rows[i];
@@ -289,8 +276,8 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = suma_clase_media_alta_alquilando;
     } else if (select_canastas == "clase_alta") {
-        console.log("clase_alta");
-        console.log("array_clase_alta", array_clase_alta);
+        // console.log("clase_alta");
+        // console.log("array_clase_alta", array_clase_alta);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_alta[i];
             let existingRow = tableBody.rows[i];
@@ -350,10 +337,10 @@ function subsPersonToTable(
     index_array_cells_new,
     table_age_gender_array
 ) {
-    console.log("array_cba_individual|", array_cba_individual);
-    console.log("array_cbt_individual|", array_cbt_individual);
-    console.log("array_count_person|", array_count_person);
-    console.log("table_age_gender_array", table_age_gender_array);
+    // console.log("array_cba_individual|", array_cba_individual);
+    // console.log("array_cbt_individual|", array_cbt_individual);
+    // console.log("array_count_person|", array_count_person);
+    // console.log("table_age_gender_array*", table_age_gender_array);
 
     array_cba_individual.splice(index_array_cells_new, 1);
     ingresos = document.getElementById("ingresos_input").value;
@@ -366,7 +353,7 @@ function subsPersonToTable(
         suma_CBA_Personas = parseFloat(suma_CBA_Personas) + parseFloat(array_cba_individual[i]);
     }
 
-    console.log("index_array_cells_new", index_array_cells_new);
+    //console.log("index_array_cells_new", index_array_cells_new);
 
     table_rows.splice(index_array_cells_new, 1);
 
@@ -571,10 +558,14 @@ document.getElementById("person-form-submit").addEventListener("click", function
         // Actualizar la variable con los nuevos valores
         table_age_gender = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
         table_age_gender_array.push(table_age_gender);
-        table_age_gender_add = table_age_gender_add + table_age_gender;
+        table_age_gender_add = table_age_gender_array.reduce((acc, cur) => acc + cur, 0);
 
-        console.log("table_age_gender_add", table_age_gender_add);
-        console.log("table_age_gender_array", table_age_gender_array);
+        if (table_age_gender_add === 0) {
+            table_age_gender_array = [];
+        }
+
+        // console.log("table_age_gender_add", table_age_gender_add);
+        // console.log("table_age_gender_array", table_age_gender_array);
 
         // Emitir un evento personalizado con el valor de ax
         const event = new CustomEvent("axUpdated", {
