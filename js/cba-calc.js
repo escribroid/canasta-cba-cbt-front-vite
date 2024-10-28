@@ -87,6 +87,7 @@ let cell_select_id;
 let cells;
 let clickedCell_id;
 let count_person = 0;
+let filas;
 let gender;
 let gender_show;
 let gender_lowercase;
@@ -125,6 +126,8 @@ let array_clase_media = [];
 let array_clase_media_alta = [];
 let array_clase_alta = [];
 let array_count_person = [];
+let array_cells = [];
+let array_filas = [];
 let table_matrix = [];
 let table_rows = [];
 let table_age_gender_array = [];
@@ -144,13 +147,13 @@ let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_sto
 
 /* Borrar Rows de la tabla ++++++++++++++++++++++++++++++++++++++++++++++ */
 tableBody.addEventListener("click", (event) => {
-    let filas = tableBody.querySelectorAll("tr");
+    filas = tableBody.querySelectorAll("tr");
 
-    let array_filas = Array.from(filas);
+    array_filas = Array.from(filas);
 
     cells = tableBody.querySelectorAll("td");
 
-    let array_cells = Array.from(cells);
+    array_cells = Array.from(cells);
 
     const clickedRow = event.target.closest("tr");
     const clickRow_id = clickedRow.id[7];
@@ -183,7 +186,11 @@ tableBody.addEventListener("click", (event) => {
         array_filas = Array.from(filas);
         array_cells = Array.from(cells);
         //console.log("array_filasLL", array_filas.length);
-        console.log("array_cellsLL", array_cells.length);
+        console.log("array_cells", array_cells.length);
+        console.log("table_age_add|A|", table_age_gender_add);
+
+        count_person = array_filas.length;
+        console.log("count_person", count_person);
 
         for (let i = 0; i < array_filas.length; i++) {
             array_filas[i].id = `person_${i + 1}`;
@@ -564,7 +571,7 @@ document.getElementById("person-form-submit").addEventListener("click", function
             table_age_gender_array = [];
         }
 
-        // console.log("table_age_gender_add", table_age_gender_add);
+        console.log("table_age_gender_add", table_age_gender_add);
         // console.log("table_age_gender_array", table_age_gender_array);
 
         // Emitir un evento personalizado con el valor de ax
