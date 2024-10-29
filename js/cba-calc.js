@@ -76,7 +76,7 @@ let alquiler_in = 0;
 alquiler_in = document.getElementById("alquiler_in");
 let alquiler_in_value = 0;
 alquiler_in_value = parseFloat(alquiler_in.value);
-let canasta_basica_alimentaria_ind_indigencia;
+let cba_individual_indigencia;
 let canasta_basica_total_ind_pobreza;
 let canasta_basica_clase_baja_individual;
 let canasta_basica_clase_media_fragil_individual;
@@ -93,7 +93,7 @@ let gender_show;
 let gender_lowercase;
 let index_array_cells_new = 0;
 let local_persona;
-let suma_CBA_Personas = 0;
+let cba_family_add = 0;
 let suma_CBT_Personas = 0;
 let suma_clase_baja = 0;
 let suma_clase_media_fragil = 0;
@@ -115,8 +115,8 @@ let show_indigencia_max = document.querySelector(".show_indigencia_max");
 let ingresos = document.getElementById("ingresos_input").value;
 vivienda = document.getElementById("select_canasta_alquiler");
 document.querySelector(".row_mostrar_alquiler").style.display = "none";
-let table_age_gender = 0;
-let table_age_gender_add = 0;
+let coef_age_gender = 0;
+let coef_age_gender_add = 0;
 
 let array_cba_individual = [];
 let array_cbt_individual = [];
@@ -130,12 +130,12 @@ let array_cells = [];
 let array_filas = [];
 let table_matrix = [];
 let table_rows = [];
-let table_age_gender_array = [];
+let coef_age_gender_array = [];
 
 export let dataso = {
     gender,
     age_mostrar_table,
-    canasta_basica_alimentaria_ind_indigencia,
+    cba_individual_indigencia,
     canasta_basica_total_ind_pobreza,
     array_count_person,
     count_person,
@@ -167,15 +167,15 @@ tableBody.addEventListener("click", (event) => {
 
         array_filas = Array.from(filas);
 
-        table_age_gender_array.splice([clickRow_id - 1], 1);
+        coef_age_gender_array.splice([clickRow_id - 1], 1);
 
-        //console.log("table_age_gender_array|||", table_age_gender_array);
+        //console.log("coef_age_gender_array|||", coef_age_gender_array);
 
-        table_age_gender_add = table_age_gender_array.reduce((acc, cur) => acc + cur, 0);
-        if (table_age_gender_add === 0) {
-            table_age_gender_array = [];
+        coef_age_gender_add = coef_age_gender_array.reduce((acc, cur) => acc + cur, 0);
+        if (coef_age_gender_add === 0) {
+            coef_age_gender_array = [];
         }
-        //console.log("table_age_gender_add|||", table_age_gender_add);
+        //console.log("coef_age_gender_add|||", coef_age_gender_add);
 
         const row_del = clickedCell.parentNode;
         row_del.remove();
@@ -186,11 +186,11 @@ tableBody.addEventListener("click", (event) => {
         array_filas = Array.from(filas);
         array_cells = Array.from(cells);
         //console.log("array_filasLL", array_filas.length);
-        console.log("array_cells", array_cells.length);
-        console.log("table_age_add|A|", table_age_gender_add);
+        //console.log("array_cells", array_cells.length);
+        //console.log("table_age_add|A|", coef_age_gender_add);
 
         count_person = array_filas.length;
-        console.log("count_person", count_person);
+        //console.log("count_person", count_person);
 
         for (let i = 0; i < array_filas.length; i++) {
             array_filas[i].id = `person_${i + 1}`;
@@ -200,7 +200,7 @@ tableBody.addEventListener("click", (event) => {
 
         // Emitir un evento personalizado con el valor de ax
         const event = new CustomEvent("axUpdated", {
-            detail: { table_age_gender_add: table_age_gender_add },
+            detail: { coef_age_gender_add: coef_age_gender_add },
         });
         window.dispatchEvent(event); // Disparar el evento
 
@@ -209,7 +209,7 @@ tableBody.addEventListener("click", (event) => {
             array_cbt_individual,
             array_count_person,
             index_array_cells_new,
-            table_age_gender_array
+            coef_age_gender_array
         );
     }
 });
@@ -299,7 +299,7 @@ document.getElementById("detalle_personal").addEventListener("change", function 
 function addPersonToTable(
     gender,
     age_mostrar_table,
-    canasta_basica_alimentaria_ind_indigencia,
+    cba_individual_indigencia,
     canasta_basica_total_ind_pobreza,
     array_count_person,
     count_person
@@ -342,12 +342,12 @@ function subsPersonToTable(
     array_cbt_individual,
     array_count_person,
     index_array_cells_new,
-    table_age_gender_array
+    coef_age_gender_array
 ) {
     // console.log("array_cba_individual|", array_cba_individual);
     // console.log("array_cbt_individual|", array_cbt_individual);
     // console.log("array_count_person|", array_count_person);
-    // console.log("table_age_gender_array*", table_age_gender_array);
+    // console.log("coef_age_gender_array*", coef_age_gender_array);
 
     array_cba_individual.splice(index_array_cells_new, 1);
     ingresos = document.getElementById("ingresos_input").value;
@@ -355,9 +355,9 @@ function subsPersonToTable(
 
     //console.log("array_cba_individual-SUB||", array_cba_individual);
 
-    suma_CBA_Personas = 0;
+    cba_family_add = 0;
     for (let i = 0; i < array_cba_individual.length; i++) {
-        suma_CBA_Personas = parseFloat(suma_CBA_Personas) + parseFloat(array_cba_individual[i]);
+        cba_family_add = parseFloat(cba_family_add) + parseFloat(array_cba_individual[i]);
     }
 
     //console.log("index_array_cells_new", index_array_cells_new);
@@ -377,7 +377,7 @@ function subsPersonToTable(
     suma_con_alquiler = 0;
 
     suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
-    suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
+    suma_tabla_indigencia(cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
 
     ingresos_input_in(ingresos);
 
@@ -416,7 +416,7 @@ function suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler) {
         });
 }
 
-function suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler) {
+function suma_tabla_indigencia(cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler) {
     alquiler_in_value = parseInt(document.getElementById("alquiler_in").value);
     //alquiler_out = document.getElementById("alquiler_out");
     if (isNaN(alquiler_in_value)) {
@@ -425,14 +425,16 @@ function suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in
         alquiler_in_value = alquiler_in_value * -1;
     }
 
-    if (!suma_CBA_Personas || !suma_CBT_Personas) {
-        suma_CBA_Personas = 0;
+    if (!cba_family_add || !suma_CBT_Personas) {
+        cba_family_add = 0;
         suma_CBT_Personas = 0;
     }
 
     suma_CT_clase_baja = suma_CBT_Personas * 1.2;
 
-    suma_indigencia_alquilando = alquiler_in_value + Math.round(suma_CBA_Personas);
+    console.log("cba_family_add", cba_family_add);
+
+    suma_indigencia_alquilando = alquiler_in_value + Math.round(cba_family_add);
     suma_pobreza_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas);
     suma_clase_baja_fragil_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas * 1.2);
     suma_clase_baja_alquilando = alquiler_in_value + Math.round(suma_CBT_Personas * 1.5);
@@ -493,7 +495,7 @@ vivienda.addEventListener("input", function () {
         document.getElementById("alquiler_out").textContent = alquiler_in.value;
         document.querySelector(".row_mostrar_alquiler").style.display = "table-row";
         suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
-        suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
+        suma_tabla_indigencia(cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
     } else if (vivienda.value === "AlquilerProm1amb") {
         alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
         alquiler_in.value = `${indices_manuales.alquilerProm1amb}`;
@@ -516,7 +518,7 @@ vivienda.addEventListener("input", function () {
     alquiler_in_value = 0;
     alquiler_in_value = alquiler_in.value;
     suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
-    suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
+    suma_tabla_indigencia(cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
 });
 
 /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -563,30 +565,41 @@ document.getElementById("person-form-submit").addEventListener("click", function
         array_count_person.push(count_person);
 
         // Actualizar la variable con los nuevos valores
-        table_age_gender = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
-        table_age_gender_array.push(table_age_gender);
-        table_age_gender_add = table_age_gender_array.reduce((acc, cur) => acc + cur, 0);
+        coef_age_gender = tabla_equivalentes[`${age}`][`${gender.toLowerCase()}`];
+        coef_age_gender_array.push(coef_age_gender);
+        coef_age_gender_add = coef_age_gender_array.reduce((acc, cur) => acc + cur, 0);
 
-        if (table_age_gender_add === 0) {
-            table_age_gender_array = [];
+        if (coef_age_gender_add === 0) {
+            coef_age_gender_array = [];
         }
 
-        console.log("table_age_gender_add", table_age_gender_add);
-        // console.log("table_age_gender_array", table_age_gender_array);
+        //console.log("coef_age_gender_add", coef_age_gender_add);
+        // console.log("coef_age_gender_array", coef_age_gender_array);
 
         // Emitir un evento personalizado con el valor de ax
         const event = new CustomEvent("axUpdated", {
-            detail: { table_age_gender_add: table_age_gender_add },
+            detail: { coef_age_gender_add: coef_age_gender_add },
         });
         window.dispatchEvent(event); // Disparar el evento
 
-        canasta_basica_alimentaria_ind_indigencia =
+        coef_age_gender_add;
+
+        cba_individual_indigencia = coef_age_gender * cba_equivalente;
+        array_cba_individual.push(cba_individual_indigencia);
+        cba_family_add = 0;
+        cba_family_add = parseFloat(cba_equivalente * coef_age_gender_add);
+
+        /*  for (let i = 0; i < array_cba_individual.length; i++) {
+            cba_family_add = parseFloat(cba_family_add) + parseFloat(array_cba_individual[i]);
+        } */
+
+        /* cba_individual_indigencia =
             tabla_equivalentes[`${age_toStr}`][`${gender_lowercase}`] * cba_equivalente;
-        array_cba_individual.push(canasta_basica_alimentaria_ind_indigencia);
-        suma_CBA_Personas = 0;
+        array_cba_individual.push(cba_individual_indigencia);
+        cba_family_add = 0;
         for (let i = 0; i < array_cba_individual.length; i++) {
-            suma_CBA_Personas = parseFloat(suma_CBA_Personas) + parseFloat(array_cba_individual[i]);
-        }
+            cba_family_add = parseFloat(cba_family_add) + parseFloat(array_cba_individual[i]);
+        } */
 
         canasta_basica_total_ind_pobreza = tabla_equivalentes[`${age_toStr}`][`${gender_lowercase}`] * cbt_equivalente;
         array_cbt_individual.push(canasta_basica_total_ind_pobreza);
@@ -651,13 +664,13 @@ document.getElementById("person-form-submit").addEventListener("click", function
     addPersonToTable(
         gender,
         age_mostrar_table,
-        canasta_basica_alimentaria_ind_indigencia,
+        cba_individual_indigencia,
         canasta_basica_total_ind_pobreza,
         array_count_person,
         count_person
     );
     suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
-    suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
+    suma_tabla_indigencia(cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
     ingresos_input_in(ingresos);
 
     // LOCAL STORAGE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -666,7 +679,7 @@ document.getElementById("person-form-submit").addEventListener("click", function
         age_mostrar_table,
         gender,
         add_partials,
-        suma_CBA_Personas,
+        cba_family_add,
         suma_CBT_Personas,
         alquiler_in_value,
         alquiler_out,
@@ -675,10 +688,10 @@ document.getElementById("person-form-submit").addEventListener("click", function
 
     personas_local_storage.push(local_persona);
     localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
-    return { suma_CBT_Personas, alquiler_in_value, suma_con_alquiler };
+    return { cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler };
     //return local_persona;
 });
-//console.log("table_age_gender", table_age_gender);
+//console.log("coef_age_gender", coef_age_gender);
 
 // Evento keydown prevenir caracteres no numéricos
 alquiler_in.addEventListener("keydown", function (e) {
@@ -727,7 +740,7 @@ function input_alquiler_in() {
         suma_con_alquiler = 0;
         alquiler_in_value = 0;
         suma_Total(suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
-        suma_tabla_indigencia(suma_CBA_Personas, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
+        suma_tabla_indigencia(cba_family_add, suma_CBT_Personas, alquiler_in_value, suma_con_alquiler);
 
         suma_CBT_Personas = suma_CBT_Personas + alquiler_in_value;
         suma_con_alquiler = suma_CBT_Personas;
