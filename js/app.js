@@ -13,14 +13,13 @@ const cbt_alquiler_1amb_unformat = cbt_unformat + indices_manuales.alquilerProm1
 const cbt_alquiler_2amb_unformat = cbt_unformat + indices_manuales.alquilerProm2amb;
 const cbt_alquiler_3amb_unformat = cbt_unformat + indices_manuales.alquilerProm3amb;
 
-// Formatear el número con separador de miles+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Formatear el número con separador de miles+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const cba = cba_unformat.toLocaleString("es-AR", { minimumFractionDigits: 0 });
 const cbt = cbt_unformat.toLocaleString("es-AR", { minimumFractionDigits: 0 });
 const cbt_alquiler_2amb = cbt_alquiler_2amb_unformat.toLocaleString("es-AR", { minimumFractionDigits: 0 });
 const cbt_alquiler_3amb = cbt_alquiler_3amb_unformat.toLocaleString("es-AR", { minimumFractionDigits: 0 });
-//console.log("cba", cba);
 
-// Calculos cba, cbt, cbt_alquiler_2amb, cbt_alquiler_3amb +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Calculos cba, cbt, cbt_alquiler_2amb, cbt_alquiler_3amb ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function calcular_cba() {
     const view_cba = document.querySelector(".view_cba");
     view_cba.innerHTML = `<span class="card_cba_value">  $${cba} </span>`;
@@ -77,6 +76,7 @@ let cb_clase_media_alta_individual;
 let cb_clase_alta_individual;
 let cell_select_id;
 let cells;
+let cb_table_cells_detail;
 let clickedCell_id;
 let count_person = 0;
 let filas;
@@ -93,7 +93,7 @@ let clase_media_add_group = 0;
 let clase_media_alta_add_group = 0;
 let clase_alta_add_group = 0;
 let suma_con_alquiler = 0;
-let suma_indigencia_alquilando = 0;
+let suma_indigencia_alquilando;
 let suma_pobreza_alquilando = 0;
 let clase_baja_add_group_fragil_alquilando = 0;
 let clase_baja_add_group_alquilando = 0;
@@ -101,6 +101,7 @@ let clase_media_fragil_add_group_alquilando = 0;
 let clase_media_add_group_alquilando = 0;
 let clase_media_alta_add_group_alquilando = 0;
 let clase_alta_add_group_baja_alquilando = 0;
+let select_canastas;
 let suma_CT_clase_baja = 0;
 let vivienda;
 let show_indigencia_max = document.querySelector(".show_indigencia_max");
@@ -109,7 +110,6 @@ vivienda = document.getElementById("select_canasta_alquiler");
 document.querySelector(".row_mostrar_alquiler").style.display = "none";
 let coef_age_gender = 0;
 let coef_age_gender_add = 0;
-
 let array_cba_individual = [];
 let array_cbt_individual = [];
 let array_clase_baja = [];
@@ -124,15 +124,6 @@ let table_matrix = [];
 let table_rows = [];
 let coef_age_gender_array = [];
 
-/* export let dataso = {
-    gender,
-    age_mostrar_table,
-    cba_individual_indigencia,
-    cbt_individual_pobreza,
-    array_count_person,
-    count_person,
-}; */
-
 const form = document.getElementById("person-form");
 const tableBody = document.getElementById("person-list");
 let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_storage")) || [];
@@ -140,28 +131,19 @@ let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_sto
 /* Borrar Rows de la tabla ++++++++++++++++++++++++++++++++++++++++++++++ */
 tableBody.addEventListener("click", (event) => {
     filas = tableBody.querySelectorAll("tr");
-
     array_filas = Array.from(filas);
-
     cells = tableBody.querySelectorAll("td");
-
     array_cells = Array.from(cells);
-
     const clickedRow = event.target.closest("tr");
     const clickRow_id = clickedRow.id[7];
-
     const clickedCell = event.target.closest("td");
-
     clickedCell_id = clickedCell.id[7];
 
     if (clickRow_id === clickedCell_id) {
         filas = tableBody.querySelectorAll("tr");
 
         array_filas = Array.from(filas);
-
         coef_age_gender_array.splice([clickRow_id - 1], 1);
-
-        //console.log("coef_age_gender_array|||", coef_age_gender_array);
 
         coef_age_gender_add = coef_age_gender_array.reduce((acc, cur) => acc + cur, 0);
         if (coef_age_gender_add === 0) {
@@ -178,11 +160,8 @@ tableBody.addEventListener("click", (event) => {
         array_filas = Array.from(filas);
         array_cells = Array.from(cells);
         //console.log("array_filasLL", array_filas.length);
-        //console.log("array_cells", array_cells.length);
-        //console.log("table_age_add|A|", coef_age_gender_add);
 
         count_person = array_filas.length;
-        //console.log("count_person", count_person);
 
         for (let i = 0; i < array_filas.length; i++) {
             array_filas[i].id = `person_${i + 1}`;
@@ -208,12 +187,10 @@ tableBody.addEventListener("click", (event) => {
 
 // change select detalles canastas +++++++++++++++++++++++++++++++++
 document.getElementById("detalle_personal").addEventListener("change", function () {
-    let select_canastas = document.getElementById("detalle_personal").value;
+    select_canastas = document.getElementById("detalle_personal").value;
 
     if (select_canastas == "indigencia") {
         // console.log("indigencia");
-        // console.log("array_cba_individual-2", array_cba_individual);
-        // console.log("table_rows", table_rows);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_cba_individual[i];
             let existingRow = tableBody.rows[i];
@@ -225,8 +202,6 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         //console.log("table_rows D-", table_rows);
     } else if (select_canastas == "pobreza") {
         // console.log("pobreza");
-        // console.log("array_cbt_individual", array_cbt_individual);
-
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_cbt_individual[i];
             let existingRow = tableBody.rows[i];
@@ -236,7 +211,6 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         document.getElementById("total-canasta").innerHTML = suma_pobreza_alquilando;
     } else if (select_canastas == "clase_baja") {
         // console.log("clase_baja");
-        // console.log("array_clase_baja", array_clase_baja);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_baja[i];
             let existingRow = tableBody.rows[i];
@@ -246,7 +220,6 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         document.getElementById("total-canasta").innerHTML = clase_baja_add_group_alquilando;
     } else if (select_canastas == "clase_media_fragil") {
         // console.log("clase_media_fragil");
-        // console.log("array_clase_media_fragil", array_clase_media_fragil);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_media_fragil[i];
             let existingRow = tableBody.rows[i];
@@ -256,7 +229,6 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         document.getElementById("total-canasta").innerHTML = clase_media_fragil_add_group_alquilando;
     } else if (select_canastas == "clase_media") {
         // console.log("clase_media");
-        // console.log("array_clase_media", array_clase_media);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_media[i];
             let existingRow = tableBody.rows[i];
@@ -266,7 +238,6 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         document.getElementById("total-canasta").innerHTML = clase_media_add_group_alquilando;
     } else if (select_canastas == "clase_media_alta") {
         // console.log("clase_media_alta");
-        // console.log("array_clase_media_alta", array_clase_media_alta);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_media_alta[i];
             let existingRow = tableBody.rows[i];
@@ -275,8 +246,6 @@ document.getElementById("detalle_personal").addEventListener("change", function 
         }
         document.getElementById("total-canasta").innerHTML = clase_media_alta_add_group_alquilando;
     } else if (select_canastas == "clase_alta") {
-        // console.log("clase_alta");
-        // console.log("array_clase_alta", array_clase_alta);
         for (let i = 0; i < table_rows.length; i++) {
             table_rows[i][2] = array_clase_alta[i];
             let existingRow = tableBody.rows[i];
@@ -294,8 +263,11 @@ function addPersonToTable(
     cba_individual_indigencia,
     cbt_individual_pobreza,
     array_count_person,
-    count_person
+    count_person,
+    suma_indigencia_alquilando
 ) {
+    select_canastas = document.getElementById("detalle_personal").value;
+
     const row = document.createElement("tr");
 
     table_matrix.pop();
@@ -308,23 +280,38 @@ function addPersonToTable(
 
     row.id = `person_${count_person}`;
 
-    let cells = [gender_show, age_mostrar_table, cbt_individual_pobreza];
+    if (select_canastas == "indigencia") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cba_individual_indigencia];
+        console.log("select_canastas", select_canastas);
+    } else if (select_canastas == "pobreza") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cbt_individual_pobreza];
+    } else if (select_canastas == "clase_baja") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_baja_individual];
+    } else if (select_canastas == "clase_media_fragil") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_media_fragil_individual];
+    } else if (select_canastas == "clase_media") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_media_individual];
+    } else if (select_canastas == "clase_media_alta") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_media_alta_individual];
+    } else if (select_canastas == "clase_alta") {
+        cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_alta_individual];
+    }
+    table_rows.push(cb_table_cells_detail);
 
-    table_rows.push(cells);
-
-    row.innerHTML = `<td class="p-1">${table_rows[array_count_person.length - 1][0]}</td><td class="col-1 p-1">${
-        table_rows[array_count_person.length - 1][1]
-    }</td><td id="detalles_monto_person_${count_person}" class="add_Partials p-1">$${table_rows[
-        array_count_person.length - 1
-    ][2].toLocaleString("es-AR", {
-        maximumFractionDigits: 0,
-    })}</td><td class="p-1 detalles_delete" id="person_${count_person}_detalles">
+    row.innerHTML = `<td class="p-1">${table_rows[array_count_person.length - 1][0]}</td>
+    <td class="col-1 p-1">${table_rows[array_count_person.length - 1][1]}</td>
+    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1">$${cb_table_cells_detail[2].toLocaleString(
+        "es-AR",
+        {
+            maximumFractionDigits: 0,
+        }
+    )}</td>
+    <td class="p-1 detalles_delete" id="person_${count_person}_detalles">
     <svg id="testSvg" class="detalles_delete_body" width="20px" height="20px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
         <path d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
     </td>`;
     tableBody.appendChild(row);
-
     return table_rows;
 }
 
@@ -339,13 +326,11 @@ function subsPersonToTable(
     array_cba_individual.splice(index_array_cells_new, 1);
     ingresos = document.getElementById("ingresos_input").value;
     vivienda = document.getElementById("select_canasta_alquiler");
-
     //console.log("array_cba_individual-SUB||", array_cba_individual);
 
     cba_add_group = 0;
     coef_age_gender_add;
     cba_add_group = parseFloat(coef_age_gender_add * cba_equivalente);
-
     //console.log("index_array_cells_new", index_array_cells_new);
 
     table_rows.splice(index_array_cells_new, 1);
@@ -361,7 +346,7 @@ function subsPersonToTable(
     suma_con_alquiler = 0;
 
     suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
-    suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+    add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
 
     ingresos_input_in(ingresos);
 
@@ -380,14 +365,30 @@ suma_con_alquiler = 0;
 function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
     alquiler_in_value = parseInt(document.getElementById("alquiler_in").value);
     alquiler_out = document.getElementById("alquiler_out");
+    select_canastas = document.getElementById("detalle_personal").value;
+
     if (isNaN(alquiler_in_value)) {
         alquiler_in_value = 0;
         alquiler_out.textContent = "0";
     } else if (alquiler_in_value < 0) {
         alquiler_in_value = alquiler_in_value * -1;
     }
-    //suma_con_alquiler = 0;
-    suma_con_alquiler = alquiler_in_value + cbt_add_group;
+
+    if (select_canastas == "indigencia") {
+        suma_con_alquiler = alquiler_in_value + cba_add_group;
+    } else if (select_canastas == "pobreza") {
+        suma_con_alquiler = alquiler_in_value + cbt_add_group;
+    } else if (select_canastas == "clase_baja") {
+        suma_con_alquiler = alquiler_in_value + clase_baja_add_group;
+    } else if (select_canastas == "clase_media_fragil") {
+        suma_con_alquiler = alquiler_in_value + clase_media_fragil_add_group;
+    } else if (select_canastas == "clase_media") {
+        suma_con_alquiler = alquiler_in_value + clase_media_add_group;
+    } else if (select_canastas == "clase_media_alta") {
+        suma_con_alquiler = alquiler_in_value + clase_media_alta_add_group;
+    } else if (select_canastas == "clase_alta") {
+        suma_con_alquiler = alquiler_in_value + clase_alta_add_group;
+    }
 
     if (isNaN(suma_con_alquiler)) {
         suma_con_alquiler = alquiler_in_value;
@@ -400,7 +401,7 @@ function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
         });
 }
 
-function suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler) {
+function add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler) {
     alquiler_in_value = parseInt(document.getElementById("alquiler_in").value);
     //alquiler_out = document.getElementById("alquiler_out");
     if (isNaN(alquiler_in_value)) {
@@ -416,9 +417,8 @@ function suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, 
 
     suma_CT_clase_baja = cbt_add_group * 1.2;
 
-    console.log("cba_add_group", cba_add_group);
-
     suma_indigencia_alquilando = alquiler_in_value + Math.round(cba_add_group);
+
     suma_pobreza_alquilando = alquiler_in_value + Math.round(cbt_add_group);
     clase_baja_add_group_fragil_alquilando = alquiler_in_value + Math.round(cbt_add_group * 1.2);
     clase_baja_add_group_alquilando = alquiler_in_value + Math.round(cbt_add_group * 1.5);
@@ -447,6 +447,7 @@ function suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, 
 
     document.querySelector(".suma_clase_alta_min").textContent = clase_media_alta_add_group_alquilando;
     document.querySelector(".suma_clase_alta_max").textContent = clase_alta_add_group_baja_alquilando;
+    return suma_indigencia_alquilando;
 }
 
 // Agregar un evento al select para cambiar el estado del input
@@ -478,8 +479,9 @@ vivienda.addEventListener("input", function () {
 
         document.getElementById("alquiler_out").textContent = alquiler_in.value;
         document.querySelector(".row_mostrar_alquiler").style.display = "table-row";
+        alquiler_in_value = alquiler_in.value;
         suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
-        suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+        add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
     } else if (vivienda.value === "AlquilerProm1amb") {
         alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
         alquiler_in.value = `${indices_manuales.alquilerProm1amb}`;
@@ -502,7 +504,7 @@ vivienda.addEventListener("input", function () {
     alquiler_in_value = 0;
     alquiler_in_value = alquiler_in.value;
     suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
-    suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+    add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
 });
 
 /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -541,10 +543,8 @@ document.getElementById("person-form-submit").addEventListener("click", function
         }
 
         age_toStr = age.toString();
-
         // Obtener GENDER ++++++++++++++++++++
         gender_lowercase = gender.toLowerCase();
-
         count_person = count_person + 1;
         array_count_person.push(count_person);
 
@@ -605,8 +605,6 @@ document.getElementById("person-form-submit").addEventListener("click", function
             document.querySelector(".icon-svg-reset").style.transform = "translatex(0)";
             document.querySelector(".icon-svg-reset").style.transition = "transform .3s ease-in-out";
             document.querySelector(".icon-svg-reset").style.opacity = "1";
-
-            // Ocultar después de la transición
         }, 300); // Esperar que la transición termine (0.5s)
     }
 
@@ -617,10 +615,11 @@ document.getElementById("person-form-submit").addEventListener("click", function
         cba_individual_indigencia,
         cbt_individual_pobreza,
         array_count_person,
-        count_person
+        count_person,
+        suma_indigencia_alquilando
     );
     suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
-    suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+    add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
     ingresos_input_in(ingresos);
 
     // LOCAL STORAGE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -639,7 +638,6 @@ document.getElementById("person-form-submit").addEventListener("click", function
     personas_local_storage.push(local_persona);
     localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
     return { cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler };
-    //return local_persona;
 });
 
 // Evento keydown prevenir caracteres no numéricos
@@ -689,7 +687,7 @@ function input_alquiler_in() {
         suma_con_alquiler = 0;
         alquiler_in_value = 0;
         suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
-        suma_tabla_indigencia(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+        add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
 
         cbt_add_group = cbt_add_group + alquiler_in_value;
         suma_con_alquiler = cbt_add_group;
@@ -853,10 +851,7 @@ document.addEventListener("click", function (e) {
         e.preventDefault();
         const targetId = e.target.getAttribute("href");
         const targetElement = document.querySelector(targetId);
-        objetivo;
-
         const offcanvas = e.target.closest(".offcanvas");
-
         const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
         offcanvasInstance.hide();
 

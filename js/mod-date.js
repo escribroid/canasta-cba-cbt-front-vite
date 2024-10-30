@@ -1,13 +1,12 @@
 export const yearGet = new Date().getFullYear();
+
 let monthGet = new Date().getMonth() + 1;
 let coef_age_gender_add = 1;
-
 let selectedYear;
 let selectedMonth;
 let array_years = [];
 let canasta_year_select = document.getElementById("canasta_date_year");
 let canasta_month_select = document.getElementById("canasta_date_month");
-
 let cba_Old = null;
 let cbt_Old = null;
 let cba_Top;
@@ -16,7 +15,6 @@ let canasta_compare_cba = document.querySelector(".canasta_compare_cba");
 let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let dataJsonFront = [];
-
 let alquiler_past;
 let alquiler_past_value;
 let suma_CBA_Personas_past;
@@ -51,20 +49,16 @@ async function fetchDataFromAPI() {
     }
 }
 
-// Función que usa fetchDataFromAPI para obtener los datos y actualizar la UI
+// Función usa fetchDataFromAPI para obtener datos, actualiza UI
 async function fetchDataAndUpdateUI() {
     try {
         const data = await fetchDataFromAPI(); // Llamamos a la función centralizada
-
-        // Guardar el data en dataJsonFront
         dataJsonFront = data;
-
         cba_top_process();
     } catch (error) {
-        console.error("Error al actualizar la UI:", error); // Manejo de errores al actualizar la UI
+        console.error("Error al actualizar la UI:", error);
     }
 }
-
 // Llamamos a la función que actualiza la UI
 fetchDataAndUpdateUI();
 
@@ -74,7 +68,6 @@ function cba_top_process() {
         cba_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cba * 3.09);
         const cba_top_short = document.querySelector(".indices_short_cba");
         cba_top_short.innerHTML = `$${cba_Top}`;
-
         cbt_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cbt * 3.09);
         const cbt_top_short = document.querySelector(".indices_short_cbt");
         cbt_top_short.innerHTML = `$${cbt_Top}`;
@@ -95,13 +88,11 @@ window.addEventListener("axUpdated", function (event) {
     let str_years = array_years.join("");
     canasta_year_select.innerHTML = `
 <option class="canasta_date_option" value="year" selected disabled>Año</option> + ${str_years}`;
-
     //console.log("año seleccionado:", selectedYear);
 
     let monthSelected = false;
     let yearSelected = false;
-
-    // Función para verificar si ambos selectores han disparado su evento
+    // Función verificar si ambos select han disparado su evento
     function checkBothSelected() {
         if (monthSelected && yearSelected) {
             document.querySelector(".table-all-canastas-past").style.display = "block";
@@ -127,7 +118,6 @@ window.addEventListener("axUpdated", function (event) {
 
             if (parseInt(selectedMonth) > monthGet) {
                 if (parseInt(selectedYear) == yearGet) {
-                    //console.log("No existe aun");
                 }
             }
 
@@ -152,7 +142,6 @@ window.addEventListener("axUpdated", function (event) {
                 callCba(selectedMonth, cba_Old);
             }
         });
-        //get_table_past(coef_age_gender_add);
 
         canasta_year_select.addEventListener("change", function () {
             selectedYear = canasta_year_select.value;
@@ -178,8 +167,6 @@ window.addEventListener("axUpdated", function (event) {
                 canasta_month_select.value = "4";
                 selectedMonth = canasta_month_select.value;
                 canasta_compare_cba.innerHTML = `${selectedMonth}`;
-
-                //console.log("Mes seleccionado:", selectedMonth);
             } else {
                 document.querySelector(".canasta_month_option[value='1']").removeAttribute("disabled");
                 document.querySelector(".canasta_month_option[value='2']").removeAttribute("disabled");
@@ -188,7 +175,6 @@ window.addEventListener("axUpdated", function (event) {
 
             // if año actual, deshabilita los meses que no existen
             if (selectedYear == yearGet) {
-                //console.log("Año seleccionado es el actual", selectedMonth);
                 if (parseInt(selectedMonth) >= monthGet) {
                     let month_actual = (monthGet - 2).toString();
                     selectedMonth = canasta_month_select.value;
