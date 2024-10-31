@@ -15,5 +15,8 @@
     "dependencies": {
         "canastas-cba-cbt-vite": "file:",
         "vite": "^5.4.8"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.14"
     }
 }
