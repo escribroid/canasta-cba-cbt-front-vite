@@ -98,17 +98,21 @@ function checkBothSelected() {
     }
 }
 
+// Mostrar el tooltip al hacer clic o tocar el overlay
 cardCompareBodyDisabled.addEventListener("click", (event) => {
-    event.stopPropagation(); // Evita que el clic se propague al documento
+    event.stopPropagation();
+    tooltip.hide(); // Asegura que no haya un tooltip activo
     tooltip.show();
-    // Ocultar el tooltip después de 2 segundos (opcional)
-    // setTimeout(() => {
-    //     tooltip.hide();
-    // }, 3000);
+});
+
+cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
+    event.stopPropagation();
+    tooltip.hide(); // Asegura que no haya un tooltip activo en móviles
+    tooltip.show();
 });
 
 // Ocultar tooltip al hacer clic fuera del overlay
-document.addEventListener('click', (event) => {
+document.addEventListener("click", (event) => {
     if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
         tooltip.hide();
     }
