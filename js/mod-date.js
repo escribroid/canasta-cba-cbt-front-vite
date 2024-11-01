@@ -16,7 +16,7 @@ let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let cardCompareBody = document.getElementById("card-compare-body");
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled);
+const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, { trigger: "manual" });
 
 let dataJsonFront = [];
 let alquiler_past;
