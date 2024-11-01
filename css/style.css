@@ -232,6 +232,7 @@ header {
 
 .canasta_month_option:enabled,
 .canasta_date_year:enabled {
+    /* display: block; */
     background-color: #331c16;
     border-color: #ff550066;
 }
@@ -300,11 +301,7 @@ header {
     border: 0;
 }
 
-.card_main_compare {
-    margin-bottom: 1.5rem;
-    width: 100%;
-    border: 0;
-}
+
 
 .card_titulo_canastas_generic {
     outline: 0.0625rem solid #aa3366;
@@ -462,9 +459,33 @@ header {
     z-index: 1;
 }
 
-.card-compare-table-body {
-    display: none;
+.card_main_compare {
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
+
+.card-compare-table-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   
+}
+.card-compare-disabled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    pointer-events: all;
+    z-index: 1;
+}
+
 .card-compare-header {
     border-radius: 1rem;
 }
@@ -695,13 +716,14 @@ header {
     font-style: italic;
     color: #f2f4f7;
     text-shadow: var(--spacing-2_0-125) var(--spacing-2_0-125) var(--spacing-5_0-3125) rgba(0, 0, 0, 0.5);
+    align-items: center;
 }
 
 .logo-img {
     margin-right: var(--spacing-8_0-5);
-    width: var(--spacing-40_2-5);
-    height: var(--spacing-40_2-5);
-    filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%);
+    width: 2.5rem;
+    height: 2.5rem;
+    /* filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%); */
 }
 
 .mayor_menor {
