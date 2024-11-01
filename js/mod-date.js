@@ -16,7 +16,11 @@ let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let cardCompareBody = document.getElementById("card-compare-body");
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, { trigger: "manual" });
+const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+    trigger: "manual",
+    container: cardCompareBodyDisabled,
+    placement: "top",
+});
 
 let dataJsonFront = [];
 let alquiler_past;
@@ -99,26 +103,42 @@ function checkBothSelected() {
 }
 
 // Mostrar el tooltip al hacer clic o tocar el overlay
+// cardCompareBodyDisabled.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     tooltip.show();
+//     // if (tooltip.hide()) {
+//     //     tooltip.show();
+
+//     // }
+//     // if(tooltip._isShown()) {
+//     //     tooltip.hide();
+//     // }
+// });
+
+// // Ocultar tooltip al hacer clic fuera del overlay
+// document.addEventListener("click", (event) => {
+//     if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
+//         tooltip.hide();
+//     }
+// });
+
+// Función para alternar el estado del tooltip
+function toggleTooltip() {
+    if (tooltip._isShown()) {
+        tooltip.hide();
+    } else {
+        tooltip.show();
+    }
+}
+
+// Mostrar/ocultar el tooltip al hacer clic en el overlay
 cardCompareBodyDisabled.addEventListener("click", (event) => {
     event.stopPropagation();
-    tooltip.hide(); // Asegura que no haya un tooltip activo
-    tooltip.show();
+    toggleTooltip();
 });
 
-cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
-    event.stopPropagation();
-    tooltip.hide(); // Asegura que no haya un tooltip activo en móviles
-    tooltip.show();
-});
-
-// Ocultar tooltip al hacer clic fuera del overlay
+// Ocultar el tooltip al hacer clic fuera del overlay
 document.addEventListener("click", (event) => {
-    if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
-        tooltip.hide();
-    }
-});
-
-document.addEventListener("touchstart", (event) => {
     if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
         tooltip.hide();
     }
