@@ -118,6 +118,12 @@ document.addEventListener("click", (event) => {
     }
 });
 
+document.addEventListener("touchstart", (event) => {
+    if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
+        tooltip.hide();
+    }
+});
+
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
     coef_age_gender_add = event.detail.coef_age_gender_add;
