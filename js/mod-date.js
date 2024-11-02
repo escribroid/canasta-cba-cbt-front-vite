@@ -17,9 +17,9 @@ let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let cardCompareBody = document.getElementById("card-compare-body");
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
 const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
-    trigger: 'manual',
+    trigger: "manual",
     container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
-    placement: 'top'    // Cambia la posición según sea necesario
+    placement: "top", // Cambia la posición según sea necesario
 });
 
 let dataJsonFront = [];
@@ -150,59 +150,48 @@ function checkBothSelected() {
 
 let tooltipVisible = false;
 
-    // Función para mostrar/ocultar el tooltip según el dispositivo
-    function initializeTooltip() {
-        // Detectar si el dispositivo es táctil
-        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+// Función para mostrar/ocultar el tooltip según el dispositivo
+function initializeTooltip() {
+    // Detectar si el dispositivo es táctil
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-        if (isTouchDevice) {
-            // En móviles, mostrar/ocultar el tooltip con click
-            cardCompareBodyDisabled.addEventListener('click', (event) => {
-                event.stopPropagation();
-                if (tooltipVisible) {
-                    tooltip.hide();
-                } else {
-                    tooltip.show();
-                }
-                tooltipVisible = !tooltipVisible;
-            });
-        } else {
-            // En PC, mostrar el tooltip con hover y ocultar al hacer clic fuera
-            cardCompareBodyDisabled.addEventListener('mouseenter', () => {
-                if (!tooltipVisible) {
-                    tooltip.show();
-                    tooltipVisible = true;
-                }
-            });
-            cardCompareBodyDisabled.addEventListener('mouseleave', () => {
-                if (tooltipVisible) {
-                    tooltip.hide();
-                    tooltipVisible = false;
-                }
-            });
-        }
+    if (isTouchDevice) {
+        // En móviles, mostrar/ocultar el tooltip con click
+        cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
+            event.stopPropagation();
+            if (tooltipVisible) {
+                tooltip.hide();
+            } else {
+                tooltip.show();
+            }
+            tooltipVisible = !tooltipVisible;
+        });
+    } else {
+        // En PC, mostrar el tooltip con hover y ocultar al hacer clic fuera
+        cardCompareBodyDisabled.addEventListener("mouseenter", () => {
+            if (!tooltipVisible) {
+                tooltip.show();
+                tooltipVisible = true;
+            }
+        });
+        cardCompareBodyDisabled.addEventListener("mouseleave", () => {
+            if (tooltipVisible) {
+                tooltip.hide();
+                tooltipVisible = false;
+            }
+        });
     }
+}
 
-    initializeTooltip();
+initializeTooltip();
 
-    // Cerrar el tooltip al hacer clic fuera en dispositivos de escritorio
-    document.addEventListener('click', (event) => {
-        if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
-            tooltip.hide();
-            tooltipVisible = false;
-        }
-    });
-
-
-
-
-
-
-
-
-
-
-
+// Cerrar el tooltip al hacer clic fuera en dispositivos de escritorio
+document.addEventListener("click", (event) => {
+    if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
+        tooltip.hide();
+        tooltipVisible = false;
+    }
+});
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
