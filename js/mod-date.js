@@ -112,12 +112,12 @@ cardCompareBodyDisabled.addEventListener("click", function (event) {
 });
 
 cardCompareBodyDisabled.addEventListener("touchstart", function (event) {
-    event.stopPropagation(); // Evita que el clic se propague al documento
+    //event.stopPropagation(); // Evita que el clic se propague al documento
     tooltip.hide();
     // Ocultar el tooltip después de 2 segundos (opcional)
-    setTimeout(() => {
-        tooltip.hide();
-    }, 3000);
+    // setTimeout(() => {
+    //     tooltip.hide();
+    // }, 3000);
 });
 
 // Escuchar el evento personalizado emitido desde a.js
