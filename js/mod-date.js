@@ -122,12 +122,15 @@ function checkBothSelected() {
 //     }
 // });
 
+let tooltipVisible = false; // Variable para controlar la visibilidad del tooltip
 // Función para alternar el estado del tooltip
 function toggleTooltip() {
     if (tooltip._isShown()) {
         tooltip.hide();
+        tooltipVisible = false;
     } else {
         tooltip.show();
+        tooltipVisible = true;
     }
 }
 
@@ -146,12 +149,14 @@ cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
 document.addEventListener("click", (event) => {
     if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
         tooltip.hide();
+        tooltipVisible = false;
     }
 });
 
 document.addEventListener("touchstart", (event) => {
     if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
         tooltip.hide();
+        tooltipVisible = false;
     }
 });
 
