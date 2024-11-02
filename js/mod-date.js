@@ -137,8 +137,19 @@ cardCompareBodyDisabled.addEventListener("click", (event) => {
     toggleTooltip();
 });
 
+cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
+    event.stopPropagation();
+    toggleTooltip();
+});
+
 // Ocultar el tooltip al hacer clic fuera del overlay
 document.addEventListener("click", (event) => {
+    if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
+        tooltip.hide();
+    }
+});
+
+document.addEventListener("touchstart", (event) => {
     if (!cardCompareBodyDisabled.contains(event.target) && tooltip._isShown()) {
         tooltip.hide();
     }
