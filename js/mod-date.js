@@ -107,6 +107,15 @@ cardCompareBodyDisabled.addEventListener("click", function (event) {
     }, 3000);
 });
 
+cardCompareBodyDisabled.addEventListener("touchstart", function (event) {
+    event.stopPropagation(); // Evita que el clic se propague al documento
+    tooltip.show();
+    // Ocultar el tooltip después de 2 segundos (opcional)
+    setTimeout(() => {
+        tooltip.hide();
+    }, 3000);
+});
+
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
     coef_age_gender_add = event.detail.coef_age_gender_add;
