@@ -150,21 +150,33 @@ function checkBothSelected() {
 
 let tooltipVisible = false;
 
+let touchTimeout = null;
+
 // Función para mostrar/ocultar el tooltip según el dispositivo
 function initializeTooltip() {
     // Detectar si el dispositivo es táctil
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
-        // En móviles, mostrar/ocultar el tooltip con click
+        // En móviles, mostrar/ocultar el tooltip con touchstart y prevenir clics adicionales
         cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
             event.stopPropagation();
-            if (tooltipVisible) {
-                tooltip.hide();
-            } else {
-                tooltip.show();
+            event.preventDefault(); // Evita el clic posterior a touchstart
+
+            // Usar temporizador para evitar duplicados
+            if (!touchTimeout) {
+                if (tooltipVisible) {
+                    tooltip.hide();
+                } else {
+                    tooltip.show();
+                }
+                tooltipVisible = !tooltipVisible;
+
+                // Establecer temporizador para evitar activaciones repetidas
+                touchTimeout = setTimeout(() => {
+                    touchTimeout = null;
+                }, 300);
             }
-            tooltipVisible = !tooltipVisible;
         });
     } else {
         // En PC, mostrar el tooltip con hover y ocultar al hacer clic fuera
