@@ -16,7 +16,11 @@ let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let cardCompareBody = document.getElementById("card-compare-body");
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled);
+const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+    trigger: 'manual',
+    container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
+    placement: 'top'    // Cambia la posición según sea necesario
+});
 
 let dataJsonFront = [];
 let alquiler_past;
@@ -109,7 +113,7 @@ cardCompareBodyDisabled.addEventListener("click", function (event) {
 
 cardCompareBodyDisabled.addEventListener("touchstart", function (event) {
     event.stopPropagation(); // Evita que el clic se propague al documento
-    tooltip.show();
+    tooltip.hide();
     // Ocultar el tooltip después de 2 segundos (opcional)
     setTimeout(() => {
         tooltip.hide();
