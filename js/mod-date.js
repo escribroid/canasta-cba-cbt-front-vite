@@ -137,6 +137,13 @@ cardCompareBodyDisabled.addEventListener('mouseenter', () => {
     }
 });
 
+cardCompareBodyDisabled.addEventListener('touchstart', () => {
+    if (!popoverVisible) {
+        popover.show();
+        popoverVisible = true;
+    }
+});
+
 // Alternar la visibilidad del popover
 function togglePopover() {
     if (popoverVisible) {
