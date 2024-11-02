@@ -129,6 +129,14 @@ const popover = new bootstrap.Popover(cardCompareBodyDisabled, {
 
 let popoverVisible = false;
 
+// Función para mostrar el popover con hover
+cardCompareBodyDisabled.addEventListener('mouseenter', () => {
+    if (!popoverVisible) {
+        popover.show();
+        popoverVisible = true;
+    }
+});
+
 // Alternar la visibilidad del popover
 function togglePopover() {
     if (popoverVisible) {
