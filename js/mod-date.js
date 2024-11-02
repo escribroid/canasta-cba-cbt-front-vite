@@ -16,11 +16,11 @@ let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let cardCompareBody = document.getElementById("card-compare-body");
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-// const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
-//     trigger: 'manual',
-//     container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
-//     placement: 'top'    // Cambia la posición según sea necesario
-// });
+const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+    trigger: 'manual',
+    container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
+    placement: 'top'    // Cambia la posición según sea necesario
+});
 
 let dataJsonFront = [];
 let alquiler_past;
@@ -120,63 +120,85 @@ function checkBothSelected() {
 //     // }, 3000);
 // });
 
-const popover = new bootstrap.Popover(cardCompareBodyDisabled, {
-    trigger: 'manual',
-    html: true,
-    container: cardCompareBodyDisabled, // Mostrar el popover dentro del overlay
-    placement: 'top'
-});
+// const popover = new bootstrap.Popover(cardCompareBodyDisabled, {
+//     trigger: 'manual',
+//     html: true,
+//     container: cardCompareBodyDisabled, // Mostrar el popover dentro del overlay
+//     placement: 'top'
+// });
 
-let popoverVisible = false;
+// let popoverVisible = false;
 
-// Función para mostrar el popover con hover
-cardCompareBodyDisabled.addEventListener('mouseenter', () => {
-    if (!popoverVisible) {
-        popover.show();
-        popoverVisible = true;
+// // Mostrar/ocultar el popover al hacer clic en el overlay
+// cardCompareBodyDisabled.addEventListener('click', (event) => {
+//     event.stopPropagation();
+//     if (popoverVisible) {
+//         popover.hide();
+//     } else {
+//         popover.show();
+//     }
+//     popoverVisible = !popoverVisible;
+// });
+
+// // Ocultar el popover al hacer clic fuera del overlay
+// document.addEventListener('click', (event) => {
+//     if (popoverVisible && !cardCompareBodyDisabled.contains(event.target)) {
+//         popover.hide();
+//         popoverVisible = false;
+//     }
+// });
+
+let tooltipVisible = false;
+
+    // Función para mostrar/ocultar el tooltip según el dispositivo
+    function initializeTooltip() {
+        // Detectar si el dispositivo es táctil
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        if (isTouchDevice) {
+            // En móviles, mostrar/ocultar el tooltip con click
+            cardCompareBodyDisabled.addEventListener('click', (event) => {
+                event.stopPropagation();
+                if (tooltipVisible) {
+                    tooltip.hide();
+                } else {
+                    tooltip.show();
+                }
+                tooltipVisible = !tooltipVisible;
+            });
+        } else {
+            // En PC, mostrar el tooltip con hover y ocultar al hacer clic fuera
+            cardCompareBodyDisabled.addEventListener('mouseenter', () => {
+                if (!tooltipVisible) {
+                    tooltip.show();
+                    tooltipVisible = true;
+                }
+            });
+            cardCompareBodyDisabled.addEventListener('mouseleave', () => {
+                if (tooltipVisible) {
+                    tooltip.hide();
+                    tooltipVisible = false;
+                }
+            });
+        }
     }
-});
 
-cardCompareBodyDisabled.addEventListener('touchstart', () => {
-    if (!popoverVisible) {
-        popover.show();
-        popoverVisible = true;
-    }
-});
+    initializeTooltip();
 
-// Alternar la visibilidad del popover
-function togglePopover() {
-    if (popoverVisible) {
-        popover.hide();
-        popoverVisible = false;
-    } else {
-        popover.show();
-        popoverVisible = true;
-    }
-}
+    // Cerrar el tooltip al hacer clic fuera en dispositivos de escritorio
+    document.addEventListener('click', (event) => {
+        if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
+            tooltip.hide();
+            tooltipVisible = false;
+        }
+    });
 
-// Mostrar el popover al hacer clic en el overlay
-cardCompareBodyDisabled.addEventListener('click', (event) => {
-    event.stopPropagation();
-    togglePopover();
-});
 
-// Ocultar el popover al hacer clic fuera del overlay
-document.addEventListener('click', (event) => {
-    if (!cardCompareBodyDisabled.contains(event.target) && popoverVisible) {
-        popover.hide();
-        popoverVisible = false;
-    }
-});
 
-// Escuchar el evento de clic en el botón de cierre del popover
-document.addEventListener('click', (event) => {
-    const closeButton = document.getElementById('closePopoverButton');
-    if (closeButton && event.target === closeButton) {
-        popover.hide();
-        popoverVisible = false;
-    }
-});
+
+
+
+
 
 
 

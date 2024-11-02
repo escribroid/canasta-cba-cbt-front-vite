@@ -14,6 +14,5 @@ const tooltipList = [...tooltipTriggerList].map(
         new bootstrap.Tooltip(tooltipTriggerEl, {
             placement: "auto",
             offset: [-75, 10],
-            container: "body"
         })
 );
