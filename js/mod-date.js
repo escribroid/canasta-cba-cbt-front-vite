@@ -97,13 +97,7 @@ function checkBothSelected() {
 }
 
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-const linkAddFamily = document.getElementById('canasta_txt_familia');
-
-/* const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
-    trigger: "manual",
-    container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
-    placement: "top", // Cambia la posición según sea necesario
-}); */
+const linkAddFamily = document.getElementById("canasta_txt_familia");
 
 // Tooltip para dispositivos táctiles (usando touchstart)
 const tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
@@ -129,42 +123,27 @@ function initializeTooltip() {
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
-        // Manejar el evento touchstart
+        // Manejar el evento touchstart en el overlay
         cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
-            touchStartTime = Date.now();
+            // Si el tooltip no está visible, mostrarlo
+            if (!tooltipVisible) {
+                tooltipTouch.show();
+                tooltipVisible = true;
+                event.preventDefault(); // Evitar la navegación inmediata
+            }
         });
 
-        // Manejar el evento touchend
-        cardCompareBodyDisabled.addEventListener("touchend", (event) => {
-            const touchDuration = Date.now() - touchStartTime;
-
-            // Si el toque fue breve (menor a 300 ms), activar el tooltip
-            if (touchDuration < 250) {
-                // event.stopPropagation();
-                // event.preventDefault();
-                // if (tooltipVisible) {
-                //     tooltipTouch.hide();
-                // } else {
-                //     tooltipTouch.show();
-                // }
-                if (!tooltipVisible) {
-                    tooltipTouch.show();
-                    tooltipVisible = true;
-                } else {
-                    window.location.href = link.href;
-                }
-                event.stopPropagation();
-                event.preventDefault(); // Evitar la navegación inmediata
-                tooltipVisible = !tooltipVisible;
-            }
-            touchStartTime = 0;
+        // Detectar toques en el enlace dentro del tooltip
+        linkAddFamily.addEventListener("touchstart", (event) => {
+            // Permitir la navegación tocando el enlace sin ocultar el tooltip
+            event.stopPropagation();
         });
     }
 }
 
 initializeTooltip();
 
-// Cerrar ambos tooltips al hacer clic fuera
+// Cerrar el tooltip al hacer clic fuera
 document.addEventListener("click", (event) => {
     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
         tooltipTouch.hide();
