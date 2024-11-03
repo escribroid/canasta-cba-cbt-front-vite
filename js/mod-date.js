@@ -138,6 +138,7 @@ function initializeTooltip() {
                     tooltipTouch.show();
                     tooltipVisible = true;
                     event.preventDefault(); // Evitar la navegación inmediata
+                    event.stopPropagation(); // Evitar propagar el evento al body
                 }
             }
 
