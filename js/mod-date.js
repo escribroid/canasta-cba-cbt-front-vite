@@ -118,27 +118,33 @@ const tooltipHover = new bootstrap.Tooltip(cardCompareBodyDisabled, {
 });
 
 let tooltipVisible = false;
+let touchStartTime = 0;
 
 // Configurar el tooltip táctil solo en dispositivos táctiles
 function initializeTooltip() {
-    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
-        tooltipHover.hide();
+        // Manejar el evento touchstart
+        cardCompareBodyDisabled.addEventListener('touchstart', (event) => {
+            touchStartTime = Date.now();
+        });
 
-        cardCompareBodyDisabled.addEventListener("click", (event) => {
-            tooltipHover.hide();
+        // Manejar el evento touchend
+        cardCompareBodyDisabled.addEventListener('touchend', (event) => {
+            const touchDuration = Date.now() - touchStartTime;
 
-            event.stopPropagation();
-            event.preventDefault(); // Evita el clic posterior
-            tooltipHover.hide();
-
-            if (tooltipVisible) {
-                tooltipTouch.hide();
-            } else {
-                tooltipTouch.show();
+            // Si el toque fue breve (menor a 300 ms), activar el tooltip
+            if (touchDuration < 300) {
+                event.stopPropagation();
+                if (tooltipVisible) {
+                    tooltipTouch.hide();
+                } else {
+                    tooltipTouch.show();
+                }
+                tooltipVisible = !tooltipVisible;
             }
-            tooltipVisible = !tooltipVisible;
+            touchStartTime = 0;
         });
     }
 }
@@ -146,13 +152,17 @@ function initializeTooltip() {
 initializeTooltip();
 
 // Cerrar ambos tooltips al hacer clic fuera
-document.addEventListener("click", (event) => {
+document.addEventListener('click', (event) => {
     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
         tooltipTouch.hide();
         tooltipHover.hide();
         tooltipVisible = false;
     }
 });
+
+
+
+
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
