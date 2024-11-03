@@ -124,7 +124,7 @@ function initializeTooltip() {
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
-        cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
+        cardCompareBodyDisabled.addEventListener("click", (event) => {
             event.stopPropagation();
             event.preventDefault(); // Evita el clic posterior
             if (tooltipVisible) {
