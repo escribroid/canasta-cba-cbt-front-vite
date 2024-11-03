@@ -127,8 +127,12 @@ function initializeTooltip() {
         tooltipHover.hide();
 
         cardCompareBodyDisabled.addEventListener("click", (event) => {
+            tooltipHover.hide();
+
             event.stopPropagation();
             event.preventDefault(); // Evita el clic posterior
+            tooltipHover.hide();
+
             if (tooltipVisible) {
                 tooltipTouch.hide();
             } else {
