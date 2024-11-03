@@ -97,6 +97,8 @@ function checkBothSelected() {
 }
 
 let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
+const linkAddFamily = document.getElementById('canasta_txt_familia');
+
 /* const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
     trigger: "manual",
     container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
@@ -138,13 +140,21 @@ function initializeTooltip() {
 
             // Si el toque fue breve (menor a 300 ms), activar el tooltip
             if (touchDuration < 250) {
-                event.stopPropagation();
-                event.preventDefault();
-                if (tooltipVisible) {
-                    tooltipTouch.hide();
-                } else {
+                // event.stopPropagation();
+                // event.preventDefault();
+                // if (tooltipVisible) {
+                //     tooltipTouch.hide();
+                // } else {
+                //     tooltipTouch.show();
+                // }
+                if (!tooltipVisible) {
                     tooltipTouch.show();
+                    tooltipVisible = true;
+                } else {
+                    window.location.href = link.href;
                 }
+                event.stopPropagation();
+                event.preventDefault(); // Evitar la navegación inmediata
                 tooltipVisible = !tooltipVisible;
             }
             touchStartTime = 0;
