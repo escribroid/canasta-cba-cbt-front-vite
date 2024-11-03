@@ -125,12 +125,23 @@ function initializeTooltip() {
     if (isTouchDevice) {
         // Manejar el evento touchstart en el overlay
         cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
-            // Si el tooltip no está visible, mostrarlo
-            if (!tooltipVisible) {
-                tooltipTouch.show();
-                tooltipVisible = true;
-                event.preventDefault(); // Evitar la navegación inmediata
+            touchStartTime = Date.now();
+        });
+
+        // Manejar el evento touchend en el overlay
+        cardCompareBodyDisabled.addEventListener("touchend", (event) => {
+            const touchDuration = Date.now() - touchStartTime;
+
+            // Si el toque fue breve (menor a 250 ms), activar el tooltip
+            if (touchDuration < 250) {
+                if (!tooltipVisible) {
+                    tooltipTouch.show();
+                    tooltipVisible = true;
+                    event.preventDefault(); // Evitar la navegación inmediata
+                }
             }
+
+            touchStartTime = 0; // Resetear el tiempo de inicio del toque
         });
 
         // Detectar toques en el enlace dentro del tooltip
