@@ -139,6 +139,9 @@ function initializeTooltip() {
                     event.stopPropagation(); // Evitar propagar el evento al body
                     tooltipTouch.show();
                     tooltipVisible = true;
+                } else {
+                    //event.preventDefault(); // Evitar la navegación inmediata
+                    event.stopPropagation(); // Evitar propagar el evento al body
                 }
             }
 
@@ -149,6 +152,7 @@ function initializeTooltip() {
         linkAddFamily.addEventListener("touchstart", (event) => {
             // Permitir la navegación tocando el enlace sin ocultar el tooltip
             event.stopPropagation();
+            event.preventDefault();
         });
     }
 }
