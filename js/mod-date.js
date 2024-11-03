@@ -100,7 +100,7 @@ let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
 const linkAddFamily = document.getElementById("canasta_txt_familia");
 
 // Tooltip para dispositivos táctiles (usando touchstart)
-const tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+let tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
     trigger: "manual",
     placement: "top",
     html: true,
