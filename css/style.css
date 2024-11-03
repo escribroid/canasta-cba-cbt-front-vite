@@ -58,8 +58,12 @@ header {
     font-weight: bold;
     font-family: var(--font-mono);
     background-color: #ff4f0066;
-    width: var(--spacing-28_1-75);
-    height: var(--spacing-28_1-75);
+    width: 40px;
+    
+    height: 40px;
+    
+    /* width: var(--spacing-28_1-75);
+    height: var(--spacing-28_1-75); */
     border-radius: var(--spacing-10_0-625);
     border-radius: 50%;
     border: 0;
