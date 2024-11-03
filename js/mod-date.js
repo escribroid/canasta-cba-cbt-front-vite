@@ -107,6 +107,7 @@ let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
 const tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
     trigger: "manual",
     placement: "top",
+    html: true,
     container: cardCompareBodyDisabled,
 });
 
@@ -114,6 +115,7 @@ const tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
 const tooltipHover = new bootstrap.Tooltip(cardCompareBodyDisabled, {
     trigger: "hover",
     placement: "top",
+    html: true,
     container: cardCompareBodyDisabled,
 });
 
@@ -122,16 +124,16 @@ let touchStartTime = 0;
 
 // Configurar el tooltip táctil solo en dispositivos táctiles
 function initializeTooltip() {
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
         // Manejar el evento touchstart
-        cardCompareBodyDisabled.addEventListener('touchstart', (event) => {
+        cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
             touchStartTime = Date.now();
         });
 
         // Manejar el evento touchend
-        cardCompareBodyDisabled.addEventListener('touchend', (event) => {
+        cardCompareBodyDisabled.addEventListener("touchend", (event) => {
             const touchDuration = Date.now() - touchStartTime;
 
             // Si el toque fue breve (menor a 300 ms), activar el tooltip
@@ -153,17 +155,13 @@ function initializeTooltip() {
 initializeTooltip();
 
 // Cerrar ambos tooltips al hacer clic fuera
-document.addEventListener('click', (event) => {
+document.addEventListener("click", (event) => {
     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
         tooltipTouch.hide();
         tooltipHover.hide();
         tooltipVisible = false;
     }
 });
-
-
-
-
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
