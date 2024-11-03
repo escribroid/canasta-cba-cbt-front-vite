@@ -15,12 +15,6 @@ let canasta_compare_cba = document.querySelector(".canasta_compare_cba");
 let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let cardCompareBody = document.getElementById("card-compare-body");
-let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
-    trigger: "manual",
-    container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
-    placement: "top", // Cambia la posición según sea necesario
-});
 
 let dataJsonFront = [];
 let alquiler_past;
@@ -102,105 +96,54 @@ function checkBothSelected() {
     }
 }
 
-// cardCompareBodyDisabled.addEventListener("click", function (event) {
-//     event.stopPropagation(); // Evita que el clic se propague al documento
-//     tooltip.show();
-//     // Ocultar el tooltip después de 2 segundos (opcional)
-//     setTimeout(() => {
-//         tooltip.hide();
-//     }, 3000);
-// });
+let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
+/* const tooltip = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+    trigger: "manual",
+    container: cardCompareBodyDisabled, // Configura el contenedor dentro del overlay
+    placement: "top", // Cambia la posición según sea necesario
+}); */
 
-// cardCompareBodyDisabled.addEventListener("touchstart", function (event) {
-//     //event.stopPropagation(); // Evita que el clic se propague al documento
-//     tooltip.hide();
-//     // Ocultar el tooltip después de 2 segundos (opcional)
-//     // setTimeout(() => {
-//     //     tooltip.hide();
-//     // }, 3000);
-// });
+// Tooltip para dispositivos táctiles (usando touchstart)
+const tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+    trigger: "manual",
+    placement: "top",
+    container: cardCompareBodyDisabled,
+});
 
-// const popover = new bootstrap.Popover(cardCompareBodyDisabled, {
-//     trigger: 'manual',
-//     html: true,
-//     container: cardCompareBodyDisabled, // Mostrar el popover dentro del overlay
-//     placement: 'top'
-// });
-
-// let popoverVisible = false;
-
-// // Mostrar/ocultar el popover al hacer clic en el overlay
-// cardCompareBodyDisabled.addEventListener('click', (event) => {
-//     event.stopPropagation();
-//     if (popoverVisible) {
-//         popover.hide();
-//     } else {
-//         popover.show();
-//     }
-//     popoverVisible = !popoverVisible;
-// });
-
-// // Ocultar el popover al hacer clic fuera del overlay
-// document.addEventListener('click', (event) => {
-//     if (popoverVisible && !cardCompareBodyDisabled.contains(event.target)) {
-//         popover.hide();
-//         popoverVisible = false;
-//     }
-// });
+// Tooltip para escritorio (usando hover)
+const tooltipHover = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+    trigger: "hover",
+    placement: "top",
+    container: cardCompareBodyDisabled,
+});
 
 let tooltipVisible = false;
 
-let touchTimeout = null;
-
-// Función para mostrar/ocultar el tooltip según el dispositivo
+// Configurar el tooltip táctil solo en dispositivos táctiles
 function initializeTooltip() {
-    // Detectar si el dispositivo es táctil
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
     if (isTouchDevice) {
-        // En móviles, mostrar/ocultar el tooltip con touchstart y prevenir clics adicionales
         cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
             event.stopPropagation();
-            event.preventDefault(); // Evita el clic posterior a touchstart
-
-            // Usar temporizador para evitar duplicados
-            if (!touchTimeout) {
-                if (tooltipVisible) {
-                    tooltip.hide();
-                } else {
-                    tooltip.show();
-                }
-                tooltipVisible = !tooltipVisible;
-
-                // Establecer temporizador para evitar activaciones repetidas
-                touchTimeout = setTimeout(() => {
-                    touchTimeout = null;
-                }, 300);
-            }
-        });
-    } else {
-        // En PC, mostrar el tooltip con hover y ocultar al hacer clic fuera
-        cardCompareBodyDisabled.addEventListener("mouseenter", () => {
-            if (!tooltipVisible) {
-                tooltip.show();
-                tooltipVisible = true;
-            }
-        });
-        cardCompareBodyDisabled.addEventListener("mouseleave", () => {
+            event.preventDefault(); // Evita el clic posterior
             if (tooltipVisible) {
-                tooltip.hide();
-                tooltipVisible = false;
+                tooltipTouch.hide();
+            } else {
+                tooltipTouch.show();
             }
+            tooltipVisible = !tooltipVisible;
         });
     }
 }
 
 initializeTooltip();
 
-// Cerrar el tooltip al hacer clic fuera en dispositivos de escritorio
+// Cerrar ambos tooltips al hacer clic fuera
 document.addEventListener("click", (event) => {
     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
-        tooltip.hide();
+        tooltipTouch.hide();
+        tooltipHover.hide();
         tooltipVisible = false;
     }
 });
