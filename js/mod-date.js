@@ -135,8 +135,9 @@ function initializeTooltip() {
             const touchDuration = Date.now() - touchStartTime;
 
             // Si el toque fue breve (menor a 300 ms), activar el tooltip
-            if (touchDuration < 300) {
+            if (touchDuration < 250) {
                 event.stopPropagation();
+                event.preventDefault();
                 if (tooltipVisible) {
                     tooltipTouch.hide();
                 } else {
