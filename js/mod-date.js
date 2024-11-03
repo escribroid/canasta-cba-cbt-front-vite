@@ -135,10 +135,10 @@ function initializeTooltip() {
             // Si el toque fue breve (menor a 250 ms), activar el tooltip
             if (touchDuration < 250) {
                 if (!tooltipVisible) {
-                    tooltipTouch.show();
-                    tooltipVisible = true;
                     event.preventDefault(); // Evitar la navegación inmediata
                     event.stopPropagation(); // Evitar propagar el evento al body
+                    tooltipTouch.show();
+                    tooltipVisible = true;
                 }
             }
 
