@@ -100,7 +100,7 @@ let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
 const linkAddFamily = document.getElementById("canasta_txt_familia");
 
 // Tooltip para dispositivos táctiles (usando touchstart)
-let tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
+const tooltipTouch = new bootstrap.Tooltip(cardCompareBodyDisabled, {
     trigger: "manual",
     placement: "top",
     html: true,
@@ -118,6 +118,7 @@ const tooltipHover = new bootstrap.Tooltip(cardCompareBodyDisabled, {
 let tooltipVisible = false;
 let touchStartTime = 0;
 
+// Configurar el tooltip táctil solo en dispositivos táctiles
 function initializeTooltip() {
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -131,7 +132,7 @@ function initializeTooltip() {
         cardCompareBodyDisabled.addEventListener("touchend", (event) => {
             const touchDuration = Date.now() - touchStartTime;
 
-            // Si el toque fue breve (menor a 250 ms), alternar el tooltip
+            // Si el toque fue breve (menor a 250 ms), activar el tooltip solo si no está visible
             if (touchDuration < 250) {
                 if (!tooltipVisible) {
                     // Asegurarse de que solo haya un tooltip, destruir si ya existe
@@ -144,11 +145,12 @@ function initializeTooltip() {
                     });
                     tooltipTouch.show();
                     tooltipVisible = true;
+                    event.preventDefault(); // Evitar la navegación inmediata
                 } else {
+                    // Si el tooltip ya está visible, ocultarlo para permitir que se vuelva a mostrar
                     tooltipTouch.hide();
                     tooltipVisible = false;
                 }
-                event.preventDefault(); // Evitar la navegación inmediata
             }
 
             touchStartTime = 0; // Resetear el tiempo de inicio del toque
@@ -168,63 +170,10 @@ initializeTooltip();
 document.addEventListener("click", (event) => {
     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
         tooltipTouch.hide();
+        //tooltipHover.hide();
         tooltipVisible = false;
     }
 });
-
-
-
-
-// // Configurar el tooltip táctil solo en dispositivos táctiles
-// function initializeTooltip() {
-//     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-
-//     if (isTouchDevice) {
-//         // Manejar el evento touchstart en el overlay
-//         cardCompareBodyDisabled.addEventListener("touchstart", (event) => {
-//             touchStartTime = Date.now();
-//         });
-
-//         // Manejar el evento touchend en el overlay
-//         cardCompareBodyDisabled.addEventListener("touchend", (event) => {
-//             const touchDuration = Date.now() - touchStartTime;
-
-//             // Si el toque fue breve (menor a 250 ms), activar el tooltip solo si no está visible
-//             if (touchDuration < 250) {
-//                 if (!tooltipVisible) {
-//                     tooltipTouch.show();
-//                     tooltipVisible = true;
-//                     event.preventDefault(); // Evitar la navegación inmediata
-//                 } else {
-//                     // Si el tooltip ya está visible, ocultarlo para permitir que se vuelva a mostrar
-//                     tooltipTouch.hide();
-//                     tooltipVisible = false;
-//                 }
-//             }
-
-//             touchStartTime = 0; // Resetear el tiempo de inicio del toque
-//         });
-
-//         // Detectar toques en el enlace dentro del tooltip
-//         linkAddFamily.addEventListener("touchstart", (event) => {
-//             // Permitir la navegación tocando el enlace sin ocultar el tooltip
-//             event.stopPropagation();
-//         });
-//     }
-// }
-
-// initializeTooltip();
-
-// // Cerrar el tooltip al hacer clic fuera
-// document.addEventListener("click", (event) => {
-//     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
-//         tooltipTouch.hide();
-//         //tooltipHover.hide();
-//         tooltipVisible = false;
-//     }
-// });
-
-
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
