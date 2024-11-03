@@ -132,16 +132,16 @@ function initializeTooltip() {
         cardCompareBodyDisabled.addEventListener("touchend", (event) => {
             const touchDuration = Date.now() - touchStartTime;
 
-            // Si el toque fue breve (menor a 250 ms), activar el tooltip
+            // Si el toque fue breve (menor a 250 ms), activar el tooltip solo si no está visible
             if (touchDuration < 250) {
                 if (!tooltipVisible) {
-                    event.preventDefault(); // Evitar la navegación inmediata
-                    event.stopPropagation(); // Evitar propagar el evento al body
                     tooltipTouch.show();
                     tooltipVisible = true;
+                    event.preventDefault(); // Evitar la navegación inmediata
                 } else {
-                    //event.preventDefault(); // Evitar la navegación inmediata
-                    event.stopPropagation(); // Evitar propagar el evento al body
+                    // Si el tooltip ya está visible, ocultarlo para permitir que se vuelva a mostrar
+                    tooltipTouch.hide();
+                    tooltipVisible = false;
                 }
             }
 
@@ -152,7 +152,6 @@ function initializeTooltip() {
         linkAddFamily.addEventListener("touchstart", (event) => {
             // Permitir la navegación tocando el enlace sin ocultar el tooltip
             event.stopPropagation();
-            event.preventDefault();
         });
     }
 }
@@ -163,10 +162,12 @@ initializeTooltip();
 document.addEventListener("click", (event) => {
     if (tooltipVisible && !cardCompareBodyDisabled.contains(event.target)) {
         tooltipTouch.hide();
-        tooltipHover.hide();
+        //tooltipHover.hide();
         tooltipVisible = false;
     }
 });
+
+
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
