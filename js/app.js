@@ -846,7 +846,7 @@ document.getElementById("ingresos_input").addEventListener("input", (e) => {
 });
 
 // Cerrar el offcanvas al hacer clic en cualquier enlace dentro de él
-document.addEventListener("click", function (e) {
+/* document.addEventListener("click", function (e) {
     if (e.target.tagName === "A" && e.target.closest(".offcanvas")) {
         e.preventDefault();
         const targetId = e.target.getAttribute("href");
@@ -859,7 +859,7 @@ document.addEventListener("click", function (e) {
             targetElement.scrollIntoView({ behavior: "smooth" });
         }, 200);
     }
-});
+}); */
 
 document.getElementById("nav-link-cbt").addEventListener("click", () => {
     document.querySelector(".card-solapada-3").style.boxShadow = "0px 0px 6px 4px #ff3366";

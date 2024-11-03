@@ -31,7 +31,7 @@
     </head>
     <!-- BODY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-    <body class="">
+    <body class="block mx-auto my-auto">
         <!-- <div class="shadow-top"></div> -->
         <div class="indices_short_container">
             <div class="indices_top">
@@ -47,8 +47,8 @@
             </div>
         </div>
         <!-- HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <header class="bg-black rounded-4">
-            <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <!-- <header class="bg-black rounded-4">
+            NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
             <nav class="navbar navbar-dark rounded-4 w-100 bg-black">
                 <div class="container-fluid">
                     <a class="navbar-brand logo" href="./index.html"
@@ -110,16 +110,106 @@
                                     <a class="nav-link" href="#">Contacto</a>
                                 </li>
                                 <li class="nav-item">
-                                    <!-- <p class="info_site">Sitio hecho con ... una Pc</p>
+                                    <p class="info_site">Sitio hecho con ... una Pc</p>
                                     <p class="info_site">Sitio hecho por ... chatGPT</p>
-                                    <p class="info_site">y con muy poco ♥</p> -->
+                                    <p class="info_site">y con muy poco ♥</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
+        </header> -->
+        <header class="bg-black rounded-4 relative">
+            <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <nav class="flex items-center justify-between p-4 bg-black relative">
+                <a class="navbar-brand logo text-white" href="./index.html">
+                    <img class="logo-img" src="img/iso_logo_canastas-ff5500.svg" alt="" />CANASTAS
+                </a>
+                <button
+                    id="offcanvasToggle"
+                    class="text-white focus:outline-none"
+                    aria-label="Toggle navigation"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </nav>
+        
+            <!-- Offcanvas -->
+            <div
+                id="offcanvas"
+                class="absolute right-0 top-0 w-64 h-full bg-gray-800 text-white hidden transform translate-x-full transition-transform z-50" 
+                aria-labelledby="offcanvasLabel"
+                
+            >
+                <div class="flex justify-between p-4 border-b border-gray-600 bg-gray-800"> <!-- Añadido bg para consistencia -->
+                    <h3 id="offcanvasLabel" class="text-lg font-semibold">Menú</h3>
+                    <button
+                        id="offcanvasClose"
+                        class="text-white focus:outline-none"
+                        aria-label="Close"
+                    >
+                        &times; <!-- Icono de cerrar -->
+                    </button>
+                </div>
+                <div class="p-4 bg-gray-800"> <!-- Añadido bg para consistencia -->
+                    <ul class="space-y-2">
+                        <li><a class="block p-2 hover:bg-gray-700 rounded" href="#canasta_custom">Canasta personalizada</a></li>
+                        <li>
+                            <a class="block p-2 hover:bg-gray-700 rounded" href="#">Canasta básica total + alquiler</a>
+                            <ul class="ml-4 space-y-2 mt-2">
+                                <li><a class="block p-2 hover:bg-gray-700 rounded" href="#">Action</a></li>
+                                <li><a class="block p-2 hover:bg-gray-700 rounded" href="#">Another action</a></li>
+                                <li><hr class="border-gray-600" /></li>
+                                <li><a class="block p-2 hover:bg-gray-700 rounded" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="block p-2 hover:bg-gray-700 rounded" href="#canasta_cbt">Canasta básica total</a></li>
+                        <li><a class="block p-2 hover:bg-gray-700 rounded" href="#">Contacto</a></li>
+                    </ul>
+                    <div class="mt-4">
+                        <p class="info_site">Sitio hecho con ... una PC</p>
+                        <p class="info_site">Sitio hecho por ... chatGPT</p>
+                        <p class="info_site">y con muy poco ♥</p>
+                    </div>
+                </div>
+            </div>
         </header>
+        
+        
+        
+       <!--  <script>
+            // JavaScript para controlar el offcanvas
+            const offcanvasToggle = document.getElementById('offcanvasToggle');
+            const offcanvas = document.getElementById('offcanvas');
+            const offcanvasClose = document.getElementById('offcanvasClose');
+        
+            offcanvasToggle.addEventListener('click', () => {
+                offcanvas.classList.toggle('hidden');
+                offcanvas.classList.toggle('block');
+                offcanvas.classList.toggle('translate-x-full');
+            });
+        
+            offcanvasClose.addEventListener('click', () => {
+                offcanvas.classList.add('hidden');
+                offcanvas.classList.remove('block');
+                offcanvas.classList.add('translate-x-full');
+            });
+        
+            // Cerrar el offcanvas al hacer clic fuera del menú
+            offcanvas.addEventListener('click', (e) => {
+                if (e.target === offcanvas) {
+                    offcanvas.classList.add('hidden');
+                    offcanvas.classList.remove('block');
+                    offcanvas.classList.add('translate-x-full');
+                }
+            });
+        </script> -->
+        
+         
+        
 
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main id="canasta_custom">
@@ -761,7 +851,7 @@
                     class="absolute top-0 left-12 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 bg-gray-800 text-white text-sm rounded-lg px-4 py-2 shadow-lg transition-all duration-300 pointer-events-auto"
                 >
                     Aquí va el contenido del tooltip con un
-                    <a href="#canasta_txt_famili" class="underline text-blue-400">enlace</a>.
+                    <a href="#canasta_txt_familia" class="underline text-blue-400">enlace</a>.
                 </div>
             </div>
 
@@ -1178,6 +1268,7 @@
         <script type="module" src="./js/fetch-data.js"></script>
         <script type="module" src="./js/mod-date.js"></script>
         <script type="module" src="./js/tooltip.js"></script>
+        <script type="module" src="./js/offcanvas.js"></script>
 
         <script type="module" src="./js/utils.js"></script>
         <script type="module" src="./js/can_past.js"></script>

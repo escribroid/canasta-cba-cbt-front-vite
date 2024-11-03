@@ -783,7 +783,7 @@ header {
     background: none !important;
 }
 
-.offcanvas.offcanvas-end {
+/* .offcanvas.offcanvas-end {
     top: 2rem;
     right: 0;
     border-left: 0;
@@ -812,13 +812,12 @@ header {
     padding: var(--spacing-8_0-5) 0;
     margin-top: -2.5px;
     margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
-    /* margin-bottom: calc(-0.4 * var(--bs-offcanvas-padding-y)); */
     margin-bottom: -3px;
     box-shadow: 0 0 0.5rem 2px rgba(0, 0, 0, 0.8);
     right: var(--spacing-8_0-5);
     opacity: 1;
     background-color: #f2f4f7;
-}
+} */
 
 .person-form-select,
 .person-select-age {
