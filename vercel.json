@@ -6,8 +6,7 @@
             "use": "@vercel/static"
         },
         {
-            "src": "vite.config.js",
-            "use": "@vercel/build"
+            "src": "vite.config.js"
         }
     ],
     "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
