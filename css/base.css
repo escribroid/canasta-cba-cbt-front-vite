@@ -135,6 +135,7 @@ header {
 
 .canasta_compare_date {
     display: flex;
+    flex-direction: column;
     max-width: 220px;
     margin: 0 auto;
     align-items: center;
