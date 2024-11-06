@@ -1,4 +1,5 @@
 // main.js
+import "../css/styles.css";
 import { yearGet } from "./mod-date.js";
 import { version } from "./mod-version.js";
 //import indices_manuales from "./mod-indices.js";

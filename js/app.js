@@ -861,6 +861,7 @@ document.getElementById("ingresos_input").addEventListener("input", (e) => {
     }
 }); */
 
-document.getElementById("nav-link-cbt").addEventListener("click", () => {
+// Agregar el color al fondo de la solapa de CBT
+/* document.getElementById("nav-link-cbt").addEventListener("click", () => {
     document.querySelector(".card-solapada-3").style.boxShadow = "0px 0px 6px 4px #ff3366";
-});
+}); */
