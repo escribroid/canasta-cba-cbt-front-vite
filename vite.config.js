@@ -2,7 +2,9 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    css: {},
+    css: {
+        postcss: './postcss.config.js'
+    },
     build: {
         outDir: "dist",
         rollupOptions: {

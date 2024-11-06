@@ -5,7 +5,7 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "vite build && npx tailwindcss -i ./css/styles.css -o ./dist/assets/index.css",
         "preview": "vite preview",
         "tw": "npx tailwindcss -i ./css/styles.css -o ./dist/assets/index.css --watch"
     },
@@ -19,7 +19,9 @@
         "canastas-cba-cbt-vite": "file:"
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.20",
         "concurrently": "^9.1.0",
+        "postcss": "^8.4.47",
         "tailwindcss": "^3.4.14",
         "vite": "^5.4.8"
     }
