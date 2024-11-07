@@ -14,9 +14,7 @@
 
         <!-- CSS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <link rel="stylesheet" href="./dist/assets/index.css" />
-        <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
-
-        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <!-- <link rel="stylesheet" href="./css/devCss.css" /> -->
     </head>
 
     <!-- BODY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -35,9 +33,9 @@
             </div>
         </div>
 
-        <header class="bg-black rounded-lg relative">
+        <header class="rounded-lg relative">
             <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <nav class="flex items-center justify-between p-4 bg-black relative rounded-lg">
+            <nav class="flex items-center justify-between p-4 relative rounded-lg navbar">
                 <!-- navbar-brand -->
                 <a class="logo text-white" href="./index.html">
                     <img class="logo-img" src="img/iso_logo_canastas-ff5500.svg" alt="imagen iso marca" />CANASTAS
@@ -62,10 +60,10 @@
             <!-- Offcanvas -->
             <div
                 id="offcanvas"
-                class="absolute right-0 top-0 w-64 h-full bg-gray-800 text-white hidden transform translate-x-full transition-transform z-50 rounded-lg"
+                class="absolute right-0 top-0 w-72 h-full bg-gray-800 text-white hidden transform translate-x-full transition-transform z-50 rounded-lg"
                 aria-labelledby="offcanvasLabel"
             >
-                <div class="flex justify-between p-4 border-b border-gray-600 bg-gray-800 rounded-lg">
+                <div class="flex justify-between p-3 border-b border-gray-600 bg-zinc-800 rounded-lg">
                     <!-- Añadido bg para consistencia -->
                     <h3 id="offcanvasLabel" class="text-2xl font-semibold">Menú</h3>
                     <button id="offcanvasClose" class="text-white size-6 py-3 focus:outline-none" aria-label="Close">
@@ -73,7 +71,7 @@
                         <!-- Icono de cerrar -->
                     </button>
                 </div>
-                <div class="p-4 bg-gray-800">
+                <div class="p-4 bg-zinc-800">
                     <!-- Añadido bg para consistencia -->
                     <!-- navbar-nav -->
                     <ul class="space-y-2">
@@ -127,7 +125,7 @@
 
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main id="canasta_custom">
-            <div class="w-full rounded-lg shadow-md bg-black card card_main">
+            <div class="w-full rounded-lg shadow-md card card_main">
                 <ul class="list-none p-0 rounded-lg">
                     <li class="p-4 border-b last:border-none rounded-lg">
                         <h2 class="text-center text-lg font-semibold canasta-custom-person-add-title">
@@ -190,7 +188,7 @@
                                         name="canasta_alquiler"
                                         id="select_canasta_alquiler"
                                         title="Seleccioná si Alquilas o No Alquilas."
-                                        class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none select_canasta_alquiler form-select"
+                                        class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-gray-400 focus:outline-none form-select select_canasta_alquiler"
                                     >
                                         <option class="option_alquiler" value="siAlquilo">Alquilada</option>
                                         <option class="option_alquiler" value="noAlquilo">No Alquilada</option>
@@ -527,10 +525,10 @@
                             </div>
 
                             <!-- Row for each socioeconomic class -->
-                            <div class="flex flex-col w-full mb-0 show_indigencia">
+                            <div class="flex w-full mb-0 show_indigencia">
                                 <div class="flex justify-center items-center show_indigencia_min"></div>
                                 <div
-                                    class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_indigencia"
+                                    class="flex flex-1 py-1 justify-center items-center text-shadow all_canasta_indigencia"
                                 >
                                     <span class="h-full flex items-center mayor_menor">≤</span>Indigente<span
                                         class="h-full text-center mayor_menor"
@@ -540,7 +538,7 @@
                                 <div class="flex justify-center items-center show_indigencia_max"></div>
                             </div>
 
-                            <div class="flex flex-col w-full mb-0 show_pobreza">
+                            <div class="flex w-full mb-0 show_pobreza">
                                 <div class="flex justify-center items-center show_pobreza_min"></div>
                                 <div
                                     class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_pobreza"
@@ -554,7 +552,7 @@
                             </div>
 
                             <!-- Clase Baja -->
-                            <div class="flex flex-col w-full mb-0 show_clase_baja">
+                            <div class="flex w-full mb-0 show_clase_baja">
                                 <div class="flex justify-center items-center show_clase_baja_min"></div>
                                 <div class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_baja">
                                     <span class="h-full flex items-center mayor_menor">≤</span>Clase Baja<span
@@ -566,7 +564,7 @@
                             </div>
 
                             <!-- Clase Media Frágil -->
-                            <div class="flex flex-col w-full mb-0 show_clase_media_fragil">
+                            <div class="flex w-full mb-0 show_clase_media_fragil">
                                 <div class="flex justify-center items-center suma_clase_media_fragil_min"></div>
                                 <div
                                     class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_media_fragil"
@@ -580,7 +578,7 @@
                             </div>
 
                             <!-- Clase Media -->
-                            <div class="flex flex-col w-full mb-0 show_clase_media">
+                            <div class="flex w-full mb-0 show_clase_media">
                                 <div class="flex justify-center items-center suma_clase_media_min"></div>
                                 <div
                                     class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_media"
@@ -594,7 +592,7 @@
                             </div>
 
                             <!-- Clase Media Alta -->
-                            <div class="flex flex-col w-full mb-0 show_clase_media_alta">
+                            <div class="flex w-full mb-0 show_clase_media_alta">
                                 <div class="flex justify-center items-center suma_clase_media_alta_min"></div>
                                 <div
                                     class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_media_alta"
@@ -608,7 +606,7 @@
                             </div>
 
                             <!-- Clase Alta -->
-                            <div class="flex flex-col w-full mb-0 show_clase_alta">
+                            <div class="flex w-full mb-0 show_clase_alta">
                                 <div class="flex justify-center items-center suma_clase_alta_min"></div>
                                 <div class="flex flex-1 py-1 justify-between items-center text-shadow all_canasta_alta">
                                     <span class="h-full flex justify-center items-center text-center mayor_menor"
@@ -619,7 +617,7 @@
                             </div>
 
                             <!-- Information Row -->
-                            <div class="flex flex-col w- suma_clase_info">
+                            <div class="flex w- suma_clase_info">
                                 <div class="flex items-center justify-center py-2 bg-black suma_clase_alta_min_info">
                                     <span>
                                         <button
@@ -696,7 +694,7 @@
 
             <!-- Card 2 Compare old canasta++++++++++++++++++++++++++++++++++++++++++++++-->
 
-            <div class="card bg-white rounded-lg shadow-md card_main_compare">
+            <div class="card rounded-lg card_main_compare">
                 <ul class="list-none rounded-lg">
                     <li class="card-compare-header flex justify-center items-center p-4">
                         <h2 class="canasta-custom-compare-title text-center text-lg font-semibold">
@@ -909,7 +907,7 @@
                 </ul>
             </div>
 
-            <div class="card card_titulo_canastas_generic card-solapada-1 rounded-lg bg-white shadow-lg">
+            <div class="card card_titulo_canastas_generic card-solapada-1 rounded-lg">
                 <div class="card-header rounded-lg border-b-2 border-gray-300 p-4">
                     <h2 class="card_header_title_generic text-lg font-bold">Canastas para Hogar "Tipo"</h2>
                     <h3 class="card_header_sub_generic text-md font-semibold">De 4 integrantes del indec:</h3>
@@ -919,7 +917,7 @@
                 </div>
             </div>
 
-            <div class="card card_cba card-solapada-2 rounded-lg bg-white shadow-lg">
+            <div class="card card_cba card-solapada-2 rounded-lg">
                 <div class="card-header rounded-lg border-b-2 border-gray-300 p-4">
                     <h2 class="card_header_title text-lg font-bold">Canasta Básica Alimentaria</h2>
                     <h3 class="card_header_sub text-md font-semibold">
@@ -949,7 +947,7 @@
                 </ul>
             </div>
 
-            <div id="canasta_cbt" class="card card_cbt card-solapada-3 rounded-lg bg-white shadow-lg">
+            <div id="canasta_cbt" class="card card_cbt card-solapada-3 rounded-lg">
                 <div class="card-header rounded-lg border-b-2 border-gray-300 p-4">
                     <h2 class="card_header_title text-lg font-bold">Canasta Básica Total</h2>
                     <h3 class="card_header_sub text-md font-semibold">
@@ -979,7 +977,7 @@
                 </ul>
             </div>
 
-            <div class="card card_cbta card-solapada-4 rounded-lg bg-white shadow-lg">
+            <div class="card card_cbta card-solapada-4 rounded-lg">
                 <div class="card-header rounded-lg border-b-2 border-gray-300 p-4">
                     <h2 class="card_header_title text-lg font-bold">
                         Canasta Básica Total <span class="text-sm">+ Alquiler</span>

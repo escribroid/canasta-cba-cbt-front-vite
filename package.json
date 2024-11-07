@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build && npx tailwindcss -i ./css/styles.css -o ./dist/assets/index.css",
         "preview": "vite preview",
-        "tw": "npx tailwindcss -i ./css/styles.css -o ./dist/assets/index.css --watch"
+        "tw": "npx tailwindcss -i ./css/styles.css -o ./css/devCss.css --watch"
     },
     "keywords": [],
     "author": "",

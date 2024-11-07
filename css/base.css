@@ -17,7 +17,7 @@ footer {
     text-align: center;
     font-size: var(--font-size-16_1rem);
     background-color: #1e1e1e !important;
-    box-shadow: 0 0 0.2rem 0.2rem #96969677;
+    /* box-shadow: 0 0 0.2rem 0.2rem #96969677; */
     margin-top: 1rem;
     border: 0;
     width: 100%;
@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-    color: #ff5500;
+    color: #ff5500 !important;
 }
 
 header {
@@ -57,11 +57,9 @@ header {
     font-size: var(--font-size-16_1rem);
     font-weight: bold;
     font-family: var(--font-mono);
-    background-color: #ff4f0066;
+    background-color: #ff4f0066 !important;
     width: 40px;
-
     height: 40px;
-
     /* width: var(--spacing-28_1-75);
   height: var(--spacing-28_1-75); */
     border-radius: var(--spacing-10_0-625);
@@ -77,7 +75,7 @@ header {
 .aclaracion_rent_past:hover {
     transform: scale(1.1);
     border-radius: var(--spacing-10_0-625);
-    background-color: #ff4f00bb;
+    background-color: #ff4f00bb !important;
 }
 
 .aclaracion_icons {
@@ -157,9 +155,9 @@ header {
 }
 
 .canasta_compare_input_month:focus {
-    border-color: #ff5733;
+    border-color: #ff5733 !important;
     outline: none;
-    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
+    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500 !important;
 }
 
 .canasta_container_person {
@@ -198,27 +196,27 @@ header {
     font-size: var(--font-size-18_1-125);
     cursor: pointer;
     height: 2.75rem;
-    background-color: #331c16;
+    background-color: #331c16 !important;
     border-color: #ff550066 !important;
     border-radius: var(--bs-border-radius);
 }
 
-.canasta_date_year {
-    background-color: #ff8800;
-}
+/* .canasta_date_year {
+    background-color: #ff8800 ;
+} */
 
 .canasta_date_month:focus,
 .canasta_date_year:focus {
-    box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
-    border-color: #ff550066;
+    box-shadow: 0 0 0.3125rem 0.2rem #ff5500 !important;
+    border-color: #ff550066 !important;
     outline: 0;
 }
 
 .canasta_month_option:enabled,
 .canasta_date_year:enabled {
     /* display: block; */
-    background-color: #331c16;
-    border-color: #ff550066;
+    background-color: #331c16 !important;
+    border-color: #ff550066 !important;
 }
 
 .canasta_month_option:disabled,
@@ -228,17 +226,18 @@ header {
     background-color: #000;
 }
 
-.canasta_compare_ingresos_input {
-    background-color: #ff880022;
+.canasta_compare_ingresos_input,
+.alquiler_past {
+    background-color: #ff880022 !important;
     cursor: pointer;
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
-    border: 0.0625rem solid #ff550066;
+    border: 0.0625rem solid #ff550066 !important;
 }
 
 .canasta_compare_ingresos_input:focus {
-    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
-    border-color: #ff550066;
+    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500 !important;
+    border-color: #ff550066 !important;
 }
 
 .canasta_txt_vivienda_container {
@@ -252,12 +251,12 @@ header {
     margin-left: 1rem;
     margin-bottom: var(--spacing-10_0-625);
     padding-top: var(--spacing-5_0-3125);
-    border-left: 0.2rem solid #4caf50aa;
+    border-left: 0.2rem solid #4caf50aa !important;
     padding-left: 0.85rem;
 }
 
 .canasta_txt_familia {
-    border-left: 0.2rem solid #ff5500aa;
+    border-left: 0.2rem solid #ff5500aa !important;
 }
 
 .canasta_vivienda_container {
@@ -309,13 +308,13 @@ header {
 }
 
 .card_cba_value {
-    color: #ff8800;
+    color: #ff8800 !important;
     font-weight: var(--font-weight-700-bold);
     margin-left: var(--spacing-10_0-625);
     background: linear-gradient(#140803, #0f0703);
     border-radius: var(--spacing-5_0-3125);
     padding: 0.2rem var(--spacing-8_0-5) 0.2rem var(--spacing-4_0-25);
-    border: 0.01rem solid #ff550055;
+    border: 0.01rem solid #ff550055 !important;
 }
 
 .card-header {
@@ -477,13 +476,6 @@ header {
     left: 0.5rem;
 }
 
-[data-bs-theme="dark"] .carousel .carousel-control-next-icon,
-[data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
-[data-bs-theme="dark"].carousel .carousel-control-next-icon,
-[data-bs-theme="dark"].carousel .carousel-control-prev-icon {
-    filter: brightness(100%) contrast(100%) saturate(100%);
-}
-
 .detalles_delete {
     padding: 0;
     margin: 0;
@@ -512,7 +504,7 @@ header {
     width: 100%;
     height: 2.25rem;
     font-size: 1.125rem;
-    background-color: #ff880055;
+    background-color: #ff880055 !important;
     border: 0;
 }
 
@@ -520,11 +512,11 @@ header {
     outline: none;
     font-size: 1.125rem;
     border: 0;
-    background-color: #ff880022;
+    background-color: #ff880022 !important;
 }
 
 .detalle_personal_option {
-    background-color: #3f3224;
+    background-color: #3f3224 !important;
     border-radius: 0.5rem;
 }
 
@@ -553,12 +545,12 @@ header {
 }
 
 .indices_date {
-    color: #ff5500;
+    color: #ff5500 !important;
     text-shadow: var(--spacing-1_0-0625) var(--spacing-1_0-0625) var(--spacing-1_0-0625) #000;
 }
 
 .form-select {
-    background-position: right 0.2rem center;
+    /* background-position: right 0.2rem center; */
     background-size: 1rem var(--spacing-12_0-75);
     border: 0.0625rem solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
@@ -586,10 +578,10 @@ header {
 }
 
 .icon-svg-add:active {
-    fill: #ff5500;
+    fill: #ff5500 !important;
     border-radius: var(--spacing-5_0-3125);
     font-weight: bold;
-    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
+    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500 !important;
 }
 
 .icon-svg-reset:active {
@@ -601,7 +593,7 @@ header {
 
 .icon-svg-hause:hover {
     /* box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #4caf50aa; */
-    border-color: #4caf5033;
+    border-color: #4caf5033 !important;
     border-radius: var(--spacing-5_0-3125);
     transform: scale(1.2);
     padding: 0;
@@ -610,7 +602,7 @@ header {
 
 .icon-svg-person:hover {
     /* box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500; */
-    border-color: #ff550066;
+    border-color: #ff550066 !important;
     border-radius: var(--spacing-5_0-3125);
     transform: scale(1.2);
     padding: 0;
@@ -650,16 +642,16 @@ header {
 }
 
 .ingresos_input {
-    background-color: #ff880022;
+    background-color: #ff880022 !important;
     cursor: pointer;
     max-width: var(--spacing-220);
     margin-right: var(--spacing-5_0-3125);
-    border: 0.0625rem solid #ff880099;
+    border: 0.0625rem solid #ff880099 !important;
 }
 
 .ingresos_input:focus {
-    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
-    border-color: #ff550066;
+    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500 !important;
+    border-color: #ff550066 !important;
 }
 
 .linea_pobreza,
@@ -720,27 +712,8 @@ header {
 
 .navbar {
     background: #1e1e1e !important;
-    box-shadow: 0 0 0.2rem 0.2rem #96969977;
+    /* box-shadow: 0 0 0.2rem 0.2rem #96969977; */
     border: 0;
-}
-
-.navbar-nav {
-    display: flex;
-    flex-direction: column;
-    text-align: end;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-.navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-lg,
-.navbar > .container-md,
-.navbar > .container-sm,
-.navbar > .container-xl,
-.navbar > .container-xxl {
-    padding-right: var(--spacing-12_0-75);
 }
 
 .person-form-select,
@@ -811,7 +784,7 @@ header {
 .suma_clase_media_alta_max_past,
 .suma_clase_alta_min_past,
 .suma_clase_alta_max_past {
-    width: 31%;
+    width: 25%;
     font-size: var(--spacing-18_1-125);
 }
 
@@ -876,7 +849,7 @@ tfoot {
     border-radius: 0.5rem;
     width: 100%;
     margin: 0;
-    background-color: #ff880033;
+    background-color: #ff880033 !important;
 }
 
 .table-all-canastas-past {
@@ -911,7 +884,6 @@ tfoot {
     box-shadow: 0 0 6.25rem 3.125rem #000000;
     padding: 0;
     margin: 0;
-    --bs-tooltip-arrow-color: red;
     border-radius: 0.5rem;
 }
 
@@ -963,7 +935,7 @@ option:disabled {
 .gender-option:enabled,
 .option_alquiler:enabled {
     text-align: start;
-    background-color: #693015;
+    background-color: #693015 !important;
 }
 
 .alquiler_in,
@@ -1012,8 +984,8 @@ option:disabled {
 .select_canasta_alquiler,
 .alquiler_in,
 .alquiler_in_past {
-    background-color: #4caf5022;
-    border-color: #4caf5055;
+    background-color: #4caf5022 !important;
+    border-color: #4caf5055 !important;
 }
 
 .select_canasta_alquiler,
@@ -1024,20 +996,20 @@ option:disabled {
 .select_canasta_alquiler:focus,
 .alquiler_in:focus,
 .alquiler_in_past:focus {
-    box-shadow: 0 0 0.3125rem 0.2rem #4caf50aa;
-    border-color: #4caf5033;
+    box-shadow: 0 0 0.3125rem 0.2rem #4caf50aa !important;
+    border-color: #4caf5033 !important;
 }
 
 .selected-age,
 .selected-gender {
-    background-color: #ff550022;
-    border-color: #ff550055;
+    background-color: #ff550022 !important;
+    border-color: #ff550055 !important;
 }
 
 .selected-age:focus,
 .selected-gender:focus {
-    box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
-    border-color: #ff550066;
+    box-shadow: 0 0 0.3125rem 0.2rem #ff5500 !important;
+    border-color: #ff550066 !important;
 }
 
 #total-alquiler {
@@ -1047,7 +1019,7 @@ option:disabled {
 .option_alquiler:enabled {
     display: block;
     margin-right: var(--spacing-50_3-125);
-    background-color: #295935;
+    background-color: #295935 !important;
 }
 
 .option_alquiler:disabled {
@@ -1059,13 +1031,13 @@ option:disabled {
 .option_alquiler:hover:focus {
     display: block;
     margin-right: var(--spacing-50_3-125);
-    background: #a42929;
+    background: #a42929 !important;
 }
 
 .alquiler_in:disabled {
     text-align: center;
-    border-color: #4caf5055;
-    background-color: #4caf5011;
+    border-color: #4caf5055 !important;
+    background-color: #4caf5011 !important;
 }
 
 .alquiler_in::placeholder {
@@ -1073,7 +1045,7 @@ option:disabled {
 }
 
 .message_error_age {
-    background-color: #493333;
+    background-color: #493333 !important;
     color: #f2f4f7;
     display: none;
     height: 6rem;
