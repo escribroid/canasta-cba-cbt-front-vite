@@ -14,8 +14,6 @@ let cbt_Top;
 let canasta_compare_cba = document.querySelector(".canasta_compare_cba");
 let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
-let cardCompareBody = document.getElementById("card-compare-body");
-
 let dataJsonFront = [];
 let alquiler_past;
 let alquiler_past_value;
@@ -75,37 +73,33 @@ function cba_top_process() {
         cbt_top_short.innerHTML = `$${cbt_Top}`;
     }
 }
-for (let i = 0; i <= yearGet; i++) {
-    if (yearGet - i >= 2016) {
-        array_years.push(`
-<option class="canasta_date_option" value="${yearGet - i}"> ${yearGet - i} </option>`);
-    }
-}
-let str_years = array_years.join("");
-canasta_year_select.innerHTML = `
-<option class="canasta_date_option" value="year" selected disabled>Año</option> + ${str_years}`;
-
-let monthSelected = false;
-let yearSelected = false;
-// Función verificar si ambos select han disparado su evento
-function checkBothSelected() {
-    if (monthSelected && yearSelected) {
-        document.querySelector(".table-all-canastas-past").style.display = "block";
-    } else {
-        document.querySelector(".table-all-canastas-past").style.display = "none";
-    }
-}
-
-let cardCompareBodyDisabled = document.getElementById("card-compare-disabled");
-
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("axUpdated", function (event) {
     coef_age_gender_add = event.detail.coef_age_gender_add;
-    cardCompareBodyDisabled.style.display = "none";
 
-    //cardCompareBody.classList.remove("card-compare-disabled");
+    for (let i = 0; i <= yearGet; i++) {
+        if (yearGet - i >= 2016) {
+            array_years.push(`
+<option class="canasta_date_option" value="${yearGet - i}"> ${yearGet - i} </option>`);
+        }
+    }
+
+    let str_years = array_years.join("");
+    canasta_year_select.innerHTML = `
+<option class="canasta_date_option" value="year" selected disabled>Año</option> + ${str_years}`;
     //console.log("año seleccionado:", selectedYear);
+
+    let monthSelected = false;
+    let yearSelected = false;
+    // Función verificar si ambos select han disparado su evento
+    function checkBothSelected() {
+        if (monthSelected && yearSelected) {
+            document.querySelector(".table-all-canastas-past").style.display = "block";
+        } else {
+            document.querySelector(".table-all-canastas-past").style.display = "none";
+        }
+    }
 
     get_table_past(coef_age_gender_add);
 

@@ -25,4 +25,3 @@ document.querySelector(".indices_short_ipc_percent").textContent = indices_manua
 //         document.querySelector(".indices_short_ipc_percent").textContent = ipc_percent_txt + "%";
 //     })
 //     .catch((error) => console.log(error));
-
