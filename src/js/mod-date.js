@@ -101,6 +101,12 @@ function checkBothSelected() {
 window.addEventListener("axUpdated", function (event) {
     coef_age_gender_add = event.detail.coef_age_gender_add;
 
+    if (coef_age_gender_add) {
+        document.getElementById("aclaracion_date_over").style.zIndex = "-5";
+    } else {
+        document.getElementById("aclaracion_date_over").style.zIndex = "1000";
+    }
+
     //console.log("año seleccionado:", selectedYear);
 
     get_table_past(coef_age_gender_add);
