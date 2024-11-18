@@ -12,7 +12,8 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(
     (tooltipTriggerEl) =>
         new bootstrap.Tooltip(tooltipTriggerEl, {
-            placement: "auto",
-            offset: [-75, 10],
+            placement: "top",
+            offset: [-75, 0],
+            container: "body",
         })
 );

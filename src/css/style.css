@@ -984,6 +984,14 @@ tfoot {
     max-width: 250px;
 }
 
+
+
+  .aclaracion_date_over:hover + .tooltip,
+.tooltip:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 .version {
     color: #f2f4f7;
     width: 100%;
