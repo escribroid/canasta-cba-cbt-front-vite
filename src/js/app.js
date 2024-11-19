@@ -138,6 +138,7 @@ tableBody.addEventListener("click", (event) => {
     const clickRow_id = clickedRow.id[7];
     const clickedCell = event.target.closest("td");
     clickedCell_id = clickedCell.id[7];
+    ingresos = document.getElementById("ingresos_input").value;
 
     if (clickRow_id === clickedCell_id) {
         filas = tableBody.querySelectorAll("tr");
@@ -691,6 +692,7 @@ function input_alquiler_in() {
 
         cbt_add_group = cbt_add_group + alquiler_in_value;
         suma_con_alquiler = cbt_add_group;
+        ingresos_input_in(ingresos);
 
         if (!alquiler_in_value || alquiler_in_value !== 0) {
             document.querySelector(".icon-svg-reset").style.display = "flex";
@@ -723,6 +725,8 @@ document.getElementById("btn-reset-person").addEventListener("click", () => {
 
 function ingresos_input_in(ingresos) {
     // Verificar si los límites están definidos
+    ingresos = document.getElementById("ingresos_input").value;
+
     if (
         suma_indigencia_alquilando === undefined &&
         suma_pobreza_alquilando === undefined &&
