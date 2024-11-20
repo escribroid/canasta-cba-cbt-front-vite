@@ -725,7 +725,7 @@ document.getElementById("btn-reset-person").addEventListener("click", () => {
 
 function ingresos_input_in(ingresos) {
     // Verificar si los límites están definidos
-    ingresos = document.getElementById("ingresos_input").value;
+    ingresos = parseInt(document.getElementById("ingresos_input").value);
 
     if (
         suma_indigencia_alquilando === undefined &&
@@ -743,6 +743,7 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".all_canasta_media").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media_alta").style.removeProperty("background-color");
         document.querySelector(".all_canasta_alta").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_acomodada").style.removeProperty("background-color");
     }
     if (
         suma_indigencia_alquilando === null &&
@@ -760,6 +761,7 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".all_canasta_media").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media_alta").style.removeProperty("background-color");
         document.querySelector(".all_canasta_alta").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_acomodada").style.removeProperty("background-color");
     }
 
     if (
@@ -771,14 +773,13 @@ function ingresos_input_in(ingresos) {
         clase_media_alta_add_group_alquilando === 0
     ) {
         document.querySelector(".all_canasta_indigencia").style.removeProperty("background-color");
-
         document.querySelector(".all_canasta_pobreza").style.removeProperty("background-color");
         document.querySelector(".all_canasta_baja").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media_fragil").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media_alta").style.removeProperty("background-color");
         document.querySelector(".all_canasta_alta").style.removeProperty("background-color");
-        return;
+        document.querySelector(".all_canasta_acomodada").style.removeProperty("background-color");
     }
 
     if (ingresos > 0 && ingresos < suma_indigencia_alquilando) {
@@ -846,7 +847,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_alta").style.removeProperty("background-color");
         document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
-    } else if (ingresos > clase_alta_add_group_baja_alquilando) {
+    } else if (ingresos >= clase_alta_add_group_baja_alquilando < Infinity) {
+        document.querySelector(".show_clase_acomodada").style.setProperty("background-color", "#4CbF50", "important");
         document.querySelector(".show_clase_alta").style.removeProperty("background-color");
         document.querySelector(".show_indigencia").style.removeProperty("background-color");
         document.querySelector(".show_pobreza").style.removeProperty("background-color");
@@ -854,7 +856,22 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_alta").style.removeProperty("background-color");
-        document.querySelector(".show_clase_acomodada").style.setProperty("background-color", "#4CbF50", "important");
+    }
+
+    console.log("clase_alta_add_group_baja_alquilando",  clase_media_alta_add_group_alquilando);
+    console.log("ingresos",  ingresos);
+
+    if (clase_media_alta_add_group_alquilando === 0) {
+        document.querySelector(".all_canasta_indigencia").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_pobreza").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_baja").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_media_fragil").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_media").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_media_alta").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_alta").style.removeProperty("background-color");
+        document.querySelector(".all_canasta_acomodada").style.removeProperty("background-color");
+        document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
+
     }
 
     if (ingresos === "" || !ingresos) {
@@ -866,6 +883,7 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_alta").style.removeProperty("background-color");
         document.querySelector(".show_clase_alta").style.removeProperty("background-color");
+        document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
     }
 }
 
