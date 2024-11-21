@@ -99,42 +99,11 @@ function checkBothSelected() {
 
 
 
-const elemento = document.querySelector(".aclaracion_date_over");
-const tooltipppp = new bootstrap.Tooltip(elemento, {
-  trigger: 'manual',
-  html: true,
-  container: '#aclaracion_date_over', // Mover el tooltip al contenedor personalizado
-  title: 'Aquí puedes colocar un <a href="#">enlace</a>'
-});
 
-// Mostrar el tooltip al hacer hover sobre el elemento
-elemento.addEventListener('mouseenter', () => {
-  tooltipppp.show();
-});
 
-// Mantener el tooltip visible al hacer hover sobre el tooltip o el elemento
-elemento.addEventListener('shown.bs.tooltip', () => {
-  const tooltipEl = document.querySelector('#aclaracion_date_over .tooltip');
 
-  if (tooltipEl) {
-    tooltipEl.addEventListener('mouseenter', () => {
-      tooltipppp.show();
-    });
-    tooltipEl.addEventListener('mouseleave', () => {
-      tooltipppp.hide();
-    });
-  }
-});
 
-// Ocultar el tooltip cuando el cursor salga del elemento y del tooltip
-elemento.addEventListener('mouseleave', () => {
-  const tooltipEl = document.querySelector('#aclaracion_date_over .tooltip');
-  setTimeout(() => {
-    if (!tooltipEl.matches(':hover') && !elemento.matches(':hover')) {
-      tooltipppp.hide();
-    }
-  }, 2000);
-});
+
 
 
 // Escuchar el evento personalizado emitido desde a.js
