@@ -45,6 +45,7 @@ header {
 } */
 
 .aclaracion_edades,
+.aclaracion_family,
 .aclaracion_ingresos,
 .aclaracion_table_sectores,
 .aclaracion_date_month,
@@ -113,7 +114,7 @@ header {
     right: 10%;
 } */
 
-.btn-add-person {
+.card-main-form-submit {
     background-color: #1e1e1e;
     border: 0;
     margin-left: var(--spacing-5_0-3125);
@@ -121,11 +122,11 @@ header {
     box-shadow: 0 0 0.2rem #000;
 }
 
-.btn-reset-container {
+.card-main-btn-reset {
     margin-left: auto;
 }
 
-.btn-reset-person {
+.card-main-btn-reset {
     display: flex;
     background-color: #1e1e1e;
     border: 0;
@@ -133,8 +134,8 @@ header {
     box-shadow: 0 0 0.2rem #000;
 }
 
-.btn-add-person:active,
-.btn-reset-person:active {
+.card-main-form-submit:active,
+.card-main-btn-reset:active {
     transform: scale(1.3);
 }
 
@@ -174,13 +175,13 @@ header {
     box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
 }
 
-.canasta_container_person {
+.card-main-form-container {
     padding: 0 0.5rem 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
 }
 
-.canasta-custom-person-add-title {
+.card-main-title {
     padding: 0.25rem var(--spacing-10_0-625) 1rem var(--spacing-10_0-625);
     margin-bottom: 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
@@ -252,14 +253,14 @@ header {
     border-color: #ff550066;
 }
 
-.canasta_txt_vivienda_container {
+.card-main-vivienda, .card-main-form-family {
     display: flex;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.canasta_txt_vivienda,
-.canasta_txt_familia {
+.card-main-vivienda-txt,
+.card-main-form-family-txt {
     margin-left: 1rem;
     margin-bottom: var(--spacing-10_0-625);
     padding-top: var(--spacing-5_0-3125);
@@ -267,11 +268,11 @@ header {
     padding-left: 0.85rem;
 }
 
-.canasta_txt_familia {
+.card-main-form-family-txt {
     border-left: 0.2rem solid #ff5500aa;
 }
 
-.canasta_vivienda_container {
+.card-main-vivienda_container {
     padding: 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
@@ -296,7 +297,7 @@ header {
     border: 0;
 }
 
-.card_main_compare {
+.card_compare {
     margin-bottom: 1.5rem;
     width: 100%;
     border: 0;
@@ -501,7 +502,7 @@ header {
     stroke: #ce2331;
 }
 
-.detalle_personal_select {
+.card-main-table-select-canastas {
     display: flex;
     width: 100%;
     height: 2.25rem;
@@ -510,14 +511,14 @@ header {
     border: 0;
 }
 
-.detalle_personal_select:focus-visible {
+.card-main-table-select-canastas:focus-visible {
     outline: none;
     font-size: 1.125rem;
     border: 0;
     background-color: #ff880022;
 }
 
-.detalle_personal_option {
+.card-main-table-select-canastas-option {
     background-color: #3f3224;
     border-radius: 0.5rem;
 }
@@ -559,12 +560,12 @@ header {
 
 .icon-svg-add,
 .icon-svg-hause,
-.icon-svg-reset,
+.card-main-icon-svg-reset,
 .icon-svg-person {
     transition: all 0.5s ease;
 }
 
-.icon-svg-reset {
+.card-main-icon-svg-reset {
     display: none;
     transform: translateX(2rem);
     opacity: 0;
@@ -584,7 +585,7 @@ header {
     box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
 }
 
-.icon-svg-reset:active {
+.card-main-icon-svg-reset:active {
     fill: #ff3366;
     border-radius: var(--spacing-5_0-3125);
     font-weight: bold;
@@ -688,7 +689,7 @@ header {
     text-shadow: var(--spacing-2_0-125) var(--spacing-2_0-125) var(--spacing-5_0-3125) rgba(0, 0, 0, 0.5);
 }
 
-.logo-img {
+.navbar-logo-img {
     margin-right: var(--spacing-8_0-5);
     width: var(--spacing-40_2-5);
     filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%);
@@ -885,7 +886,7 @@ header {
     font-size: 1.3rem;
 }
 
-.table_detalles {
+.card-main-table-select-canastas {
     font-size: var(--font-size-16_1rem);
     margin: 0 auto;
     width: 100%;
@@ -893,7 +894,7 @@ header {
     border-collapse: collapse;
 }
 
-.table_detalles td,
+.card-main-table-select-canastas td,
 th,
 tbody,
 thead,
@@ -901,13 +902,13 @@ tfoot {
     border: 0.0625rem solid #3c3f43;
 }
 
-.table_detalles {
+.card-main-table-select-canastas {
     position: relative;
     border: 0;
     border-radius: 0.5rem;
 }
 
-.table_detalles::before {
+.card-main-table-select-canastas::before {
     content: "";
     position: absolute;
     top: -1px;
@@ -932,11 +933,11 @@ tfoot {
     display: none;
 }
 
-.table-header {
+.card-main-table-header {
     text-align: center;
 }
 
-.table_alquiler {
+.card-main-table_alquiler {
     margin: 0 0 0.5rem 0;
     display: flex;
     justify-content: space-between;
@@ -1016,17 +1017,17 @@ option:disabled {
     background-color: #121212;
 }
 
-.age-option:enabled,
-.gender-option:enabled,
-.option_alquiler:enabled {
+.card-main-form-age-option:enabled,
+.card-main-form-selected-gender-option:enabled,
+.card-main-select-alquiler-option:enabled {
     text-align: start;
     background-color: #693015;
 }
 
-.alquiler_in,
-.selected-gender,
-.selected-age,
-.select_canasta_alquiler,
+.card-main-alquiler_in,
+.card-main-form-selected-gender,
+.card-main-form-age-select,
+.card-main-select-alquiler,
 .alquiler_in_past {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1037,18 +1038,18 @@ option:disabled {
     height: 2.75rem;
 }
 
-.age_add_container {
+.card-main-form-age-container {
     display: flex;
     width: 48%;
     gap: 0.125rem;
     align-items: center;
 }
 
-.select_canasta_alquiler {
+.card-main-select-alquiler {
     width: 100%;
 }
 
-.alquiler_in {
+.card-main-alquiler_in {
     width: 95%;
 }
 
@@ -1057,79 +1058,79 @@ option:disabled {
     margin-bottom: 0.5rem;
 }
 
-.age-form-group {
+.card-main-form-age {
     flex: 1;
 }
 
-.gender-form-group {
+.card-main-form-gender {
     flex: 0 0 50%;
     margin-right: 0.5rem;
 }
 
-.select_canasta_alquiler,
-.alquiler_in,
+.card-main-select-alquiler,
+.card-main-alquiler_in,
 .alquiler_in_past {
     background-color: #4caf5022;
     border-color: #4caf5055;
 }
 
-.select_canasta_alquiler,
-.selected-gender {
+.card-main-select-alquiler,
+.card-main-form-selected-gender {
     margin-right: 0.5rem;
 }
 
-.select_canasta_alquiler:focus,
-.alquiler_in:focus,
+.card-main-select-alquiler:focus,
+.card-main-alquiler_in:focus,
 .alquiler_in_past:focus {
     box-shadow: 0 0 0.3125rem 0.2rem #4caf50aa;
     border-color: #4caf5033;
 }
 
-.selected-age,
-.selected-gender {
+.card-main-form-age-select,
+.card-main-form-selected-gender {
     background-color: #ff550022;
     border-color: #ff550055;
 }
 
-.selected-age:focus,
-.selected-gender:focus {
+.card-main-form-age-select:focus,
+.card-main-form-selected-gender:focus {
     box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
     border-color: #ff550066;
 }
 
-#total-alquiler {
+#card-main-total-alquiler {
     width: 50%;
 }
 
-.option_alquiler:enabled {
+.card-main-select-alquiler-option:enabled {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background-color: #295935;
 }
 
-.option_alquiler:disabled {
+.card-main-select-alquiler-option:disabled {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background-color: #000;
 }
 
-.option_alquiler:hover:focus {
+.card-main-select-alquiler-option:hover:focus {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background: #a42929;
 }
 
-.alquiler_in:disabled {
+.card-main-alquiler_in:disabled {
     text-align: center;
     border-color: #4caf5055;
     background-color: #4caf5011;
 }
 
-.alquiler_in::placeholder {
+.card-main-alquiler_in::placeholder {
     text-align: center;
 }
 
-.message_error_age {
+.card-main-message_error_age {
     background-color: #493333;
     color: #f2f4f7;
     display: none;

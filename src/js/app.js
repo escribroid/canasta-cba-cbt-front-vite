@@ -64,7 +64,7 @@ let age_toStr;
 let age_mostrar_table;
 let alquiler_out = 0;
 let alquiler_in = 0;
-alquiler_in = document.getElementById("alquiler_in");
+alquiler_in = document.getElementById("card-main-alquiler_in");
 let alquiler_in_value = 0;
 alquiler_in_value = parseFloat(alquiler_in.value);
 let cba_individual_indigencia;
@@ -106,7 +106,7 @@ let suma_CT_clase_baja = 0;
 let vivienda;
 let show_indigencia_max = document.querySelector(".show_indigencia_max");
 let ingresos = document.getElementById("ingresos_input").value;
-vivienda = document.getElementById("select_canasta_alquiler");
+vivienda = document.getElementById("card-main-select-alquiler");
 document.querySelector(".row_mostrar_alquiler").style.display = "none";
 let coef_age_gender = 0;
 let coef_age_gender_add = 0;
@@ -124,7 +124,7 @@ let table_matrix = [];
 let table_rows = [];
 let coef_age_gender_array = [];
 
-const form = document.getElementById("person-form");
+const form = document.getElementById("card-main-form");
 const tableBody = document.getElementById("person-list");
 let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_storage")) || [];
 
@@ -326,7 +326,7 @@ function subsPersonToTable(
 ) {
     array_cba_individual.splice(index_array_cells_new, 1);
     ingresos = document.getElementById("ingresos_input").value;
-    vivienda = document.getElementById("select_canasta_alquiler");
+    vivienda = document.getElementById("card-main-select-alquiler");
     //console.log("array_cba_individual-SUB||", array_cba_individual);
 
     cba_add_group = 0;
@@ -352,11 +352,11 @@ function subsPersonToTable(
     ingresos_input_in(ingresos);
 
     if (array_cba_individual.length === 0 && (vivienda.value == "vivienda_slc" || vivienda.value == "noAlquilo")) {
-        document.querySelector(".icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
-        document.querySelector(".icon-svg-reset").style.transform = "translatex(100%)";
+        document.querySelector(".card-main-icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
+        document.querySelector(".card-main-icon-svg-reset").style.transform = "translatex(100%)";
         setTimeout(() => {
-            document.querySelector(".icon-svg-reset").style.opacity = "0";
-            document.querySelector(".icon-svg-reset").style.display = "none";
+            document.querySelector(".card-main-icon-svg-reset").style.opacity = "0";
+            document.querySelector(".card-main-icon-svg-reset").style.display = "none";
         }, 400);
     }
 }
@@ -364,7 +364,7 @@ function subsPersonToTable(
 // SUMA DE CANASTA PERSONALIZADA +++++++++++++++++++++++
 suma_con_alquiler = 0;
 function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
-    alquiler_in_value = parseInt(document.getElementById("alquiler_in").value);
+    alquiler_in_value = parseInt(document.getElementById("card-main-alquiler_in").value);
     alquiler_out = document.getElementById("alquiler_out");
     select_canastas = document.getElementById("detalle_personal").value;
 
@@ -403,7 +403,7 @@ function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
 }
 
 function add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler) {
-    alquiler_in_value = parseInt(document.getElementById("alquiler_in").value);
+    alquiler_in_value = parseInt(document.getElementById("card-main-alquiler_in").value);
     //alquiler_out = document.getElementById("alquiler_out");
     if (isNaN(alquiler_in_value)) {
         alquiler_in_value = 0;
@@ -453,8 +453,8 @@ function add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_c
 
 // Agregar un evento al select para cambiar el estado del input
 vivienda.addEventListener("input", function () {
-    vivienda = document.getElementById("select_canasta_alquiler");
-    alquiler_in = document.getElementById("alquiler_in");
+    vivienda = document.getElementById("card-main-select-alquiler");
+    alquiler_in = document.getElementById("card-main-alquiler_in");
 
     if (vivienda.value === "siAlquilo") {
         alquiler_in.value = "";
@@ -493,11 +493,11 @@ vivienda.addEventListener("input", function () {
     }
 
     if (vivienda.value !== "siAlquilo" && vivienda.value !== "vivienda_slc" && vivienda.value !== "noAlquilo") {
-        document.querySelector(".icon-svg-reset").style.display = "flex";
+        document.querySelector(".card-main-icon-svg-reset").style.display = "flex";
         setTimeout(() => {
-            document.querySelector(".icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
-            document.querySelector(".icon-svg-reset").style.transform = "translatex(0)";
-            document.querySelector(".icon-svg-reset").style.opacity = "1";
+            document.querySelector(".card-main-icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
+            document.querySelector(".card-main-icon-svg-reset").style.transform = "translatex(0)";
+            document.querySelector(".card-main-icon-svg-reset").style.opacity = "1";
         }, 400);
     }
 
@@ -509,11 +509,11 @@ vivienda.addEventListener("input", function () {
 });
 
 /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-document.getElementById("person-form-submit").addEventListener("click", function (e) {
+document.getElementById("card-main-form-submit").addEventListener("click", function (e) {
     e.preventDefault();
-    age = document.getElementById("selected-age").value;
-    gender = document.getElementById("selected-gender").value;
-    alquiler_in = document.getElementById("alquiler_in");
+    age = document.getElementById("card-main-form-age-select").value;
+    gender = document.getElementById("card-main-form-selected-gender").value;
+    alquiler_in = document.getElementById("card-main-alquiler_in");
     alquiler_in_value = alquiler_in.value;
     ingresos = document.getElementById("ingresos_input").value;
 
@@ -600,12 +600,12 @@ document.getElementById("person-form-submit").addEventListener("click", function
         clase_alta_add_group = parseFloat(cbt_add_group * 10);
 
         // activar boton reset
-        document.querySelector(".icon-svg-reset").style.display = "flex";
+        document.querySelector(".card-main-icon-svg-reset").style.display = "flex";
 
         setTimeout(() => {
-            document.querySelector(".icon-svg-reset").style.transform = "translatex(0)";
-            document.querySelector(".icon-svg-reset").style.transition = "transform .3s ease-in-out";
-            document.querySelector(".icon-svg-reset").style.opacity = "1";
+            document.querySelector(".card-main-icon-svg-reset").style.transform = "translatex(0)";
+            document.querySelector(".card-main-icon-svg-reset").style.transition = "transform .3s ease-in-out";
+            document.querySelector(".card-main-icon-svg-reset").style.opacity = "1";
         }, 300); // Esperar que la transición termine (0.5s)
     }
 
@@ -667,10 +667,10 @@ alquiler_in.addEventListener("input", function () {
 
 // event INPUT ++++++++++++++++++++++++++++++++++++++++++++++++++++
 function input_alquiler_in() {
-    document.getElementById("alquiler_in").addEventListener("input", () => {
-        age = document.getElementById("selected-age").value;
-        gender = document.getElementById("selected-gender").value;
-        alquiler_in_value = parseInt(document.getElementById("alquiler_in").value);
+    document.getElementById("card-main-alquiler_in").addEventListener("input", () => {
+        age = document.getElementById("card-main-form-age-select").value;
+        gender = document.getElementById("card-main-form-selected-gender").value;
+        alquiler_in_value = parseInt(document.getElementById("card-main-alquiler_in").value);
         alquiler_out = document.getElementById("alquiler_out").value;
 
         if (isNaN(alquiler_in_value)) {
@@ -695,27 +695,27 @@ function input_alquiler_in() {
         ingresos_input_in(ingresos);
 
         if (!alquiler_in_value || alquiler_in_value !== 0) {
-            document.querySelector(".icon-svg-reset").style.display = "flex";
+            document.querySelector(".card-main-icon-svg-reset").style.display = "flex";
             setTimeout(() => {
-                document.querySelector(".icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
-                document.querySelector(".icon-svg-reset").style.transform = "translatex(0)";
-                document.querySelector(".icon-svg-reset").style.opacity = "1";
+                document.querySelector(".card-main-icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
+                document.querySelector(".card-main-icon-svg-reset").style.transform = "translatex(0)";
+                document.querySelector(".card-main-icon-svg-reset").style.opacity = "1";
             }, 400);
         }
     });
 }
 input_alquiler_in();
 
-document.getElementById("btn-reset-person").addEventListener("click", () => {
+document.getElementById("card-main-btn-reset").addEventListener("click", () => {
     //localStorage.removeItem('personas_local_storage');
     personas_local_storage = [];
     localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
-    document.querySelector(".icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
-    document.querySelector(".icon-svg-reset").style.transform = "translatex(100%)";
+    document.querySelector(".card-main-icon-svg-reset").style.transition = "transform 0.3s ease-in-out";
+    document.querySelector(".card-main-icon-svg-reset").style.transform = "translatex(100%)";
     setTimeout(() => {
-        document.querySelector(".icon-svg-reset").style.opacity = "0";
-        document.querySelector(".icon-svg-reset").style.display = "none";
-        document.getElementById("person-form").reset();
+        document.querySelector(".card-main-icon-svg-reset").style.opacity = "0";
+        document.querySelector(".card-main-icon-svg-reset").style.display = "none";
+        document.getElementById("card-main-form").reset();
     }, 400);
     setTimeout(() => {
         document.getElementById("person-list").innerHTML = "";
