@@ -104,10 +104,10 @@ let clase_alta_add_group_baja_alquilando = 0;
 let select_canastas;
 let suma_CT_clase_baja = 0;
 let vivienda;
-let show_indigencia_max = document.querySelector(".show_indigencia_max");
-let ingresos = document.getElementById("ingresos_input").value;
+let show_indigencia_max = document.querySelector(".card-main-table-classes-show-indigencia_max");
+let ingresos = document.getElementById("card-main-ingresos-input").value;
 vivienda = document.getElementById("card-main-select-alquiler");
-document.querySelector(".row_mostrar_alquiler").style.display = "none";
+document.querySelector(".card-main-table-details-row-mostrar-alquiler").style.display = "none";
 let coef_age_gender = 0;
 let coef_age_gender_add = 0;
 let array_cba_individual = [];
@@ -125,7 +125,7 @@ let table_rows = [];
 let coef_age_gender_array = [];
 
 const form = document.getElementById("card-main-form");
-const tableBody = document.getElementById("person-list");
+const tableBody = document.getElementById("card-main-table-details-person-list");
 let personas_local_storage = JSON.parse(localStorage.getItem("personas_local_storage")) || [];
 
 /* Borrar Rows de la tabla ++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -138,7 +138,7 @@ tableBody.addEventListener("click", (event) => {
     const clickRow_id = clickedRow.id[7];
     const clickedCell = event.target.closest("td");
     clickedCell_id = clickedCell.id[7];
-    ingresos = document.getElementById("ingresos_input").value;
+    ingresos = document.getElementById("card-main-ingresos-input").value;
 
     if (clickRow_id === clickedCell_id) {
         filas = tableBody.querySelectorAll("tr");
@@ -187,8 +187,8 @@ tableBody.addEventListener("click", (event) => {
 });
 
 // change select detalles canastas +++++++++++++++++++++++++++++++++
-document.getElementById("detalle_personal").addEventListener("change", function () {
-    select_canastas = document.getElementById("detalle_personal").value;
+document.getElementById("card-main-table-select-canastas").addEventListener("change", function () {
+    select_canastas = document.getElementById("card-main-table-select-canastas").value;
 
     if (select_canastas == "indigencia") {
         // console.log("indigencia");
@@ -267,7 +267,7 @@ function addPersonToTable(
     count_person,
     suma_indigencia_alquilando
 ) {
-    select_canastas = document.getElementById("detalle_personal").value;
+    select_canastas = document.getElementById("card-main-table-select-canastas").value;
 
     const row = document.createElement("tr");
 
@@ -325,7 +325,7 @@ function subsPersonToTable(
     coef_age_gender_array
 ) {
     array_cba_individual.splice(index_array_cells_new, 1);
-    ingresos = document.getElementById("ingresos_input").value;
+    ingresos = document.getElementById("card-main-ingresos-input").value;
     vivienda = document.getElementById("card-main-select-alquiler");
     //console.log("array_cba_individual-SUB||", array_cba_individual);
 
@@ -365,8 +365,8 @@ function subsPersonToTable(
 suma_con_alquiler = 0;
 function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
     alquiler_in_value = parseInt(document.getElementById("card-main-alquiler_in").value);
-    alquiler_out = document.getElementById("alquiler_out");
-    select_canastas = document.getElementById("detalle_personal").value;
+    alquiler_out = document.getElementById("card-main-alquiler-out");
+    select_canastas = document.getElementById("card-main-table-select-canastas").value;
 
     if (isNaN(alquiler_in_value)) {
         alquiler_in_value = 0;
@@ -404,7 +404,7 @@ function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
 
 function add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler) {
     alquiler_in_value = parseInt(document.getElementById("card-main-alquiler_in").value);
-    //alquiler_out = document.getElementById("alquiler_out");
+    //alquiler_out = document.getElementById("card-main-alquiler-out");
     if (isNaN(alquiler_in_value)) {
         alquiler_in_value = 0;
     } else if (alquiler_in_value < 0) {
@@ -428,11 +428,11 @@ function add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_c
     clase_media_alta_add_group_alquilando = alquiler_in_value + Math.round(cbt_add_group * 8);
     clase_alta_add_group_baja_alquilando = alquiler_in_value + Math.round(cbt_add_group * 12);
 
-    document.querySelector(".show_indigencia_min").textContent = 0;
-    document.querySelector(".show_indigencia_max").textContent = suma_indigencia_alquilando;
+    document.querySelector(".card-main-table-classes-show-indigencia_min").textContent = 0;
+    document.querySelector(".card-main-table-classes-show-indigencia_max").textContent = suma_indigencia_alquilando;
 
-    document.querySelector(".show_pobreza_min").textContent = suma_indigencia_alquilando;
-    document.querySelector(".show_pobreza_max").textContent = suma_pobreza_alquilando;
+    document.querySelector(".card-main-table-classes-show-pobreza_min").textContent = suma_indigencia_alquilando;
+    document.querySelector(".card-main-table-classes-show-pobreza_max").textContent = suma_pobreza_alquilando;
 
     document.querySelector(".show_clase_baja_min").textContent = suma_pobreza_alquilando;
     document.querySelector(".show_clase_baja_max").textContent = clase_baja_add_group_alquilando;
@@ -461,25 +461,25 @@ vivienda.addEventListener("input", function () {
         alquiler_in.enabled = true; // Habilitar el input
         alquiler_in.removeAttribute("disabled"); // Deshabilitar el input
         alquiler_in.placeholder = "$ valor alquiler"; // Mostrar texto en el input
-        document.querySelector(".row_mostrar_alquiler").style.display = "table-row";
+        document.querySelector(".card-main-table-details-row-mostrar-alquiler").style.display = "table-row";
     } else if (vivienda.value === "noAlquilo") {
         alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
         alquiler_in.value = ""; // Limpiar el input
         alquiler_in.placeholder = "No alquilo"; // Mostrar texto en el input
-        document.getElementById("alquiler_out").textContent = "No";
-        document.querySelector(".row_mostrar_alquiler").style.display = "none";
+        document.getElementById("card-main-alquiler-out").textContent = "No";
+        document.querySelector(".card-main-table-details-row-mostrar-alquiler").style.display = "none";
     } else if (vivienda.value === "AlquilerProm3amb") {
         alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
         alquiler_in.value = `${indices_manuales.alquilerProm3amb}`;
-        document.getElementById("alquiler_out").textContent = alquiler_in.value;
-        document.querySelector(".row_mostrar_alquiler").style.display = "table-row";
+        document.getElementById("card-main-alquiler-out").textContent = alquiler_in.value;
+        document.querySelector(".card-main-table-details-row-mostrar-alquiler").style.display = "table-row";
     } else if (vivienda.value === "AlquilerProm2amb") {
         alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
         alquiler_in.value = `${indices_manuales.alquilerProm2amb}`;
         parseInt(alquiler_in.value);
 
-        document.getElementById("alquiler_out").textContent = alquiler_in.value;
-        document.querySelector(".row_mostrar_alquiler").style.display = "table-row";
+        document.getElementById("card-main-alquiler-out").textContent = alquiler_in.value;
+        document.querySelector(".card-main-table-details-row-mostrar-alquiler").style.display = "table-row";
         alquiler_in_value = alquiler_in.value;
         suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
         add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
@@ -488,8 +488,8 @@ vivienda.addEventListener("input", function () {
         alquiler_in.value = `${indices_manuales.alquilerProm1amb}`;
         parseInt(alquiler_in.value);
 
-        document.getElementById("alquiler_out").textContent = alquiler_in.value;
-        document.querySelector(".row_mostrar_alquiler").style.display = "table-row";
+        document.getElementById("card-main-alquiler-out").textContent = alquiler_in.value;
+        document.querySelector(".card-main-table-details-row-mostrar-alquiler").style.display = "table-row";
     }
 
     if (vivienda.value !== "siAlquilo" && vivienda.value !== "vivienda_slc" && vivienda.value !== "noAlquilo") {
@@ -515,7 +515,7 @@ document.getElementById("card-main-form-submit").addEventListener("click", funct
     gender = document.getElementById("card-main-form-selected-gender").value;
     alquiler_in = document.getElementById("card-main-alquiler_in");
     alquiler_in_value = alquiler_in.value;
-    ingresos = document.getElementById("ingresos_input").value;
+    ingresos = document.getElementById("card-main-ingresos-input").value;
 
     // Evitar que se agreguen personas sin género
     if (!gender) {
@@ -671,7 +671,7 @@ function input_alquiler_in() {
         age = document.getElementById("card-main-form-age-select").value;
         gender = document.getElementById("card-main-form-selected-gender").value;
         alquiler_in_value = parseInt(document.getElementById("card-main-alquiler_in").value);
-        alquiler_out = document.getElementById("alquiler_out").value;
+        alquiler_out = document.getElementById("card-main-alquiler-out").value;
 
         if (isNaN(alquiler_in_value)) {
             alquiler_in_value = 0;
@@ -679,10 +679,10 @@ function input_alquiler_in() {
             alquiler_in_value = alquiler_in_value * -1;
         }
 
-        if (isNaN(parseInt(document.getElementById("alquiler_out").value))) {
-            document.getElementById("alquiler_out").textContent = alquiler_in_value;
+        if (isNaN(parseInt(document.getElementById("card-main-alquiler-out").value))) {
+            document.getElementById("card-main-alquiler-out").textContent = alquiler_in_value;
         } else {
-            document.getElementById("alquiler_out").textContent = alquiler_in_value;
+            document.getElementById("card-main-alquiler-out").textContent = alquiler_in_value;
         }
 
         suma_con_alquiler = 0;
@@ -718,14 +718,14 @@ document.getElementById("card-main-btn-reset").addEventListener("click", () => {
         document.getElementById("card-main-form").reset();
     }, 400);
     setTimeout(() => {
-        document.getElementById("person-list").innerHTML = "";
+        document.getElementById("card-main-table-details-person-list").innerHTML = "";
         location.reload();
     }, 400);
 });
 
 function ingresos_input_in(ingresos) {
     // Verificar si los límites están definidos
-    ingresos = parseInt(document.getElementById("ingresos_input").value);
+    ingresos = parseInt(document.getElementById("card-main-ingresos-input").value);
 
     if (
         suma_indigencia_alquilando === undefined &&
@@ -735,7 +735,7 @@ function ingresos_input_in(ingresos) {
         clase_media_add_group_alquilando === undefined &&
         clase_media_alta_add_group_alquilando === undefined
     ) {
-        document.querySelector(".all_canasta_indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia-txt").style.removeProperty("background-color");
 
         document.querySelector(".all_canasta_pobreza").style.removeProperty("background-color");
         document.querySelector(".all_canasta_baja").style.removeProperty("background-color");
@@ -753,7 +753,7 @@ function ingresos_input_in(ingresos) {
         clase_media_add_group_alquilando === null &&
         clase_media_alta_add_group_alquilando === null
     ) {
-        document.querySelector(".all_canasta_indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia-txt").style.removeProperty("background-color");
 
         document.querySelector(".all_canasta_pobreza").style.removeProperty("background-color");
         document.querySelector(".all_canasta_baja").style.removeProperty("background-color");
@@ -772,7 +772,7 @@ function ingresos_input_in(ingresos) {
         clase_media_add_group_alquilando === 0 &&
         clase_media_alta_add_group_alquilando === 0
     ) {
-        document.querySelector(".all_canasta_indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia-txt").style.removeProperty("background-color");
         document.querySelector(".all_canasta_pobreza").style.removeProperty("background-color");
         document.querySelector(".all_canasta_baja").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media_fragil").style.removeProperty("background-color");
@@ -783,8 +783,8 @@ function ingresos_input_in(ingresos) {
     }
 
     if (ingresos > 0 && ingresos < suma_indigencia_alquilando) {
-        document.querySelector(".show_indigencia").style.setProperty("background-color", "#FF1100", "important");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.setProperty("background-color", "#FF1100", "important");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
@@ -792,8 +792,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_alta").style.removeProperty("background-color");
         document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
     } else if (ingresos >= suma_indigencia_alquilando && ingresos < suma_pobreza_alquilando) {
-        document.querySelector(".show_pobreza").style.setProperty("background-color", "#FF1100", "important");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.setProperty("background-color", "#FF1100", "important");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
@@ -802,8 +802,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
     } else if (ingresos >= suma_pobreza_alquilando && ingresos < clase_baja_add_group_alquilando) {
         document.querySelector(".show_clase_baja").style.setProperty("background-color", "#FF5500 ", "important");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_alta").style.removeProperty("background-color");
@@ -813,8 +813,8 @@ function ingresos_input_in(ingresos) {
         document
             .querySelector(".show_clase_media_fragil")
             .style.setProperty("background-color", "#4CAF50", "important");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_alta").style.removeProperty("background-color");
@@ -822,8 +822,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
     } else if (ingresos >= clase_media_fragil_add_group_alquilando && ingresos < clase_media_add_group_alquilando) {
         document.querySelector(".show_clase_media").style.setProperty("background-color", "#4CAF50", "important");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_alta").style.removeProperty("background-color");
@@ -831,8 +831,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
     } else if (ingresos >= clase_media_add_group_alquilando && ingresos < clase_media_alta_add_group_alquilando) {
         document.querySelector(".show_clase_media_alta").style.setProperty("background-color", "#4CAF50", "important");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
@@ -840,8 +840,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".show_clase_acomodada").style.removeProperty("background-color");
     } else if (ingresos >= clase_media_alta_add_group_alquilando && ingresos < clase_alta_add_group_baja_alquilando) {
         document.querySelector(".show_clase_alta").style.setProperty("background-color", "#4CAF50", "important");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
@@ -850,8 +850,8 @@ function ingresos_input_in(ingresos) {
     } else if (ingresos >= clase_alta_add_group_baja_alquilando < Infinity) {
         document.querySelector(".show_clase_acomodada").style.setProperty("background-color", "#4CbF50", "important");
         document.querySelector(".show_clase_alta").style.removeProperty("background-color");
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
         document.querySelector(".show_clase_media").style.removeProperty("background-color");
@@ -862,7 +862,7 @@ function ingresos_input_in(ingresos) {
     console.log("ingresos",  ingresos);
 
     if (clase_media_alta_add_group_alquilando === 0) {
-        document.querySelector(".all_canasta_indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia-txt").style.removeProperty("background-color");
         document.querySelector(".all_canasta_pobreza").style.removeProperty("background-color");
         document.querySelector(".all_canasta_baja").style.removeProperty("background-color");
         document.querySelector(".all_canasta_media_fragil").style.removeProperty("background-color");
@@ -875,8 +875,8 @@ function ingresos_input_in(ingresos) {
     }
 
     if (ingresos === "" || !ingresos) {
-        document.querySelector(".show_indigencia").style.removeProperty("background-color");
-        document.querySelector(".show_pobreza").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-indigencia").style.removeProperty("background-color");
+        document.querySelector(".card-main-table-classes-show-pobreza").style.removeProperty("background-color");
 
         document.querySelector(".show_clase_baja").style.removeProperty("background-color");
         document.querySelector(".show_clase_media_fragil").style.removeProperty("background-color");
@@ -889,7 +889,7 @@ function ingresos_input_in(ingresos) {
 
 ingresos_input_in(ingresos);
 
-document.getElementById("ingresos_input").addEventListener("input", (e) => {
+document.getElementById("card-main-ingresos-input").addEventListener("input", (e) => {
     const ingresosEvent = parseInt(e.target.value);
     ingresos_input_in(ingresosEvent);
 });

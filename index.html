@@ -172,7 +172,7 @@
                                     </option>
                                 </select>
                             </label>
-                            <div id="card-main-total-alquiler" class="card-main-table-header">
+                            <div id="card-main-total-alquiler">
                                 <label class="d-flex justify-content-end">
                                     <input type="text" inputmode="numeric" pattern="\d*" name="card-main-alquiler_in"
                                         id="card-main-alquiler_in" class="card-main-partial_sumable card-main-alquiler_in form-control" value=""
@@ -363,11 +363,11 @@
 
                         <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
                         <div class="table-responsive overflow-auto">
-                            <table class="table card-main-table-select-canastas table-hover overflow-hidden card-main-table-header w-100">
+                            <table class="table table-hover overflow-hidden card-main-table-details w-100">
                                 <thead >
                                     <tr >
                                         <th class="card-main-table-select-canastas-container col-3 p-0 m-0" scope="col">
-                                            <select name="detalle_personal" id="detalle_personal"
+                                            <select name="card-main-table-select-canastas" id="card-main-table-select-canastas"
                                                 title="Seleccione el detalle personal" class="card-main-table-select-canastas">
                                                 <option class="card-main-table-select-canastas-option" value="" disabled>
                                                     Detalle individual ▼▼
@@ -390,11 +390,11 @@
                                                 </option>
                                             </select>
                                         </th>
-                                        <th class="card-main-table-header col-1 p-1 m-0" scope="col-1">Edad</th>
-                                        <th class="card-main-table-header p-0 m-0" scope="col">$ detalle $</th>
-                                        <th class="card-main-table-header col-1 p-0 m-0" scope="col">
+                                        <th class="card-main-table-head col-1 p-1 m-0" scope="col-1">Edad</th>
+                                        <th class="card-main-table-head p-0 m-0" scope="col">$ detalle $</th>
+                                        <th class="card-main-table-head col-1 p-0 m-0" scope="col">
                                             <!-- SVG DELETE -->
-                                            <svg class="detalles_delete_head" width="20px" height="20px"
+                                            <svg class="card-main-table_delete_head" width="20px" height="20px"
                                                 viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
@@ -409,33 +409,33 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody id="person-list" class=""></tbody>
+                                <tbody id="card-main-table-details-person-list"></tbody>
                                 <tfoot>
-                                    <tr class="row_mostrar_alquiler">
-                                        <th class="card-main-table-header" scope="col">Alquiler</th>
-                                        <th class="card-main-table-header col-1" scope="col"></th>
-                                        <th id="alquiler_out" class="card-main-table-header" scope="col"></th>
-                                        <th class="card-main-table-header col-1" scope="col"></th>
+                                    <tr class="card-main-table-details-row-mostrar-alquiler">
+                                        <th class="card-main-table-head" scope="col">Alquiler</th>
+                                        <th class="card-main-table-head col-1" scope="col"></th>
+                                        <th id="card-main-alquiler-out" class="card-main-table-head" scope="col"></th>
+                                        <th class="card-main-table-head col-1" scope="col"></th>
                                     </tr>
                                     <tr class="table-group-divider">
-                                        <th class="card-main-table-header" scope="col">Total</th>
-                                        <th class="card-main-table-header col-1" scope="col"></th>
-                                        <th id="total-canasta" class="card-main-table-header" scope="col"></th>
-                                        <th class="card-main-table-header col-1" scope="col"></th>
+                                        <th class="card-main-table-head" scope="col">Total</th>
+                                        <th class="card-main-table-head col-1" scope="col"></th>
+                                        <th id="total-canasta" class="card-main-table-head" scope="col"></th>
+                                        <th class="card-main-table-head col-1" scope="col"></th>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
                     </form>
 
-                    <!-- Tabla clases sociales -->
+                    <!-- Tabla clases sociales ------------------------------------------>
                 <li class="list-group-item pt-3">
 
                     <div class="d-flex justify-content-center row w-100">
                         <span class=" pb-1 text-center fs-6">Opcional: Ingresar Salario</span>
                         <div class="d-flex justify-content-center align-items-center pb-2">
                             <label>
-                                <input id="ingresos_input" class="ingresos_input form-control me-2 text-center"
+                                <input id="card-main-ingresos-input" class="card-main-ingresos-input form-control me-2 text-center"
                                     type="number" pattern="\d+" placeholder="$ Ingreso Familiar"
                                     title="Ingresa tu salario mensual familiar" />
                             </label>
@@ -448,35 +448,35 @@
 
                     </div>
                 </li>
-                <div class="pt-2 mt-3 text-center table-all-canastas">
+                <div class="pt-2 mt-3 text-center card-main-table-classes">
                     <div class="row m-0 mb-2 p-0 w-100">
-                        <div class="col pb-1 text-center table_canastas_title text-shadow">
+                        <div class="col pb-1 text-center card-main-table-classes-txt text-shadow">
                             Conocé tu Clase Social
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 show_indigencia">
+                    <div class="row m-0 p-0 w-100 card-main-table-classes-show-indigencia">
                         <div
-                            class="m-0 p-0 show_indigencia_min d-flex justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 card-main-table-classes-show-indigencia_min d-flex justify-content-center align-content-center align-items-center">
                         </div>
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_indigencia">
-                            <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Indigente<span
-                                class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow card-main-table-classes-show-indigencia-txt">
+                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Indigente<span
+                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
-                            class="m-0 p-0 show_indigencia_max justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 card-main-table-classes-show-indigencia_max justify-content-center align-content-center align-items-center">
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 show_pobreza">
+                    <div class="row m-0 p-0 w-100 card-main-table-classes-show-pobreza">
                         <div
-                            class="m-0 p-0 show_pobreza_min justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 card-main-table-classes-show-pobreza_min justify-content-center align-content-center align-items-center">
                         </div>
                         <div
                             class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_pobreza">
-                            <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Pobreza<span
-                                class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Pobreza<span
+                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
-                        <div class="m-0 p-0 show_pobreza_max align-content-center align-items-center"></div>
+                        <div class="m-0 p-0 card-main-table-classes-show-pobreza_max align-content-center align-items-center"></div>
                     </div>
                     <div class="row m-0 p-0 w-100 show_clase_baja">
                         <div
@@ -484,8 +484,8 @@
                         </div>
                         <div
                             class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_baja">
-                            <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Clase Baja<span
-                                class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Clase Baja<span
+                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
                             class="m-0 p-0 show_clase_baja_max justify-content-center align-content-center align-items-center">
@@ -497,8 +497,8 @@
                         </div>
                         <div
                             class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_fragil">
-                            <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media fragil<span
-                                class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media fragil<span
+                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
                             class="m-0 p-0 suma_clase_media_fragil_max justify-content-center align-content-center align-items-center">
@@ -510,8 +510,8 @@
                         </div>
                         <div
                             class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media">
-                            <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media<span
-                                class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media<span
+                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
                             class="m-0 p-0 suma_clase_media_max justify-content-center align-content-center align-items-center">
@@ -523,8 +523,8 @@
                         </div>
                         <div
                             class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_alta">
-                            <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>
-                            Media alta<span class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>
+                            Media alta<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
                             class="m-0 p-0 suma_clase_media_alta_max justify-content-center align-content-center align-items-center">
@@ -535,8 +535,8 @@
                         <div
                             class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_alta">
                             <span
-                                class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor">≤</span>Alta
-                            baja<span class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Alta
+                            baja<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
                             class="m-0 p-0 suma_clase_alta_max justify-content-center align-content-center align-items-center">
@@ -566,8 +566,8 @@
                         <div
                             class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text-shadow">
                             <span
-                                class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor">≤</span>Clase
-                            social<span class="bg-black text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Clase
+                            social<span class="bg-black text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                         </div>
                         <div
                             class="m-0 p-0 suma_clase_alta_max_info bg-black fs-6 justify-content-center align-content-center align-items-center">
@@ -702,33 +702,33 @@
                     </li>
 
                     <!-- Tabla clases sociales pasadas-->
-                    <div class="pt-2 mt-3 text-center table-all-canastas-past">
+                    <div class="pt-2 mt-3 text-center card-main-table-classes-past">
                         <div class="row m-0 mb-2 p-0 w-100">
                             <div class="col pb-1 fs-5 text-center text-shadow">Clase Socio Económica</div>
                         </div>
-                        <div class="row m-0 mb-0 p-0 w-100 show_indigencia show_indigencia_past">
+                        <div class="row m-0 mb-0 p-0 w-100 card-main-table-classes-show-indigencia card-main-table-classes-show-indigencia_past">
                             <div
-                                class="m-0 p-0 show_indigencia_min_past d-flex justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 card-main-table-classes-show-indigencia_min_past d-flex justify-content-center align-content-center align-items-center">
                             </div>
                             <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_indigencia all_canasta_indigencia_past">
-                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Indigente<span
-                                    class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow card-main-table-classes-show-indigencia-txt card-main-table-classes-show-indigencia-txt_past">
+                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Indigente<span
+                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
-                                class="m-0 p-0 show_indigencia_max_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 card-main-table-classes-show-indigencia_max_past justify-content-center align-content-center align-items-center">
                             </div>
                         </div>
-                        <div class="row m-0 p-0 w-100 show_pobreza show_pobreza_past">
+                        <div class="row m-0 p-0 w-100 card-main-table-classes-show-pobreza card-main-table-classes-show-pobreza_past">
                             <div
-                                class="m-0 p-0 show_pobreza_min_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 card-main-table-classes-show-pobreza_min_past justify-content-center align-content-center align-items-center">
                             </div>
                             <div
                                 class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_pobreza all_canasta_pobreza_past">
-                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Pobreza<span
-                                    class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Pobreza<span
+                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
-                            <div class="m-0 p-0 show_pobreza_max_past align-content-center align-items-center"></div>
+                            <div class="m-0 p-0 card-main-table-classes-show-pobreza_max_past align-content-center align-items-center"></div>
                         </div>
                         <div class="row m-0 p-0 w-100 show_clase_baja show_clase_baja_past">
                             <div
@@ -736,8 +736,8 @@
                             </div>
                             <div
                                 class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_baja all_canasta_baja_past">
-                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Clase Baja<span
-                                    class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Clase Baja<span
+                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
                                 class="m-0 p-0 show_clase_baja_max_past justify-content-center align-content-center align-items-center">
@@ -749,8 +749,8 @@
                             </div>
                             <div
                                 class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_fragil all_canasta_media_fragil_past">
-                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media fragil<span
-                                    class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media fragil<span
+                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
                                 class="m-0 p-0 suma_clase_media_fragil_max_past justify-content-center align-content-center align-items-center">
@@ -762,8 +762,8 @@
                             </div>
                             <div
                                 class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media all_canasta_media_past">
-                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>Media<span
-                                    class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media<span
+                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
                                 class="m-0 p-0 suma_clase_media_max_past justify-content-center align-content-center align-items-center">
@@ -775,8 +775,8 @@
                             </div>
                             <div
                                 class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_alta all_canasta_media_alta_past">
-                                <span class="pe-0 h-100 align-content-center mayor_menor">≤</span>
-                                Media alta<span class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>
+                                Media alta<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
                                 class="m-0 p-0 suma_clase_media_alta_max_past justify-content-center align-content-center align-items-center">
@@ -788,8 +788,8 @@
                             <div
                                 class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_alta all_canasta_alta_past">
                                 <span
-                                    class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor">≤</span>Alta
-                                baja<span class="text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                    class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Alta
+                                baja<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
                                 class="m-0 p-0 suma_clase_alta_max_past justify-content-center align-content-center align-items-center">
@@ -819,9 +819,9 @@
                             <div
                                 class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text-shadow">
                                 <span
-                                    class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor_menor">≤</span>Clase
+                                    class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Clase
                                 social<span
-                                    class="bg-black text-center h-100 align-content-center mayor_menor">&lt;</span>
+                                    class="bg-black text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
                             </div>
                             <div
                                 class="m-0 p-0 suma_clase_alta_max_info bg-black fs-6 justify-content-center align-content-center align-items-center">

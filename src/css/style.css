@@ -642,7 +642,7 @@ header {
     padding: 0;
 }
 
-.ingresos_input {
+.card-main-ingresos-input {
     background-color: #ff880022;
     cursor: pointer;
     max-width: var(--spacing-220);
@@ -650,7 +650,7 @@ header {
     border: 0.0625rem solid #ff880099;
 }
 
-.ingresos_input:focus {
+.card-main-ingresos-input:focus {
     box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
     border-color: #ff550066;
 }
@@ -695,7 +695,7 @@ header {
     filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%);
 }
 
-.mayor_menor {
+.card-main-table-classes-mayor-menor {
     font-size: var(--font-size-18_1-125);
     font-size: var(--font-size-18_1-125);
 }
@@ -813,14 +813,14 @@ header {
     width: 90%;
 }
 
-.show_indigencia,
+.card-main-table-classes-show-indigencia,
 .show_clase_baja,
 .show_clase_media,
 .show_clase_alta {
     background-color: #090909;
 }
 
-.show_indigencia {
+.card-main-table-classes-show-indigencia {
     border-top: 0.0625rem solid #2c2f33;
 }
 
@@ -828,17 +828,17 @@ header {
     border-bottom: 0.0625rem solid #2c2f33;
 }
 
-.show_pobreza,
+.card-main-table-classes-show-pobreza,
 .show_clase_media_fragil,
 .show_clase_media_alta,
 .show_clase_acomodada {
     background-color: #252529;
 }
 
-.show_indigencia_min,
-.show_indigencia_max,
-.show_pobreza_min,
-.show_pobreza_max,
+.card-main-table-classes-show-indigencia_min,
+.card-main-table-classes-show-indigencia_max,
+.card-main-table-classes-show-pobreza_min,
+.card-main-table-classes-show-pobreza_max,
 .show_clase_baja_min,
 .show_clase_baja_max,
 .suma_clase_media_fragil_min,
@@ -851,10 +851,10 @@ header {
 .suma_clase_alta_max,
 .suma_clase_alta_min_info,
 .suma_clase_alta_max_info,
-.show_indigencia_min_past,
-.show_indigencia_max_past,
-.show_pobreza_min_past,
-.show_pobreza_max_past,
+.card-main-table-classes-show-indigencia_min_past,
+.card-main-table-classes-show-indigencia_max_past,
+.card-main-table-classes-show-pobreza_min_past,
+.card-main-table-classes-show-pobreza_max_past,
 .show_clase_baja_min_past,
 .show_clase_baja_max_past,
 .suma_clase_media_fragil_min_past,
@@ -882,7 +882,7 @@ header {
     margin: 0;
 }
 
-.table_canastas_title {
+.card-main-table-classes-txt {
     font-size: 1.3rem;
 }
 
@@ -920,7 +920,7 @@ tfoot {
     pointer-events: none; /* Evita interferencias con la interacción del usuario */
 }
 
-.table-all-canastas {
+.card-main-table-all-classes {
     font-size: var(--spacing-10_0-625) !important;
     border: 0.0625rem solid #141414;
     border-radius: 0.5rem;
@@ -929,10 +929,12 @@ tfoot {
     background-color: #ff880033;
 }
 
-.table-all-canastas-past {
+.card-main-table-all-classes-past {
     display: none;
 }
 
+.card-main-table-details,
+.card-main-table-head,
 .card-main-table-header {
     text-align: center;
 }
