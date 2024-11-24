@@ -26,25 +26,25 @@
 
 <body>
     <!-- <div class="shadow-top"></div> -->
-    <div class="indices_short_container">
-        <div class="indices_top">
-            <span class="indices_short">ipc </span><span class="indices_short_ipc_percent"> </span>
+    <div class="index__container">
+        <div class="index__top">
+            <span class="index__data--txt">ipc </span><span class="index__data--ipc"> </span>
         </div>
         <span>|</span>
-        <div class="indices_top">
-            <span class="indices_short">cba </span><span class="indices_short_cba"></span>
+        <div class="index__top">
+            <span class="index__data--txt">cba </span><span class="index__data--cba"></span>
         </div>
         <span>|</span>
-        <div class="indices_top">
-            <span class="indices_short">cbt </span><span class="indices_short_cbt"></span>
+        <div class="index__top">
+            <span class="index__data--txt">cbt </span><span class="index__data--cbt"></span>
         </div>
     </div>
     <!-- HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
     <header class="bg-black rounded-4">
         <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="navbar navbar-dark rounded-4 w-100 bg-black">
+        <nav class="navbar rounded-4 w-100">
             <div class="container-fluid">
-                <a class="navbar-brand logo" href="./index.html"><img class="navbar-logo-img" src="src/img/iso_logo.svg"
+                <a class="navbar-brand logo" href="./index.html"><img class="navbar__img" src="src/img/iso_logo.svg"
                         alt="" />CANASTAS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
@@ -61,7 +61,7 @@
                     <div class="offcanvas-body rounded-4">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" href="#canasta_custom">Canasta personalizada</a>
+                                <a class="nav-link" href="#canasta__main">Canasta personalizada</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -96,39 +96,36 @@
     </header>
 
     <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <main id="canasta_custom">
+    <main id="canasta__main">
         <!-- Card 1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <div class="card w-100 rounded-4 card_main">
             <ul class="list-group list-group-flush rounded-4">
                 <li class="list-group-item d-flex flex-column pb-0">
-                    <h2 class="card-main-title text-center">Canasta Personalizada</h2>
+                    <h2 class="card__title text-center">Canasta Personalizada</h2>
 
-                    <div class="card-main-vivienda_container">
-                        <div class="card-main-vivienda">
+                    <div class="card__vivienda__container">
+                        <div class="card__vivienda">
                             
                                         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#4CAF50"
-                                            class="bi bi-house-fill icon-svg-hause" viewBox="0 0 16 16">
+                                            class="bi bi-house-fill card__svg__house" viewBox="0 0 16 16">
                                             <path
                                                 d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
                                             <path
                                                 d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
                                         </svg>
-                                    </span>
-                                </button>
-                            </span>
 
-                            <p class="card-main-vivienda-txt">Vivienda</p>
+                            <p class="card__vivienda__txt">Vivienda</p>
                             <span >
-                                <button type="button" class="btn btn-secondary  aclaracion_vivienda"
-                                    data-bs-toggle="tooltip" data-bs-placement="top" aria-label="aclaracion_icons"
+                                <button type="button" class="btn btn-secondary  aclaracion__vivienda"
+                                    data-bs-toggle="tooltip" data-bs-placement="top" aria-label="aclaracion__icons"
                                     data-bs-custom-class="custom-tooltip"
                                     data-bs-title="Agrega presionando el [+]  de color naranja, a cada miembro de tu hogar, su género y edad, para calcular tu Canasta Verdadera.">i
                                    
                                 </button> 
                             </span>
-                            <div class="card-main-btn-reset" id="card-main-btn-reset">
+                            <div class="card__btn--reset" id="card__btn--reset">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#FF3366"
-                                    class="bi bi-x-square card-main-icon-svg-reset" viewBox="0 0 16 16">
+                                    class="bi bi-x-square card__svg--reset" viewBox="0 0 16 16">
                                     <path
                                         d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
                                     <path
@@ -136,46 +133,46 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="card-main-table_alquiler">
+                        <div class="card__table__rent">
                             <label class="w-50">
-                                <select aria-label="canasta_alquiler" name="canasta_alquiler"
-                                    id="card-main-select-alquiler" title="Seleccioná si ALquilas o No ALquilas."
-                                    class="form-select card-main-select-alquiler">
-                                    <option class="card-main-select-alquiler-option" value="siAlquilo">Alquilada</option>
-                                    <option class="card-main-select-alquiler-option" value="noAlquilo">No Alquilada</option>
-                                    <option class="card-main-select-alquiler-option" value="" disabled>
+                                <select aria-label="canasta_rent" name="canasta_rent"
+                                    id="card__select__rent" title="Seleccioná si ALquilas o No ALquilas."
+                                    class="form-select card__select__rent">
+                                    <option class="card__rent--option" value="siAlquilo">Alquilada</option>
+                                    <option class="card__rent--option" value="noAlquilo">No Alquilada</option>
+                                    <option class="card__rent--option" value="" disabled>
                                         == Datos Promedio CABA ▼▼
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="AlquilerProm3amb">
+                                    <option class="card__rent--option" value="AlquilerProm3amb">
                                         CABA Alquiler promedio 3 Amb
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="AlquilerProm2amb">
+                                    <option class="card__rent--option" value="AlquilerProm2amb">
                                         CABA Alquiler promedio 2 Amb
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="AlquilerProm1amb">
+                                    <option class="card__rent--option" value="AlquilerProm1amb">
                                         CABA Alquiler promedio 1 Amb
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="" disabled>
+                                    <option class="card__rent--option" value="" disabled>
                                         == Datos Promedio GBA Norte ▼▼
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="" disabled>
+                                    <option class="card__rent--option" value="" disabled>
                                         == Datos Promedio GBA Oeste ▼▼
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="" disabled>
+                                    <option class="card__rent--option" value="" disabled>
                                         == Datos Promedio GBA Sur ▼▼
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="" disabled>
+                                    <option class="card__rent--option" value="" disabled>
                                         == Datos Promedio Cordoba ▼▼
                                     </option>
-                                    <option class="card-main-select-alquiler-option" value="" disabled>
+                                    <option class="card__rent--option" value="" disabled>
                                         == Datos Promedio Rosario ▼▼
                                     </option>
                                 </select>
                             </label>
-                            <div id="card-main-total-alquiler">
+                            <div id="card__total__rent">
                                 <label class="d-flex justify-content-end">
-                                    <input type="text" inputmode="numeric" pattern="\d*" name="card-main-alquiler_in"
-                                        id="card-main-alquiler_in" class="card-main-partial_sumable card-main-alquiler_in form-control" value=""
+                                    <input type="text" inputmode="numeric" pattern="\d*" name="card__rent__in"
+                                        id="card__rent__in" class="card__partial__add card__rent__in form-control" value=""
                                         placeholder="$ Valor Alquiler"
                                         title="Si alquilas, ingresá el monto del alquiler." />
                                 </label>
@@ -183,9 +180,9 @@
                         </div>
                     </div>
 
-                    <form id="card-main-form">
-                        <div class="card-main-form-container">
-                            <div class="card-main-form-family">
+                    <form id="form">
+                        <div class="form__container">
+                            <div class="form__family">
                                 <span>
                                     <!-- SVG PERSON -->
                                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -196,10 +193,10 @@
                                     </svg>
                                 </span>
                                 
-                                <p class="card-main-form-family-txt">Agregá el grupo familiar</p>
+                                <p class="form__family--txt">Agregá el grupo familiar</p>
                                 <span class="">
-                                    <button type="button" class="btn btn-secondary  aclaracion_family"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" aria-label="aclaracion_icons"
+                                    <button type="button" class="btn btn-secondary  aclaracion__family"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" aria-label="aclaracion__icons"
                                         data-bs-custom-class="custom-tooltip"
                                         data-bs-title="Agrega presionando el [+]  de color naranja, a cada miembro de tu hogar, su género y edad, para calcular tu Canasta Verdadera.">i
                                        
@@ -207,144 +204,144 @@
                                 </span>
                             </div>
                             <div class="fieldset">
-                                <div class="card-main-form-gender">
+                                <div class="form__gender">
                                     <!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
                                     <label class="w-100">
-                                        <select aria-label="card-main-form-selected-gender" name="card-main-form-selected-gender" id="card-main-form-selected-gender"
-                                            class="form-select card-main-form-selected-gender" title="Ingresá el género de la persona">
-                                            <!-- <option value="" class="card-main-form-selected-gender-option" selected disabled>
+                                        <select aria-label="form__select__gender" name="form__select__gender" id="form__select__gender"
+                                            class="form-select form__select__gender" title="Ingresá el género de la persona">
+                                            <!-- <option value="" class="form__gender--option" selected disabled>
                                                     • Persona
                                                 </option> -->
 
-                                            <option value="Femenino" class="card-main-form-selected-gender-option" selected>
+                                            <option value="Femenino" class="form__gender--option" selected>
                                                 Femenino
                                             </option>
-                                            <option value="Masculino" class="card-main-form-selected-gender-option">Masculino</option>
+                                            <option value="Masculino" class="form__gender--option">Masculino</option>
                                         </select>
                                     </label>
                                     <input type="hidden" name="gender" id="gender" required />
                                 </div>
-                                <div class="card-main-form-age-container">
-                                    <div class="card-main-form-age">
-                                        <label for="card-main-form-age-select" class="d-block">
-                                            <select aria-label="card-main-form-age-select" name="card-main-form-age-select" id="card-main-form-age-select"
-                                                class="form-select card-main-form-age-select rounded"
+                                <div class="form__age__container">
+                                    <div class="form__age">
+                                        <label for="form__select__age" class="d-block">
+                                            <select aria-label="form__select__age" name="form__select__age" id="form__select__age"
+                                                class="form-select form__select__age rounded"
                                                 title="Ingresá la edad de la persona">
-                                                <option value="" class="card-main-form-age-option-selected" selected disabled>
+                                                <option value="" class="form__age__option--selected" selected disabled>
                                                     Edad
                                                 </option>
-                                                <option value="0" class="card-main-form-age-option">0 a 11 meses</option>
-                                                <option value="1" class="card-main-form-age-option">1 año</option>
-                                                <option value="2" class="card-main-form-age-option">2 años</option>
-                                                <option value="3" class="card-main-form-age-option">3 años</option>
-                                                <option value="4" class="card-main-form-age-option">4 años</option>
-                                                <option value="5" class="card-main-form-age-option">5 años</option>
-                                                <option value="6" class="card-main-form-age-option">6 años</option>
-                                                <option value="7" class="card-main-form-age-option">7 años</option>
-                                                <option value="8" class="card-main-form-age-option">8 años</option>
-                                                <option value="9" class="card-main-form-age-option">9 años</option>
-                                                <option value="10" class="card-main-form-age-option">10 años</option>
-                                                <option value="11" class="card-main-form-age-option">11 años</option>
-                                                <option value="12" class="card-main-form-age-option">12 años</option>
-                                                <option value="13" class="card-main-form-age-option">13 años</option>
-                                                <option value="14" class="card-main-form-age-option">14 años</option>
-                                                <option value="15" class="card-main-form-age-option">15 años</option>
-                                                <option value="16" class="card-main-form-age-option">16 años</option>
-                                                <option value="17" class="card-main-form-age-option">17 años</option>
-                                                <option value="18" class="card-main-form-age-option">18 años</option>
-                                                <option value="19" class="card-main-form-age-option">19 años</option>
-                                                <option value="20" class="card-main-form-age-option">20 años</option>
-                                                <option value="21" class="card-main-form-age-option">21 años</option>
-                                                <option value="22" class="card-main-form-age-option">22 años</option>
-                                                <option value="23" class="card-main-form-age-option">23 años</option>
-                                                <option value="24" class="card-main-form-age-option">24 años</option>
-                                                <option value="25" class="card-main-form-age-option">25 años</option>
-                                                <option value="26" class="card-main-form-age-option">26 años</option>
-                                                <option value="27" class="card-main-form-age-option">27 años</option>
-                                                <option value="28" class="card-main-form-age-option">28 años</option>
-                                                <option value="29" class="card-main-form-age-option">29 años</option>
-                                                <option value="30" class="card-main-form-age-option">30 años</option>
-                                                <option value="31" class="card-main-form-age-option">31 años</option>
-                                                <option value="32" class="card-main-form-age-option">32 años</option>
-                                                <option value="33" class="card-main-form-age-option">33 años</option>
-                                                <option value="34" class="card-main-form-age-option">34 años</option>
-                                                <option value="35" class="card-main-form-age-option">35 años</option>
-                                                <option value="36" class="card-main-form-age-option">36 años</option>
-                                                <option value="37" class="card-main-form-age-option">37 años</option>
-                                                <option value="38" class="card-main-form-age-option">38 años</option>
-                                                <option value="39" class="card-main-form-age-option">39 años</option>
-                                                <option value="40" class="card-main-form-age-option">40 años</option>
-                                                <option value="41" class="card-main-form-age-option">41 años</option>
-                                                <option value="42" class="card-main-form-age-option">42 años</option>
-                                                <option value="43" class="card-main-form-age-option">43 años</option>
-                                                <option value="44" class="card-main-form-age-option">44 años</option>
-                                                <option value="45" class="card-main-form-age-option">45 años</option>
-                                                <option value="46" class="card-main-form-age-option">46 años</option>
-                                                <option value="47" class="card-main-form-age-option">47 años</option>
-                                                <option value="48" class="card-main-form-age-option">48 años</option>
-                                                <option value="49" class="card-main-form-age-option">49 años</option>
-                                                <option value="50" class="card-main-form-age-option">50 años</option>
-                                                <option value="51" class="card-main-form-age-option">51 años</option>
-                                                <option value="52" class="card-main-form-age-option">52 años</option>
-                                                <option value="53" class="card-main-form-age-option">53 años</option>
-                                                <option value="54" class="card-main-form-age-option">54 años</option>
-                                                <option value="55" class="card-main-form-age-option">55 años</option>
-                                                <option value="56" class="card-main-form-age-option">56 años</option>
-                                                <option value="57" class="card-main-form-age-option">57 años</option>
-                                                <option value="58" class="card-main-form-age-option">58 años</option>
-                                                <option value="59" class="card-main-form-age-option">59 años</option>
-                                                <option value="60" class="card-main-form-age-option">60 años</option>
-                                                <option value="61" class="card-main-form-age-option">61 años</option>
-                                                <option value="62" class="card-main-form-age-option">62 años</option>
-                                                <option value="63" class="card-main-form-age-option">63 años</option>
-                                                <option value="64" class="card-main-form-age-option">64 años</option>
-                                                <option value="65" class="card-main-form-age-option">65 años</option>
-                                                <option value="66" class="card-main-form-age-option">66 años</option>
-                                                <option value="67" class="card-main-form-age-option">67 años</option>
-                                                <option value="68" class="card-main-form-age-option">68 años</option>
-                                                <option value="69" class="card-main-form-age-option">69 años</option>
-                                                <option value="70" class="card-main-form-age-option">70 años</option>
-                                                <option value="71" class="card-main-form-age-option">71 años</option>
-                                                <option value="72" class="card-main-form-age-option">72 años</option>
-                                                <option value="73" class="card-main-form-age-option">73 años</option>
-                                                <option value="74" class="card-main-form-age-option">74 años</option>
-                                                <option value="75" class="card-main-form-age-option">75 años</option>
-                                                <option value="76" class="card-main-form-age-option">76 años</option>
-                                                <option value="77" class="card-main-form-age-option">77 años</option>
-                                                <option value="78" class="card-main-form-age-option">78 años</option>
-                                                <option value="79" class="card-main-form-age-option">79 años</option>
-                                                <option value="80" class="card-main-form-age-option">80 años</option>
-                                                <option value="81" class="card-main-form-age-option">81 años</option>
-                                                <option value="82" class="card-main-form-age-option">82 años</option>
-                                                <option value="83" class="card-main-form-age-option">83 años</option>
-                                                <option value="84" class="card-main-form-age-option">84 años</option>
-                                                <option value="85" class="card-main-form-age-option">85 años</option>
-                                                <option value="86" class="card-main-form-age-option">86 años</option>
-                                                <option value="87" class="card-main-form-age-option">87 años</option>
-                                                <option value="88" class="card-main-form-age-option">88 años</option>
-                                                <option value="89" class="card-main-form-age-option">89 años</option>
-                                                <option value="90" class="card-main-form-age-option">90 años</option>
-                                                <option value="91" class="card-main-form-age-option">91 años</option>
-                                                <option value="92" class="card-main-form-age-option">92 años</option>
-                                                <option value="93" class="card-main-form-age-option">93 años</option>
-                                                <option value="94" class="card-main-form-age-option">94 años</option>
-                                                <option value="95" class="card-main-form-age-option">95 años</option>
-                                                <option value="96" class="card-main-form-age-option">96 años</option>
-                                                <option value="97" class="card-main-form-age-option">97 años</option>
-                                                <option value="98" class="card-main-form-age-option">98 años</option>
-                                                <option value="99" class="card-main-form-age-option">99 años</option>
-                                                <option value="100" class="card-main-form-age-option">100 a 122</option>
+                                                <option value="0" class="form__age--option">0 a 11 meses</option>
+                                                <option value="1" class="form__age--option">1 año</option>
+                                                <option value="2" class="form__age--option">2 años</option>
+                                                <option value="3" class="form__age--option">3 años</option>
+                                                <option value="4" class="form__age--option">4 años</option>
+                                                <option value="5" class="form__age--option">5 años</option>
+                                                <option value="6" class="form__age--option">6 años</option>
+                                                <option value="7" class="form__age--option">7 años</option>
+                                                <option value="8" class="form__age--option">8 años</option>
+                                                <option value="9" class="form__age--option">9 años</option>
+                                                <option value="10" class="form__age--option">10 años</option>
+                                                <option value="11" class="form__age--option">11 años</option>
+                                                <option value="12" class="form__age--option">12 años</option>
+                                                <option value="13" class="form__age--option">13 años</option>
+                                                <option value="14" class="form__age--option">14 años</option>
+                                                <option value="15" class="form__age--option">15 años</option>
+                                                <option value="16" class="form__age--option">16 años</option>
+                                                <option value="17" class="form__age--option">17 años</option>
+                                                <option value="18" class="form__age--option">18 años</option>
+                                                <option value="19" class="form__age--option">19 años</option>
+                                                <option value="20" class="form__age--option">20 años</option>
+                                                <option value="21" class="form__age--option">21 años</option>
+                                                <option value="22" class="form__age--option">22 años</option>
+                                                <option value="23" class="form__age--option">23 años</option>
+                                                <option value="24" class="form__age--option">24 años</option>
+                                                <option value="25" class="form__age--option">25 años</option>
+                                                <option value="26" class="form__age--option">26 años</option>
+                                                <option value="27" class="form__age--option">27 años</option>
+                                                <option value="28" class="form__age--option">28 años</option>
+                                                <option value="29" class="form__age--option">29 años</option>
+                                                <option value="30" class="form__age--option">30 años</option>
+                                                <option value="31" class="form__age--option">31 años</option>
+                                                <option value="32" class="form__age--option">32 años</option>
+                                                <option value="33" class="form__age--option">33 años</option>
+                                                <option value="34" class="form__age--option">34 años</option>
+                                                <option value="35" class="form__age--option">35 años</option>
+                                                <option value="36" class="form__age--option">36 años</option>
+                                                <option value="37" class="form__age--option">37 años</option>
+                                                <option value="38" class="form__age--option">38 años</option>
+                                                <option value="39" class="form__age--option">39 años</option>
+                                                <option value="40" class="form__age--option">40 años</option>
+                                                <option value="41" class="form__age--option">41 años</option>
+                                                <option value="42" class="form__age--option">42 años</option>
+                                                <option value="43" class="form__age--option">43 años</option>
+                                                <option value="44" class="form__age--option">44 años</option>
+                                                <option value="45" class="form__age--option">45 años</option>
+                                                <option value="46" class="form__age--option">46 años</option>
+                                                <option value="47" class="form__age--option">47 años</option>
+                                                <option value="48" class="form__age--option">48 años</option>
+                                                <option value="49" class="form__age--option">49 años</option>
+                                                <option value="50" class="form__age--option">50 años</option>
+                                                <option value="51" class="form__age--option">51 años</option>
+                                                <option value="52" class="form__age--option">52 años</option>
+                                                <option value="53" class="form__age--option">53 años</option>
+                                                <option value="54" class="form__age--option">54 años</option>
+                                                <option value="55" class="form__age--option">55 años</option>
+                                                <option value="56" class="form__age--option">56 años</option>
+                                                <option value="57" class="form__age--option">57 años</option>
+                                                <option value="58" class="form__age--option">58 años</option>
+                                                <option value="59" class="form__age--option">59 años</option>
+                                                <option value="60" class="form__age--option">60 años</option>
+                                                <option value="61" class="form__age--option">61 años</option>
+                                                <option value="62" class="form__age--option">62 años</option>
+                                                <option value="63" class="form__age--option">63 años</option>
+                                                <option value="64" class="form__age--option">64 años</option>
+                                                <option value="65" class="form__age--option">65 años</option>
+                                                <option value="66" class="form__age--option">66 años</option>
+                                                <option value="67" class="form__age--option">67 años</option>
+                                                <option value="68" class="form__age--option">68 años</option>
+                                                <option value="69" class="form__age--option">69 años</option>
+                                                <option value="70" class="form__age--option">70 años</option>
+                                                <option value="71" class="form__age--option">71 años</option>
+                                                <option value="72" class="form__age--option">72 años</option>
+                                                <option value="73" class="form__age--option">73 años</option>
+                                                <option value="74" class="form__age--option">74 años</option>
+                                                <option value="75" class="form__age--option">75 años</option>
+                                                <option value="76" class="form__age--option">76 años</option>
+                                                <option value="77" class="form__age--option">77 años</option>
+                                                <option value="78" class="form__age--option">78 años</option>
+                                                <option value="79" class="form__age--option">79 años</option>
+                                                <option value="80" class="form__age--option">80 años</option>
+                                                <option value="81" class="form__age--option">81 años</option>
+                                                <option value="82" class="form__age--option">82 años</option>
+                                                <option value="83" class="form__age--option">83 años</option>
+                                                <option value="84" class="form__age--option">84 años</option>
+                                                <option value="85" class="form__age--option">85 años</option>
+                                                <option value="86" class="form__age--option">86 años</option>
+                                                <option value="87" class="form__age--option">87 años</option>
+                                                <option value="88" class="form__age--option">88 años</option>
+                                                <option value="89" class="form__age--option">89 años</option>
+                                                <option value="90" class="form__age--option">90 años</option>
+                                                <option value="91" class="form__age--option">91 años</option>
+                                                <option value="92" class="form__age--option">92 años</option>
+                                                <option value="93" class="form__age--option">93 años</option>
+                                                <option value="94" class="form__age--option">94 años</option>
+                                                <option value="95" class="form__age--option">95 años</option>
+                                                <option value="96" class="form__age--option">96 años</option>
+                                                <option value="97" class="form__age--option">97 años</option>
+                                                <option value="98" class="form__age--option">98 años</option>
+                                                <option value="99" class="form__age--option">99 años</option>
+                                                <option value="100" class="form__age--option">100 a 122</option>
                                             </select>
                                         </label>
                                         <input type="hidden" name="age" id="age" required />
                                         <!-- message error -->
-                                        <div id="card-main-message_error_age" class="card-main-message_error_age"></div>
+                                        <div id="error__message--age" class="error__message--age"></div>
                                         <!-- Overlay for the age options ++++++++++++++++++++++++-->
                                         <!-- <div id="overlay-age" class="overlay"></div> -->
                                         <!-- <div id="overlay-gender" class="overlay"></div> -->
                                     </div>
-                                    <button id="card-main-form-submit" type="submit" class="card-main-form-submit"
-                                        aria-label="Person" name="boton_add_person">
+                                    <button id="form__submit" type="submit" class="form__submit"
+                                        aria-label="Person" name="btn__add__person">
                                         <span>
                                             <!-- SVG ADD PERSON -->
                                             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45"
@@ -363,36 +360,36 @@
 
                         <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
                         <div class="table-responsive overflow-auto">
-                            <table class="table table-hover overflow-hidden card-main-table-details w-100">
+                            <table class="table table-hover overflow-hidden w-100 table__canastas">
                                 <thead >
                                     <tr >
-                                        <th class="card-main-table-select-canastas-container col-3 p-0 m-0" scope="col">
-                                            <select name="card-main-table-select-canastas" id="card-main-table-select-canastas"
-                                                title="Seleccione el detalle personal" class="card-main-table-select-canastas">
-                                                <option class="card-main-table-select-canastas-option" value="" disabled>
+                                        <th class="table__canastas__choice col-3 p-0 m-0" scope="col">
+                                            <select name="table__canastas__select" id="table__canastas__select"
+                                                title="Seleccione el detalle personal" class="table__canastas__select">
+                                                <option class="table__canastas__select--option" value="" disabled>
                                                     Detalle individual ▼▼
                                                 </option>
-                                                <option class="card-main-table-select-canastas-option" value="indigencia">
+                                                <option class="table__canastas__select--option" value="indigencia">
                                                     • CBA - Linea de indigencia
                                                 </option>
-                                                <option class="card-main-table-select-canastas-option" value="pobreza" selected>
+                                                <option class="table__canastas__select--option" value="pobreza" selected>
                                                     • CBT - Linea de pobreza
                                                 </option>
 
-                                                <option class="card-main-table-select-canastas-option" value="clase_baja">
+                                                <option class="table__canastas__select--option" value="clase_baja">
                                                     • Clase Baja
                                                 </option>
-                                                <option class="card-main-table-select-canastas-option" value="clase_media_fragil">
+                                                <option class="table__canastas__select--option" value="clase_media_fragil">
                                                     • Clase Media Fragil
                                                 </option>
-                                                <option class="card-main-table-select-canastas-option" value="clase_media">
+                                                <option class="table__canastas__select--option" value="clase_media">
                                                     • Clase Media
                                                 </option>
                                             </select>
                                         </th>
-                                        <th class="card-main-table-head col-1 p-1 m-0" scope="col-1">Edad</th>
-                                        <th class="card-main-table-head p-0 m-0" scope="col">$ detalle $</th>
-                                        <th class="card-main-table-head col-1 p-0 m-0" scope="col">
+                                        <th class="table__canastas__head col-1 p-1 m-0" scope="col-1">Edad</th>
+                                        <th class="table__canastas__head p-0 m-0" scope="col">$ detalle $</th>
+                                        <th class="table__canastas__head col-1 p-0 m-0" scope="col">
                                             <!-- SVG DELETE -->
                                             <svg class="card-main-table_delete_head" width="20px" height="20px"
                                                 viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
@@ -409,37 +406,37 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody id="card-main-table-details-person-list"></tbody>
+                                <tbody id="table__canastas__list"></tbody>
                                 <tfoot>
-                                    <tr class="card-main-table-details-row-mostrar-alquiler">
-                                        <th class="card-main-table-head" scope="col">Alquiler</th>
-                                        <th class="card-main-table-head col-1" scope="col"></th>
-                                        <th id="card-main-alquiler-out" class="card-main-table-head" scope="col"></th>
-                                        <th class="card-main-table-head col-1" scope="col"></th>
+                                    <tr class="table__canastas__rent">
+                                        <th class="table__canastas__head" scope="col">Alquiler</th>
+                                        <th class="table__canastas__head col-1" scope="col"></th>
+                                        <th id="card-main-rent-out" class="table__canastas__head" scope="col"></th>
+                                        <th class="table__canastas__head col-1" scope="col"></th>
                                     </tr>
                                     <tr class="table-group-divider">
-                                        <th class="card-main-table-head" scope="col">Total</th>
-                                        <th class="card-main-table-head col-1" scope="col"></th>
-                                        <th id="total-canasta" class="card-main-table-head" scope="col"></th>
-                                        <th class="card-main-table-head col-1" scope="col"></th>
+                                        <th class="table__canastas__head" scope="col">Total</th>
+                                        <th class="table__canastas__head col-1" scope="col"></th>
+                                        <th id="total-canasta" class="table__canastas__head" scope="col"></th>
+                                        <th class="table__canastas__head col-1" scope="col"></th>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
                     </form>
 
-                    <!-- Tabla clases sociales ------------------------------------------>
+                    <!-- ingresar salario ------------------------------------------>
                 <li class="list-group-item pt-3">
 
                     <div class="d-flex justify-content-center row w-100">
                         <span class=" pb-1 text-center fs-6">Opcional: Ingresar Salario</span>
                         <div class="d-flex justify-content-center align-items-center pb-2">
                             <label>
-                                <input id="card-main-ingresos-input" class="card-main-ingresos-input form-control me-2 text-center"
+                                <input id="income__input" class="form-control me-2 text-center income__input"
                                     type="number" pattern="\d+" placeholder="$ Ingreso Familiar"
                                     title="Ingresa tu salario mensual familiar" />
                             </label>
-                            <button type="button" class="btn btn-secondary aclaracion_ingresos" data-bs-toggle="tooltip"
+                            <button type="button" class="btn btn-secondary aclaracion__ingresos" data-bs-toggle="tooltip"
                                 data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector socioeconómico.">
                                 i
@@ -448,112 +445,114 @@
 
                     </div>
                 </li>
-                <div class="pt-2 mt-3 text-center card-main-table-classes">
+
+                <!-- Tabla clases sociales ------------------------------------------>
+                <div class="pt-2 mt-3 text-center table__classes">
                     <div class="row m-0 mb-2 p-0 w-100">
-                        <div class="col pb-1 text-center card-main-table-classes-txt text-shadow">
+                        <div class="col pb-1 text-center table__classes--txt text--shadow">
                             Conocé tu Clase Social
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 card-main-table-classes-show-indigencia">
+                    <div class="row m-0 p-0 w-100 table__classes__indigencia">
                         <div
-                            class="m-0 p-0 card-main-table-classes-show-indigencia_min d-flex justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 table__classes__indigencia--min d-flex justify-content-center align-content-center align-items-center">
                         </div>
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow card-main-table-classes-show-indigencia-txt">
-                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Indigente<span
-                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__indigencia--row">
+                            <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Indigente<span
+                                class="text-center h-100 align-content-center mayor__menor">&lt;</span>
                         </div>
                         <div
-                            class="m-0 p-0 card-main-table-classes-show-indigencia_max justify-content-center align-content-center align-items-center">
-                        </div>
-                    </div>
-                    <div class="row m-0 p-0 w-100 card-main-table-classes-show-pobreza">
-                        <div
-                            class="m-0 p-0 card-main-table-classes-show-pobreza_min justify-content-center align-content-center align-items-center">
-                        </div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_pobreza">
-                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Pobreza<span
-                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
-                        </div>
-                        <div class="m-0 p-0 card-main-table-classes-show-pobreza_max align-content-center align-items-center"></div>
-                    </div>
-                    <div class="row m-0 p-0 w-100 show_clase_baja">
-                        <div
-                            class="m-0 p-0 show_clase_baja_min d-flex justify-content-center align-content-center align-items-center">
-                        </div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_baja">
-                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Clase Baja<span
-                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
-                        </div>
-                        <div
-                            class="m-0 p-0 show_clase_baja_max justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 table__classes__indigencia--max justify-content-center align-content-center align-items-center">
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 show_clase_media_fragil">
+                    <div class="row m-0 p-0 w-100 table__classes__pobreza">
                         <div
-                            class="m-0 p-0 suma_clase_media_fragil_min justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 table__classes__pobreza--min justify-content-center align-content-center align-items-center">
                         </div>
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_fragil">
-                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media fragil<span
-                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__pobreza--row">
+                            <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Pobreza<span
+                                class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                        </div>
+                        <div class="m-0 p-0 table__classes__pobreza--max align-content-center align-items-center"></div>
+                    </div>
+                    <div class="row m-0 p-0 w-100 table__classes__baja">
+                        <div
+                            class="m-0 p-0 table__classes__baja--min d-flex justify-content-center align-content-center align-items-center">
                         </div>
                         <div
-                            class="m-0 p-0 suma_clase_media_fragil_max justify-content-center align-content-center align-items-center">
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__baja--row">
+                            <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Clase Baja<span
+                                class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                        </div>
+                        <div
+                            class="m-0 p-0 table__classes__baja--max justify-content-center align-content-center align-items-center">
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 show_clase_media">
+                    <div class="row m-0 p-0 w-100 table__classes__media__fragil">
                         <div
-                            class="m-0 p-0 suma_clase_media_min justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 table__classes__media__fragil--min justify-content-center align-content-center align-items-center">
                         </div>
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media">
-                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media<span
-                                class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__media__fragil--row">
+                            <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Media fragil<span
+                                class="text-center h-100 align-content-center mayor__menor">&lt;</span>
                         </div>
                         <div
-                            class="m-0 p-0 suma_clase_media_max justify-content-center align-content-center align-items-center">
-                        </div>
-                    </div>
-                    <div class="row m-0 p-0 w-100 show_clase_media_alta">
-                        <div
-                            class="m-0 p-0 suma_clase_media_alta_min justify-content-center align-content-center align-items-center">
-                        </div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_alta">
-                            <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>
-                            Media alta<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
-                        </div>
-                        <div
-                            class="m-0 p-0 suma_clase_media_alta_max justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 table__classes__media__fragil--max justify-content-center align-content-center align-items-center">
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 show_clase_alta">
-                        <div class="m-0 p-0 suma_clase_alta_min justify-content-center align-items-center"></div>
+                    <div class="row m-0 p-0 w-100 table__classes__media">
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_alta">
+                            class="m-0 p-0 table__classes__media--min justify-content-center align-content-center align-items-center">
+                        </div>
+                        <div
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__media--row">
+                            <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Media<span
+                                class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                        </div>
+                        <div
+                            class="m-0 p-0 table__classes__media--max justify-content-center align-content-center align-items-center">
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0 w-100 table__classes__media__alta">
+                        <div
+                            class="m-0 p-0 table__classes__media__alta--min justify-content-center align-content-center align-items-center">
+                        </div>
+                        <div
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__media__alta--row">
+                            <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>
+                            Media alta<span class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                        </div>
+                        <div
+                            class="m-0 p-0 table__classes__media__alta--max justify-content-center align-content-center align-items-center">
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0 w-100 table__classes__alta">
+                        <div class="m-0 p-0 table__classes__alta--min justify-content-center align-items-center"></div>
+                        <div
+                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__alta--row">
                             <span
-                                class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Alta
-                            baja<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor__menor">≤</span>Alta
+                            baja<span class="text-center h-100 align-content-center mayor__menor">&lt;</span>
                         </div>
                         <div
-                            class="m-0 p-0 suma_clase_alta_max justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 justify-content-center align-content-center align-items-center table__classes__alta--max">
                         </div>
                     </div>
-                    <div class="row m-0 p-0 w-100 show_clase_acomodada">
+                    <div class="row m-0 p-0 w-100 table__classes__acomodada">
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-center align-content-center align-items-center text-shadow all_canasta_acomodada">
+                            class="col m-0 p-0 py-1 d-flex justify-content-center align-content-center align-items-center text--shadow class__acomodada--row">
                             Acomodada
                         </div>
                     </div>
 
                     <div class="row w-100 text-body-tertiary">
                         <div
-                            class="m-0 p-0 py-2 suma_clase_alta_min_info bg-black justify-content-center align-items-center">
+                            class="m-0 p-0 py-2 bg-black justify-content-center align-items-center table__classes__alta--min__info">
                             <span class="">
-                                <button type="button" class="btn btn-secondary aclaracion_table_sectores"
+                                <button type="button" class="btn btn-secondary aclaracion__classes"
                                     data-bs-toggle="tooltip" data-bs-placement="top"
                                     data-bs-custom-class="custom-tooltip"
                                     data-bs-title="Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el ingreso máximo para pertenecer a ese sector socioeconómico.">
@@ -564,13 +563,13 @@
                             Minimo
                         </div>
                         <div
-                            class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text-shadow">
+                            class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text--shadow">
                             <span
-                                class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Clase
-                            social<span class="bg-black text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor__menor">≤</span>Clase
+                            social<span class="bg-black text-center h-100 align-content-center mayor__menor">&lt;</span>
                         </div>
                         <div
-                            class="m-0 p-0 suma_clase_alta_max_info bg-black fs-6 justify-content-center align-content-center align-items-center">
+                            class="m-0 p-0 bg-black fs-6 justify-content-center align-content-center align-items-center table__classes__alta--max__info">
                             Maximo
                         </div>
                     </div>
@@ -608,30 +607,30 @@
             </div> -->
 
         <!-- Card 2 Pesos Dolares +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <div class="card rounded-4 card_compare ">
+        <div class="card rounded-4 card__compare ">
             <ul class="list-group list-group-flush rounded-4">
                 <li
-                    class="list-group-item d-flex justify-content-center card-compare-header align-items-center position-relative">
-                    <div class="compare-switch form-switch">
+                    class="list-group-item d-flex justify-content-center align-items-center position-relative card__compare__header">
+                    <div class="form-switch compare__switch">
                         <input class="form-check-input border border-2 border-primary" type="checkbox" role="switch"
                             id="SwitchCompareCba" />
                         <label class="form-check-label" for="SwitchCompareCba" aria-label="Switch"></label>
                     </div>
 
-                    <h2 class="canasta-custom-compare-title text-center fs-5">Canasta en el Tiempo</h2>
-                    <span class="canasta_compare_info"><button type="button"
-                            class="btn btn-secondary aclaracion_date_month" data-bs-toggle="tooltip"
+                    <h2 class="card__compare__title text-center fs-5">Canasta en el Tiempo</h2>
+                    <span class="card__compare__info"><button type="button"
+                            class="btn btn-secondary aclaracion__date" data-bs-toggle="tooltip"
                             data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true"
                             data-bs-title="Tu situación hace uno o cinco años, ¿era mejor? ¿peor? ¿En la misma Clase social? Desde abril de 2016 podes revisar. Tenes que recordar tu salario en la esa fecha solamente.">
                             i
                         </button></span>
-                    <span class="canasta_compare_over rounded-4 aclaracion_date_over_container"><button type="button"
-                            id="aclaracion_date_over" class="btn btn-secondary aclaracion_date_over rounded-4"
+                    <span class="card__compare__over rounded-4 "><button type="button"
+                            id="aclaracion__date__over" class="btn btn-secondary rounded-4 aclaracion__date__over"
                             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                             data-bs-html="true"
-                            data-bs-title="Agrega tu grupo familiar <a class='tooltip-link' href='#card-main-form'>aquí</a>"></button></span>
+                            data-bs-title="Agrega tu grupo familiar <a class='tooltip-link' href='#form'>aquí</a>"></button></span>
                 </li>
-                <div class="card-compare-table-body">
+                <div class="table__compare__body">
                     <!--  <li class="d-flex justify-content-center text-center p-1">
                             <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cba"
                                 >cba</span
@@ -643,42 +642,42 @@
                                 >c_Baja</span
                             >
                         </li> -->
-                    <div class="canasta_date_container">
-                        <select id="canasta_date_month" class="form-select canasta_date_month" aria-label="Month">
-                            <option class="canasta_month_option" value="month" selected disabled>Mes</option>
+                    <div class="table__compare__month__container">
+                        <select id="table__compare__month" class="form-select table__compare__month" aria-label="Month">
+                            <option class="table__compare__month--option" value="month" selected disabled>Mes</option>
 
-                            <option class="canasta_month_option" value="1">Enero</option>
-                            <option class="canasta_month_option" value="2">Febrero</option>
-                            <option class="canasta_month_option" value="3">Marzo</option>
-                            <option class="canasta_month_option" value="4">Abril</option>
-                            <option class="canasta_month_option" value="5">Mayo</option>
-                            <option class="canasta_month_option" value="6">Junio</option>
-                            <option class="canasta_month_option" value="7">Julio</option>
-                            <option class="canasta_month_option" value="8">Agosto</option>
-                            <option class="canasta_month_option" value="9">Septiembre</option>
-                            <option class="canasta_month_option" value="10">Octubre</option>
-                            <option class="canasta_month_option" value="11">Noviembre</option>
-                            <option class="canasta_month_option" value="12">Diciembre</option>
+                            <option class="table__compare__month--option" value="1">Enero</option>
+                            <option class="table__compare__month--option" value="2">Febrero</option>
+                            <option class="table__compare__month--option" value="3">Marzo</option>
+                            <option class="table__compare__month--option" value="4">Abril</option>
+                            <option class="table__compare__month--option" value="5">Mayo</option>
+                            <option class="table__compare__month--option" value="6">Junio</option>
+                            <option class="table__compare__month--option" value="7">Julio</option>
+                            <option class="table__compare__month--option" value="8">Agosto</option>
+                            <option class="table__compare__month--option" value="9">Septiembre</option>
+                            <option class="table__compare__month--option" value="10">Octubre</option>
+                            <option class="table__compare__month--option" value="11">Noviembre</option>
+                            <option class="table__compare__month--option" value="12">Diciembre</option>
                         </select>
 
-                        <label for="canasta_date_year"></label>
-                        <select id="canasta_date_year" class="form-select canasta_date_year" aria-label="Year"></select>
-                        <span class="canasta_compare_info"><button type="button"
-                                class="btn btn-secondary aclaracion_date_month" data-bs-toggle="tooltip"
+                        <label for="table__compare__year"></label>
+                        <select id="table__compare__year" class="form-select table__compare__year" aria-label="Year"></select>
+                        <span class="card__compare__info"><button type="button"
+                                class="btn btn-secondary aclaracion__date" data-bs-toggle="tooltip"
                                 data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true"
-                                data-bs-title="ingresa mes y año y obtendras la canasta en ese momento para la familia que ya ingresaste <a href='#canasta_custom'>aquí</a>.">
+                                data-bs-title="ingresa mes y año y obtendras la canasta en ese momento para la familia que ya ingresaste <a href='#canasta__main'>aquí</a>.">
                                 i
                             </button></span>
                     </div>
-                    <li class="list-group canasta_compare_date">
+                    <li class="list-group table__compare__rent">
                         <div class="d-flex justify-content-center align-items-center w-100 position-relative">
                             <label class="d-flex justify-content-end">
-                                <input type="text" inputmode="numeric" pattern="\d*" name="alquiler_past"
-                                    id="alquiler_past" class="card-main-partial_sumable alquiler_past form-control" value=""
+                                <input type="text" inputmode="numeric" pattern="\d*" name="rent__past"
+                                    id="rent__past" class="form-control card__partial__add rent__past" value=""
                                     placeholder="$ Alquiler en 02/2022"
                                     title="Si alquilas, ingresá el monto del alquiler." />
                             </label>
-                            <button type="button" class="btn btn-secondary aclaracion_rent_past"
+                            <button type="button" class="btn btn-secondary aclaracion__rent__past"
                                 data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                 data-bs-html="true"
                                 data-bs-title="Ingresá el monto de alquiler, si alquilabas en esa fecha.">
@@ -687,13 +686,13 @@
                         </div>
                         <div class="d-flex justify-content-center align-items-center w-100 position-relative">
                             <label>
-                                <input id="canasta_compare_ingresos_input"
-                                    class="canasta_compare_ingresos_input form-control me-2 text-center" type="number"
+                                <input id="table__compare__income--in"
+                                    class="form-control me-2 text-center table__compare__income--in" type="number"
                                     pattern="\d+" placeholder="$ Ingresos en 02/2022"
                                     title="Ingresa tu salario en ese mes y año." />
                             </label>
                             <button type="button"
-                                class="btn btn-secondary aclaracion_ingresos aclaracion_ingresos_compare"
+                                class="btn btn-secondary aclaracion__ingresos aclaracion__income_compare"
                                 data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Ingresá el ingreso mensual del hogar en el mes y año que elegiste.">
                                 i
@@ -701,112 +700,112 @@
                         </div>
                     </li>
 
-                    <!-- Tabla clases sociales pasadas-->
-                    <div class="pt-2 mt-3 text-center card-main-table-classes-past">
+                    <!-- Tabla clases sociales pasadas------------------------------->
+                    <div class="pt-2 mt-3 text-center table__classes__past">
                         <div class="row m-0 mb-2 p-0 w-100">
-                            <div class="col pb-1 fs-5 text-center text-shadow">Clase Socio Económica</div>
+                            <div class="col pb-1 fs-5 text-center text--shadow">Clase Socio Económica</div>
                         </div>
-                        <div class="row m-0 mb-0 p-0 w-100 card-main-table-classes-show-indigencia card-main-table-classes-show-indigencia_past">
+                        <div class="row m-0 mb-0 p-0 w-100 table__classes__indigencia table__classes__indigencia__past">
                             <div
-                                class="m-0 p-0 card-main-table-classes-show-indigencia_min_past d-flex justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 d-flex justify-content-center align-content-center align-items-center table__classes__indigencia--min__past">
                             </div>
                             <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow card-main-table-classes-show-indigencia-txt card-main-table-classes-show-indigencia-txt_past">
-                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Indigente<span
-                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__indigencia--row class__indigencia--row__past">
+                                <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Indigente<span
+                                    class="text-center h-100 align-content-center mayor__menor">&lt;</span>
                             </div>
                             <div
-                                class="m-0 p-0 card-main-table-classes-show-indigencia_max_past justify-content-center align-content-center align-items-center">
-                            </div>
-                        </div>
-                        <div class="row m-0 p-0 w-100 card-main-table-classes-show-pobreza card-main-table-classes-show-pobreza_past">
-                            <div
-                                class="m-0 p-0 card-main-table-classes-show-pobreza_min_past justify-content-center align-content-center align-items-center">
-                            </div>
-                            <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_pobreza all_canasta_pobreza_past">
-                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Pobreza<span
-                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
-                            </div>
-                            <div class="m-0 p-0 card-main-table-classes-show-pobreza_max_past align-content-center align-items-center"></div>
-                        </div>
-                        <div class="row m-0 p-0 w-100 show_clase_baja show_clase_baja_past">
-                            <div
-                                class="m-0 p-0 show_clase_baja_min_past justify-content-center align-content-center align-items-center">
-                            </div>
-                            <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_baja all_canasta_baja_past">
-                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Clase Baja<span
-                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
-                            </div>
-                            <div
-                                class="m-0 p-0 show_clase_baja_max_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 justify-content-center align-content-center align-items-center table__classes__indigencia--max__past">
                             </div>
                         </div>
-                        <div class="row m-0 p-0 w-100 show_clase_media_fragil show_clase_media_fragil_past">
+                        <div class="row m-0 p-0 w-100 table__classes__pobreza table__classes__pobreza__past">
                             <div
-                                class="m-0 p-0 suma_clase_media_fragil_min_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 justify-content-center align-content-center align-items-center table__classes__pobreza--min__past">
                             </div>
                             <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_fragil all_canasta_media_fragil_past">
-                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media fragil<span
-                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__pobreza--row class__pobreza--row__past">
+                                <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Pobreza<span
+                                    class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                            </div>
+                            <div class="m-0 p-0 align-content-center align-items-center table__classes__pobreza--max__past"></div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 table__classes__baja table__classes__baja__past">
+                            <div
+                                class="m-0 p-0 justify-content-center align-content-center align-items-center table__classes__baja--min__past">
                             </div>
                             <div
-                                class="m-0 p-0 suma_clase_media_fragil_max_past justify-content-center align-content-center align-items-center">
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__baja--row class__baja--row__past">
+                                <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Clase Baja<span
+                                    class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                            </div>
+                            <div
+                                class="m-0 p-0 justify-content-center align-content-center align-items-center table__classes__baja--max__past">
                             </div>
                         </div>
-                        <div class="row m-0 p-0 w-100 show_clase_media show_clase_media_past">
+                        <div class="row m-0 p-0 w-100 table__classes__media__fragil table__classes__media__fragil__past">
                             <div
-                                class="m-0 p-0 suma_clase_media_min_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 table__classes__media__fragil--min_past justify-content-center align-content-center align-items-center">
                             </div>
                             <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media all_canasta_media_past">
-                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>Media<span
-                                    class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__media__fragil--row class__media__fragil--row_past">
+                                <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Media fragil<span
+                                    class="text-center h-100 align-content-center mayor__menor">&lt;</span>
                             </div>
                             <div
-                                class="m-0 p-0 suma_clase_media_max_past justify-content-center align-content-center align-items-center">
-                            </div>
-                        </div>
-                        <div class="row m-0 p-0 w-100 show_clase_media_alta show_clase_media_alta_past">
-                            <div
-                                class="m-0 p-0 suma_clase_media_alta_min_past justify-content-center align-content-center align-items-center">
-                            </div>
-                            <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_media_alta all_canasta_media_alta_past">
-                                <span class="pe-0 h-100 align-content-center card-main-table-classes-mayor-menor">≤</span>
-                                Media alta<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
-                            </div>
-                            <div
-                                class="m-0 p-0 suma_clase_media_alta_max_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 table__classes__media__fragil--max_past justify-content-center align-content-center align-items-center">
                             </div>
                         </div>
-                        <div class="row m-0 p-0 w-100 show_clase_alta show_clase_alta_past">
-                            <div class="m-0 p-0 suma_clase_alta_min_past justify-content-center align-items-center">
+                        <div class="row m-0 p-0 w-100 table__classes__media table__classes__media_past">
+                            <div
+                                class="m-0 p-0 table__classes__media--min_past justify-content-center align-content-center align-items-center">
                             </div>
                             <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text-shadow all_canasta_alta all_canasta_alta_past">
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__media--row class__media--row_past">
+                                <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>Media<span
+                                    class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                            </div>
+                            <div
+                                class="m-0 p-0 table__classes__media--max_past justify-content-center align-content-center align-items-center">
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 table__classes__media__alta table__classes__media__alta_past">
+                            <div
+                                class="m-0 p-0 table__classes__media__alta--min_past justify-content-center align-content-center align-items-center">
+                            </div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__media__alta--row class__media__alta--row_past">
+                                <span class="pe-0 h-100 align-content-center mayor__menor">≤</span>
+                                Media alta<span class="text-center h-100 align-content-center mayor__menor">&lt;</span>
+                            </div>
+                            <div
+                                class="m-0 p-0 table__classes__media__alta--max_past justify-content-center align-content-center align-items-center">
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0 w-100 table__classes__alta table__classes__alta_past">
+                            <div class="m-0 p-0 table__classes__alta--min_past justify-content-center align-items-center">
+                            </div>
+                            <div
+                                class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class__alta--row class__alta--row_past">
                                 <span
-                                    class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Alta
-                                baja<span class="text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                    class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor__menor">≤</span>Alta
+                                baja<span class="text-center h-100 align-content-center mayor__menor">&lt;</span>
                             </div>
                             <div
-                                class="m-0 p-0 suma_clase_alta_max_past justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 table__classes__alta--max_past justify-content-center align-content-center align-items-center">
                             </div>
                         </div>
-                        <div class="row m-0 p-0 w-100 show_clase_acomodada show_clase_acomodada_past">
+                        <div class="row m-0 p-0 w-100 table__classes__acomodada table__classes__acomodada_past">
                             <div
-                                class="col m-0 p-0 py-1 d-flex justify-content-center align-content-center align-items-center text-shadow all_canasta_media_alta">
+                                class="col m-0 p-0 py-1 d-flex justify-content-center align-content-center align-items-center text--shadow class__media__alta--row">
                                 Acomodada
                             </div>
                         </div>
 
                         <div class="row w-100 text-body-tertiary">
                             <div
-                                class="m-0 p-0 py-2 suma_clase_alta_min_info bg-black justify-content-center align-items-center">
+                                class="m-0 p-0 py-2 table__classes__alta--min__info bg-black justify-content-center align-items-center">
                                 <span class="">
-                                    <button type="button" class="btn btn-secondary aclaracion_table_sectores"
+                                    <button type="button" class="btn btn-secondary aclaracion__classes"
                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-custom-class="custom-tooltip"
                                         data-bs-title="Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el ingreso máximo para pertenecer a ese sector socioeconómico.">
@@ -817,14 +816,14 @@
                                 Minimo
                             </div>
                             <div
-                                class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text-shadow">
+                                class="col m-0 p-0 bg-black fs-6 d-flex justify-content-between align-content-center align-items-center text--shadow">
                                 <span
-                                    class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center card-main-table-classes-mayor-menor">≤</span>Clase
+                                    class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor__menor">≤</span>Clase
                                 social<span
-                                    class="bg-black text-center h-100 align-content-center card-main-table-classes-mayor-menor">&lt;</span>
+                                    class="bg-black text-center h-100 align-content-center mayor__menor">&lt;</span>
                             </div>
                             <div
-                                class="m-0 p-0 suma_clase_alta_max_info bg-black fs-6 justify-content-center align-content-center align-items-center">
+                                class="m-0 p-0 table__classes__alta--max__info bg-black fs-6 justify-content-center align-content-center align-items-center">
                                 Maximo
                             </div>
                         </div>
@@ -849,9 +848,9 @@
                 <h2 class="card_header_title">Canasta Básica Alimentaria</h2>
                 <h3 class="card_header_sub">
                     • CBA - Linea de indigencia [Li]
-                    <span><button type="button" class="btn btn-secondary aclaracion_edades" data-bs-toggle="tooltip"
+                    <span><button type="button" class="btn btn-secondary aclaracion__edades" data-bs-toggle="tooltip"
                             data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true"
-                            data-bs-title="CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta_custom'>aquí</a>.">
+                            data-bs-title="CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta__main'>aquí</a>.">
                             i
                         </button></span>
                 </h3>
@@ -872,9 +871,9 @@
                 <h2 class="card_header_title">Canasta Básica Total</h2>
                 <h3 class="card_header_sub">
                     • CBT - Linea de Pobreza [LP]
-                    <span><button type="button" class="btn btn-secondary aclaracion_edades" data-bs-toggle="tooltip"
+                    <span><button type="button" class="btn btn-secondary aclaracion__edades" data-bs-toggle="tooltip"
                             data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true"
-                            data-bs-title="CBT es la Canasta Básica Total, es el umbral de la Linea de pobreza. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta_custom'>aquí</a>.">
+                            data-bs-title="CBT es la Canasta Básica Total, es el umbral de la Linea de pobreza. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta__main'>aquí</a>.">
                             i
                         </button></span>
                 </h3>
@@ -895,15 +894,15 @@
                 <h2 class="card_header_title">Canasta Básica Total <span class="fs-6">+ Alquiler</span></h2>
                 <h3 class="card_header_sub">
                     • Linea Pobreza Alquilando [LPA]
-                    <span><button type="button" class="btn btn-secondary aclaracion_edades" data-bs-toggle="tooltip"
+                    <span><button type="button" class="btn btn-secondary aclaracion__edades" data-bs-toggle="tooltip"
                             data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true"
-                            data-bs-title="CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el umbral de la Linea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta_custom'>aquí</a>.">
+                            data-bs-title="CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el umbral de la Linea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta__main'>aquí</a>.">
                             i
                         </button></span>
                 </h3>
                 <div class="card_subtitle fs-6 py-1 pb-0">
                     • 3 amb Promedio
-                    <div class="view_cbt_alquiler_3amb"></div>
+                    <div class="view_cbt_rent_3amb"></div>
                 </div>
             </div>
             <ul class="list-group list-group-flush rounded-4">
