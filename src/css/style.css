@@ -44,13 +44,13 @@ header {
     padding: 0;
 } */
 
-.aclaracion__edades,
-.aclaracion__family,
-.aclaracion__ingresos,
-.aclaracion__classes,
-.aclaracion__date,
-.aclaracion__rent__past,
-.aclaracion__vivienda {
+.aclaracion-edades,
+.aclaracion-family,
+.aclaracion-ingresos,
+.aclaracion-classes,
+.aclaracion-date,
+.aclaracion-rent-past,
+.aclaracion-vivienda {
     display: inline-flex;
     position: relative;
     align-items: center;
@@ -67,17 +67,17 @@ header {
     transition: all 0.5s ease;
 }
 
-.aclaracion__edades:hover,
-.aclaracion__ingresos:hover,
-.aclaracion__classes:hover,
-.aclaracion__date:hover,
-.aclaracion__rent__past:hover {
+.aclaracion-edades:hover,
+.aclaracion-ingresos:hover,
+.aclaracion-classes:hover,
+.aclaracion-date:hover,
+.aclaracion-rent-past:hover {
     transform: scale(1.1);
     border-radius: var(--spacing-10_0-625);
     background-color: #ff4f00bb;
 }
 
-.aclaracion__date__over {
+.aclaracion-date--over {
     top: 0;
     left: 0;
     position: absolute;
@@ -87,7 +87,7 @@ header {
     opacity: 0.7;
 }
 
-.aclaracion__icons {
+.aclaracion-icons {
     display: inline-flex;
     position: relative;
     align-items: center;
@@ -99,23 +99,23 @@ header {
     transition: all 5s ease;
 }
 
-.aclaracion__ingresos {
+.aclaracion-ingresos {
     position: absolute;
     right: calc(50% - 143px);
 }
 
-.aclaracion__rent__past {
+.aclaracion-rent-past {
     position: absolute;
     top: 0.5625rem;
     right: calc(50% - 143px);
 }
 
-/* .aclaracion__date {
+/* .aclaracion-date {
     position: absolute;
     right: 10%;
 } */
 
-.form__submit {
+.form-submit {
     background-color: #1e1e1e;
     border: 0;
     margin-left: var(--spacing-5_0-3125);
@@ -135,7 +135,7 @@ header {
     box-shadow: 0 0 0.2rem #000;
 }
 
-.form__submit:active,
+.form-submit:active,
 .card__btn--reset:active {
     transform: scale(1.3);
 }
@@ -148,7 +148,7 @@ header {
     border-radius: 0.375rem;
 }
 
-.table__compare__rent {
+.table-compare-rent {
     display: flex;
     max-width: 220px;
     margin: 0 auto;
@@ -157,7 +157,7 @@ header {
     gap: 0.5rem;
 }
 
-.card__compare__info {
+.card-compare-info {
     position: absolute;
     right: calc(50% - 48%);
 }
@@ -176,7 +176,7 @@ header {
     box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
 }
 
-.form__container {
+.form-container {
     padding: 0 0.5rem 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
@@ -190,12 +190,12 @@ header {
     font-size: 1.5rem;
 }
 
-.card__compare__title {
+.card-compare__title {
     padding: 0.25rem var(--spacing-10_0-625) 0rem var(--spacing-10_0-625);
     color: #fffaf0;
 }
 
-.table__compare__month__container {
+.table-compare-month-container {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -203,8 +203,8 @@ header {
     align-items: center;
 }
 
-.table__compare__month,
-.table__compare__year {
+.table-compare-month,
+.table-compare-year {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -217,31 +217,31 @@ header {
     border-radius: var(--bs-border-radius);
 }
 
-.table__compare__year {
+.table-compare-year {
     background-color: #ff8800;
 }
 
-.table__compare__month:focus,
-.table__compare__year:focus {
+.table-compare-month:focus,
+.table-compare-year:focus {
     box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
     border-color: #ff550066;
     outline: 0;
 }
 
-.table__compare__month--option:enabled,
-.table__compare__year:enabled {
+.table-compare-month-option:enabled,
+.table-compare-year:enabled {
     background-color: #331c16;
     border-color: #ff550066;
 }
 
-.table__compare__month--option:disabled,
-.table__compare__year:disabled {
+.table-compare-month-option:disabled,
+.table-compare-year:disabled {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background-color: #000;
 }
 
-.table__compare__income--in {
+.table-compare-income-in {
     background-color: #ff880022;
     cursor: pointer;
     max-width: var(--spacing-220);
@@ -249,19 +249,20 @@ header {
     border: 0.0625rem solid #ff550066;
 }
 
-.table__compare__income--in:focus {
+.table-compare-income-in:focus {
     box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
     border-color: #ff550066;
 }
 
-.card__vivienda, .form__family {
+.card-vivienda,
+.form-family {
     display: flex;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.card__vivienda__txt,
-.form__family--txt {
+.card-vivienda__txt,
+.form-family--txt {
     margin-left: 1rem;
     margin-bottom: var(--spacing-10_0-625);
     padding-top: var(--spacing-5_0-3125);
@@ -269,11 +270,11 @@ header {
     padding-left: 0.85rem;
 }
 
-.form__family--txt {
+.form-family--txt {
     border-left: 0.2rem solid #ff5500aa;
 }
 
-.card__vivienda__container {
+.card-vivienda-container {
     padding: 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
@@ -298,36 +299,36 @@ header {
     border: 0;
 }
 
-.card__compare {
+.card-compare {
     margin-bottom: 1.5rem;
     width: 100%;
     border: 0;
 }
 
-.card_titulo_canastas_generic {
+.card-canastas-head {
     outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
 
-.card_cba {
+.card-cba {
     outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
-.card_cbt {
-    outline: 0.0625rem solid #aa3366;
-    box-shadow: none;
-    width: 100%;
-}
-
-.card_cbta {
+.card-cbt {
     outline: 0.0625rem solid #aa3366;
     box-shadow: none;
     width: 100%;
 }
 
-.card_cba_value {
+.card-cbta {
+    outline: 0.0625rem solid #aa3366;
+    box-shadow: none;
+    width: 100%;
+}
+
+.card-cba_value {
     color: #ff8800;
     font-weight: var(--font-weight-700-bold);
     margin-left: var(--spacing-10_0-625);
@@ -349,7 +350,7 @@ header {
     font-family: var(--font-primary);
 }
 
-.card_header_sub {
+.card-cb-subtitle {
     display: flex;
     justify-content: space-between;
     font-size: var(--font-size-16_1rem);
@@ -359,30 +360,30 @@ header {
     align-items: center;
 }
 
-.card_header_generic_txt {
+.card-canastas-header-txt {
     text-align: center;
     font-size: var(--font-size-14_0-875);
 }
 
-.card_header_title {
+.card-cb-title {
     margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
 
-.card_header_title_generic {
+.card-canastas-header-title {
     text-align: center;
     font-weight: 500;
     margin-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
 
-.card_header_sub_generic {
+.card-canastas-header-subtitle {
     text-align: center;
     padding-bottom: 0.5rem;
     color: #919191;
 }
 
-.card_subtitle {
+.card-cb-txt {
     color: #f2f4f7;
     display: flex;
     margin-left: 1rem;
@@ -409,61 +410,61 @@ header {
     text-align: center;
 }
 
-.card-solapada-1 {
+.card-canastas-1 {
     z-index: 4;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
 }
 
-.card-solapada-1:hover {
+.card-canastas-1:hover {
     /* transform: translate3d(0px, 5px, 0px) rotate(2deg); */
     box-shadow: 0px 0px 6px 4px #ff3366;
     z-index: 4;
 }
 
-.card-solapada-2 {
+.card-canastas-2 {
     position: relative;
     margin-top: -5px;
     z-index: 3;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
 }
-.card-solapada-2:hover {
+.card-canastas-2:hover {
     /* transform: translate3d(0px, -5px, 0px) rotate(-1deg); */
     box-shadow: 0px 0px 6px 4px #ff3366;
     z-index: 3;
 }
 
-.card-solapada-3 {
+.card-canastas-3 {
     position: relative;
     margin-top: -5px;
     z-index: 2;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
 }
-.card-solapada-3:hover {
+.card-canastas-3:hover {
     /* transform: translate3d(0px, 5px, 0px) rotate(2deg); */
     box-shadow: 0px 0px 6px 4px #ff3366;
     z-index: 2;
 }
 
-.card-solapada-4 {
+.card-canastas-4 {
     position: relative;
     margin-top: -5px;
     z-index: 1;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
 }
-.card-solapada-4:hover {
+.card-canastas-4:hover {
     /* transform: translate3d(0px, -5px, 0px) rotate(-1deg); */
     box-shadow: 0px 0px 6px 4px #ff3366;
     z-index: 1;
 }
 
-.table__compare__body {
+.table-compare-body {
     display: none;
 }
-.card__compare__header {
+.card-compare__header {
     border-radius: 1rem;
 }
 
@@ -503,7 +504,7 @@ header {
     stroke: #ce2331;
 }
 
-.table__canastas__select {
+.table-canastas__select {
     display: flex;
     width: 100%;
     height: 2.25rem;
@@ -512,14 +513,14 @@ header {
     border: 0;
 }
 
-.table__canastas__select:focus-visible {
+.table-canastas__select:focus-visible {
     outline: none;
     font-size: 1.125rem;
     border: 0;
     background-color: #ff880022;
 }
 
-.table__canastas__select--option {
+.table-canastas__select--option {
     background-color: #3f3224;
     border-radius: 0.5rem;
 }
@@ -548,7 +549,7 @@ header {
     width: 100%;
 }
 
-.indices_date {
+.indices-date {
     color: #ff5500;
     text-shadow: var(--spacing-1_0-0625) var(--spacing-1_0-0625) var(--spacing-1_0-0625) #000;
 }
@@ -560,7 +561,7 @@ header {
 }
 
 .icon-svg-add,
-.card__svg__house,
+.card-svg-house,
 .card__svg--reset,
 .icon-svg-person {
     transition: all 0.5s ease;
@@ -573,7 +574,7 @@ header {
     margin-top: -0.5rem;
 }
 
-.card__svg__house,
+.card-svg-house,
 .icon-svg-person {
     margin-left: 0.3rem;
     background-color: #1e1e1e;
@@ -593,7 +594,7 @@ header {
     box-shadow: 0 0 var(--spacing-10_0-625) #ff3366;
 }
 
-.card__svg__house:hover {
+.card-svg-house:hover {
     /* box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #4caf50aa; */
     border-color: #4caf5033;
     border-radius: var(--spacing-5_0-3125);
@@ -611,7 +612,7 @@ header {
     background: #1e1e1e;
 }
 
-.index__container {
+.index-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -623,16 +624,16 @@ header {
     border: 0;
 }
 
-.index__data--ipc,
-.index__data--cba,
-.index__data--cbt,
-.index__data--txt {
+.index-data-ipc,
+.index-data-cba,
+.index-data-cbt,
+.index-data-txt {
     font-family: var(--font-secondary);
     font-size: var(--font-size-14_0-875);
     color: antiquewhite;
 }
 
-.index__top {
+.index-top {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -656,20 +657,20 @@ header {
     border-color: #ff550066;
 }
 
-.linea_pobreza,
-.linea_indigencia,
-.linea_pobreza_alquilando {
+.linea-pobreza,
+.linea-indigencia,
+.linea-pobreza-renting {
     display: flex;
     justify-content: center;
     font-size: var(--font-size-16_1rem);
 }
 
-.lineas_info {
+.lineas-info {
     padding: var(--spacing-10_0-625);
 }
 
-.lineas_info_title,
-.lineas_info_txt {
+.lineas-info_title,
+.lineas-info_txt {
     font-size: 0.8rem;
 }
 
@@ -690,13 +691,13 @@ header {
     text-shadow: var(--spacing-2_0-125) var(--spacing-2_0-125) var(--spacing-5_0-3125) rgba(0, 0, 0, 0.5);
 }
 
-.navbar__img {
+.navbar--img {
     margin-right: var(--spacing-8_0-5);
     width: var(--spacing-40_2-5);
     filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%);
 }
 
-.mayor__menor {
+.mayor-menor {
     font-size: var(--font-size-18_1-125);
     font-size: var(--font-size-18_1-125);
 }
@@ -814,67 +815,67 @@ header {
     width: 90%;
 }
 
-.table__classes__indigencia,
-.table__classes__baja,
-.table__classes__media,
-.table__classes__alta {
+.table-classes-indigencia,
+.table-classes-baja,
+.table-classes-media,
+.table-classes-alta {
     background-color: #090909;
 }
 
-.table__classes__indigencia {
+.table-classes-indigencia {
     border-top: 0.0625rem solid #2c2f33;
 }
 
-.table__classes__alta {
+.table-classes-alta {
     border-bottom: 0.0625rem solid #2c2f33;
 }
 
-.table__classes__pobreza,
-.table__classes__media__fragil,
-.table__classes__media__alta,
-.table__classes__acomodada {
+.table-classes-pobreza,
+.table-classes-media-fragil,
+.table-classes-media-alta,
+.table-classes-acomodada {
     background-color: #252529;
 }
 
-.table__classes__indigencia--min,
-.table__classes__indigencia--max,
-.table__classes__pobreza--min,
-.table__classes__pobreza--max,
-.table__classes__baja--min,
-.table__classes__baja--max,
-.table__classes__media__fragil--min,
-.table__classes__media__fragil--max,
-.table__classes__media--min,
-.table__classes__media--max,
-.table__classes__media__alta--min,
+.table-classes-indigencia-min,
+.table-classes-indigencia-max,
+.table-classes-pobreza-min,
+.table-classes-pobreza-max,
+.table-classes-baja-min,
+.table-classes-baja-max,
+.table-classes-media-fragil-min,
+.table-classes-media-fragil-max,
+.table-classes-media-min,
+.table-classes-media-max,
+.table-classes-media-alta-min,
 .suma_clase_media_alta_max,
-.table__classes__alta--min,
-.table__classes__alta--max,
-.table__classes__alta--min__info,
-.table__classes__alta--max__info,
-.table__classes__indigencia--min__past,
-.table__classes__indigencia--max__past,
-.table__classes__pobreza--min__past,
-.table__classes__pobreza--max__past,
-.table__classes__baja--min__past,
-.table__classes__baja--max__past,
-.table__classes__media__fragil--min_past,
-.table__classes__media__fragil--max_past,
-.table__classes__media--min_past,
-.table__classes__media--max_past,
-.table__classes__media__alta--min_past,
-.table__classes__media__alta--max_past,
-.table__classes__alta--min_past,
-.table__classes__alta--max_past {
+.table-classes-alta--min,
+.table-classes-alta-max,
+.table-classes-alta-min-info,
+.table-classes-alta-max-info,
+.table-classes-indigencia-min-past,
+.table-classes-indigencia-max-past,
+.table-classes-pobreza-min-past,
+.table-classes-pobreza-max-past,
+.table-classes-baja-min-past,
+.table-classes-baja-max-past,
+.table-classes-media-fragil-min-past,
+.table-classes-media-fragil-max-past,
+.table-classes-media-min-past,
+.table-classes-media-max-past,
+.table-classes-media-alta-min-past,
+.table-classes-media-alta-max-past,
+.table-classes-alta-min-past,
+.table-classes-alta-max-past {
     width: 31%;
     font-size: var(--spacing-18_1-125);
 }
 
-.table__classes__alta--min__info {
+.table-classes-alta-min-info {
     border-radius: 0 0 0 0.5rem;
 }
 
-.table__classes__alta--max__info {
+.table-classes-alta-max-info {
     border-radius: 0 0 0.5rem 0;
 }
 
@@ -883,11 +884,11 @@ header {
     margin: 0;
 }
 
-.table__classes--txt {
+.table-classes--txt {
     font-size: 1.3rem;
 }
 
-.table__canastas__select {
+.table-canastas__select {
     font-size: var(--font-size-16_1rem);
     margin: 0 auto;
     width: 100%;
@@ -895,7 +896,7 @@ header {
     border-collapse: collapse;
 }
 
-.table__canastas__select td,
+.table-canastas__select td,
 th,
 tbody,
 thead,
@@ -903,13 +904,13 @@ tfoot {
     border: 0.0625rem solid #3c3f43;
 }
 
-.table__canastas__select {
+.table-canastas__select {
     position: relative;
     border: 0;
     border-radius: 0.5rem;
 }
 
-.table__canastas__select::before {
+.table-canastas__select::before {
     content: "";
     position: absolute;
     top: -1px;
@@ -930,13 +931,13 @@ tfoot {
     background-color: #ff880033;
 }
 
-.card-main-table-all-classes-past {
+.table-classes-past {
     display: none;
 }
 
-.table__canastas,
-.table__canastas__head,
-.table__canastas__header {
+.table-canastas,
+.table-canastas-head,
+.table-canastas-header {
     text-align: center;
 }
 
@@ -988,12 +989,10 @@ tfoot {
     max-width: 250px;
 }
 
-
-
-  .aclaracion__date__over:hover + .tooltip,
+.aclaracion-date--over:hover + .tooltip,
 .tooltip:hover {
-  opacity: 1 !important;
-  visibility: visible !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .version {
@@ -1003,10 +1002,10 @@ tfoot {
     font-size: var(--font-size-16_1rem);
 }
 
-.view_cba,
-.view_cbt,
-.view_cbta,
-.view_cbt_rent_3amb {
+.view-cba,
+.view-cbt,
+.view-cbta,
+.view-cbt-rent-3amb {
     color: #f2f4f7;
     font-size: var(--spacing-5_0-3125);
 }
@@ -1020,17 +1019,17 @@ option:disabled {
     background-color: #121212;
 }
 
-.form__age--option:enabled,
-.form__gender--option:enabled,
-.card__rent--option:enabled {
+.form-age--option:enabled,
+.form-gender--option:enabled,
+.card-rent--option:enabled {
     text-align: start;
     background-color: #693015;
 }
 
-.card__rent__in,
-.form__select__gender,
-.form__select__age,
-.card__select__rent,
+.card-rent-in,
+.form__select-gender,
+.form__select-age,
+.card__select-rent,
 .rent_in_past {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1041,18 +1040,18 @@ option:disabled {
     height: 2.75rem;
 }
 
-.form__age__container {
+.form-age-container {
     display: flex;
     width: 48%;
     gap: 0.125rem;
     align-items: center;
 }
 
-.card__select__rent {
+.card__select-rent {
     width: 100%;
 }
 
-.card__rent__in {
+.card-rent-in {
     width: 95%;
 }
 
@@ -1061,79 +1060,79 @@ option:disabled {
     margin-bottom: 0.5rem;
 }
 
-.form__age {
+.form-age {
     flex: 1;
 }
 
-.form__gender {
+.form-gender {
     flex: 0 0 50%;
     margin-right: 0.5rem;
 }
 
-.card__select__rent,
-.card__rent__in,
+.card__select-rent,
+.card-rent-in,
 .rent_in_past {
     background-color: #4caf5022;
     border-color: #4caf5055;
 }
 
-.card__select__rent,
-.form__select__gender {
+.card__select-rent,
+.form__select-gender {
     margin-right: 0.5rem;
 }
 
-.card__select__rent:focus,
-.card__rent__in:focus,
+.card__select-rent:focus,
+.card-rent-in:focus,
 .rent_in_past:focus {
     box-shadow: 0 0 0.3125rem 0.2rem #4caf50aa;
     border-color: #4caf5033;
 }
 
-.form__select__age,
-.form__select__gender {
+.form__select-age,
+.form__select-gender {
     background-color: #ff550022;
     border-color: #ff550055;
 }
 
-.form__select__age:focus,
-.form__select__gender:focus {
+.form__select-age:focus,
+.form__select-gender:focus {
     box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
     border-color: #ff550066;
 }
 
-#card__total__rent {
+#card-total-rent {
     width: 50%;
 }
 
-.card__rent--option:enabled {
+.card-rent--option:enabled {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background-color: #295935;
 }
 
-.card__rent--option:disabled {
+.card-rent--option:disabled {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background-color: #000;
 }
 
-.card__rent--option:hover:focus {
+.card-rent--option:hover:focus {
     display: block;
     margin-right: var(--spacing-50_3-125);
     background: #a42929;
 }
 
-.card__rent__in:disabled {
+.card-rent-in:disabled {
     text-align: center;
     border-color: #4caf5055;
     background-color: #4caf5011;
 }
 
-.card__rent__in::placeholder {
+.card-rent-in::placeholder {
     text-align: center;
 }
 
-.error__message--age {
+.error-message-age {
     background-color: #493333;
     color: #f2f4f7;
     display: none;
