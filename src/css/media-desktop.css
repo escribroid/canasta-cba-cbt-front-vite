@@ -35,12 +35,51 @@
     }
 }
 
-@media (min-width: 667px) {
+@media (min-width: 767px) {
+   
+    
     body {
         max-width: 1200px;
     }
-    .offcanvas.offcanvas-end {
-        right: calc(50vw - 310px);
+
+    .card__svg--reset:hover {
+        fill: #ff3366;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0px 0px 10px 4px #ff3366;
+    }
+
+    .card__title {
+        font-size: rem;
+    }
+
+    .card-canastas-1 {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-canastas-2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-canastas-3 {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-canastas-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .card-vivienda__txt,
+    .form-family--txt {
+        font-size: 1.5rem;
+    }
+
+    .card-rent-in,
+    .form__select-gender,
+    .form__select-age,
+    .card__select-rent,
+    .rent_in_past {
+        font-size: 1.3rem;
     }
 
     .icon-svg-add:hover {
@@ -49,99 +88,79 @@
         font-weight: bold;
         box-shadow: 0px 0px 10px 4px #ff5500;
     }
-    .card__svg--reset:hover {
-        fill: #ff3366;
-        border-radius: 5px;
-        font-weight: bold;
-        box-shadow: 0px 0px 10px 4px #ff3366;
+
+    .income__input {
+        font-size: 1.3rem;
     }
 
-    .card-compare-info {
-        position: absolute;
-        right: calc(50% - 266px);
+    .index-data-cba {
+        font-size: 1.3rem;
+    }
+    .index-data-cbt {
+        font-size: 1.3rem;
+    }
+
+    .index-data-txt {
+        font-size: 1.3rem;
     }
 
     .left {
         display: flex;
         flex-direction: column;
-        max-width: 49%;
+        max-width: 49.2%;
     }
 
-    .right {
-        display: flex;
-        flex-direction: column;
-        max-width: 49%;
+    .form-age--option:enabled,
+    .form-gender--option:enabled,
+    .card-rent--option:enabled {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: var(--font-size-44_2-75);
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    .offcanvas.offcanvas-end {
+        right: calc(50vw - 310px);
     }
 
     .offcanvas.offcanvas-end {
         right: 0.2rem;
         height: 40vh;
-    
     }
 
     .offcanvas-header .btn-close {
         margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
     }
 
+    .right {
+        display: flex;
+        flex-direction: column;
+        width: 49.2%;
+    }
+
+    .table-classes--txt {
+        font-size: 1.5rem;
+    }
+
+    .table-canastas,
+    .table-canastas-head,
+    .table-canastas-header {
+        font-size: 1.3rem;
+    }
+
+    .tooltip .tooltip-inner {       
+        font-size: 1.5rem;
+        max-width: 350px;
+    
+    }
+
     #canasta-main {
         display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .card-canastas-1 {
-        z-index: 4;
-        transition: transform 0.5s ease, box-shadow 0.3s ease;
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 1rem;
-    }
-    
-    .card-canastas-1:hover {
-        box-shadow: 0px 0px 6px 4px #ff3366;
-        z-index: 4;
-    }
-    
-    .card-canastas-2 {
-        position: relative;
-        margin-top: 0px;
-        z-index: 3;
-        transition: transform 0.5s ease, box-shadow 0.3s ease;
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 1rem;
-
-    }
-    .card-canastas-2:hover {
-        box-shadow: 0px 0px 6px 4px #ff3366;
-        z-index: 3;
-    }
-    
-    .card-canastas-3 {
-        position: relative;
-        z-index: 2;
-        transition: transform 0.5s ease, box-shadow 0.3s ease;
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 1rem;
-        margin-top: 0px;
-
-
-    }
-    .card-canastas-3:hover {
-        box-shadow: 0px 0px 6px 4px #ff3366;
-        z-index: 2;
-    }
-    
-    .card-canastas-4 {
-        position: relative;
-        z-index: 1;
-        transition: transform 0.5s ease, box-shadow 0.3s ease;
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 1rem;
-        margin-top: 0px;
-
-
-    }
-    .card-canastas-4:hover {
-        box-shadow: 0px 0px 6px 4px #ff3366;
-        z-index: 1;
+        justify-content: space-between;
     }
 }

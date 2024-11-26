@@ -265,7 +265,6 @@ header {
 .form-family--txt {
     margin-left: 1rem;
     margin-bottom: var(--spacing-10_0-625);
-    padding-top: var(--spacing-5_0-3125);
     border-left: 0.2rem solid #4caf50aa;
     padding-left: 0.85rem;
 }
@@ -300,7 +299,7 @@ header {
 }
 
 .card-compare {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     width: 100%;
     border: 0;
 }
@@ -885,7 +884,7 @@ header {
 }
 
 .table-classes--txt {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .table-canastas__select {
@@ -967,6 +966,7 @@ tfoot {
     margin: 0;
     /* --bs-tooltip-arrow-color: red; */
     border-radius: 0.5rem;
+
 }
 
 .tooltip-arrow {
@@ -987,6 +987,7 @@ tfoot {
     font-size: 1rem;
     border-radius: 0.5rem;
     max-width: 250px;
+
 }
 
 .aclaracion-date--over:hover + .tooltip,
@@ -1024,6 +1025,7 @@ option:disabled {
 .card-rent--option:enabled {
     text-align: start;
     background-color: #693015;
+    font-size: 1.5rem;
 }
 
 .card-rent-in,
