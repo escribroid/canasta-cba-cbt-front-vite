@@ -49,10 +49,10 @@ header {
 .aclaracion-ingresos,
 .aclaracion-classes,
 .aclaracion-date,
+.aclaracion-date-card,
 .aclaracion-rent-past,
 .aclaracion-vivienda {
     display: inline-flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     font-size: var(--font-size-16_1rem);
@@ -63,8 +63,41 @@ header {
     height: var(--spacing-28_1-75);
     border-radius: var(--spacing-10_0-625);
     border-radius: 50%;
-    border: 0;
+    /* border: 0; */
     transition: all 0.5s ease;
+}
+
+.aclaracion-vivienda,
+.aclaracion-family,
+.aclaracion-ingresos,
+.aclaracion-date,
+.aclaracion-date-card,
+.aclaracion-rent-past {
+    position: absolute;
+    right: 1rem;
+    margin-top: 0.2rem;
+}
+
+.aclaracion-classes {
+    position: absolute;
+    margin-top: 0;
+    left: 0.5rem;
+    right: 1rem;
+}
+
+.aclaracion-rent-past {
+    margin-top: 0;
+    right: 1rem;
+}
+
+.aclaracion-date {
+    margin-top: 0.5rem;
+    right: 1rem;
+}
+
+.aclaracion-ingresos {
+    /* right: calc(50% - 143px); */
+    margin-top: 0;
 }
 
 .aclaracion-edades:hover,
@@ -85,6 +118,7 @@ header {
     height: 100%;
     background-color: #000;
     opacity: 0.7;
+    z-index: 20;
 }
 
 .aclaracion-icons {
@@ -97,11 +131,6 @@ header {
     height: var(--spacing-30_1-875);
     border: 0;
     transition: all 5s ease;
-}
-
-.aclaracion-ingresos {
-    position: absolute;
-    right: calc(50% - 143px);
 }
 
 .aclaracion-rent-past {
@@ -162,8 +191,8 @@ header {
 }
 
 .card-compare-info {
-    position: absolute;
-    right: calc(50% - 48%);
+    /* position: absolute; */
+    /* right: calc(50% - 48%); */
 }
 
 .canasta_compare_input_month {
@@ -201,10 +230,10 @@ header {
 
 .table-compare-month-container {
     display: flex;
+    position: relative;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 0 0.5rem 0;
-    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 .table-compare-month,
@@ -465,9 +494,12 @@ header {
 }
 
 .table-compare-body {
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 .card-compare__header {
+    display: flex;
+    justify-content: center;
     border-radius: 1rem;
 }
 
@@ -574,6 +606,7 @@ header {
     transform: translateX(2rem);
     opacity: 0;
     margin-top: -0.5rem;
+    background-color: #000;
 }
 
 .card-svg-house,
@@ -934,7 +967,7 @@ tfoot {
 }
 
 .table-classes-past {
-    display: none;
+    display: block;
 }
 
 .table-canastas,
@@ -969,7 +1002,6 @@ tfoot {
     margin: 0;
     /* --bs-tooltip-arrow-color: red; */
     border-radius: 0.5rem;
-
 }
 
 .tooltip-arrow {
@@ -990,7 +1022,6 @@ tfoot {
     font-size: 1rem;
     border-radius: 0.5rem;
     max-width: 250px;
-
 }
 
 .aclaracion-date--over:hover + .tooltip,

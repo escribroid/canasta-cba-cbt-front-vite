@@ -607,20 +607,24 @@
                 </div>
             </div> -->
 
-        <!-- Card 2 Compare +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <div class="card rounded-4 card-compare ">
-            <ul class="list-group list-group-flush rounded-4">
+    </div>
+
+    <div class="right">
+
+         <!-- Card 2 Compare +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+         <div class="card rounded-4 card-compare ">
+            <ul class="list-group list-group-flush rounded-4 position-relative">
                 <li
-                    class="list-group-item d-flex justify-content-center align-items-center position-relative card-compare__header">
-                    <div class="form-switch compare__switch">
+                    class="list-group-item d-flex position-static card-compare__header">
+                    <!-- <div class="form-switch compare__switch">
                         <input class="form-check-input border border-2 border-primary" type="checkbox" role="switch"
                             id="SwitchCompareCba" />
                         <label class="form-check-label" for="SwitchCompareCba" aria-label="Switch"></label>
-                    </div>
+                    </div> -->
 
                     <h2 class="card-compare__title text-center fs-5">Canasta en el Tiempo</h2>
                     <span class="card-compare-info"><button type="button"
-                            class="btn btn-secondary aclaracion-date" data-bs-toggle="tooltip"
+                            class="btn btn-secondary aclaracion-date-card" data-bs-toggle="tooltip"
                             data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-html="true"
                             data-bs-title="Tu situación hace uno o cinco años, ¿era mejor? ¿peor? ¿En la misma Clase social? Desde abril de 2016 podes revisar. Tenes que recordar tu salario en la esa fecha solamente.">
                             i
@@ -643,7 +647,7 @@
                                 >c_Baja</span
                             >
                         </li> -->
-                    <div class="table-compare-month-container">
+                    <div class="table-compare-month-container my-3">
                         <select id="table-compare-month" class="form-select table-compare-month" aria-label="Month">
                             <option class="table-compare-month-option" value="month" selected disabled>Mes</option>
 
@@ -670,7 +674,7 @@
                                 i
                             </button></span>
                     </div>
-                    <li class="list-group table-compare-rent">
+                        <div class="position-relative w-100 mb-3">
                         <div class="d-flex justify-content-center align-items-center w-100 position-relative">
                             <label class="d-flex justify-content-end">
                                 <input type="text" inputmode="numeric" pattern="\d*" name="rent-past"
@@ -685,6 +689,8 @@
                                 i
                             </button>
                         </div>
+                    </div>
+                    <div class="position-relative w-100 mb-3">
                         <div class="d-flex justify-content-center align-items-center w-100 position-relative">
                             <label>
                                 <input id="table-compare-income-in"
@@ -699,7 +705,7 @@
                                 i
                             </button>
                         </div>
-                    </li>
+                    </div>
 
                     <!-- Tabla clases sociales pasadas------------------------------->
                     <div class="pt-2 mt-3 text-center table-classes-past">
@@ -832,9 +838,6 @@
                 </div>
             </ul>
         </div>
-    </div>
-
-    <div class="right">
 
 
         <!-- Card titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
