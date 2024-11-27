@@ -100,6 +100,10 @@ header {
     margin-top: 0;
 }
 
+.form-recuadrar {
+    border: 3px red solid;
+}
+
 .aclaracion-edades:hover,
 .aclaracion-ingresos:hover,
 .aclaracion-classes:hover,
