@@ -36,8 +36,6 @@
 }
 
 @media (min-width: 767px) {
-   
-    
     body {
         max-width: 1200px;
     }
@@ -50,7 +48,7 @@
     }
 
     .card__title {
-        font-size: rem;
+        font-size: 2rem;
     }
 
     .card-canastas-1 {
@@ -82,6 +80,10 @@
         font-size: 1.3rem;
     }
 
+    header {
+        margin-bottom: 1.5rem;
+    }
+
     .icon-svg-add:hover {
         fill: #ff5500;
         border-radius: 5px;
@@ -93,21 +95,35 @@
         font-size: 1.3rem;
     }
 
+    .index-container {
+        margin-bottom: 1.5rem;
+    }
+
     .index-data-cba {
         font-size: 1.3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
     .index-data-cbt {
         font-size: 1.3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .index-data-txt {
         font-size: 1.3rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .left {
         display: flex;
         flex-direction: column;
         max-width: 49.2%;
+    }
+
+    .form__select-age {
+        margin-left: 0.18rem;
     }
 
     .form-age--option:enabled,
@@ -117,7 +133,7 @@
     }
 
     .logo {
-        font-size: var(--font-size-44_2-75);
+        font-size: var(--font-size-48_3rem);
     }
 
     .nav-link {
@@ -130,11 +146,13 @@
 
     .offcanvas.offcanvas-end {
         right: 0.2rem;
+        top: 3.25rem;
         height: 40vh;
     }
 
     .offcanvas-header .btn-close {
         margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
+        height: 5rem;
     }
 
     .right {
@@ -153,10 +171,9 @@
         font-size: 1.3rem;
     }
 
-    .tooltip .tooltip-inner {       
+    .tooltip .tooltip-inner {
         font-size: 1.5rem;
-        max-width: 350px;
-    
+        max-width: 400px;
     }
 
     #canasta-main {

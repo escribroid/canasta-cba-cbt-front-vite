@@ -116,11 +116,15 @@ header {
 } */
 
 .form-submit {
+    position: absolute;
+    right: 0.1rem;
     background-color: #1e1e1e;
     border: 0;
-    margin-left: var(--spacing-5_0-3125);
+    /* margin-left: var(--spacing-5_0-3125); */
+    /* margin-right: 0rem; */
+    margin: 0;
     transition: all 0.1s ease;
-    box-shadow: 0 0 0.2rem #000;
+    /* box-shadow: 0 0 0.2rem #000; */
 }
 
 .card__btn--reset {
@@ -541,7 +545,6 @@ header {
 
 .fieldset {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin: 0 0 0.5rem 0;
     padding: 0 0 0.5rem 0;
@@ -871,11 +874,11 @@ header {
 }
 
 .table-classes-alta-min-info {
-    border-radius: 0 0 0 0.5rem;
+    border-radius: 0 0 0 1rem;
 }
 
 .table-classes-alta-max-info {
-    border-radius: 0 0 0.5rem 0;
+    border-radius: 0 0 1rem 0;
 }
 
 .subtitle {
@@ -1063,7 +1066,7 @@ option:disabled {
 }
 
 .form-age {
-    flex: 1;
+    width: calc(100% - 60px);
 }
 
 .form-gender {
