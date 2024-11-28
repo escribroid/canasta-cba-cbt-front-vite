@@ -22,11 +22,12 @@ document.addEventListener("click", (event) => {
 
         // Seleccionar el recuadro de destino
         const recuadro = document.querySelector(".form-container");
-
         // Agregar la clase para resaltar con borde rojo
         recuadro.classList.add("form-recuadrar");
-
         // Opcional: Desplazar la página al recuadro
         recuadro.scrollIntoView({ behavior: "smooth", block: "center" });
+        setTimeout(() => {
+            recuadro.classList.remove("form-recuadrar");
+        }, 2000);
     }
 });

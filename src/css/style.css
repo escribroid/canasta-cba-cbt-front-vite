@@ -100,10 +100,6 @@ header {
     margin-top: 0;
 }
 
-.form-recuadrar {
-    border: 3px red solid;
-}
-
 .aclaracion-edades:hover,
 .aclaracion-ingresos:hover,
 .aclaracion-classes:hover,
@@ -214,9 +210,27 @@ header {
 }
 
 .form-container {
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0.1rem 0.5rem 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
+}
+
+.form-recuadrar {
+    /* border: 2px red solid; */
+    /* box-shadow: 1px 1px 0.2rem 0.2rem red; */
+    border-radius: 1rem;
+    animation: parpadeo 0.7s ease-in-out 2;
+}
+
+@keyframes parpadeo {
+    0%,
+    100% {
+        box-shadow: none; /* Sin sombra */
+    }
+    25%,
+    75% {
+        box-shadow: 0 0 10px 5px red; /* Sombra roja */
+    }
 }
 
 .card__title {

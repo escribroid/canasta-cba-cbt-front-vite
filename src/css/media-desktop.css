@@ -37,7 +37,7 @@
 
 @media (min-width: 767px) {
     body {
-        max-width: 1200px;
+        max-width: 960px;
     }
 
     .card__svg--reset:hover {
@@ -119,10 +119,8 @@
     .left {
         display: flex;
         flex-direction: column;
-        max-width: 49.2%;
+        width: 49%;
     }
-
-    
 
     .form__select-age {
         margin-left: 0.18rem;
@@ -160,7 +158,7 @@
     .right {
         display: flex;
         flex-direction: column;
-        width: 49.2%;
+        width: 49%;
     }
 
     .table-classes--txt {
@@ -180,6 +178,7 @@
 
     #canasta-main {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
