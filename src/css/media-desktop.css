@@ -36,6 +36,9 @@
 }
 
 @media (min-width: 767px) {
+    .aclaracion-classes {
+        left: 0.1rem;
+    }
     body {
         max-width: 960px;
     }
@@ -53,18 +56,35 @@
 
     .card-canastas-1 {
         margin-bottom: 1.5rem;
+        width: 49%;
     }
 
     .card-canastas-2 {
         margin-bottom: 1.5rem;
+        width: 49%;
+        margin-top: 0;
     }
 
     .card-canastas-3 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
+        width: 49%;
     }
 
     .card-canastas-4 {
+        margin-bottom: 0.5rem;
+        width: 49%;
+    }
+
+    .card-classes {
+        width: 49%;
+        height: auto;
         margin-bottom: 1.5rem;
+        justify-content: flex-start;
+    }
+
+    .card-compare {
+        margin-bottom: 1.5rem;
+        width: 49%;
     }
 
     .card-vivienda__txt,
@@ -116,12 +136,6 @@
         padding-bottom: 0.5rem;
     }
 
-    .left {
-        display: flex;
-        flex-direction: column;
-        width: 49%;
-    }
-
     .form__select-age {
         margin-left: 0.18rem;
     }
@@ -155,13 +169,8 @@
         height: 5rem;
     }
 
-    .right {
-        display: flex;
-        flex-direction: column;
-        width: 49%;
-    }
-
-    .table-classes--txt {
+    .table-classes--txt,
+    .card-compare__title {
         font-size: 1.5rem;
     }
 
@@ -179,6 +188,6 @@
     #canasta-main {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        justify-content: space-between;
     }
 }
