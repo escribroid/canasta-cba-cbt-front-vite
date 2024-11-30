@@ -17,9 +17,10 @@ footer {
     font-size: var(--font-size-16_1rem);
     background-color: #1e1e1e !important;
     box-shadow: 0 0 0.2rem 0.2rem #96969677;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     border: 0;
     width: 100%;
+    border-radius: 0.625rem 0.625rem 0 0;
 }
 
 h1 {
@@ -35,8 +36,7 @@ h2 {
 header {
     position: static;
     margin: 0;
-    margin-top: 0.625rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 /* #person-form {
@@ -243,6 +243,7 @@ header {
 .card-compare__title {
     padding: 0.25rem var(--spacing-10_0-625) 0rem var(--spacing-10_0-625);
     color: #fffaf0;
+    font-size: var(--font-size-22_1-375);
 }
 
 .table-compare-month-container {
@@ -307,19 +308,25 @@ header {
 .card-vivienda,
 .form-family {
     display: flex;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card-vivienda__txt,
-.form-family--txt {
-    margin-left: 1rem;
-    margin-bottom: var(--spacing-10_0-625);
-    border-left: 0.2rem solid #4caf50aa;
+.card-family-txt {
+    display: flex;
+    color: #f2f4f7;
+    margin: 0 0 0 1rem;
     padding-left: 0.85rem;
+    font-size: 1rem;
+    height: 100%;
+    align-items: center;
 }
 
-.form-family--txt {
+.card-vivienda__txt {
+    border-left: 0.2rem solid #4caf50aa;
+}
+.card-family-txt {
     border-left: 0.2rem solid #ff5500aa;
 }
 
@@ -338,12 +345,8 @@ header {
     border: 0;
 }
 
-.card p {
-    color: #f2f4f7;
-}
-
 .card_main {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     width: 100%;
     border: 0;
 }
@@ -671,9 +674,10 @@ header {
     background-color: #1e1e1e;
     border-radius: 0 0 0.625rem 0.625rem;
     color: gainsboro;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     box-shadow: 0 0 0.2rem 0.2rem #96969677;
     border: 0;
+    padding: 0.2rem 0;
 }
 
 .index-data-ipc,
@@ -879,7 +883,7 @@ header {
     display: flex;
     justify-content: center;
     height: 100%;
-    max-height: auto;
+    margin-bottom: 1.25rem;
 }
 
 .table-classes-indigencia {
@@ -945,7 +949,7 @@ header {
 }
 
 .table-classes--txt {
-    font-size: var(--font-size-16_1rem);
+    font-size: var(--font-size-22_1-375);
     border-bottom: 1px solid #3c3f43;
     padding-bottom: 0.5rem;
 }
