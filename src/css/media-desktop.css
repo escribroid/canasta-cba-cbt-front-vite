@@ -36,6 +36,9 @@
 }
 
 @media (min-width: 767px) {
+    :root {
+        font-size: 22px;
+    }
     .aclaracion-classes {
         left: 0.1rem;
     }
@@ -51,7 +54,7 @@
     }
 
     .card__title {
-        font-size: 2rem;
+        /* font-size: 2rem; */
     }
 
     .card-canastas-1 {
@@ -89,7 +92,7 @@
 
     .card-vivienda__txt,
     .form-family--txt {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
 
     .card-rent-in,
@@ -97,7 +100,7 @@
     .form__select-age,
     .card__select-rent,
     .rent_in_past {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
     }
 
     header {
@@ -112,7 +115,7 @@
     }
 
     .income__input {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
     }
 
     .index-container {
@@ -120,18 +123,18 @@
     }
 
     .index-data-cba {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
     .index-data-cbt {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
 
     .index-data-txt {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
@@ -143,7 +146,7 @@
     .form-age--option:enabled,
     .form-gender--option:enabled,
     .card-rent--option:enabled {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
 
     .logo {
@@ -171,13 +174,13 @@
 
     .table-classes--txt,
     .card-compare__title {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
 
     .table-canastas,
     .table-canastas-head,
     .table-canastas-header {
-        font-size: 1.3rem;
+        /* font-size: 1.3rem; */
     }
 
     .tooltip .tooltip-inner {
