@@ -5,14 +5,20 @@
     .offcanvas-header .btn-close {
         position: relative;
         padding: var(--spacing-8_0-5) 0;
-        margin-top: -4px;
+        top: 0.2em;
         margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
-        margin-bottom: -5px;
+        margin-bottom: 0.15em;
         box-shadow: 0 0 0.5rem 2px rgba(0, 0, 0, 0.8);
-        height: 56px;
+        height: 1.4em;
         right: var(--spacing-8_0-5);
         opacity: 1;
         background-color: #f2f4f7;
+    }
+
+    .offcanvas.offcanvas-end {
+        border-left: 0;
+        right: 0;
+        height: 50vh;
     }
 }
 
@@ -23,27 +29,41 @@
     .offcanvas-header .btn-close {
         position: relative;
         padding: var(--spacing-8_0-5) 0;
-        margin-top: -2.5px;
+        top: 0.2em;
         margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
-        margin-bottom: -5px;
+        margin-bottom: 0.15em;
         box-shadow: 0 0 0.5rem 2px rgba(0, 0, 0, 0.8);
-        height: 52px;
-
+        height: 1.25em;
+        width: 1.5em;
         right: var(--spacing-8_0-5);
         opacity: 1;
         background-color: #f2f4f7;
+    }
+
+    .offcanvas.offcanvas-end {
+        border-left: 0;
+        right: 0;
+        height: 50vh;
     }
 }
 
 @media (min-width: 767px) {
     :root {
+        /* font-size: 16px; */
         font-size: 22px;
     }
-    .aclaracion-classes {
-        left: 0.1rem;
-    }
+    /* .aclaracion-classes {
+        left: 0.4rem;
+    } */
     body {
         max-width: 960px;
+    }
+
+    .btn-close {
+        width: 2em;
+        height: 1.6em !important;
+        padding: 0.2em 0.2em;
+        border-radius: 0.375rem;
     }
 
     .card__svg--reset:hover {
@@ -55,6 +75,10 @@
 
     .card__title {
         /* font-size: 2rem; */
+    }
+
+    .card-header {
+        height: 100%;
     }
 
     .card-canastas-1 {
@@ -90,6 +114,10 @@
         width: 49%;
     }
 
+    .card-rent-in {
+        width: 97.5%;
+    }
+
     .card-vivienda__txt,
     .card-family-txt {
         /* font-size: 1.5rem; */
@@ -122,17 +150,6 @@
         margin-bottom: 1.5rem;
     }
 
-    .index-data-cba {
-        /* font-size: 1.3rem; */
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-    .index-data-cbt {
-        /* font-size: 1.3rem; */
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-
     .index-data-txt {
         /* font-size: 1.3rem; */
         padding-top: 0.5rem;
@@ -140,7 +157,7 @@
     }
 
     .form__select-age {
-        margin-left: 0.18rem;
+        /* margin-left: 0.7rem; */
     }
 
     .form-age--option:enabled,
@@ -150,7 +167,7 @@
     }
 
     .logo {
-        font-size: var(--font-size-48_3rem);
+        /* font-size: var(--font-size-48_3rem); */
     }
 
     .nav-link {
@@ -158,13 +175,11 @@
     }
 
     .offcanvas.offcanvas-end {
-        right: calc(50vw - 310px);
-    }
-
-    .offcanvas.offcanvas-end {
-        right: 0.2rem;
-        top: 3.25rem;
-        height: 40vh;
+        top: 2.6em;
+        border-left: 0;
+        right: calc(50vw - 480px);
+        height: 60vh;
+        width: 60vh;
     }
 
     .offcanvas-header .btn-close {
@@ -192,5 +207,24 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+}
+
+@media ((min-width: 600px) and (max-width: 767px)) {
+    .offcanvas.offcanvas-end {
+        top: 1.8em;
+        right: calc(50vw - 300px);
+        border-left: 0;
+        height: 60vh;
+    }
+}
+
+@media ((min-width: 767px) and (max-width: 960px)) {
+    .offcanvas.offcanvas-end {
+        top: 2.6em;
+        right: 0;
+        border-left: 0;
+        height: 60vh;
+        width: 60vh;
     }
 }
