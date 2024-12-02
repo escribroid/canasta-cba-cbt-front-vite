@@ -118,6 +118,10 @@
         width: 97.5%;
     }
 
+    .card__svg--reset {       
+        top: 0rem;       
+    }
+
     .card-vivienda__txt,
     .card-family-txt {
         /* font-size: 1.5rem; */
