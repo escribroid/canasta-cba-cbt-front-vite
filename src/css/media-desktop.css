@@ -82,35 +82,35 @@
     }
 
     .card-canastas-1 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         width: 49%;
     }
 
     .card-canastas-2 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         width: 49%;
         margin-top: 0;
     }
 
     .card-canastas-3 {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0rem;
         width: 49%;
     }
 
     .card-canastas-4 {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0rem;
         width: 49%;
     }
 
     .card-classes {
         width: 49%;
         height: auto;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         justify-content: flex-start;
     }
 
     .card-compare {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         width: 49%;
     }
 
@@ -118,8 +118,8 @@
         width: 97.5%;
     }
 
-    .card__svg--reset {       
-        top: 0rem;       
+    .card__svg--reset {
+        top: 0rem;
     }
 
     .card-vivienda__txt,
@@ -136,7 +136,7 @@
     }
 
     header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
     }
 
     .icon-svg-add:hover {
@@ -151,7 +151,7 @@
     }
 
     .index-container {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
     }
 
     .index-data-txt {
@@ -181,7 +181,7 @@
     .offcanvas.offcanvas-end {
         top: 2.6em;
         border-left: 0;
-        right: calc(50vw - 480px);
+        right: calc(50vw - 485px);
         height: 60vh;
         width: 60vh;
     }
@@ -200,6 +200,16 @@
     .table-canastas-head,
     .table-canastas-header {
         /* font-size: 1.3rem; */
+    }
+
+    .table-canastas {
+        width: 98%;
+    }
+
+    .table-classes-alta-min-info,
+    .table-classes-alta-max-info,
+    .table-classes-info {
+        font-size: 0.8rem;
     }
 
     .tooltip .tooltip-inner {

@@ -66,12 +66,17 @@ header {
     transition: all 0.5s ease;
 }
 
+.aclaracion-classes {
+    width: var(--spacing-24_1-5);
+    height: var(--spacing-24_1-5);
+}
+
 .aclaracion-date,
 .aclaracion-date-card,
 .aclaracion-rent-past,
 .aclaracion-ingresos {
     position: absolute;
-    right: 0.5rem;
+    right: 0.4rem;
 }
 
 .aclaracion-family {
@@ -85,8 +90,9 @@ header {
 }
 
 .aclaracion-classes {
+    display: flex;
     position: absolute;
-    left: 0.4rem;
+    left: 0.25rem;
 }
 
 .aclaracion-date {
@@ -128,9 +134,10 @@ header {
 
 .form-submit {
     position: absolute;
-    right: 0.1rem;
+    right: 0.45rem;
     background-color: #1e1e1e;
     border: 0;
+    padding: 0;
     /* margin-left: var(--spacing-5_0-3125); */
     /* margin-right: 0rem; */
     margin: 0;
@@ -274,7 +281,8 @@ header {
 .table-compare-income-in {
     background-color: #ff880022;
     cursor: pointer;
-    max-width: var(--spacing-220);
+    height: 2rem;
+    max-width: 12rem;
     border: 0.0625rem solid #ff550066;
 }
 
@@ -692,7 +700,8 @@ header {
 .income__input {
     background-color: #ff880022;
     cursor: pointer;
-    max-width: var(--spacing-220);
+    height: 2.75rem;
+    max-width: 12rem;
     margin-right: var(--spacing-5_0-3125);
     border: 0.0625rem solid #ff880099;
 }
@@ -855,6 +864,11 @@ header {
     text-align: center;
 }
 
+.rent-past {
+    height: 2rem;
+    max-width: 12rem;
+}
+
 .row {
     display: flex;
     justify-content: space-around;
@@ -925,12 +939,14 @@ header {
     font-size: var(--font-size-18_1-125);
 }
 
-.table-classes-alta-min-info {
-    border-radius: 0 0 0 1rem;
-}
-
 .table-classes-alta-max-info {
     border-radius: 0 0 1rem 0;
+}
+
+.table-classes-alta-min-info {
+    display: inline-flex;
+    border-radius: 0 0 0 1rem;
+    justify-content: center;
 }
 
 .subtitle {
@@ -1118,7 +1134,7 @@ option:disabled {
 }
 
 .form-age {
-    width: calc(100% - 60px);
+    width: calc(100% - 3.2rem);
 }
 
 .form-gender {
