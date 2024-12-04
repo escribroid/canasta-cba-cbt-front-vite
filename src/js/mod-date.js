@@ -93,7 +93,7 @@ function checkBothSelected() {
     if (monthSelected && yearSelected) {
         document.querySelector(".table-classes-past").style.display = "block";
     } else {
-        document.querySelector(".table-classes-past").style.display = "none";
+        document.querySelector(".table-classes-past").style.display = "block";
     }
 }
 
