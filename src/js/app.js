@@ -22,32 +22,32 @@ const cbt_alquiler_3amb = cbt_alquiler_3amb_unformat.toLocaleString("es-AR", { m
 // Calculos cba, cbt, cbt_alquiler_2amb, cbt_alquiler_3amb ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function calcular_cba() {
     const view_cba = document.querySelector(".view-cba");
-    view_cba.innerHTML = `<span class="card-cba_value">  $${cba} </span>`;
+    view_cba.innerHTML = `<span class="card-cba_value">  $ ${cba} </span>`;
 }
 
 function calcular_cbt() {
     const view_cbt = document.querySelector(".view-cbt");
-    view_cbt.innerHTML = `<span class="card-cba_value">  $${cbt} </span>`;
+    view_cbt.innerHTML = `<span class="card-cba_value">  $ ${cbt} </span>`;
 }
 
 function calcular_cbt_y_alquiler(personas, edad) {
     const view_cbt_alquiler_3amb = document.querySelector(".view-cbt-rent-3amb");
-    view_cbt_alquiler_3amb.innerHTML = `<span class="card-cba_value">  $${cbt_alquiler_3amb} </span>`;
+    view_cbt_alquiler_3amb.innerHTML = `<span class="card-cba_value">  $ ${cbt_alquiler_3amb} </span>`;
 }
 
 function linea_indigencia() {
     const linea_indigencia = document.querySelector(".linea-indigencia");
-    linea_indigencia.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Indigencia con Casa Propia: ingreso mensual menor a $${cba}</span></div>`;
+    linea_indigencia.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Indigencia con Casa Propia: ingreso mensual menor a $ ${cba}</span></div>`;
 }
 
 function linea_pobreza() {
     const linea_pobreza = document.querySelector(".linea-pobreza");
-    linea_pobreza.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Pobreza con Casa Propia: ingreso mensual menor a $${cbt}</span></div>`;
+    linea_pobreza.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Pobreza con Casa Propia: ingreso mensual menor a $ ${cbt}</span></div>`;
 }
 
 function linea_pobreza_alquilando() {
     const linea_pobreza_alquilando = document.querySelector(".linea-pobreza-renting");
-    linea_pobreza_alquilando.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Pobreza ALQUILANDO: ingreso mensual menor a $${cbt_alquiler_3amb}</span></div>`;
+    linea_pobreza_alquilando.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Pobreza ALQUILANDO: ingreso mensual menor a $ ${cbt_alquiler_3amb}</span></div>`;
 }
 
 calcular_cba();
@@ -74,7 +74,7 @@ let cb_clase_media_fragil_individual;
 let cb_clase_media_individual;
 let cb_clase_media_alta_individual;
 let cb_clase_alta_individual;
-let cell_select_id;
+// let cell_select_id;
 let cells;
 let cb_table_cells_detail;
 let clickedCell_id;
@@ -107,7 +107,7 @@ let vivienda;
 let show_indigencia_max = document.querySelector(".table-classes-indigencia-max");
 let ingresos = document.getElementById("income__input").value;
 vivienda = document.getElementById("card__select-rent");
-document.querySelector(".table-canastas-rent").style.display = "none";
+let rent_in_show = document.querySelector(".table-canastas-rent")
 let coef_age_gender = 0;
 let coef_age_gender_add = 0;
 let array_cba_individual = [];
@@ -123,6 +123,9 @@ let array_filas = [];
 let table_matrix = [];
 let table_rows = [];
 let coef_age_gender_array = [];
+
+
+rent_in_show.style.display = "none";
 
 const form = document.getElementById("form");
 const tableBody = document.getElementById("table-canastas__list");
@@ -301,7 +304,7 @@ function addPersonToTable(
 
     row.innerHTML = `<td class="p-1">${table_rows[array_count_person.length - 1][0]}</td>
     <td class="col-1 p-1">${table_rows[array_count_person.length - 1][1]}</td>
-    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1">$${cb_table_cells_detail[2].toLocaleString(
+    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1">$ ${cb_table_cells_detail[2].toLocaleString(
         "es-AR",
         {
             maximumFractionDigits: 0,
@@ -396,7 +399,7 @@ function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
     }
 
     document.getElementById("total-canasta").innerHTML =
-        "$" +
+        "$ " +
         suma_con_alquiler.toLocaleString("es-AR", {
             maximumFractionDigits: 0,
         });
@@ -665,7 +668,7 @@ alquiler_in.addEventListener("input", function () {
     alquiler_in.selectionEnd = cursorPos; // Restaurar la posición del cursor
 });
 
-// event INPUT ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// event INPUT rent-input ++++++++++++++++++++++++++++++++++++++++++++++++++++
 function input_alquiler_in() {
     document.getElementById("card-rent-in").addEventListener("input", () => {
         age = document.getElementById("form__select-age").value;
@@ -700,6 +703,8 @@ function input_alquiler_in() {
                 document.querySelector(".card__svg--reset").style.transition = "transform 0.3s ease-in-out";
                 document.querySelector(".card__svg--reset").style.transform = "translatex(0)";
                 document.querySelector(".card__svg--reset").style.opacity = "1";
+                rent_in_show.style.display = "table-row";
+
             }, 400);
         }
     });

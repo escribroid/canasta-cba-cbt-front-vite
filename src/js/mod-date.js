@@ -17,7 +17,7 @@ let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 
 let dataJsonFront = [];
 let alquiler_past;
-let alquiler_past_value;
+let alquiler_past_value = parseInt(document.getElementById("rent-past").value);
 let suma_CBA_Personas_past;
 let suma_CBT_Personas_past;
 let suma_CT_clase_baja_past;
@@ -68,10 +68,10 @@ function cba_top_process() {
         // Actualizar valores en la UI
         cba_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cba * 3.09);
         const cba_top_short = document.querySelector(".index-data-cba");
-        cba_top_short.innerHTML = `$${cba_Top}`;
+        cba_top_short.innerHTML = `$ ${cba_Top}`;
         cbt_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cbt * 3.09);
         const cbt_top_short = document.querySelector(".index-data-cbt");
-        cbt_top_short.innerHTML = `$${cbt_Top}`;
+        cbt_top_short.innerHTML = `$ ${cbt_Top}`;
     }
 }
 
@@ -428,3 +428,48 @@ document.getElementById("table-compare-income-in").addEventListener("input", (e)
     const ingresosEvent = parseInt(e.target.value);
     ingresos_input_past(ingresosEvent);
 });
+
+
+// event INPUT rent-input ++++++++++++++++++++++++++++++++++++++++++++++++++++
+function input_alquiler_past() {
+    document.getElementById("rent-past").addEventListener("input", () => {
+        age = document.getElementById("form__select-age").value;
+        gender = document.getElementById("form__select-gender").value;
+        // alquiler_in_value = parseInt(document.getElementById("card-rent-in").value);
+        alquiler_out = document.getElementById("card-main-rent-out").value;
+
+        alquiler_past_value = parseInt(document.getElementById("rent-past").value);
+
+
+        if (isNaN(alquiler_past_value)) {
+            alquiler_past_value = 0;
+        } else if (alquiler_past_value < 0) {
+            alquiler_past_value = alquiler_past_value * -1;
+        }
+
+        if (isNaN(parseInt(document.getElementById("card-main-rent-out").value))) {
+            document.getElementById("card-main-rent-out").textContent = alquiler_in_value;
+        } else {
+            document.getElementById("card-main-rent-out").textContent = alquiler_in_value;
+        }
+
+        suma_con_alquiler = 0;
+        alquiler_in_value = 0;
+        suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
+        add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+
+        cbt_add_group = cbt_add_group + alquiler_in_value;
+        suma_con_alquiler = cbt_add_group;
+        ingresos_input_in(ingresos);
+
+        if (!alquiler_in_value || alquiler_in_value !== 0) {
+            document.querySelector(".card__svg--reset").style.display = "flex";
+            setTimeout(() => {
+                document.querySelector(".card__svg--reset").style.transition = "transform 0.3s ease-in-out";
+                document.querySelector(".card__svg--reset").style.transform = "translatex(0)";
+                document.querySelector(".card__svg--reset").style.opacity = "1";
+            }, 400);
+        }
+    });
+}
+input_alquiler_past();

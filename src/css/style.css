@@ -1013,6 +1013,10 @@ tfoot {
     text-align: center;
 }
 
+.table-canastas-foot th {
+    border: none;
+}
+
 .card__table__rent {
     margin: 0 0 0.5rem 0;
     display: flex;
