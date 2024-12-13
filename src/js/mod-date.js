@@ -14,6 +14,7 @@ let cbt_Top;
 let canasta_compare_cba = document.querySelector(".canasta_compare_cba");
 let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
+let ingresos = document.getElementById("table-compare-income-in").value;
 
 let dataJsonFront = [];
 let alquiler_past;
@@ -116,6 +117,7 @@ window.addEventListener("axUpdated", function (event) {
         canasta_month_select.addEventListener("change", function () {
             selectedMonth = canasta_month_select.value;
             selectedYear = canasta_year_select.value;
+            ingresos = document.getElementById("table-compare-income-in").value;
 
             if (selectedMonth !== "") {
                 monthSelected = true;
@@ -149,11 +151,14 @@ window.addEventListener("axUpdated", function (event) {
             if (callCba) {
                 callCba(selectedMonth, cba_Old);
             }
+
+            ingresos_input_past(ingresos);
         });
 
         canasta_year_select.addEventListener("change", function () {
             selectedYear = canasta_year_select.value;
             selectedMonth = canasta_month_select.value;
+            ingresos = document.getElementById("table-compare-income-in").value;
 
             if (selectedYear !== "") {
                 yearSelected = true;
@@ -174,7 +179,8 @@ window.addEventListener("axUpdated", function (event) {
                 document.querySelector(".table-compare-month-option[value='3']").setAttribute("disabled", true);
                 canasta_month_select.value = "4";
                 selectedMonth = canasta_month_select.value;
-                canasta_compare_cba.innerHTML = `${selectedMonth}`;
+                // canasta_compare_cba.innerHTML = `${selectedMonth}`;
+                canasta_compare_cba = `${selectedMonth}`;
             } else {
                 document.querySelector(".table-compare-month-option[value='1']").removeAttribute("disabled");
                 document.querySelector(".table-compare-month-option[value='2']").removeAttribute("disabled");
@@ -219,6 +225,7 @@ window.addEventListener("axUpdated", function (event) {
             if (callCbt) {
                 callCbt(selectedYear, cbt_Old);
             }
+            ingresos_input_past(ingresos);
         });
     }
 
@@ -278,8 +285,6 @@ window.addEventListener("axUpdated", function (event) {
         document.querySelector(".table-classes-alta-max-past").textContent = suma_clase_alta_baja_past;
     }
 });
-
-let ingresos = document.getElementById("income__input").value;
 
 function ingresos_input_past(ingresos) {
     // Verificar si los límites están definidos
@@ -429,7 +434,6 @@ document.getElementById("table-compare-income-in").addEventListener("input", (e)
     ingresos_input_past(ingresosEvent);
 });
 
-
 // event INPUT rent-input ++++++++++++++++++++++++++++++++++++++++++++++++++++
 function input_alquiler_past() {
     document.getElementById("rent-past").addEventListener("input", () => {
@@ -439,7 +443,6 @@ function input_alquiler_past() {
         alquiler_out = document.getElementById("card-main-rent-out").value;
 
         alquiler_past_value = parseInt(document.getElementById("rent-past").value);
-
 
         if (isNaN(alquiler_past_value)) {
             alquiler_past_value = 0;

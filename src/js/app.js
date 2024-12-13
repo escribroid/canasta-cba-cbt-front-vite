@@ -869,8 +869,8 @@ function ingresos_input_in(ingresos) {
         document.querySelector(".table-classes-media-alta").style.removeProperty("background-color");
     }
 
-    console.log("clase_alta_add_group_baja_alquilando", clase_media_alta_add_group_alquilando);
-    console.log("ingresos", ingresos);
+    //console.log("clase_alta_add_group_baja_alquilando", clase_media_alta_add_group_alquilando);
+    //console.log("ingresos", ingresos);
 
     if (clase_media_alta_add_group_alquilando === 0) {
         document.querySelector(".class-indigencia-row").style.removeProperty("background-color");
