@@ -1015,6 +1015,7 @@ tfoot {
 
 .table-canastas-foot th {
     border: none;
+    font-weight: 400;
 }
 
 .card__table__rent {
