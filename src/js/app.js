@@ -107,7 +107,7 @@ let vivienda;
 let show_indigencia_max = document.querySelector(".table-classes-indigencia-max");
 let ingresos = document.getElementById("income__input").value;
 vivienda = document.getElementById("card__select-rent");
-let rent_in_show = document.querySelector(".table-canastas-rent")
+let rent_in_show = document.querySelector(".table-canastas-rent");
 let coef_age_gender = 0;
 let coef_age_gender_add = 0;
 let array_cba_individual = [];
@@ -123,7 +123,6 @@ let array_filas = [];
 let table_matrix = [];
 let table_rows = [];
 let coef_age_gender_array = [];
-
 
 rent_in_show.style.display = "none";
 
@@ -704,7 +703,6 @@ function input_alquiler_in() {
                 document.querySelector(".card__svg--reset").style.transform = "translatex(0)";
                 document.querySelector(".card__svg--reset").style.opacity = "1";
                 rent_in_show.style.display = "table-row";
-
             }, 400);
         }
     });
