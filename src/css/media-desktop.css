@@ -237,9 +237,6 @@
 }
 
 @media ((min-width: 767px) and (max-width: 960px)) {
-    body {
-        max-width: 600px;
-    }
     .offcanvas.offcanvas-end {
         top: 2.4em;
         right: 0;
