@@ -1,10 +1,10 @@
 // CONSTANTES DE INDICES MANUALES
-const mes_cba_cbt_manual = 9;
-const cba_manual = 138744;
-const cbt_manual = 312175;
+const mes_cba_cbt_manual = 11;
+const cba_manual = 142148.73;
+const cbt_manual = 324099.1;
 const mesAlquilerManual = 8;
-const alquilerProm2amb = 507422;
-const ipc_manual = 3.5;
+const alquilerProm2amb = 538324;
+const ipc_manual = 2.4;
 
 const linea_indigencia = Math.round(cba_manual);
 const linea_pobreza = Math.round(cbt_manual);
