@@ -64,7 +64,6 @@
         width: 2em;
         height: 1.6em !important;
         padding: 0.2em 0.2em;
-        border-radius: 0.375rem;
     }
 
     .card__svg--reset:hover {
@@ -228,7 +227,7 @@
 @media ((min-width: 600px) and (max-width: 767px)) {
     .offcanvas.offcanvas-end {
         top: 1.8em;
-        right: calc(50vw - 300px);
+        right: calc(50vw - 305px);
         border-left: 0;
         height: 75vh;
     }
@@ -247,7 +246,7 @@
 @media ((min-width: 961px)) {
     .offcanvas.offcanvas-end {
         top: 2.4em;
-        right: calc(50vw - 480px);
+        right: calc(50vw - 485px);
         border-left: 0;
         width: 600px;
         height: 75vh;
