@@ -19,7 +19,7 @@
     .offcanvas.offcanvas-end {
         border-left: 0;
         right: 0;
-        height: 60vh;
+        height: 75vh;
     }
 }
 
@@ -44,7 +44,7 @@
     .offcanvas.offcanvas-end {
         border-left: 0;
         right: 0;
-        height: 60vh;
+        height: 75vh;
     }
 }
 
@@ -184,7 +184,7 @@
         border-left: 0;
         right: calc(50vw - 485px);
         width: 60vh;
-        height: 60vh;
+        height: 75vh;
     }
 
     .offcanvas-header .btn-close {
@@ -230,7 +230,7 @@
         top: 1.8em;
         right: calc(50vw - 300px);
         border-left: 0;
-        height: 60vh;
+        height: 75vh;
     }
 }
 
@@ -240,7 +240,7 @@
         right: 0;
         border-left: 0;
         width: 60vh;
-        height: 60vh;
+        height: 75vh;
     }
 }
 
@@ -250,6 +250,6 @@
         right: calc(50vw - 480px);
         border-left: 0;
         width: 600px;
-        height: 60vh;
+        height: 75vh;
     }
 }
