@@ -277,8 +277,12 @@ function addPersonToTable(
 
     if (gender === "Femenino") {
         gender_show = "Femenino";
-    } else {
+    } else if(gender === "Masculino") {
         gender_show = "Masculino";
+    } else if(gender === "Embarazada") {
+        gender_show = "Embarazada";
+    } else if(gender === "Lactante") {
+        gender_show = "F. Lactante";
     }
 
     row.id = `person_${count_person}`;
@@ -301,7 +305,7 @@ function addPersonToTable(
     }
     table_rows.push(cb_table_cells_detail);
 
-    row.innerHTML = `<td class="p-1">${table_rows[array_count_person.length - 1][0]}</td>
+    row.innerHTML = `<td class="p-1 text-start">${table_rows[array_count_person.length - 1][0]}</td>
     <td class="col-1 p-1">${table_rows[array_count_person.length - 1][1]}</td>
     <td id="detalles_monto_person_${count_person}" class="add_Partials p-1">$ ${cb_table_cells_detail[2].toLocaleString(
         "es-AR",
