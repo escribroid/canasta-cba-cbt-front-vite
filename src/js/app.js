@@ -277,11 +277,11 @@ function addPersonToTable(
 
     if (gender === "Femenino") {
         gender_show = "Femenino";
-    } else if(gender === "Masculino") {
+    } else if (gender === "Masculino") {
         gender_show = "Masculino";
-    } else if(gender === "Embarazada") {
+    } else if (gender === "Embarazada") {
         gender_show = "Embarazada";
-    } else if(gender === "Lactante") {
+    } else if (gender === "Lactante") {
         gender_show = "F. Lactante";
     }
 
@@ -501,10 +501,12 @@ vivienda.addEventListener("input", function () {
     if (vivienda.value !== "siAlquilo" && vivienda.value !== "vivienda_slc" && vivienda.value !== "noAlquilo") {
         document.querySelector(".card__svg--reset").style.display = "flex";
         setTimeout(() => {
-            document.querySelector(".card__svg--reset").style.transition = "transform 0.3s ease-in-out";
-            document.querySelector(".card__svg--reset").style.transform = "translatex(0)";
+            document.querySelector(".card__svg--reset").style.transition = "all 0.5s ease-in-out";
+            document.querySelector(".card__svg--reset").style.transform = "translatex(0rem)";
+
             document.querySelector(".card__svg--reset").style.opacity = "1";
         }, 400);
+        // document.querySelector(".card__svg--reset").style.right = "0";
     }
 
     suma_con_alquiler = 0;
