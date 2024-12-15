@@ -17,7 +17,7 @@ body {
     text-align: center;
     font-size: var(--font-size-16_1rem);
     background-color: #1e1e1e !important;
-    box-shadow: 0 0 0.2rem 0.2rem #96969677;
+    box-shadow: 0 0 0.5rem 0.1px #96969677;
     margin: 1.25rem 1px 0 1px;
     border: 0;
     border-radius: 0.625rem 0.625rem 0 0;
@@ -34,8 +34,7 @@ main {
     background-color: #1e1e1e;
     border-radius: 0 0 0.625rem 0.625rem;
     color: gainsboro;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 0 0.2rem 0.2rem #96969677;
+    box-shadow: 0 0 0.5rem 0.1px #96969677;
     border: 0;
     padding: 0.2rem 0;
     margin: 0 1px 1.25rem 1px;
