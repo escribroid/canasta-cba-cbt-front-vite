@@ -57,6 +57,16 @@ async function fetchDataAndUpdateUI() {
         const data = await fetchDataFromAPI(); // Llamamos a la función centralizada
         dataJsonFront = data;
         cba_top_process();
+        // console.log("dataJsonFront", dataJsonFront[101]);
+
+        // Emitir un evento personalizado con el valor de ax
+        const even = new CustomEvent("dataJsonFront", {
+            detail: { dataJsonFront: dataJsonFront },
+        });
+        window.dispatchEvent(even); // Disparar el evento
+
+        // ver cuantas comas tiene el string, borrar todas salvo la ultima
+        // reemplazarla por un punto
     } catch (error) {
         console.error("Error al actualizar la UI:", error);
     }
@@ -438,7 +448,7 @@ window.addEventListener("axUpdated", function (event) {
                 alquiler_past_value = alquiler_past_value * -1;
             }
 
-            console.log("alquiler_past_value", alquiler_past_value);
+            // console.log("alquiler_past_value", alquiler_past_value);
 
             suma_indigencia_past = alquiler_past_value + suma_indigencia_past;
             suma_pobreza_past = alquiler_past_value + suma_pobreza_past;
