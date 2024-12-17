@@ -773,7 +773,7 @@ window.addEventListener("dataJsonFront", function (even) {
         personas_local_storage = [];
         localStorage.setItem("personas_local_storage", JSON.stringify(personas_local_storage));
         document.querySelector(".card__svg--reset").style.transition = "transform 0.3s ease-in-out";
-        document.querySelector(".card__svg--reset").style.transform = "translatex(100%)";
+        document.querySelector(".card__svg--reset").style.transform = "translatex(2rem)";
         setTimeout(() => {
             document.querySelector(".card__svg--reset").style.opacity = "0";
             document.querySelector(".card__svg--reset").style.display = "none";

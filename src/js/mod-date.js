@@ -32,7 +32,7 @@ let suma_clase_media_alta_past;
 let suma_clase_alta_baja_past;
 
 // Centralizamos la URL aquí
-const API_URL = "https://canasta-cba-cbt-back-express.vercel.app/api/cba-cbt/";
+const API_URL = "https://canasta-cba-cbt-back-express.vercel.app/api/v1/cba-cbt/";
 
 // Función que realiza el fetch y devuelve los datos
 async function fetchDataFromAPI() {
