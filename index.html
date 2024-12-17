@@ -74,29 +74,25 @@
                         <div class="offcanvas-body rounded-4">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#canasta-main">Canasta personalizada</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a
-                                        class="nav-link dropdown-toggle"
-                                        href="#"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
+                                    <a class="nav-link" id="nav-link-custom" href="#canasta-main"
+                                        >Canasta Personalizada</a
                                     >
-                                        Canasta básica total + alquiler
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-menu-dark">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider" />
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="nav-link-cbt" href="#canasta-cbt">Canasta básica total</a>
+                                    <a class="nav-link" id="nav-link-cba" href="#card-canasta-cba"
+                                        >Canasta Básica Alimentaria</a
+                                    >
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" id="nav-link-cbt" href="#card-canasta-cbt"
+                                        >Canasta Básica Total</a
+                                    >
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="nav-link-cbta" href="#card-canasta-cbta"
+                                        >Canasta Básica Total + Alquiler</a
+                                    >
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Contacto</a>
@@ -457,7 +453,7 @@
                                 <table class="table table-hover overflow-hidden table-canastas rounded-2">
                                     <thead>
                                         <tr>
-                                            <th class="table-canastas-choice col-3 p-0 m-0" scope="col">Género</th>
+                                            <th class="table-canastas-choice col-3 p-1 m-0" scope="col">Género</th>
                                             <th class="table-canastas-head col-1 p-1 m-0" scope="col-1">Edad</th>
                                             <th class="table-canastas-head p-1 m-0" scope="col">$ detalle $</th>
                                             <th class="table-canastas-head col-1 p-1 m-0" scope="col" title="Eliminar">
@@ -492,7 +488,9 @@
                                     <tbody id="table-canastas__list"></tbody>
                                     <tfoot class="table-canastas-foot">
                                         <tr class="table-canastas-rent">
-                                            <th class="col-4 table-canastas-head m-0 p-1" scope="col">Alquiler</th>
+                                            <th class="col-4 table-canastas-head text-start m-0 p-1" scope="col">
+                                                Alquiler
+                                            </th>
                                             <th class="col table-canastas-head m-0 p-0" scope="col"></th>
                                             <th id="card-main-rent-out" class="col-8 m-0 p-0" scope="col"></th>
                                             <th class="col table-canastas-head m-0 p-0" scope="col"></th>
@@ -1020,7 +1018,7 @@
             </div>
 
             <!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="card rounded-4 card-canastas-head card-canastas-1">
+            <div id="card-canastas-1" class="card rounded-4 card-canastas-head card-canastas-1">
                 <div class="card-header rounded-4">
                     <h2 class="card-canastas-header-title">Canastas para Hogar "Tipo"</h2>
                     <h3 class="card-canastas-header-subtitle">De 4 integrantes del indec:</h3>
@@ -1030,7 +1028,7 @@
             </div>
 
             <!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="card rounded-4 card-cba card-canastas-2">
+            <div id="card-canasta-cba" class="card rounded-4 card-cba card-canastas-2">
                 <div class="card-header rounded-4">
                     <h2 class="card-cb-title">Canasta Básica Alimentaria</h2>
                     <h3 class="card-cb-subtitle">
@@ -1061,7 +1059,7 @@
             </div>
 
             <!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="canasta-cbt" class="card rounded-4 card-cbt card-canastas-3">
+            <div id="card-canasta-cbt" class="card rounded-4 card-cbt card-canastas-3">
                 <div class="card-header rounded-4">
                     <h2 class="card-cb-title">Canasta Básica Total</h2>
                     <h3 class="card-cb-subtitle">
@@ -1092,7 +1090,7 @@
             </div>
 
             <!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="card rounded-4 card-cbta card-canastas-4">
+            <div id="card-canasta-cbta" class="card rounded-4 card-cbta card-canastas-4">
                 <div class="card-header rounded-4">
                     <h2 class="card-cb-title">Canasta Básica Total <span class="fs-6">+ Alquiler</span></h2>
                     <h3 class="card-cb-subtitle">

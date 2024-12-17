@@ -318,7 +318,6 @@ header {
 
 .card-vivienda {
     display: flex;
-    position: relative;
     overflow: hidden;
 }
 
@@ -341,9 +340,11 @@ header {
 }
 
 .card-vivienda-container {
+    position: relative;
     padding: 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
+    overflow: hidden;
 }
 
 .card {
@@ -637,8 +638,8 @@ header {
 .card__svg--reset {
     position: absolute;
     display: none;
-    top: 0.2rem;
-    right: 0;
+    top: 0.675rem;
+    right: 0.5rem;
     transform: translateX(2rem);
     opacity: 0;
     margin-top: -0.5rem;

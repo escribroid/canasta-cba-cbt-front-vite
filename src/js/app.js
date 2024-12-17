@@ -986,7 +986,44 @@ window.addEventListener("dataJsonFront", function (even) {
         }
     });
 
+    // Resaltado Links
+    document.getElementById("nav-link-custom").addEventListener("click", () => {
+        setTimeout(() => {
+            document.querySelector(".card_main").style.boxShadow = "0px 0px 6px 4px #ff3366";
+        }, 800);
+
+        setTimeout(() => {
+            document.querySelector(".card_main").style.removeProperty("box-shadow");
+        }, 2000);
+    });
+
+    document.getElementById("nav-link-cba").addEventListener("click", () => {
+        setTimeout(() => {
+            document.querySelector(".card-canastas-2").style.boxShadow = "0px 0px 6px 4px #ff3366";
+        }, 800);
+
+        setTimeout(() => {
+            document.querySelector(".card-canastas-2").style.removeProperty("box-shadow");
+        }, 2000);
+    });
+
     document.getElementById("nav-link-cbt").addEventListener("click", () => {
-        document.querySelector(".card-canastas-3").style.boxShadow = "0px 0px 6px 4px #ff3366";
+        setTimeout(() => {
+            document.querySelector(".card-canastas-3").style.boxShadow = "0px 0px 6px 4px #ff3366";
+        }, 800);
+
+        setTimeout(() => {
+            document.querySelector(".card-canastas-3").style.removeProperty("box-shadow");
+        }, 2000);
+    });
+
+    document.getElementById("nav-link-cbta").addEventListener("click", () => {
+        setTimeout(() => {
+            document.querySelector(".card-canastas-4").style.boxShadow = "0px 0px 6px 4px #ff3366";
+        }, 800);
+
+        setTimeout(() => {
+            document.querySelector(".card-canastas-4").style.removeProperty("box-shadow");
+        }, 2000);
     });
 });
