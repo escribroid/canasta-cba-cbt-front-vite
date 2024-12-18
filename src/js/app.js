@@ -332,9 +332,21 @@ window.addEventListener("dataJsonFront", function (even) {
             gender_show = "Masculino";
         } else if (gender === "Embarazada") {
             gender_show = "Embarazada";
+            document.querySelector(".form-age--option[value='0']").setAttribute("disabled", true);
         } else if (gender === "Lactante") {
             gender_show = "F. Lactante";
         }
+
+        /* 
+        form__select-gender
+        document.querySelector(".table-compare-month-option[value='1']").setAttribute("disabled", true);
+                document.querySelector(".table-compare-month-option[value='2']").setAttribute("disabled", true);
+                document.querySelector(".table-compare-month-option[value='3']").setAttribute("disabled", true);
+                canasta_month_select.value = "4";
+                selectedMonth = canasta_month_select.value;
+                // canasta_compare_cba.innerHTML = `${selectedMonth}`;
+                canasta_compare_cba = `${selectedMonth}`;
+        */
 
         // console.log("count_person", count_person);
 
@@ -567,6 +579,46 @@ window.addEventListener("dataJsonFront", function (even) {
         alquiler_in_value = alquiler_in.value;
         suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
         add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
+    });
+
+    // Embarazo, lactante solo mas de 10 años
+    document.getElementById("form__select-gender").addEventListener("change", function () {
+        let genderSelected = document.getElementById("form__select-gender").value;
+
+        if (genderSelected === "Embarazada" || genderSelected === "Lactante") {
+            document.querySelector(".form-age--option[value='0']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='1']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='2']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='3']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='4']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='5']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='6']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='7']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='8']").setAttribute("disabled", true);
+            document.querySelector(".form-age--option[value='9']").setAttribute("disabled", true);
+        } else {
+            document.querySelector(".form-age--option[value='0']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='1']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='2']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='3']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='4']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='5']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='6']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='7']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='8']").removeAttribute("disabled");
+            document.querySelector(".form-age--option[value='9']").removeAttribute("disabled");
+        }
+
+        /* 
+        form__select-gender
+        document.querySelector(".table-compare-month-option[value='1']").setAttribute("disabled", true);
+                document.querySelector(".table-compare-month-option[value='2']").setAttribute("disabled", true);
+                document.querySelector(".table-compare-month-option[value='3']").setAttribute("disabled", true);
+                canasta_month_select.value = "4";
+                selectedMonth = canasta_month_select.value;
+                // canasta_compare_cba.innerHTML = `${selectedMonth}`;
+                canasta_compare_cba = `${selectedMonth}`;
+        */
     });
 
     /* Agregar PERSONAS a la tabla SUBMIT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
