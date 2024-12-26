@@ -15,8 +15,10 @@ let canasta_compare_cba = document.querySelector(".canasta_compare_cba");
 let canasta_compare_cbt = document.querySelector(".canasta_compare_cbt");
 let canasta_compare_cbaja = document.querySelector(".canasta_compare_cbaja");
 let ingresos = document.getElementById("table-compare-income-in").value;
+let ipc_Top;
 
 let dataJsonFront = [];
+let dataJsonIpc = [];
 let alquiler_past;
 let alquiler_past_value = parseInt(document.getElementById("rent-past").value);
 let suma_CBA_Personas_past;
@@ -33,6 +35,7 @@ let suma_clase_alta_baja_past;
 
 // Centralizamos la URL aquí
 const API_URL = "https://canasta-cba-cbt-back-express.vercel.app/api/v1/cba-cbt/";
+const API_URL_IPC = "https://canasta-cba-cbt-back-express.vercel.app/api/v1/ipc/";
 
 // Función que realiza el fetch y devuelve los datos
 async function fetchDataFromAPI() {
@@ -74,8 +77,45 @@ async function fetchDataAndUpdateUI() {
 // Llamamos a la función que actualiza la UI
 fetchDataAndUpdateUI();
 
+// Función que realiza el fetch y devuelve los datos IPC
+async function fetchDataApiIPC() {
+    try {
+        const response = await fetch(API_URL_IPC);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data; // Devolvemos los datos para que la otra función los use
+    } catch (error) {
+        console.error("Error al obtener los datos de la API:", error);
+        throw error; // Volvemos a lanzar el error para que sea manejado donde se llame esta función
+    }
+}
+
+// Función usa fetchDataFromAPI para obtener datos, actualiza UI
+async function fetchDataIpcUpdateUI() {
+    try {
+        const data = await fetchDataApiIPC(); // Llamamos a la función centralizada
+        dataJsonIpc = data;
+        ipc_top_process();
+        //console.log("dataJsonIpc", dataJsonIpc);
+
+        // Emitir un evento personalizado con el valor de ax
+        const even = new CustomEvent("dataJsonIpc", {
+            detail: { dataJsonIpc: dataJsonIpc },
+        });
+        window.dispatchEvent(even); // Disparar el evento
+    } catch (error) {
+        console.error("Error al actualizar la UI:", error);
+    }
+}
+// Llamamos a la función que actualiza la UI
+fetchDataIpcUpdateUI();
+
 function cba_top_process() {
-    if (dataJsonFront.length > 0) {
+    if (dataJsonFront) {
         // Actualizar valores en la UI
         cba_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cba * 3.09);
         const cba_top_short = document.querySelector(".index-data-cba");
@@ -83,6 +123,15 @@ function cba_top_process() {
         cbt_Top = Math.round(dataJsonFront[dataJsonFront.length - 1].cbt * 3.09);
         const cbt_top_short = document.querySelector(".index-data-cbt");
         cbt_top_short.innerHTML = `$ ${cbt_Top}`;
+    }
+}
+
+function ipc_top_process() {
+    if (dataJsonIpc) {
+        // Actualizar valores en la UI
+        ipc_Top = dataJsonIpc.ipcValue;
+        const ipc_top_short = document.querySelector(".index-data-ipc");
+        ipc_top_short.innerHTML = `${ipc_Top}%`;
     }
 }
 
