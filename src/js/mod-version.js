@@ -1,1 +1,1 @@
-export const version = "Canastas | v0.9.6.7";
+export const version = "Canastas | v0.9.6.8";

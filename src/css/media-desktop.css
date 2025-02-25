@@ -212,8 +212,8 @@
         font-size: 0.8rem;
     }
 
-    .tooltip .tooltip-inner {
-        font-size: 1.5rem;
+    .tooltip {
+        font-size: 1.25rem;
         max-width: 400px;
     }
 

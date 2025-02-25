@@ -16,12 +16,12 @@
 
         <link
             rel="preload"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             as="style"
             onload="this.rel='stylesheet'"
         />
         <noscript>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
         </noscript>
         <link rel="stylesheet" href="src/css/design-system.css" />
         <link rel="stylesheet" href="src/css/style.css" />
@@ -38,6 +38,7 @@
             <span>|</span>
             <div class="index-top"><span class="index-data-txt">cbt </span><span class="index-data-cbt"></span></div>
         </div>
+
         <!-- HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <header class="bg-black rounded-4">
             <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
@@ -108,6 +109,16 @@
                 </div>
             </nav>
         </header>
+
+        <div class="tooltip-container" style="position: absolute; left: 10px">
+            <button class="info-btn">ℹ️</button>
+            <div class="tooltip">Más info en <a href="#" class="tooltip-link">este enlace</a></div>
+        </div>
+
+        <div class="tooltip-container" style="position: absolute; right: 10px">
+            <button class="info-btn">ℹ️</button>
+            <div class="tooltip left">Visita <a href="#" class="tooltip-link">este sitio</a></div>
+        </div>
 
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main id="canasta-main">
@@ -316,7 +327,9 @@
                                                     <option value="7" class="form-age--option">7 años</option>
                                                     <option value="8" class="form-age--option">8 años</option>
                                                     <option value="9" class="form-age--option">9 años</option>
-                                                    <option value="10" class="form-age--option" selected>10 años</option>
+                                                    <option value="10" class="form-age--option" selected>
+                                                        10 años
+                                                    </option>
                                                     <option value="11" class="form-age--option">11 años</option>
                                                     <option value="12" class="form-age--option">12 años</option>
                                                     <option value="13" class="form-age--option">13 años</option>
@@ -739,18 +752,19 @@
 
                         <div class="card-compare__title text-center pb-2">Tu Clase Social Ayer</div>
 
-                        <span class="rounded-4 card-compare--over"
-                            ><button
+                        <span class="rounded-4 card-compare--over">
+                            <button
                                 type="button"
-                                id="aclaracion-date--over"
-                                class="btn btn-secondary rounded-4 aclaracion-date--over"
+                                class="btn btn-secondary aclaracion-date--over"
                                 data-bs-toggle="tooltip"
                                 data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-html="true"
                                 data-bs-title="Agrega tu grupo familiar <a class='tooltip-link' id='card-canastas-link' href='#form'>aquí</a>"
-                            ></button
-                        ></span>
+                            >
+                                i
+                            </button>
+                        </span>
                     </div>
                     <div class="table-compare-body">
                         <!--  <li class="d-flex justify-content-center text-center p-1">

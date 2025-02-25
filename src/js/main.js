@@ -6,58 +6,53 @@ import { version } from "./mod-version.js";
 // yearUpdated
 //const yearUpdated = document.querySelector(".copyleftYear").innerHTML = yearGet;
 // version
-const versionUpdated = (document.querySelector(".version").innerHTML = version);
+/* const versionUpdated = (document.querySelector(".version").innerHTML = version);
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-// const tooltipList = [...tooltipTriggerList].map(
-//     (tooltipTriggerEl) =>
-//         new bootstrap.Tooltip(tooltipTriggerEl, {
-//             placement: "top",
-//             offset: [-75, 0],
-//         })
-// );
 
-let tooltipInstance;
+/* ############################################################## */
+document.querySelectorAll(".tooltip-container").forEach((container) => {
+    const button = container.querySelector(".info-btn");
+    const tooltip = container.querySelector(".tooltip");
+    const link = container.querySelector(".tooltip-link");
 
-// Detectar si el dispositivo es táctil
-const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    let timeout;
 
-if (isTouchDevice) {
-    // Dispositivo táctil: mostrar tooltip al hacer clic
-    tooltipTriggerList.forEach((tooltipTriggerTo) => {
-        new bootstrap.Tooltip(tooltipTriggerTo, {
-            placement: "top",
-            offset: [-75, 0],
-        });
+    function showTooltip() {
+        clearTimeout(timeout);
+        tooltip.style.visibility = "visible";
+        tooltip.style.opacity = "1";
+
+        // Agregar evento para cerrar cuando se toca fuera
+        document.addEventListener("click", closeOnClickOutside);
+    }
+
+    function hideTooltip() {
+        timeout = setTimeout(() => {
+            tooltip.style.visibility = "hidden";
+            tooltip.style.opacity = "0";
+        }, 200);
+    }
+
+    function closeOnClickOutside(event) {
+        if (!container.contains(event.target)) {
+            hideTooltip();
+            document.removeEventListener("click", closeOnClickOutside);
+        }
+    }
+
+    button.addEventListener("mouseenter", showTooltip);
+    button.addEventListener("mouseleave", hideTooltip);
+    tooltip.addEventListener("mouseenter", showTooltip);
+    tooltip.addEventListener("mouseleave", hideTooltip);
+
+    // Soporte para toque en dispositivos móviles
+    button.addEventListener("click", (event) => {
+        event.stopPropagation(); // Evita cierre inmediato
+        showTooltip();
     });
-} else {
-    // Dispositivo con ratón: mostrar tooltip al pasar el cursor
-    tooltipTriggerList.forEach((tooltipTriggerEl) => {
-        const tooltip = new bootstrap.Tooltip(tooltipTriggerEl, {
-            placement: "top",
-            offset: [-75, 0],
-            trigger: "manual", // Controlar manualmente cuándo mostrar/ocultar
-        });
 
-        let timer; // Para manejar el temporizador
+    tooltip.addEventListener("click", (event) => event.stopPropagation()); // Permite tocar sin cerrar
 
-        // Mostrar tooltip al pasar el cursor
-        tooltipTriggerEl.addEventListener("mouseenter", () => {
-            tooltip.show();
-
-            // Iniciar un temporizador para ocultar el tooltip después de 2 segundos
-            clearTimeout(timer); // Limpiar cualquier temporizador previo
-            // timer = setTimeout(() => {
-            //     tooltip.hide();
-            // }, 5000); // 2000ms = 2 segundos
-        });
-
-        // Ocultar tooltip al salir si no se hace clic en el enlace
-        tooltipTriggerEl.addEventListener("mouseleave", () => {
-            //clearTimeout(timer); // Cancelar temporizador si se mueve el mouse
-            timer = setTimeout(() => {
-                tooltip.hide();
-            }, 2000); // 2000ms = 2 segundos
-        });
-    });
-}
+    // Cerrar tooltip al hacer click en el enlace
+    link.addEventListener("click", () => hideTooltip());
+});
