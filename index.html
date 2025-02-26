@@ -110,23 +110,21 @@
             </nav>
         </header>
 
-        <div class="tooltip-container" style="position: absolute; left: 10px">
-            <button class="info-btn">ℹ️</button>
-            <div class="tooltip">Más info en <a href="#" class="tooltip-link">este enlace</a></div>
-        </div>
-
-        <div class="tooltip-container" style="position: absolute; right: 10px">
-            <button class="info-btn">ℹ️</button>
-            <div class="tooltip left">Visita <a href="#" class="tooltip-link">este sitio</a></div>
-        </div>
-
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main id="canasta-main">
             <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div class="card w-100 rounded-4 card_main">
                 <ul class="list-group list-group-flush rounded-4">
-                    <li class="list-group-item d-flex flex-column pb-0">
+                    <li class="list-group-item flex-column pb-0">
                         <h2 class="card__title text-center">Canasta Personalizada</h2>
+
+                        <div class="tooltip-custom-container">
+                            <button class="info-btn">ℹ️</button>
+                            <div class="tooltip-custom ">
+                                Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su género y
+                                edad, para calcular tu Canasta Verdadera.
+                            </div>
+                        </div>
 
                         <div class="card-vivienda-container">
                             <div class="card-vivienda">
@@ -143,22 +141,16 @@
                                     />
                                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
                                 </svg>
-                                <div>
-                                    <p class="card-vivienda__txt">Vivienda</p>
+                                <p class="card-vivienda__txt">Vivienda</p>
+
+                                <div class="tooltip-custom-container">
+                                    <button class="info-btn">ℹ️</button>
+                                    <div class="tooltip-custom">
+                                        Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
+                                        género y edad, para calcular tu Canasta Verdadera.
+                                    </div>
                                 </div>
-                                <span class="d-flex align-items-center">
-                                    <button
-                                        type="button"
-                                        class="btn btn-secondary aclaracion-vivienda"
-                                        data-bs-toggle="tooltip"
-                                        data-bs-placement="top"
-                                        aria-label="aclaracion-icons"
-                                        data-bs-custom-class="custom-tooltip"
-                                        data-bs-title="Agrega presionando el [+]  de color naranja, a cada miembro de tu hogar, su género y edad, para calcular tu Canasta Verdadera."
-                                    >
-                                        i
-                                    </button>
-                                </span>
+
                                 <div class="card__btn--reset" id="card__btn--reset" title="Borrar Todo">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

@@ -316,20 +316,18 @@ header {
     margin-bottom: 1rem;
 }
 
-.card-vivienda {
-    display: flex;
-    overflow: hidden;
-}
+
 
 .card-vivienda__txt,
 .card-family-txt {
-    display: flex;
+    /* display: flex; */
     color: #f2f4f7;
     margin: 0 0 0 1rem;
     padding-left: 0.85rem;
     font-size: 1rem;
     height: 100%;
     align-items: center;
+    width: 100%;
 }
 
 .card-vivienda__txt {
@@ -344,7 +342,6 @@ header {
     padding: 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
     margin-bottom: 0.5rem;
-    overflow: hidden;
 }
 
 .card {
@@ -1045,35 +1042,36 @@ tfoot {
 }
 
 /* ############################################################## */
-.tooltip-container {
+.tooltip-custom-container {
     position: relative;
     display: inline-block;
 }
 
-.tooltip {
+.tooltip-custom {
     position: absolute;
-    top: 50%;
-    left: 120%;
-    transform: translateY(-50%);
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: black;
     color: white;
     padding: 8px;
     border-radius: 5px;
-    white-space: nowrap;
+    width: 220px;
+    max-width: 250px;
+    white-space: normal;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    z-index: 9999;
 }
 
-.tooltip a {
-    color: yellow;
-    text-decoration: underline;
-}
 
-.tooltip.left {
+
+/* .tooltip-custom.left {
     left: auto;
-    right: 120%;
-}
+    right: 100%;
+    transform: none;
+} */
 
 /* ############################################################## */
 .version {

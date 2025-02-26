@@ -212,10 +212,10 @@
         font-size: 0.8rem;
     }
 
-    .tooltip {
+   /*  .tooltip-custom {
         font-size: 1.25rem;
         max-width: 400px;
-    }
+    } */
 
     #canasta-main {
         display: flex;
