@@ -1,139 +1,121 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="description" content="Canasta Basica Alimentaria y Canasta Basica Total" />
+        <meta name="description" content="Canasta Básica Alimentaria y Canasta Básica Total" />
         <meta
             name="keywords"
-            content="CBA, CBT, IPC, Canasta Basica Alimentaria, Canasta Basica Total, Canasta Basica Total mas Alquiler, Canasta Basica Alimentaria mas Alquiler, Linea de pobreza, linea de indigencia, linea de clase media"
+            content="CBA, CBT, IPC, Canasta Básica Alimentaria, Canasta Básica Total, Canasta Básica Total mas Alquiler, Canasta Básica Alimentaria mas Alquiler, Linea de pobreza, linea de indigencia, linea de clase media"
         />
         <meta name="author" content="escribroid" />
         <title>CANASTAS</title>
 
-        <!-- CSS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-
-        <link
-            rel="preload"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            as="style"
-            onload="this.rel='stylesheet'"
-        />
-        <noscript>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-        </noscript>
+        <!-- Tailwind CSS -->
+        <!-- Estilos personalizados -->
+        <link href="/src/css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="src/css/design-system.css" />
-        <link rel="stylesheet" href="src/css/style.css" />
         <link rel="stylesheet" href="src/css/media-desktop.css" />
-    </head>
-    <!-- BODY +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 
-    <body>
-        <!-- <div class="shadow-top"></div> -->
-        <div class="index-container">
-            <div class="index-top"><span class="index-data-txt">ipc </span><span class="index-data-ipc"> </span></div>
+        <style>
+            .tooltip {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 0.5rem;
+                display: none;
+            }
+            .tooltip::after {
+                content: "";
+                position: absolute;
+                bottom: 100%; /* At the top of the tooltip */
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 0.5rem;
+                border-style: solid;
+                border-color: transparent transparent black transparent;
+            }
+            .tooltip.visible {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body class="">
+        <!-- Contenedor principal -->
+        <div class="index-container flex justify-center items-center space-x-4 p-3 my-3 bg-gray-800 rounded-lg">
+            <div class="index-top">
+                <span class="index-data-txt">ipc </span>
+                <span class="index-data-ipc"> </span>
+            </div>
             <span>|</span>
-            <div class="index-top"><span class="index-data-txt">cba </span><span class="index-data-cba"></span></div>
+            <div class="index-top">
+                <span class="index-data-txt">cba </span>
+                <span class="index-data-cba"></span>
+            </div>
             <span>|</span>
-            <div class="index-top"><span class="index-data-txt">cbt </span><span class="index-data-cbt"></span></div>
+            <div class="index-top">
+                <span class="index-data-txt">cbt </span>
+                <span class="index-data-cbt"></span>
+            </div>
         </div>
 
-        <!-- HEADER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <header class="bg-black rounded-4">
-            <!-- NAVBAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <nav class="navbar rounded-4 w-100">
-                <div class="container-fluid">
-                    <a class="navbar-brand logo" href="./index.html"
-                        ><img class="navbar--img" src="src/img/iso_logo.svg" alt="" />CANASTAS</a
+        <!-- Header -->
+        <header class="bg-black rounded-lg p-3 mb-3">
+            <!-- Navbar -->
+            <nav class="flex justify-between items-center">
+                <a class="flex items-center text-white text-xl font-bold" href="./index.html">
+                    <img class="h-8 mr-2" src="src/img/iso_logo.svg" alt="Logo" />
+                    CANASTAS
+                </a>
+                <button class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                    </svg>
+                </button>
+                <!-- <div id="mobileMenu" class="hidden md:flex md:items-center space-x-6">
+                    <a class="text-white hover:text-gray-400" href="#canasta-main">Canasta Personalizada</a>
+                    <a class="text-white hover:text-gray-400" href="#card-canasta-cba">Canasta Básica Alimentaria</a>
+                    <a class="text-white hover:text-gray-400" href="#card-canasta-cbt">Canasta Básica Total</a>
+                    <a class="text-white hover:text-gray-400" href="#card-canasta-cbta"
+                        >Canasta Básica Total + Alquiler</a
                     >
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasDarkNavbar"
-                        aria-controls="offcanvasDarkNavbar"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div
-                        class="offcanvas offcanvas-end text-bg-dark bg-black"
-                        tabindex="-1"
-                        id="offcanvasDarkNavbar"
-                        aria-labelledby="offcanvasDarkNavbarLabel"
-                    >
-                        <div class="offcanvas-header">
-                            <h3 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h3>
-                            <button
-                                type="button"
-                                class="btn-close btn-close-white"
-                                data-bs-dismiss="offcanvas"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="offcanvas-body rounded-4">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" id="nav-link-custom" href="#canasta-main"
-                                        >Canasta Personalizada</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="nav-link-cba" href="#card-canasta-cba"
-                                        >Canasta Básica Alimentaria</a
-                                    >
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" id="nav-link-cbt" href="#card-canasta-cbt"
-                                        >Canasta Básica Total</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="nav-link-cbta" href="#card-canasta-cbta"
-                                        >Canasta Básica Total + Alquiler</a
-                                    >
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contacto</a>
-                                </li>
-                                <li class="nav-item">
-                                    <!-- <p class="info_site">Sitio hecho con ... una Pc</p>
-                                    <p class="info_site">Sitio hecho por ... chatGPT</p>
-                                    <p class="info_site">y con muy poco ♥</p> -->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                    <a class="text-white hover:text-gray-400" href="#">Contacto</a>
+                </div> -->
             </nav>
         </header>
 
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main id="canasta-main">
             <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="card w-100 rounded-4 card_main">
-                <ul class="list-group list-group-flush rounded-4">
-                    <li class="list-group-item flex-column pb-0">
+            <div class="card w-full rounded-lg card_main">
+                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-lg">
+                    <li class="rounded-lg flex flex-col pb-0">
                         <h2 class="card__title text-center">Canasta Personalizada</h2>
 
                         <div class="tooltip-custom-container">
                             <button class="info-btn">ℹ️</button>
-                            <div class="tooltip-custom ">
+                            <div class="tooltip-custom">
                                 Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su género y
                                 edad, para calcular tu Canasta Verdadera.
                             </div>
                         </div>
 
                         <div class="card-vivienda-container">
-                            <div class="card-vivienda">
+                            <div class="card-vivienda flex flex-col items-center p-4 rounded-lg shadow-lg">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="35"
                                     height="35"
                                     fill="#4CAF50"
-                                    class="bi bi-house-fill card-svg-house"
+                                    class="card-svg-house"
                                     viewBox="0 0 16 16"
                                 >
                                     <path
@@ -141,23 +123,25 @@
                                     />
                                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
                                 </svg>
-                                <p class="card-vivienda__txt">Vivienda</p>
+                                <p class="card-vivienda__txt text-lg font-semibold text-gray-700">Vivienda</p>
 
-                                <div class="tooltip-custom-container">
-                                    <button class="info-btn">ℹ️</button>
-                                    <div class="tooltip-custom">
+                                <div class="tooltip-custom-container relative">
+                                    <button class="info-btn text-xl">ℹ️</button>
+                                    <div
+                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-lg mt-2"
+                                    >
                                         Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
                                         género y edad, para calcular tu Canasta Verdadera.
                                     </div>
                                 </div>
 
-                                <div class="card__btn--reset" id="card__btn--reset" title="Borrar Todo">
+                                <div class="card__btn--reset mt-4" id="card__btn--reset" title="Borrar Todo">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="2.75rem"
                                         height="2.75rem"
                                         fill="#FF3366"
-                                        class="bi bi-x-square card__svg--reset"
+                                        class="card__svg--reset"
                                         viewBox="0 0 16 16"
                                     >
                                         <path
@@ -169,14 +153,14 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="card__table__rent">
-                                <label class="w-50">
+                            <div class="card__table__rent mt-4">
+                                <label class="w-1/2">
                                     <select
                                         aria-label="canasta-rent"
                                         name="canasta-rent"
                                         id="card__select-rent"
                                         title="Seleccioná si ALquilas o No ALquilas."
-                                        class="form-select card__select-rent"
+                                        class="block w-full mt-1 shadow appearance-none border py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline card__select-rent p-2 border-gray-300 rounded"
                                     >
                                         <option class="card-rent--option" value="siAlquilo">Alquilada</option>
                                         <option class="card-rent--option" value="noAlquilo">No Alquilada</option>
@@ -209,15 +193,15 @@
                                         </option>
                                     </select>
                                 </label>
-                                <div id="card-total-rent">
-                                    <label class="d-flex justify-content-end">
+                                <div id="card-total-rent" class="">
+                                    <label class="flex justify-end">
                                         <input
                                             type="text"
                                             inputmode="numeric"
                                             pattern="\d*"
                                             name="card-rent-in"
                                             id="card-rent-in"
-                                            class="card-partial-add card-rent-in form-control"
+                                            class="card-partial-add card-rent-in form-control w-full p-2 border border-gray-300 rounded"
                                             value=""
                                             placeholder="$ Valor Alquiler"
                                             title="Si alquilas, ingresá el monto del alquiler."
@@ -228,8 +212,8 @@
                         </div>
 
                         <form id="form">
-                            <div class="form-container">
-                                <div class="form-family">
+                            <div class="max-w-lg mx-auto shadow-lg rounded-lg p-6">
+                                <div class="form-family shadow-lg">
                                     <span>
                                         <!-- SVG PERSON -->
                                         <svg
@@ -237,7 +221,7 @@
                                             width="35"
                                             height="35"
                                             fill="#FF5500"
-                                            class="bi bi-person-fill icon-svg-person"
+                                            class="icon-svg-person"
                                             viewBox="0 0 16 16"
                                         >
                                             <path
@@ -248,30 +232,36 @@
                                     <div>
                                         <p class="card-family-txt">Agregá el grupo familiar</p>
                                     </div>
-                                    <span class="d-flex align-items-center">
+                                    <span class="flex items-center">
                                         <button
                                             type="button"
-                                            class="btn btn-secondary aclaracion-family"
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
+                                            class="bg-gray-500 text-white p-2 rounded aclaracion-family"
                                             aria-label="aclaracion-icons"
-                                            data-bs-custom-class="custom-tooltip"
-                                            data-bs-title="Agrega presionando el [+]  de color naranja, a cada miembro de tu hogar, su género y edad, para calcular tu Canasta Verdadera."
+                                            data-tooltip-target="tooltip-default"
                                         >
                                             i
                                         </button>
+                                        <div
+                                            id="tooltip-default"
+                                            role="tooltip"
+                                            class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                                        >
+                                            Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
+                                            género y edad, para calcular tu Canasta Verdadera.
+                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                        </div>
                                     </span>
                                 </div>
                                 <div class="fieldset">
-                                    <div class="form-gender w-50">
+                                    <div class="form-gender w-1/2">
                                         <!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
-                                        <label class="w-100">
+                                        <label class="w-full">
                                             <select
                                                 aria-label="form__select-gender"
                                                 name="form__select-gender"
                                                 id="form__select-gender"
-                                                class="form-select form__select-gender"
-                                                title="Ingresá el género, si esta embarazada o amamanta"
+                                                class="block w-full mt-1 shadow appearance-none border py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline form__select-gender p-2 border-gray-300 rounded"
+                                                title="Ingresá el género, si está embarazada o amamanta"
                                             >
                                                 <!-- <option value="" class="form-gender--option" selected disabled>
                                                     • Persona
@@ -291,14 +281,15 @@
                                         </label>
                                         <input type="hidden" name="gender" id="gender" required />
                                     </div>
+
                                     <div class="form-age-container">
                                         <div class="form-age">
-                                            <label for="form__select-age" class="d-block">
+                                            <label for="form__select-age" class="block">
                                                 <select
                                                     aria-label="form__select-age"
                                                     name="form__select-age"
                                                     id="form__select-age"
-                                                    class="rounded form-select form__select-age"
+                                                    class="block w-full mt-1 shadow appearance-none rounded py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline form__select-age p-2 border border-gray-300"
                                                     title="Ingresá la edad de la persona"
                                                 >
                                                     <option
@@ -424,7 +415,7 @@
                                         <button
                                             id="form-submit"
                                             type="submit"
-                                            class="form-submit"
+                                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded form-submit focus:outline-none focus:shadow-outline"
                                             aria-label="Person"
                                             name="btn-add-person"
                                             title="Agregar Familiar"
@@ -436,7 +427,7 @@
                                                     width="2.75rem"
                                                     height="2.75rem"
                                                     fill="#FF8800dd "
-                                                    class="bi bi-plus-square icon-svg-add"
+                                                    class="icon-svg-add"
                                                     viewBox="0 0 16 16"
                                                 >
                                                     <path
@@ -451,17 +442,18 @@
                                     </div>
                                 </div>
                             </div>
+
                             <span> Cuidado</span><span> Dias</span>
 
                             <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
-                            <div class="d-flex justify-content-center table-responsive overflow-auto rounded-2">
-                                <table class="table table-hover overflow-hidden table-canastas rounded-2">
+                            <div class="flex justify-center table-responsive overflow-auto rounded-lg">
+                                <table class="min-w-full table-auto hover:bg-gray-100 rounded-lg table-canastas">
                                     <thead>
                                         <tr>
-                                            <th class="table-canastas-choice col-3 p-1 m-0" scope="col">Género</th>
-                                            <th class="table-canastas-head col-1 p-1 m-0" scope="col-1">Edad</th>
+                                            <th class="table-canastas-choice w-1/3 p-1 m-0" scope="col">Género</th>
+                                            <th class="table-canastas-head w-1/12 p-1 m-0" scope="col">Edad</th>
                                             <th class="table-canastas-head p-1 m-0" scope="col">$ detalle $</th>
-                                            <th class="table-canastas-head col-1 p-1 m-0" scope="col" title="Eliminar">
+                                            <th class="table-canastas-head w-1/12 p-1 m-0" scope="col" title="Eliminar">
                                                 <!-- SVG DELETE -->
                                                 <svg
                                                     class="card-table-delete-head"
@@ -490,26 +482,27 @@
                                             </th>
                                         </tr>
                                     </thead>
+
                                     <tbody id="table-canastas__list"></tbody>
                                     <tfoot class="table-canastas-foot">
                                         <tr class="table-canastas-rent">
-                                            <th class="col-4 table-canastas-head text-start m-0 p-1" scope="col">
+                                            <th class="w-1/4 table-canastas-head text-left m-0 p-1" scope="col">
                                                 Alquiler
                                             </th>
-                                            <th class="col table-canastas-head m-0 p-0" scope="col"></th>
-                                            <th id="card-main-rent-out" class="col-8 m-0 p-0" scope="col"></th>
-                                            <th class="col table-canastas-head m-0 p-0" scope="col"></th>
+                                            <th class="table-canastas-head m-0 p-0" scope="col"></th>
+                                            <th id="card-main-rent-out" class="w-3/4 m-0 p-0" scope="col"></th>
+                                            <th class="table-canastas-head m-0 p-0" scope="col"></th>
                                         </tr>
                                         <tr class="table-group-divider">
                                             <th
-                                                class="table-canastas-choice table-canastas-head col-3 p-0 m-0"
+                                                class="table-canastas-choice table-canastas-head w-1/3 p-0 m-0"
                                                 scope="col"
                                             >
                                                 <select
                                                     name="table-canastas__select"
                                                     id="table-canastas__select"
                                                     title="Seleccione el detalle personal"
-                                                    class="table-canastas__select"
+                                                    class="table-canastas__select w-full p-2 border-gray-300 rounded block mt-1 shadow appearance-none border py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
                                                 >
                                                     <option class="table-canastas__select--option" value="" disabled>
                                                         Detalle individual ▼▼
@@ -524,7 +517,6 @@
                                                     >
                                                         • CBT - Linea de pobreza
                                                     </option>
-
                                                     <option class="table-canastas__select--option" value="clase_baja">
                                                         • Clase Baja
                                                     </option>
@@ -539,9 +531,9 @@
                                                     </option>
                                                 </select>
                                             </th>
-                                            <th class="col-1 table-canastas-head" scope="col"></th>
+                                            <th class="w-1/12 table-canastas-head" scope="col"></th>
                                             <th id="total-canasta" class="table-canastas-head" scope="col"></th>
-                                            <th class="col-1 table-canastas-head" scope="col"></th>
+                                            <th class="w-1/12 table-canastas-head" scope="col"></th>
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -552,21 +544,21 @@
             </div>
 
             <!-- Card-2 Tabla clases sociales ------------------------------------------>
-            <div class="card rounded-4 card-classes section-idem">
+            <div class="card rounded-lg card-classes section-idem">
                 <div class="pt-2 mt-1 text-center table-classes">
-                    <div class="row m-0 mb-2 p-0 w-100">
-                        <div class="col text-center table-classes--txt text--shadow">Tu Clase Social Hoy</div>
+                    <div class="flex flex-col m-0 mb-2 p-0 w-full">
+                        <div class="text-center table-classes--txt text-shadow">Tu Clase Social Hoy</div>
                     </div>
 
                     <!-- ingresar salario ------------------------------------------>
-                    <li class="list-group-item py-2">
-                        <div class="d-flex justify-content-center row w-100">
+                    <li class="py-2">
+                        <div class="flex justify-center flex-col w-full">
                             <!-- <span class="pb-1 text-center fs-6">Opcional: Ingresar Salario</span> -->
-                            <div class="d-flex justify-content-center align-items-center pb-2">
+                            <div class="flex justify-center items-center pb-2">
                                 <label>
                                     <input
                                         id="income__input"
-                                        class="form-control me-2 text-center income__input"
+                                        class="form-control me-2 text-center income__input w-full p-2 border border-gray-300 rounded"
                                         type="number"
                                         pattern="\d+"
                                         placeholder="$ Ingreso Familiar"
@@ -575,167 +567,158 @@
                                 </label>
                                 <button
                                     type="button"
-                                    class="btn btn-secondary aclaracion-ingresos"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-placement="top"
-                                    data-bs-custom-class="custom-tooltip"
-                                    data-bs-title="Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector socioeconómico."
+                                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded aclaracion-ingresos"
+                                    data-tooltip-target="tooltip-default"
+                                    data-tooltip-placement="top"
+                                    aria-label="aclaracion-icons"
+                                    title="Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector socioeconómico."
                                 >
                                     i
                                 </button>
+                                <div
+                                    id=""
+                                    role="tooltip"
+                                    class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg mt-2"
+                                >
+                                    Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector
+                                    socioeconómico.
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
                             </div>
                         </div>
                     </li>
-                    <div class="row m-0 p-0 w-100 table-classes-indigencia">
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-indigencia">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-indigencia-min"></div>
                         <div
-                            class="m-0 p-0 d-flex justify-content-center align-content-center align-items-center table-classes-indigencia-min"
-                        ></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-indigencia-row"
+                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-indigencia-row"
                         >
-                            <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Indigente<span
-                                class="text-center h-100 align-content-center mayor-menor"
+                            <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Indigente<span
+                                class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
                             >
                         </div>
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-indigencia-max"
-                        ></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-indigencia-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-pobreza">
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-pobreza">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-pobreza-min"></div>
                         <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-pobreza-min"
-                        ></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-pobreza-row"
+                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-pobreza-row"
                         >
-                            <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Pobreza<span
-                                class="text-center h-100 align-content-center mayor-menor"
+                            <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Pobreza<span
+                                class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
                             >
                         </div>
-                        <div class="m-0 p-0 align-content-center align-items-center table-classes-pobreza-max"></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-pobreza-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-baja">
-                        <div
-                            class="m-0 p-0 d-flex justify-content-center align-content-center align-items-center table-classes-baja-min"
-                        ></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-baja-row"
-                        >
-                            <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Clase Baja<span
-                                class="text-center h-100 align-content-center mayor-menor"
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-baja">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-baja-min"></div>
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-baja-row">
+                            <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Clase Baja<span
+                                class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
                             >
                         </div>
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-baja-max"
-                        ></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-baja-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-media-fragil">
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-media-fragil">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-media-fragil-min"></div>
                         <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-fragil-min"
-                        ></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-media-fragil-row"
+                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-fragil-row"
                         >
-                            <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Media fragil<span
-                                class="text-center h-100 align-content-center mayor-menor"
+                            <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media frágil<span
+                                class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
                             >
                         </div>
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-fragil-max"
-                        ></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-media-fragil-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-media">
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-min"
-                        ></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-media-row"
-                        >
-                            <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Media<span
-                                class="text-center h-100 align-content-center mayor-menor"
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-media">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-media-min"></div>
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-row">
+                            <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media<span
+                                class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
                             >
                         </div>
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-max"
-                        ></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-media-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-media-alta">
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-media-alta">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-media-alta-min"></div>
                         <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-alta-min"
-                        ></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-media-alta-row"
+                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-alta-row"
                         >
-                            <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>
-                            Media alta<span class="text-center h-100 align-content-center mayor-menor">&lt;</span>
+                            <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media alta<span
+                                class="text-center h-full flex items-center mayor-menor"
+                                >&lt;</span
+                            >
                         </div>
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-alta-max"
-                        ></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-media-alta-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-alta">
-                        <div class="m-0 p-0 table-classes-alta--min justify-content-center align-items-center"></div>
-                        <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-alta-row"
-                        >
-                            <span
-                                class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor-menor"
-                                >≤</span
-                            >Alta baja<span class="text-center h-100 align-content-center mayor-menor">&lt;</span>
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-alta">
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-alta--min"></div>
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-alta-row">
+                            <span class="pr-0 h-full flex justify-center items-center text-center mayor-menor">≤</span
+                            >Alta baja<span class="text-center h-full flex items-center mayor-menor">&lt;</span>
                         </div>
-                        <div
-                            class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-alta-max"
-                        ></div>
+                        <div class="m-0 p-0 flex justify-center items-center table-classes-alta-max"></div>
                     </div>
-                    <div class="row m-0 p-0 w-100 table-classes-acomodada">
+
+                    <div class="flex flex-wrap m-0 p-0 w-full table-classes-acomodada">
                         <div
-                            class="col m-0 p-0 py-1 d-flex justify-content-center align-content-center align-items-center text--shadow class-acomodada-row"
+                            class="flex flex-1 m-0 p-0 py-1 justify-center items-center text-shadow class-acomodada-row"
                         >
                             Acomodada
                         </div>
                     </div>
 
-                    <div class="row w-100 text-body-tertiary">
-                        <div class="m-0 p-0 ps-4 py-2 bg-black table-classes-alta-min-info">
-                            <span class="d-flex align-items-center">
+                    <div class="flex flex-wrap w-full text-gray-500">
+                        <div class="m-0 p-0 pl-4 py-2 bg-black table-classes-alta-min-info">
+                            <span class="flex items-center">
                                 <button
                                     type="button"
-                                    class="btn btn-secondary aclaracion-classes"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-placement="top"
-                                    data-bs-custom-class="custom-tooltip"
-                                    data-bs-title="Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el ingreso máximo para pertenecer a ese sector socioeconómico."
+                                    class="bg-gray-500 text-white p-2 rounded aclaracion-classes"
+                                    data-tooltip-target="tooltip-classes"
+                                    data-tooltip-placement="top"
                                 >
                                     i
                                 </button>
+                                <div
+                                    id="tooltip-classes"
+                                    role="tooltip"
+                                    class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                                >
+                                    Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el
+                                    ingreso máximo para pertenecer a ese sector socioeconómico.
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
                             </span>
-
                             Minimo
                         </div>
                         <div
-                            class="col m-0 p-0 bg-black d-flex justify-content-between align-content-center align-items-center text--shadow table-classes-info"
+                            class="flex-1 m-0 p-0 bg-black flex justify-between items-center text-shadow table-classes-info"
                         >
-                            <span
-                                class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor-menor"
+                            <span class="bg-black pr-0 h-full flex justify-center items-center text-center mayor-menor"
                                 >≤</span
-                            >Clase social<span class="bg-black text-center h-100 align-content-center mayor-menor"
+                            >Clase social<span class="bg-black text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
                             >
                         </div>
-                        <div class="m-0 p-0 pe-4 bg-black align-content-center table-classes-alta-max-info">Maximo</div>
+                        <div class="m-0 p-0 pr-4 bg-black flex items-center table-classes-alta-max-info">Maximo</div>
                     </div>
                 </div>
             </div>
 
             <!-- Card-3 Compare +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="card rounded-4 card-compare section-idem">
-                <ul class="pt-1 list-group list-group-flush rounded-4 position-relative">
-                    <div class="m-0 mb-2 p-0 w-100 position-static card-compare__header">
+            <div class="bg-white shadow-lg rounded-lg card-compare section-idem">
+                <ul class="pt-1 divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-lg relative">
+                    <div class="m-0 mb-2 p-0 w-full static card-compare__header">
                         <!-- <div class="form-switch compare__switch">
                         <input class="form-check-input border border-2 border-primary" type="checkbox" role="switch"
                             id="SwitchCompareCba" />
@@ -744,18 +727,24 @@
 
                         <div class="card-compare__title text-center pb-2">Tu Clase Social Ayer</div>
 
-                        <span class="rounded-4 card-compare--over">
+                        <span class="rounded-lg card-compare--over">
                             <button
                                 type="button"
-                                class="btn btn-secondary aclaracion-date--over"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="custom-tooltip"
-                                data-bs-html="true"
-                                data-bs-title="Agrega tu grupo familiar <a class='tooltip-link' id='card-canastas-link' href='#form'>aquí</a>"
+                                class="bg-gray-500 text-white p-2 rounded aclaracion-date--over"
+                                data-tooltip-target="tooltip-date-over"
+                                data-tooltip-placement="top"
                             >
                                 i
                             </button>
+                            <div
+                                id="tooltip-date-over"
+                                role="tooltip"
+                                class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                            >
+                                Agrega tu grupo familiar
+                                <a class="tooltip-link" id="card-canastas-link" href="#form">aquí</a>
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
                         </span>
                     </div>
                     <div class="table-compare-body">
@@ -771,7 +760,11 @@
                             >
                         </li> -->
                         <div class="table-compare-month-container mt-2 mb-3">
-                            <select id="table-compare-month" class="form-select table-compare-month" aria-label="Month">
+                            <select
+                                id="table-compare-month"
+                                class="block w-full mt-1 shadow appearance-none border rounded py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline table-compare-month p-2 border-gray-300"
+                                aria-label="Month"
+                            >
                                 <option class="table-compare-month-option" value="month" selected disabled>Mes</option>
                                 <option class="table-compare-month-option" value="1">Enero</option>
                                 <option class="table-compare-month-option" value="2">Febrero</option>
@@ -790,33 +783,41 @@
                             <label for="table-compare-year"></label>
                             <select
                                 id="table-compare-year"
-                                class="form-select table-compare-year"
+                                class="block w-full mt-1 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline table-compare-year p-2 border-gray-300"
                                 aria-label="Year"
                             ></select>
-                            <span class="card-compare-info d-flex align-items-center"
-                                ><button
+
+                            <span class="card-compare-info flex items-center">
+                                <button
                                     type="button"
-                                    class="btn btn-secondary aclaracion-date-card"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-placement="top"
-                                    data-bs-custom-class="custom-tooltip"
-                                    data-bs-html="true"
-                                    data-bs-title="Tu Clase Social hace 2 años, ¿era mejor? ¿peor? Ingresa Mes y Año y obtendras tu canasta en esa fecha. Tenes que saber tu salario en ese momento solamente."
+                                    class="bg-gray-500 text-white p-2 rounded aclaracion-date-card"
+                                    data-tooltip-target="tooltip-date-card"
+                                    data-tooltip-placement="top"
                                 >
                                     i
-                                </button></span
-                            >
+                                </button>
+                                <div
+                                    id="tooltip-date-card"
+                                    role="tooltip"
+                                    class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                                >
+                                    Tu Clase Social hace 2 años, ¿era mejor? ¿peor? Ingresa Mes y Año y obtendrás tu
+                                    canasta en esa fecha. Tienes que saber tu salario en ese momento solamente.
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+                            </span>
                         </div>
-                        <div class="position-relative w-100 mb-3">
-                            <div class="d-flex justify-content-center align-items-center w-100 position-relative">
-                                <label class="d-flex justify-content-end">
+
+                        <div class="relative w-full mb-3">
+                            <div class="flex justify-center items-center w-full relative">
+                                <label class="flex justify-end">
                                     <input
                                         type="text"
                                         inputmode="numeric"
                                         pattern="\d*"
                                         name="rent-past"
                                         id="rent-past"
-                                        class="form-control card-partial-add rent-past"
+                                        class="form-control card-partial-add rent-past w-full p-2 border border-gray-300 rounded"
                                         value=""
                                         placeholder="$ Alquiler en 02/2022"
                                         title="Si alquilas, ingresá el monto del alquiler."
@@ -824,23 +825,29 @@
                                 </label>
                                 <button
                                     type="button"
-                                    class="btn btn-secondary aclaracion-rent-past"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-placement="top"
-                                    data-bs-custom-class="custom-tooltip"
-                                    data-bs-html="true"
-                                    data-bs-title="Ingresá el monto de alquiler, si alquilabas en esa fecha."
+                                    class="bg-gray-500 text-white p-2 rounded aclaracion-rent-past"
+                                    data-tooltip-target="tooltip-rent-past"
+                                    data-tooltip-placement="top"
                                 >
                                     i
                                 </button>
+                                <div
+                                    id="tooltip-rent-past"
+                                    role="tooltip"
+                                    class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                                >
+                                    Ingresá el monto de alquiler, si alquilabas en esa fecha.
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="position-relative w-100 mb-1">
-                            <div class="d-flex justify-content-center align-items-center w-100 position-relative">
+
+                        <div class="relative w-full mb-1">
+                            <div class="flex justify-center items-center w-full relative">
                                 <label>
                                     <input
                                         id="table-compare-income-in"
-                                        class="form-control text-center table-compare-income-in"
+                                        class="form-control text-center table-compare-income-in w-full p-2 border border-gray-300 rounded"
                                         type="number"
                                         pattern="\d+"
                                         placeholder="$ Ingresos en 02/2022"
@@ -849,172 +856,184 @@
                                 </label>
                                 <button
                                     type="button"
-                                    class="btn btn-secondary aclaracion-ingresos aclaracion-income-compare"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-placement="top"
-                                    data-bs-custom-class="custom-tooltip"
-                                    data-bs-title="Agregá el ingreso mensual del hogar en el mes y año que elegiste."
+                                    class="bg-gray-500 text-white p-2 rounded aclaracion-ingresos aclaracion-income-compare"
+                                    data-tooltip-target="tooltip-income-compare"
+                                    data-tooltip-placement="top"
                                 >
                                     i
                                 </button>
+                                <div
+                                    id="tooltip-income-compare"
+                                    role="tooltip"
+                                    class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                                >
+                                    Agregá el ingreso mensual del hogar en el mes y año que elegiste.
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Tabla clases sociales pasadas------------------------------->
                         <div class="pt-0 mt-2 text-center table-classes-past">
-                            <div class="row m-0 mb-0 p-0 w-100 table-classes-indigencia table-classes-indigencia-past">
+                            <div
+                                class="flex flex-wrap m-0 mb-0 p-0 w-full table-classes-indigencia table-classes-indigencia-past"
+                            >
                                 <div
-                                    class="m-0 p-0 d-flex justify-content-center align-content-center align-items-center table-classes-indigencia-min-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-indigencia-min-past"
                                 ></div>
                                 <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-indigencia-row class-indigencia-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-indigencia-row class-indigencia-row-past"
                                 >
-                                    <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Indigente<span
-                                        class="text-center h-100 align-content-center mayor-menor"
+                                    <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Indigente<span
+                                        class="text-center h-full flex items-center mayor-menor"
                                         >&lt;</span
                                     >
                                 </div>
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-indigencia-max-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-indigencia-max-past"
                                 ></div>
                             </div>
-                            <div class="row m-0 p-0 w-100 table-classes-pobreza table-classes-pobreza-past">
+                            <div class="flex flex-wrap m-0 p-0 w-full table-classes-pobreza table-classes-pobreza-past">
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-pobreza-min-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-pobreza-min-past"
                                 ></div>
                                 <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-pobreza-row class-pobreza-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-pobreza-row class-pobreza-row-past"
                                 >
-                                    <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Pobreza<span
-                                        class="text-center h-100 align-content-center mayor-menor"
+                                    <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Pobreza<span
+                                        class="text-center h-full flex items-center mayor-menor"
                                         >&lt;</span
                                     >
                                 </div>
                                 <div
-                                    class="m-0 p-0 align-content-center align-items-center table-classes-pobreza-max-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-pobreza-max-past"
                                 ></div>
                             </div>
-                            <div class="row m-0 p-0 w-100 table-classes-baja table-classes-baja-past">
+
+                            <div class="flex flex-wrap m-0 p-0 w-full table-classes-baja table-classes-baja-past">
+                                <div class="m-0 p-0 flex justify-center items-center table-classes-baja-min-past"></div>
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-baja-min-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-baja-row class-baja-row-past"
+                                >
+                                    <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Clase Baja<span
+                                        class="text-center h-full flex items-center mayor-menor"
+                                        >&lt;</span
+                                    >
+                                </div>
+                                <div class="m-0 p-0 flex justify-center items-center table-classes-baja-max-past"></div>
+                            </div>
+
+                            <div
+                                class="flex flex-wrap m-0 p-0 w-full table-classes-media-fragil table-classes-media-fragil-past"
+                            >
+                                <div
+                                    class="m-0 p-0 flex justify-center items-center table-classes-media-fragil-min-past"
                                 ></div>
                                 <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-baja-row class-baja-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-fragil-row class-media-fragil-row-past"
                                 >
-                                    <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Clase Baja<span
-                                        class="text-center h-100 align-content-center mayor-menor"
+                                    <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media frágil<span
+                                        class="text-center h-full flex items-center mayor-menor"
                                         >&lt;</span
                                     >
                                 </div>
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-baja-max-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-media-fragil-max-past"
                                 ></div>
                             </div>
-                            <div class="row m-0 p-0 w-100 table-classes-media-fragil table-classes-media-fragil-past">
+
+                            <div class="flex flex-wrap m-0 p-0 w-full table-classes-media table-classes-media-past">
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-fragil-min-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-media-min-past"
                                 ></div>
                                 <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-media-fragil-row class-media-fragil-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-row class-media-row-past"
                                 >
-                                    <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Media fragil<span
-                                        class="text-center h-100 align-content-center mayor-menor"
+                                    <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media<span
+                                        class="text-center h-full flex items-center mayor-menor"
                                         >&lt;</span
                                     >
                                 </div>
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-fragil-max-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-media-max-past"
                                 ></div>
                             </div>
-                            <div class="row m-0 p-0 w-100 table-classes-media table-classes-media-past">
+
+                            <div
+                                class="flex flex-wrap m-0 p-0 w-full table-classes-media-alta table-classes-media-alta-past"
+                            >
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-min-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-media-alta-min-past"
                                 ></div>
                                 <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-media-row class-media-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-alta-row class-media-alta-row-past"
                                 >
-                                    <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>Media<span
-                                        class="text-center h-100 align-content-center mayor-menor"
+                                    <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media alta<span
+                                        class="text-center h-full flex items-center mayor-menor"
                                         >&lt;</span
                                     >
                                 </div>
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-max-past"
+                                    class="m-0 p-0 flex justify-center items-center table-classes-media-alta-max-past"
                                 ></div>
                             </div>
-                            <div class="row m-0 p-0 w-100 table-classes-media-alta table-classes-media-alta-past">
+
+                            <div class="flex flex-wrap m-0 p-0 w-full table-classes-alta table-classes-alta-past">
+                                <div class="m-0 p-0 flex justify-center items-center table-classes-alta-min-past"></div>
                                 <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-alta-min-past"
-                                ></div>
-                                <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-media-alta-row class-media-alta-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-alta-row class-alta-row-past"
                                 >
-                                    <span class="pe-0 h-100 align-content-center mayor-menor">≤</span>
-                                    Media alta<span class="text-center h-100 align-content-center mayor-menor"
-                                        >&lt;</span
-                                    >
-                                </div>
-                                <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-media-alta-max-past"
-                                ></div>
-                            </div>
-                            <div class="row m-0 p-0 w-100 table-classes-alta table-classes-alta-past">
-                                <div
-                                    class="m-0 p-0 justify-content-center align-items-center table-classes-alta-min-past"
-                                ></div>
-                                <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-between align-content-center align-items-center text--shadow class-alta-row class-alta-row-past"
-                                >
-                                    <span
-                                        class="pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor-menor"
+                                    <span class="pr-0 h-full flex justify-center items-center text-center mayor-menor"
                                         >≤</span
-                                    >Alta baja<span class="text-center h-100 align-content-center mayor-menor"
-                                        >&lt;</span
-                                    >
+                                    >Alta baja<span class="text-center h-full flex items-center mayor-menor">&lt;</span>
                                 </div>
-                                <div
-                                    class="m-0 p-0 justify-content-center align-content-center align-items-center table-classes-alta-max-past"
-                                ></div>
+                                <div class="m-0 p-0 flex justify-center items-center table-classes-alta-max-past"></div>
                             </div>
-                            <div class="row m-0 p-0 w-100 table-classes-acomodada table-classes-acomodada-past">
+
+                            <div
+                                class="flex flex-wrap m-0 p-0 w-full table-classes-acomodada table-classes-acomodada-past"
+                            >
                                 <div
-                                    class="col m-0 p-0 py-1 d-flex justify-content-center align-content-center align-items-center text--shadow class-media-alta-row"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-center items-center text-shadow class-media-alta-row"
                                 >
                                     Acomodada
                                 </div>
                             </div>
 
-                            <div class="row w-100 text-body-tertiary position-relative">
-                                <div
-                                    class="align-content-center m-0 p-0 ps-4 py-2 bg-black table-classes-alta-min-info"
-                                >
-                                    <span class="d-flex align-items-center">
+                            <div class="flex flex-wrap w-full text-gray-500 relative">
+                                <div class="m-0 p-0 pl-4 py-2 bg-black table-classes-alta-min-info">
+                                    <span class="flex items-center">
                                         <button
                                             type="button"
-                                            class="btn btn-secondary aclaracion-classes"
-                                            data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip"
-                                            data-bs-title="Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el ingreso máximo para pertenecer a ese sector socioeconómico."
+                                            class="bg-gray-500 text-white p-2 rounded aclaracion-classes"
+                                            data-tooltip-target="tooltip-classes"
+                                            data-tooltip-placement="top"
                                         >
                                             i
                                         </button>
+                                        <div
+                                            id="tooltip-classe"
+                                            role="tooltip"
+                                            class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                                        >
+                                            Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al
+                                            final el ingreso máximo para pertenecer a ese sector socioeconómico.
+                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                        </div>
                                     </span>
-
                                     Minimo
                                 </div>
                                 <div
-                                    class="col m-0 p-0 bg-black d-flex justify-content-between align-content-center align-items-center text--shadow table-classes-info"
+                                    class="flex-1 m-0 p-0 bg-black flex justify-between items-center text-shadow table-classes-info"
                                 >
                                     <span
-                                        class="bg-black pe-0 h-100 d-flex justify-content-center align-items-center align-content-center text-center mayor-menor"
+                                        class="bg-black pr-0 h-full flex justify-center items-center text-center mayor-menor"
                                         >≤</span
-                                    >Clase social<span
-                                        class="bg-black text-center h-100 align-content-center mayor-menor"
+                                    >Clase social<span class="bg-black text-center h-full flex items-center mayor-menor"
                                         >&lt;</span
                                     >
                                 </div>
-                                <div class="m-0 p-0 pe-4 bg-black align-content-center table-classes-alta-max-info">
+                                <div class="m-0 p-0 pr-4 bg-black flex items-center table-classes-alta-max-info">
                                     Maximo
                                 </div>
                             </div>
@@ -1024,114 +1043,140 @@
             </div>
 
             <!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canastas-1" class="card rounded-4 card-canastas-head card-canastas-1">
-                <div class="card-header rounded-4">
-                    <h2 class="card-canastas-header-title">Canastas para Hogar "Tipo"</h2>
-                    <h3 class="card-canastas-header-subtitle">De 4 integrantes del indec:</h3>
-                    <h4 class="card-canastas-header-txt">| Varón 35 años | Mujer 31 años |</h4>
-                    <h4 class="card-canastas-header-txt">| Niña 8 años | Niño 6 años |</h4>
+            <div id="card-canastas-1" class="shadow-lg rounded-lg card-canastas-head card-canastas-1">
+                <div class="max-w-sm mx-auto shadow-lg overflow-hidden rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2 card-canastas-header-title">Canastas para Hogar "Tipo"</h2>
+                    <h3 class="text-xl font-semibold mb-2 card-canastas-header-subtitle">
+                        De 4 integrantes del indec:
+                    </h3>
+                    <h4 class="text-lg mb-1 card-canastas-header-txt">| Varón 35 años | Mujer 31 años |</h4>
+                    <h4 class="text-lg mb-1 card-canastas-header-txt">| Niña 8 años | Niño 6 años |</h4>
                 </div>
             </div>
 
             <!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canasta-cba" class="card rounded-4 card-cba card-canastas-2">
-                <div class="card-header rounded-4">
-                    <h2 class="card-cb-title">Canasta Básica Alimentaria</h2>
-                    <h3 class="card-cb-subtitle">
+            <div id="card-canasta-cba" class="shadow-lg rounded-lg card-cba card-canastas-2">
+                <div class="max-w-sm mx-auto shadow-lg overflow-hidden rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Alimentaria</h2>
+                    <h3 class="text-xl font-semibold mb-2 card-cb-subtitle">
                         • CBA - Linea de indigencia
-                        <span
-                            ><button
+                        <span>
+                            <button
                                 type="button"
-                                class="btn btn-secondary aclaracion-edades"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="custom-tooltip"
-                                data-bs-html="true"
-                                data-bs-title="CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta-main'>aquí</a>."
+                                class="bg-gray-500 text-white p-2 rounded aclaracion-edades"
+                                data-tooltip-target="tooltip-edades"
+                                data-tooltip-placement="top"
                             >
                                 i
-                            </button></span
-                        >
+                            </button>
+                            <div
+                                id="tooltip-edades"
+                                role="tooltip"
+                                class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                            >
+                                CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este valor
+                                es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés
+                                calcular <a href="#canasta-main">aquí</a>.
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </span>
                     </h3>
                     <div class="py-1 pb-0 card-cb-txt">
                         • Con Casa Propia
                         <div class="view-cba"></div>
                     </div>
                 </div>
-                <ul class="list-group list-group-flush rounded-4">
-                    <li class="list-group-item list-group-item-acordion p-0"></li>
-                    <li class="list-group-item lineas-info linea-indigencia"></li>
+                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-lg">
+                    <li class="-acordion p-0"></li>
+                    <li class="lineas-info linea-indigencia"></li>
                 </ul>
             </div>
 
             <!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canasta-cbt" class="card rounded-4 card-cbt card-canastas-3">
-                <div class="card-header rounded-4">
-                    <h2 class="card-cb-title">Canasta Básica Total</h2>
-                    <h3 class="card-cb-subtitle">
-                        • CBT - Linea de Pobreza
-                        <span
-                            ><button
+            <div id="card-canasta-cbt" class="shadow-lg rounded-lg card-cbt card-canastas-3">
+                <div class="max-w-sm mx-auto shadow-lg overflow-hidden rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Total</h2>
+                    <h3 class="text-xl font-semibold mb-2 card-cb-subtitle">
+                        • CBT - Línea de Pobreza
+                        <span>
+                            <button
                                 type="button"
-                                class="btn btn-secondary aclaracion-edades"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="custom-tooltip"
-                                data-bs-html="true"
-                                data-bs-title="CBT es la Canasta Básica Total, es el umbral de la Linea de pobreza. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a href='#canasta-main'>aquí</a>."
+                                class="bg-gray-500 text-white p-2 rounded aclaracion-edades"
+                                data-tooltip-target="tooltip-edades"
+                                data-tooltip-placement="top"
                             >
                                 i
-                            </button></span
-                        >
+                            </button>
+                            <div
+                                id="tooltip-edadess"
+                                role="tooltip"
+                                class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                            >
+                                CBT es la Canasta Básica Total, es el umbral de la Línea de pobreza. Este valor es para
+                                un hogar modelo de 4 miembros del INDEC. La canasta real de tu hogar la podés calcular
+                                <a href="#canasta-main">aquí</a>.
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </span>
                     </h3>
-                    <div class="fs-6 py-1 pb-0 card-cb-txt">
+                    <div class="text-base py-1 pb-0 card-cb-txt">
                         • Con Casa Propia
                         <div class="view-cbt"></div>
                     </div>
                 </div>
-                <ul class="list-group list-group-flush rounded-4">
-                    <li class="list-group-item list-group-item-acordion p-0"></li>
-                    <li class="list-group-item lineas-info linea-pobreza"></li>
+                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-lg">
+                    <li class="-acordion p-0"></li>
+                    <li class="lineas-info linea-pobreza"></li>
                 </ul>
             </div>
 
             <!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canasta-cbta" class="card rounded-4 card-cbta card-canastas-4">
-                <div class="card-header rounded-4">
-                    <h2 class="card-cb-title">Canasta Básica Total <span class="fs-6">+ Alquiler</span></h2>
-                    <h3 class="card-cb-subtitle">
-                        • Linea Pobreza Alquilando
-                        <span
-                            ><button
+            <div id="card-canasta-cbta" class="shadow-lg rounded-lg card-cbta card-canastas-4">
+                <div class="max-w-sm mx-auto shadow-lg overflow-hidden rounded-lg">
+                    <h2 class="text-2xl font-bold mb-2 card-cb-title">
+                        Canasta Básica Total <span class="text-sm">+ Alquiler</span>
+                    </h2>
+                    <h3 class="text-xl font-semibold mb-2 card-cb-subtitle">
+                        • Línea Pobreza Alquilando
+                        <span>
+                            <button
                                 type="button"
-                                class="btn btn-secondary aclaracion-edades"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                data-bs-custom-class="custom-tooltip"
-                                data-bs-html="true"
-                                data-bs-title="CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el umbral de la Linea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar la podés calcular <a  href='#canasta-main'>aquí</a>."
+                                class="bg-gray-500 text-white p-2 rounded aclaracion-edades"
+                                data-tooltip-target="tooltip-edades"
+                                data-tooltip-placement="top"
                             >
                                 i
-                            </button></span
-                        >
+                            </button>
+                            <div
+                                id="tooltip-edad"
+                                role="tooltip"
+                                class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-lg shadow-lg"
+                            >
+                                CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el umbral
+                                de la Línea de pobreza alquilando. Este valor es para un hogar modelo de 4 miembros del
+                                indec. La Canasta real de tu hogar la podés calcular <a href="#canasta-main">aquí</a>.
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </span>
                     </h3>
-                    <div class="fs-6 py-1 pb-0 card-cb-txt">
+                    <div class="text-base py-1 pb-0 card-cb-txt">
                         • 3 amb Promedio
                         <div class="view-cbt-rent-3amb"></div>
                     </div>
                 </div>
-                <ul class="list-group list-group-flush rounded-4">
-                    <li class="list-group-item list-group-item-acordion p-0"></li>
-                    <li class="list-group-item lineas-info linea-pobreza-renting"></li>
+                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-lg">
+                    <li class="-acordion p-0"></li>
+                    <li class="lineas-info linea-pobreza-renting"></li>
                 </ul>
             </div>
+
             <!-- </div> -->
         </main>
 
         <!-- FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <footer id="foot" class="foot">
-            <div class="container-fluid rounded-4 p-2">
-                <span class="m-1 text-center fs-6 indices-date"></span>
+            <div class="max-w-7xl mx-auto rounded-lg p-2">
+                <span class="m-1 text-center text-sm indices-date"></span>
                 <span></span>
                 <span class="version"></span>
             </div>
@@ -1139,11 +1184,11 @@
 
         <!-- JS ------------------------------------------------------------------------>
         <!-- BOOTSTRAP -->
-        <script
+        <!--  <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"
-        ></script>
+        ></script> -->
         <script type="module" src="src/js/main.js"></script>
         <!-- <script type="module" src="./js/shared.js"></script> -->
         <script type="module" src="src/js/app.js"></script>

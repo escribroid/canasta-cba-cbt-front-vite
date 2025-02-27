@@ -52,11 +52,13 @@
     :root {
         /* font-size: 16px; */
         font-size: 22px;
+
     }
     /* .aclaracion-classes {
         left: 0.4rem;
     } */
     body {
+        width: 960px;
         max-width: 960px;
     }
 

@@ -8,12 +8,9 @@ import { version } from "./mod-version.js";
 // version
 //const versionUpdated = (document.querySelector(".version").innerHTML = version);
 
-const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-tooltips.forEach((tooltip) => {
-    tooltip.removeAttribute("data-bs-toggle");
-});
 
 /* ############################################################## */
+const main = document.querySelector("main");
 document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
     const button = container.querySelector(".info-btn");
     const tooltip = container.querySelector(".tooltip-custom");
@@ -29,15 +26,28 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         const tooltipRect = tooltip.getBoundingClientRect();
         const buttonRect = button.getBoundingClientRect();
         const windowWidth = window.innerWidth;
+        const mainWidth = main.offsetWidth;
         const padding = 10; // Espacio extra para evitar que toque los bordes
 
+        console.log("windowWidth", windowWidth);
+        console.log("tooltipRect", tooltipRect);
+        console.log("tooltipRect.right", tooltipRect.right);
+        console.log("tooltipRect.left", tooltipRect.left);
+
+        console.log("mainWidth", mainWidth);
+        
+
+
+        
+        
+
         // Ajustar horizontalmente
-        if (tooltipRect.right > windowWidth - padding) {
+        if (tooltipRect.right > mainWidth - padding) {
             // Si se sale por la derecha, moverlo a la izquierda
             tooltip.style.left = "auto";
             tooltip.style.right = "0";
             tooltip.style.transform = "none";
-        } else if (tooltipRect.left < padding) {
+        } else if (tooltipRect.left > 10) {
             // Si se sale por la izquierda, alinear con el botón
             tooltip.style.left = "0";
             tooltip.style.right = "auto";
@@ -52,7 +62,7 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         // Ajustar verticalmente si es necesario
         const tooltipBottom = tooltipRect.bottom;
         const windowHeight = window.innerHeight;
-        if (tooltipBottom > windowHeight - padding) {
+        if (tooltipBottom > windowHeight - 24) {
             tooltip.style.top = "auto";
             tooltip.style.bottom = "100%";
         } else {
@@ -90,3 +100,13 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
 
     tooltip.addEventListener("click", (event) => event.stopPropagation());
 });
+
+
+
+
+
+
+
+
+
+
