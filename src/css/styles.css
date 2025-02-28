@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 
 /* ============================================================== */
 /* == Tags == */
@@ -30,8 +30,7 @@ header {
 
 main {
     padding: 0 0.5rem;
-    position: relative; /* Necesario para el posicionamiento absoluto del tooltip */ 
-
+    position: relative; /* Necesario para el posicionamiento absoluto del tooltip */
 }
 
 option:disabled {
