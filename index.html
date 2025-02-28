@@ -18,29 +18,7 @@
         <link rel="stylesheet" href="src/css/design-system.css" />
         <link rel="stylesheet" href="src/css/media-desktop.css" />
 
-        <style>
-            .tooltip {
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                margin-top: 0.5rem;
-                display: none;
-            }
-            .tooltip::after {
-                content: "";
-                position: absolute;
-                bottom: 100%; /* At the top of the tooltip */
-                left: 50%;
-                transform: translateX(-50%);
-                border-width: 0.5rem;
-                border-style: solid;
-                border-color: transparent transparent black transparent;
-            }
-            .tooltip.visible {
-                display: block;
-            }
-        </style>
+        
     </head>
 
     <body class="">
@@ -100,13 +78,7 @@
                     <li class="rounded-lg flex flex-col pb-0">
                         <h2 class="card__title text-center">Canasta Personalizada</h2>
 
-                        <div class="tooltip-custom-container">
-                            <button class="info-btn">ℹ️</button>
-                            <div class="tooltip-custom">
-                                Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su género y
-                                edad, para calcular tu Canasta Verdadera.
-                            </div>
-                        </div>
+                       
 
                         <div class="card-vivienda-container">
                             <div class="card-vivienda flex flex-col items-center p-4 rounded-lg shadow-lg">
@@ -128,7 +100,7 @@
                                 <div class="tooltip-custom-container relative">
                                     <button class="info-btn text-xl">ℹ️</button>
                                     <div
-                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-lg mt-2"
+                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-lg"
                                     >
                                         Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
                                         género y edad, para calcular tu Canasta Verdadera.
