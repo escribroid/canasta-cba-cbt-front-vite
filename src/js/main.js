@@ -1,4 +1,7 @@
 // main.js
+
+import "../css/styles.css"
+
 const main = document.querySelector("main");
 document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
     const button = container.querySelector(".info-btn");
