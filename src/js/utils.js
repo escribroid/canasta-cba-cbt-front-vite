@@ -1,18 +1,8 @@
-// document.getElementById("SwitchCompareCba").addEventListener("change", function () {
-//     if (this.checked) {
-//         document.querySelector(".table-compare-body").style.display = "block";
-//         let cardHeader = document.querySelector(".card-compare__header");
-//         cardHeader.style.borderBottomLeftRadius = "0";
-//         cardHeader.style.borderBottomRightRadius = "0";
-//     } else {
-//         document.querySelector(".table-compare-body").style.display = "none";
-//         document.querySelector(".card-compare__header").style.borderRadius = "1rem";
-//     }
-// });
+import version from "./mod-version"
 
-// document.getElementById("card-canastas-link").addEventListener("click", function(){
-//   document.querySelector(".form-container").classList.add("form-recuadrar");
-// });
+/* Version ############################################################## */
+document.querySelector(".version").innerHTML = version;
+
 
 // Escuchar el evento de clic en el documento para detectar el clic en el enlace del tooltip
 document.addEventListener("click", (event) => {
