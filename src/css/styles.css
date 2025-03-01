@@ -11,6 +11,7 @@ body {
     font-family: var(--font-primary);
     font-size: var(--font-size-22_1-375);
     margin: 0 auto;
+    background-color: #000000; /* Fondo negro */
     background-image: url("/src/img/background.svg"); /* Asegúrate de que la ruta sea correcta */
     background-size: cover;
 }
