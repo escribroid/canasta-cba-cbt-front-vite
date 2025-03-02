@@ -24,6 +24,7 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         const buttonRect = button.getBoundingClientRect();
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
+        const tooltipHeight = tooltipRect.height;
 
         const mainWidth = main.offsetWidth;
         const mainOffsetTop = main.offsetTop;
@@ -44,13 +45,11 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         if (tooltipRect.right > mainWidth - padding) {
             // Si se sale por la derecha, moverlo a la izquierda
             tooltip.style.left = "auto";
-            tooltip.style.right = "100%";
             tooltip.style.transform = "none";
             // tooltip.style.inset = "100% 0px auto auto";
         } else if (tooltipRect.left > 10) {
             // Si se sale por la izquierda, alinear con el botón
             tooltip.style.left = "auto";
-            tooltip.style.right = "100%";
             tooltip.style.transform = "none";
             // tooltip.style.inset = "100% 0px auto auto";
         } else {
@@ -58,6 +57,8 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
             tooltip.style.left = "auto";
             tooltip.style.right = "auto";
         }
+
+        const tooltipCenter = (tooltipHeight - 26)/2;
 
         // Ajustar verticalmente si es necesario
         let tooltipBottom = tooltipRect.bottom;
@@ -67,15 +68,20 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         console.log("tooltipBottom", tooltipBottom);
         console.log("windowHeight", windowHeight);
         console.log("tooltipATop", tooltipATop);
+        console.log("tooltipHeight", tooltipHeight);
+        console.log("tooltipCenter", tooltipCenter);
+        
+        
 
         if (tooltipBottom > windowHeight - 24) {
             //tooltip.style.top = "auto";
             //tooltip.style.bottom = "auto";
-            tooltip.style.transform = "translateY(-100%)";
+            tooltip.style.top = `${-tooltipCenter}px`; 
+            
         } else {
             //tooltip.style.top = "auto";
             //tooltip.style.bottom = "auto";
-            tooltip.style.transform = "translateY(0%)";
+            tooltip.style.top = `${-tooltipCenter}px`;
         }
 
         document.addEventListener("click", closeOnClickOutside);
@@ -86,8 +92,8 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
             //tooltip.style.inset = "100% 0px auto auto";
             button.disabled = false; // Habilitar el botón nuevamente
         }, 200);
-        tooltip.style.visibility = "visible";
-        tooltip.style.opacity = "0.2";
+        tooltip.style.visibility = "hidden";
+        tooltip.style.opacity = "0";
 
         isTooltipVisible = false; // Marcar el tooltip como oculto
     }

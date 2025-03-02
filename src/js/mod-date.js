@@ -1,7 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL;
 const API_URL_IPC = import.meta.env.VITE_API_URL_IPC;
-console.log("API_URL", API_URL); // Usará la URL correcta según el entorno
-console.log("API_URL_IPC", API_URL_IPC); // Usará la URL correcta según el entorno
+// console.log("API_URL", API_URL); // Usará la URL correcta según el entorno
+// console.log("API_URL_IPC", API_URL_IPC); // Usará la URL correcta según el entorno
 
 
 export const yearGet = new Date().getFullYear();

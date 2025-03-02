@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tailwindcss/preflight";
+/* @import "tailwindcss";
+@import "tailwindcss/preflight"; */
 
 /* @layer theme, base, components, utilities; */
 /* @import "tailwindcss/theme.css" layer(theme); */
@@ -23,9 +23,11 @@ body {
 }
 
 h1 {
-    text-align: center;
-    width: 24ch;
+    display: flex;
+    text-align: left;
     color: #ff8800;
+    margin-left: 1rem;
+    font-size: 3rem;
 }
 
 h2 {
@@ -657,6 +659,7 @@ option:disabled {
     font-style: italic;
     color: #f2f4f7;
     text-shadow: var(--spacing-2_0-125) var(--spacing-2_0-125) var(--spacing-5_0-3125) rgba(0, 0, 0, 0.5);
+    width: 48px;
 }
 
 .navbar--img {
@@ -1040,8 +1043,8 @@ tfoot {
 
 .tooltip-custom {
     position: absolute;
-    top: 100%;
-    right: 100%;
+    top: -125px;
+    right: 110%;
     font-size: 1rem;
     background-color: black;
     color: white;
@@ -1050,10 +1053,15 @@ tfoot {
     width: 250px;
     max-width: 250px;
     white-space: normal;
-    visibility: visible;
-    opacity: 0.4;
+    visibility: hidden;
+    opacity: 0;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
     z-index: 9999;
+    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.51s;
+    -moz-transition: all ease-in-out 0.51s;
+    -ms-transition: all ease-in-out 0.51s;
+    -o-transition: all ease-in-out 0.51s;
 }
 
 .tooltip-button {
