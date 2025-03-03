@@ -23,9 +23,11 @@
         <link rel="stylesheet" href="src/css/media-desktop.css" />
     </head>
 
-    <body>
+    <body class="mx-0.5">
         <!-- Contenedor principal -->
-        <div class="index-container flex justify-around items-center rounded-b-xl py-2 mb-4 shadow-sm shadow-white">
+        <div
+            class="index-container flex justify-around items-center rounded-b-xl py-2 mb-4 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+        >
             <div class="index-top">
                 <span class="index-data-txt">ipc </span>
                 <span class="index-data-ipc"> </span>
@@ -43,7 +45,9 @@
         </div>
 
         <!-- Header -->
-        <header class="bg-transparent rounded-xl px-2 mb-4 shadow-sm shadow-white">
+        <header
+            class="bg-transparent rounded-xl px-2 mb-5 inset-shadow-sm inset-shadow-gray-800 shadow-lg shadow-gray-600"
+        >
             <!-- Navbar -->
             <nav class="flex justify-between">
                 <a class="flex font-bold" href="./index.html">
@@ -66,7 +70,9 @@
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <main id="canasta-main" class="">
             <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="card w-full rounded-xl card_main mb-4 shadow-sm shadow-white">
+            <div
+                class="card w-full rounded-xl card_main mb-4 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
                 <ul class="px-2 pb-1">
                     <li class="flex flex-col">
                         <h2 class="card__title text-center py-1">Canasta Personalizada</h2>
@@ -513,14 +519,16 @@
             </div>
 
             <!-- Card-2 Tabla clases sociales ------------------------------------------>
-            <div class="card rounded-xl card-classes section-idem">
+            <div
+                class="card rounded-xl card-classes section-idem inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
                 <div class="pt-2 mt-1 text-center table-classes">
                     <div class="flex flex-col m-0 mb-2 p-0 w-full">
                         <div class="text-center table-classes--txt text-shadow">Tu Clase Social Hoy</div>
                     </div>
 
                     <!-- ingresar salario ------------------------------------------>
-                    <li class="py-2">
+                    <div class="py-2">
                         <div class="flex justify-center flex-col w-full">
                             <!-- <span class="pb-1 text-center fs-6">Opcional: Ingresar Salario</span> -->
                             <div class="flex justify-center items-center pb-2">
@@ -545,7 +553,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </div>
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-indigencia">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-indigencia-min"></div>
                         <div
@@ -667,8 +675,10 @@
             </div>
 
             <!-- Card-3 Compare +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div class="shadow-lg rounded-xl card-compare section-idem">
-                <ul class="pt-1 divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-xl relative w-full">
+            <div
+                class="rounded-xl card-compare section-idem inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
+                <ul class="pt-1 shadow-lg rounded-xl relative w-full">
                     <div class="m-0 mb-2 p-0 w-full static card-compare__header">
                         <!-- <div class="form-switch compare__switch">
                         <input class="form-check-input border border-2 border-primary" type="checkbox" role="switch"
@@ -955,8 +965,11 @@
             </div>
 
             <!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canastas-1" class="shadow-lg rounded-xl card-canastas-head card-canastas-1">
-                <div class="max-w-sm mx-auto shadow-lg rounded-xl">
+            <div
+                id="card-canastas-1"
+                class="rounded-xl card-canastas-1 mb-3 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
+                <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-canastas-header-title">Canastas para Hogar "Tipo"</h2>
                     <h3 class="text-xl font-semibold mb-2 card-canastas-header-subtitle">
                         De 4 integrantes del indec:
@@ -967,8 +980,11 @@
             </div>
 
             <!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canasta-cba" class="shadow-lg rounded-xl card-cba card-canastas-2">
-                <div class="max-w-sm mx-auto shadow-lg rounded-xl">
+            <div
+                id="card-canasta-cba"
+                class="rounded-xl card-cba card-canastas-2 mb-3 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
+                <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Alimentaria</h2>
                     <h3 class="text-xl font-semibold mb-2 card-cb-subtitle">
                         • CBA - Linea de indigencia
@@ -990,15 +1006,17 @@
                         <div class="view-cba"></div>
                     </div>
                 </div>
-                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-xl">
-                    <li class="-acordion p-0"></li>
-                    <li class="lineas-info linea-indigencia"></li>
+                <ul class="flex m-1">
+                    <li class="linea-indigencia justify-items-center m-2 border-t pt-1"></li>
                 </ul>
             </div>
 
             <!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canasta-cbt" class="shadow-lg rounded-xl card-cbt card-canastas-3">
-                <div class="max-w-sm mx-auto shadow-lg rounded-xl">
+            <div
+                id="card-canasta-cbt"
+                class="rounded-xl card-cbt card-canastas-3 mb-3 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
+                <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Total</h2>
                     <h3 class="text-xl font-semibold mb-2 card-cb-subtitle">
                         • CBT - Línea de Pobreza
@@ -1021,15 +1039,17 @@
                         <div class="view-cbt"></div>
                     </div>
                 </div>
-                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-xl">
-                    <li class="-acordion p-0"></li>
-                    <li class="lineas-info linea-pobreza"></li>
+                <ul class="flex m-1">
+                    <li class="linea-pobreza justify-items-center m-2 border-t pt-1"></li>
                 </ul>
             </div>
 
             <!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-            <div id="card-canasta-cbta" class="shadow-lg rounded-xl card-cbta card-canastas-4">
-                <div class="max-w-sm mx-auto shadow-lg rounded-xl">
+            <div
+                id="card-canasta-cbta"
+                class="rounded-xl card-cbta card-canastas-4 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            >
+                <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-cb-title">
                         Canasta Básica Total <span class="text-sm">+ Alquiler</span>
                     </h2>
@@ -1054,9 +1074,9 @@
                         <div class="view-cbt-rent-3amb"></div>
                     </div>
                 </div>
-                <ul class="divide-y divide-gray-200 shadow-lg border border-gray-200 rounded-xl">
+                <ul class="flex m-1">
                     <li class="-acordion p-0"></li>
-                    <li class="lineas-info linea-pobreza-renting"></li>
+                    <li class="linea-pobreza-renting justify-items-center m-2 border-t pt-1"></li>
                 </ul>
             </div>
 

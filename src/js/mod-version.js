@@ -1,3 +1,3 @@
-const version = "Canastas | v0.9.6.94";
+const version = "Canastas | v0.9.6.95";
 
 export default version;

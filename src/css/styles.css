@@ -13,7 +13,6 @@
 body {
     color: #f2f4f7;
     font-family: var(--font-primary);
-    margin: 0 auto;
     background-color: #a51616;
     background-image: url("/src/img/background.svg");
     background-size: cover;
@@ -233,29 +232,6 @@ option:disabled {
     border: 0;
 }
 
-.card-canastas-head {
-    outline: 0.0625rem solid #aa3366;
-    box-shadow: none;
-    width: 100%;
-}
-
-.card-cba {
-    outline: 0.0625rem solid #aa3366;
-    box-shadow: none;
-    width: 100%;
-}
-.card-cbt {
-    outline: 0.0625rem solid #aa3366;
-    box-shadow: none;
-    width: 100%;
-}
-
-.card-cbta {
-    outline: 0.0625rem solid #aa3366;
-    box-shadow: none;
-    width: 100%;
-}
-
 .card-cba_value {
     color: #ff8800;
     font-weight: var(--font-weight-700-bold);
@@ -368,7 +344,6 @@ option:disabled {
 }
 
 .card-canastas-2 {
-    margin-top: -5px;
     z-index: 3;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
@@ -381,7 +356,6 @@ option:disabled {
 
 .card-canastas-3 {
     position: relative;
-    margin-top: -5px;
     z-index: 2;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
@@ -394,7 +368,6 @@ option:disabled {
 
 .card-canastas-4 {
     position: relative;
-    margin-top: -5px;
     z-index: 1;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
@@ -580,25 +553,6 @@ option:disabled {
     /* padding: 0.2rem 0; */
     /* margin: 0 1px 1.25rem 1px; */
 }
-
-.linea-pobreza,
-.linea-indigencia,
-.linea-pobreza-renting {
-    display: flex;
-    justify-content: center;
-    font-size: var(--font-size-16_1rem);
-}
-
-.lineas-info {
-    padding: var(--spacing-10_0-625);
-}
-
-.lineas-info_title,
-.lineas-info_txt {
-    font-size: var(--font-size-14_0-875);
-}
-
-
 
 .navbar--img {
     margin-right: var(--spacing-8_0-5);
