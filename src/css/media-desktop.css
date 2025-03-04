@@ -106,7 +106,6 @@
     }
 
     .card-compare {
-        margin-bottom: 1.25rem;
         width: 49%;
     }
 
@@ -156,46 +155,8 @@
         padding-bottom: 0.5rem;
     }
 
-    .form__select-age {
-        /* margin-left: 0.7rem; */
-    }
-
-    .form-age--option:enabled,
-    .form-gender--option:enabled,
-    .card-rent--option:enabled {
-        /* font-size: 1.5rem; */
-    }
-
-    .logo {
-        /* font-size: var(--font-size-48_3rem); */
-    }
-
     .nav-link {
         font-size: 1.5rem;
-    }
-
-    .offcanvas.offcanvas-end {
-        top: 2.6em;
-        border-left: 0;
-        right: calc(50vw - 485px);
-        width: 60vh;
-        height: 75vh;
-    }
-
-    .offcanvas-header .btn-close {
-        margin-right: calc(-1.1 * var(--bs-offcanvas-padding-x));
-        height: 5rem;
-    }
-
-    .table-classes--txt,
-    .card-compare__title {
-        /* font-size: 1.5rem; */
-    }
-
-    .table-canastas,
-    .table-canastas-head,
-    .table-canastas-header {
-        /* font-size: 1.3rem; */
     }
 
     .table-canastas {
