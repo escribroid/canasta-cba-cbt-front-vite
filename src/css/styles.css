@@ -304,26 +304,6 @@ option:disabled {
     text-align: center;
 }
 
-.card-canastas-1 {
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    transform: translate3d(0, 0, 0);
-}
-
-.card-canastas-2 {
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    transform: translate3d(0, 0, 0);
-}
-
-.card-canastas-3 {
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    transform: translate3d(0, 0, 0);
-}
-
-.card-canastas-4 {
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
-    transform: translate3d(0, 0, 0);
-}
-
 .card__svg--reset {
     display: none;
     position: absolute;
@@ -464,13 +444,7 @@ option:disabled {
     border-color: #ff550066;
 }
 
-.index-container {
-    color: gainsboro;
-    /* box-shadow: 0 0 0.1rem 1px #96969677; */
-    /* border: 0; */
-    /* padding: 0.2rem 0; */
-    /* margin: 0 1px 1.25rem 1px; */
-}
+
 
 .navbar--img {
     margin-right: var(--spacing-8_0-5);
