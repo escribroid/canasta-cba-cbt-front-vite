@@ -5,9 +5,9 @@
 body {
     color: #f2f4f7;
     font-family: var(--font-primary);
-    background-color: #a51616;
+    /* background-color: #a51616;
     background-image: url("/src/img/background.svg");
-    background-size: cover;
+    background-size: cover; */
 }
 
 h1 {
@@ -201,9 +201,7 @@ option:disabled {
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
 }
 
-.card {
-    background-color: #1e1e1e;
-}
+
 
 .card-cba_value {
     color: #ff8800;
@@ -467,7 +465,6 @@ option:disabled {
 }
 
 .index-container {
-    background-color: #1e1e1e;
     color: gainsboro;
     /* box-shadow: 0 0 0.1rem 1px #96969677; */
     /* border: 0; */
@@ -977,5 +974,4 @@ tfoot {
     color: #f2f4f7;
     text-align: center;
     font-size: var(--font-size-16_1rem);
-    background-color: #1e1e1e;
 }
