@@ -1,18 +1,10 @@
-/* ============================================================== */
-/* == Tags == */
-/* ============================================================== */
+/* == Tags =============================================== */
 
 body {
-    color: #f2f4f7;
     font-family: var(--font-primary);
     /* background-color: #a51616;
     background-image: url("/src/img/background.svg");
     background-size: cover; */
-}
-
-h1 {
-    text-align: center;
-    color: #ff8800;
 }
 
 h2 {
@@ -23,9 +15,7 @@ option:disabled {
     background-color: #121212;
 }
 
-/* ============================================================== */
-/* == Classes == */
-/* ============================================================== */
+/* == Classes ========================================= */
 .aclaracion-edades,
 .aclaracion-family,
 .aclaracion-ingresos,
@@ -180,11 +170,7 @@ option:disabled {
 
 .card-vivienda__txt,
 .card-family-txt {
-    /* display: flex; */
-    color: #f2f4f7;
-    /* margin: 0 0 0 1rem; */
-    /* padding-left: 0.85rem; */
-    /* font-size: 1rem; */
+    color: #f2f4f7;    
     height: 100%;
     align-items: center;
     width: 100%;
@@ -201,8 +187,6 @@ option:disabled {
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
 }
 
-
-
 .card-cba_value {
     color: #ff8800;
     font-weight: var(--font-weight-700-bold);
@@ -217,12 +201,12 @@ option:disabled {
     -o-border-radius: var(--spacing-5_0-3125);
 }
 
-.card-header {
+/* .card-header {
     padding: var(--bs-card-cap-padding-y) 0.5rem;
     color: var(--bs-card-cap-color);
     background-color: #20141988 !important;
     border: 0;
-}
+} */
 
 .card-header h2 {
     font-weight: 400;
@@ -329,13 +313,6 @@ option:disabled {
     top: 0.8125rem;
     left: 0.5rem;
 }
-
-/* [data-bs-theme="dark"] .carousel .carousel-control-next-icon,
-[data-bs-theme="dark"] .carousel .carousel-control-prev-icon,
-[data-bs-theme="dark"].carousel .carousel-control-next-icon,
-[data-bs-theme="dark"].carousel .carousel-control-prev-icon {
-    filter: brightness(100%) contrast(100%) saturate(100%);
-} */
 
 .detalles_delete {
     padding: 0;
@@ -461,43 +438,6 @@ option:disabled {
     position: relative;
     flex: 1 1 auto;
     padding: 0.3rem;
-}
-
-.navbar {
-    background: #1e1e1e !important;
-    box-shadow: 0 0 0.2rem 0.2rem #96969977;
-    border: 0;
-    --bs-navbar-padding-y: 0rem;
-}
-
-.navbar-nav {
-    --bs-nav-link-padding-x: 0;
-    --bs-nav-link-padding-y: 0.5rem;
-    --bs-nav-link-font-weight: ;
-    display: flex;
-    flex-direction: column;
-    text-align: end;
-    padding-left: 0;
-    margin-bottom: 0;
-}
-
-.navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-lg,
-.navbar > .container-md,
-.navbar > .container-sm,
-.navbar > .container-xl,
-.navbar > .container-xxl {
-    padding-right: var(--spacing-12_0-75);
-}
-
-.navbar-toggler {
-    padding: 0;
-}
-
-.navbar-toggler-icon {
-    width: 2em;
-    height: 2em;
 }
 
 .person-form-select,
@@ -738,12 +678,7 @@ tfoot {
     font-weight: 400;
 }
 
-/* .table-responsive {
-    border-radius: 0.5rem;
-    width: 100%;
-    padding: 0 0.01rem;
-    margin-top: 1rem;
-} */
+
 
 .text-bg-dark {
     color: #f2f4f7 !important;
@@ -813,11 +748,6 @@ tfoot {
     color: #f2f4f7;
     font-size: var(--font-size-6_0-375);
 }
-
-/* Select custom +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* option {
-    color: #fffaf0;
-} */
 
 .form-age--option:enabled,
 .form-gender--option:enabled,
