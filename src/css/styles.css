@@ -13,7 +13,6 @@ body {
 h1 {
     text-align: center;
     color: #ff8800;
-    font-size: 3rem;
 }
 
 h2 {
@@ -308,50 +307,23 @@ option:disabled {
 }
 
 .card-canastas-1 {
-    z-index: 4;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
-}
-
-.card-canastas-1:hover {
-    /* transform: translate3d(0px, 5px, 0px) rotate(2deg); */
-    box-shadow: 0px 0px 6px 4px #ff3366;
-    z-index: 4;
 }
 
 .card-canastas-2 {
-    z-index: 3;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
-}
-.card-canastas-2:hover {
-    /* transform: translate3d(0px, -5px, 0px) rotate(-1deg); */
-    box-shadow: 0px 0px 6px 4px #ff3366;
-    z-index: 3;
 }
 
 .card-canastas-3 {
-    position: relative;
-    z-index: 2;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
-}
-.card-canastas-3:hover {
-    /* transform: translate3d(0px, 5px, 0px) rotate(2deg); */
-    box-shadow: 0px 0px 6px 4px #ff3366;
-    z-index: 2;
 }
 
 .card-canastas-4 {
-    position: relative;
-    z-index: 1;
     transition: transform 0.5s ease, box-shadow 0.3s ease;
     transform: translate3d(0, 0, 0);
-}
-.card-canastas-4:hover {
-    /* transform: translate3d(0px, -5px, 0px) rotate(-1deg); */
-    box-shadow: 0px 0px 6px 4px #ff3366;
-    z-index: 1;
 }
 
 .card__svg--reset {
@@ -820,7 +792,7 @@ tfoot {
 .tooltip-custom {
     position: absolute;
     top: -125px;
-    right: 110%;
+    right: 120%;
     font-size: 1rem;
     background-color: black;
     color: white;
@@ -1006,5 +978,4 @@ tfoot {
     text-align: center;
     font-size: var(--font-size-16_1rem);
     background-color: #1e1e1e;
-    margin: 1.25rem 1px 0 1px;
 }

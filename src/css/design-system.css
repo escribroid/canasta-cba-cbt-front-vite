@@ -156,20 +156,14 @@ span {
 
 /* Headings font-sizes */
 h1 {
-    font-size: var(--font-size-26_1-625);
 }
 h2 {
-    font-size: var(--font-size-24_1-5);
 }
 h3 {
-    font-size: var(--font-size-22_1-375);
 }
 h4 {
-    font-size: var(--font-size-20_1-25);
 }
 h5 {
-    font-size: var(--font-size-18_1-125);
 }
 h6 {
-    font-size: var(--font-size-16_1rem);
 }

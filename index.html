@@ -23,10 +23,10 @@
         <link rel="stylesheet" href="src/css/media-desktop.css" />
     </head>
 
-    <body class="mx-1">
+    <body class="">
         <!-- Contenedor principal -->
         <div
-            class="index-container flex justify-around items-center rounded-b-xl py-2 mb-5 shadow-lg shadow-gray-600 inset-shadow-sm inset-shadow-gray-800"
+            class="index-container flex justify-around items-center rounded-b-2xl py-2 mb-5 shadow-md shadow-gray-600 inset-shadow-sm inset-shadow-gray-800"
         >
             <div class="index-top">
                 <span class="index-data-txt">ipc </span>
@@ -46,7 +46,7 @@
 
         <!-- Header -->
         <header
-            class="bg-transparent rounded-xl px-2 mb-5 shadow-lg shadow-gray-600 inset-shadow-sm inset-shadow-gray-800"
+            class="bg-transparent rounded-xl mx-2 px-2 mb-5 shadow-lg shadow-gray-600 inset-shadow-sm inset-shadow-gray-800"
         >
             <!-- Navbar -->
             <nav class="flex justify-between">
@@ -54,7 +54,7 @@
                     <img class="h-12 mr-2" src="src/img/iso_logo.svg" alt="Logo" />
                 </a>
                 <a class="flex items-center font-bold" href="./index.html">
-                    <h1 class="w-full">CANASTAS</h1>
+                    <h1 class="w-full text-4xl md:text-5xl">CANASTAS</h1>
                 </a>
                 <button class="text-white focus:outline-none">
                     <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@
         </header>
 
         <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <main id="canasta-main" class="">
+        <main id="canasta-main" class="mx-2">
             <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
                 class="card w-full rounded-xl card_main mb-5 shadow-lg shadow-gray-600 inset-shadow-sm inset-shadow-gray-800"
@@ -117,7 +117,7 @@
                                 <div class="tooltip-custom-container relative">
                                     <button class="tooltip-button info-btn">i</button>
                                     <div
-                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
                                         Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
                                         género y edad, para calcular tu Canasta Verdadera.
@@ -222,7 +222,7 @@
                                     <div class="tooltip-custom-container relative">
                                         <button class="tooltip-button info-btn">i</button>
                                         <div
-                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
                                             Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
                                             género y edad, para calcular tu Canasta Verdadera.
@@ -424,7 +424,7 @@
 
                             <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
                             <div class="flex justify-center table-responsive overflow-auto rounded-xl">
-                                <table class="min-w-full table-auto hover:bg-gray-100 rounded-xl table-canastas">
+                                <table class="min-w-full table-auto rounded-xl table-canastas">
                                     <thead>
                                         <tr>
                                             <th class="table-canastas-choice w-1/3 p-1 m-0" scope="col">Género</th>
@@ -547,7 +547,7 @@
                                 <div class="tooltip-custom-container relative">
                                     <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                     <div
-                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
                                         Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector
                                         socioeconómico.
@@ -665,7 +665,7 @@
                                     i
                                 </button>
                                 <div
-                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
                                     Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el
                                     ingreso máximo para pertenecer a ese sector socioeconómico.
@@ -743,7 +743,7 @@
                                 <div class="tooltip-custom-container relative">
                                     <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                     <div
-                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
                                         Tu Clase Social hace 2 años, ¿era mejor? ¿peor? Ingresa Mes y Año y obtendrás tu
                                         canasta en esa fecha. Tienes que saber tu salario en ese momento solamente.
@@ -771,7 +771,7 @@
                                     <div class="tooltip-custom-container relative">
                                         <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                         <div
-                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
                                             Ingresá el monto de alquiler, si alquilabas en esa fecha.
                                         </div>
@@ -796,7 +796,7 @@
                                     <div class="tooltip-custom-container relative">
                                         <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                         <div
-                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
                                             Agregá el ingreso mensual del hogar en el mes y año que elegiste.
                                         </div>
@@ -956,7 +956,7 @@
                                             i
                                         </button>
                                         <div
-                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
                                             Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al
                                             final el ingreso máximo para pertenecer a ese sector socioeconómico.
@@ -997,7 +997,7 @@
                             <div class="tooltip-custom-container relative">
                                 <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                 <div
-                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
                                     CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este
                                     valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar
@@ -1029,7 +1029,7 @@
                             <div class="tooltip-custom-container relative">
                                 <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                 <div
-                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
                                     CBT es la Canasta Básica Total, es el umbral de la Línea de pobreza. Este valor es
                                     para un hogar modelo de 4 miembros del INDEC. La canasta real de tu hogar la podés
@@ -1064,7 +1064,7 @@
                             <div class="tooltip-custom-container relative">
                                 <button class="tooltip-button info-btn" style="background: #165f07">i</button>
                                 <div
-                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black"
+                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
                                     CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el
                                     umbral de la Línea de pobreza alquilando. Este valor es para un hogar modelo de 4
@@ -1091,7 +1091,7 @@
         <!-- FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <footer
             id="foot"
-            class="foot rounded-t-xl mb-0 p-1 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
+            class="foot rounded-t-2xl p-1 inset-shadow-sm inset-shadow-gray-800 shadow-md shadow-gray-600"
         >
             <div class="max-w-7xl mx-auto p-2">
                 <span class="m-1 text-center text-sm indices-date"></span>
