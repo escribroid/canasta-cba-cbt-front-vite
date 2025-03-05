@@ -738,12 +738,12 @@ tfoot {
     font-weight: 400;
 }
 
-.table-responsive {
+/* .table-responsive {
     border-radius: 0.5rem;
     width: 100%;
     padding: 0 0.01rem;
     margin-top: 1rem;
-}
+} */
 
 .text-bg-dark {
     color: #f2f4f7 !important;
