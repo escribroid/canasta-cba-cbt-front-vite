@@ -143,13 +143,10 @@ option:disabled {
     }
 }
 
-
-
 .card-compare__title {
     color: #fffaf0;
     font-size: var(--font-size-22_1-375);
 }
-
 
 .card-cba_value {
     color: #ff8800;
@@ -293,8 +290,6 @@ option:disabled {
     stroke: #ce2331;
 }
 
-
-
 .form-container {
     padding: 0.1rem 0.5rem 0 0.5rem;
     border-bottom: var(--spacing-2_0-125) solid #2c2f33;
@@ -302,14 +297,11 @@ option:disabled {
 }
 
 .form-submit {
-    position: absolute;
-    right: 0.45rem;
     background-color: #1e1e1e;
-    border: 0;
-    padding: 0;
+    /* border: 0; */
+    /* padding: 0; */
     /* margin-left: var(--spacing-5_0-3125); */
     /* margin-right: 0rem; */
-    margin: 0;
     transition: all 0.1s ease;
     /* box-shadow: 0 0 0.2rem #000; */
 }
@@ -330,10 +322,6 @@ option:disabled {
     box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
 }
 
-
-
-
-
 .info_site {
     margin: 0;
     padding: 0;
@@ -352,8 +340,6 @@ option:disabled {
     box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
     border-color: #ff550066;
 }
-
-
 
 .navbar--img {
     margin-right: var(--spacing-8_0-5);
@@ -610,8 +596,6 @@ tfoot {
     font-weight: 400;
 }
 
-
-
 .text-bg-dark {
     color: #f2f4f7 !important;
     background: none !important;
@@ -687,14 +671,6 @@ tfoot {
     font-size: var(--font-size-24_1-5);
 } */
 
-.card-rent-in,
-.form__select-gender,
-.form__select-age,
-.card__select-rent,
-.rent_in_past {
-    
-}
-
 .form-age-container {
     display: flex;
     width: 48%;
@@ -719,7 +695,6 @@ tfoot {
     width: calc(100% - 3.2rem);
 }
 
-
 .card__select-rent,
 .card-rent-in,
 .rent_in_past {
@@ -738,10 +713,8 @@ tfoot {
     border-color: #4caf5033;
 }
 
-.form__select-age,
-.form__select-gender {
-    background-color: #ff550022;
-    border-color: #ff550055;
+.form__select-age {
+    width: calc(100% - 0px);
 }
 
 .form__select-age:focus,
