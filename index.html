@@ -16,17 +16,16 @@
         <title>CANASTAS</title>
 
         <!-- Tailwind CSS -->
-        <!-- Estilos personalizados -->
         <link href="/src/css/twcss.css" rel="stylesheet" />
-        <link rel="stylesheet" href="src/css/design-system.css" />
+        <!-- Estilos personalizados -->
         <link href="/src/css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="src/css/media-desktop.css" />
+        <link href="src/css/media-desktop.css" rel="stylesheet" />
     </head>
 
     <body class="bg-neutral-500 text-orange-50">
         <!-- Contenedor principal shadow-xl shadow-neutral-950/70-->
         <div
-            class="bg-neutral-800 index-container flex justify-around items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-xl shadow-neutral-950/70 border-b border-x border-neutral-800"
+            class="index-container bg-neutral-800 flex justify-around items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-xl shadow-neutral-950/70 border-b border-x border-neutral-800"
         >
             <div class="index-top">
                 <span class="index-data-txt">ipc </span>
@@ -73,13 +72,15 @@
         <main id="canasta-main" class="mx-2">
             <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
-                class="card card_main bg-neutral-800 rounded-2xl mb-6 w-full shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="card_main bg-neutral-800 rounded-2xl mb-6 w-full shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
             >
-                <ul class="px-2 pb-1">
-                    <li class="flex flex-col">
-                        <h2 class="card__title text-center py-1">Canasta Personalizada</h2>
+                <div class="">
+                    <div class="flex flex-col">
+                        <h2 class="card__title text-center py-3 text-xl border-b border-gray-500">
+                            Canasta Personalizada
+                        </h2>
 
-                        <div class="card-vivienda-container relative">
+                        <div class="card-vivienda-container relative px-2">
                             <div class="card-vivienda flex flex-row items-center py-3">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -94,28 +95,14 @@
                                     />
                                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
                                 </svg>
-                                <p class="card-vivienda__txt ml-3 pl-3 text-base text-gray-700">Vivienda</p>
-
-                                <!-- <button
-                                    type="button"
-                                    class="bg-gray-500 text-white p-2 rounded aclaracion-date-card"
-                                    data-tooltip-target="tooltip-date-card"
-                                    data-tooltip-placement="top"
+                                <p
+                                    class="card-vivienda__txt w-full ml-3 pl-3 text-base border-l-3 border-green-600/80 h-8 content-center"
                                 >
-                                    i
-                                </button>
-                                <div
-                                    id="tooltip-date-card"
-                                    role="tooltip"
-                                    class="absolute z-10 hidden w-max p-2 bg-black text-white text-sm rounded-xl shadow-xl shadow-black"
-                                >
-                                    Tu Clase Social hace 2 años, ¿era mejor? ¿peor? Ingresa Mes y Año y obtendrás tu
-                                    canasta en esa fecha. Tienes que saber tu salario en ese momento solamente.
-                                    <div class="tooltip-arrow" data-popper-arrow></div>
-                                </div> -->
+                                    Vivienda
+                                </p>
 
                                 <div class="tooltip-custom-container relative">
-                                    <button class="tooltip-button info-btn">i</button>
+                                    <button class="tooltip-button info-btn w-6 h-6">i</button>
                                     <div
                                         class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
@@ -124,7 +111,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card__btn--reset mt-4" id="card__btn--reset" title="Borrar Todo">
+                                <div class="card__btn--reset" id="card__btn--reset" title="Borrar Todo">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="2.75rem"
@@ -142,14 +129,14 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="card__table__rent mt-4">
+                            <div class="card__table__rent flex pb-3">
                                 <label class="w-1/2">
                                     <select
                                         aria-label="canasta-rent"
                                         name="canasta-rent"
                                         id="card__select-rent"
                                         title="Seleccioná si ALquilas o No ALquilas."
-                                        class="block w-full mt-1 shadow appearance-none border py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline card__select-rent p-2 border-gray-300 rounded"
+                                        class="card__select-rent block h-10 shadow appearance-none border text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 border-gray-300 rounded"
                                     >
                                         <option class="card-rent--option" value="siAlquilo">Alquilada</option>
                                         <option class="card-rent--option" value="noAlquilo">No Alquilada</option>
@@ -200,27 +187,29 @@
                             </div>
                         </div>
 
-                        <form id="form">
-                            <div class="flex flex-col my-4">
-                                <div class="form-family flex flex-row mb-3">
-                                    <span>
-                                        <!-- SVG PERSON -->
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="35"
-                                            height="35"
-                                            fill="#FF5500"
-                                            class="icon-svg-person"
-                                            viewBox="0 0 16 16"
-                                        >
-                                            <path
-                                                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-                                            />
-                                        </svg>
-                                    </span>
-                                    <p class="card-family-txt ml-2 pl-3 w-full">Agregá el grupo familiar</p>
+                        <form id="form " class="border-t border-neutral-600">
+                            <div class="flex flex-col my-4 px-2">
+                                <div class="form-family flex flex-row mb-3 items-center">
+                                    <!-- SVG PERSON -->
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="2.75rem"
+                                        height="2.75rem"
+                                        fill="#FF5500"
+                                        class="icon-svg-person"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                                        />
+                                    </svg>
+                                    <p
+                                        class="card-family-txt ml-3 pl-3 text-base w-full border-l-3 border-orange-500 h-8 content-center"
+                                    >
+                                        Agregá el grupo familiar
+                                    </p>
                                     <div class="tooltip-custom-container relative">
-                                        <button class="tooltip-button info-btn">i</button>
+                                        <button class="tooltip-button info-btn w-6 h-6">i</button>
                                         <div
                                             class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
@@ -229,32 +218,46 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="fieldset relative">
-                                    <div class="form-gender w-1/2">
+                                <div class="fieldset flex mb-2 relative">
+                                    <div class="form-gender w-1/2 mr-3">
                                         <!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
-                                        <label class="w-full">
+
+                                        <label class="relative">
                                             <select
                                                 aria-label="form__select-gender"
                                                 name="form__select-gender"
                                                 id="form__select-gender"
-                                                class="block w-full mt-1 shadow appearance-none border py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline form__select-gender p-2 border-gray-300 rounded"
+                                                class="form__select-gender bg-black block w-full mt-1 shadow appearance-none border border-gray-300 pl-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline p-2 rounded"
                                                 title="Ingresá el género, si está embarazada o amamanta"
                                             >
                                                 <!-- <option value="" class="form-gender--option" selected disabled>
                                                     • Persona
                                                 </option> -->
 
-                                                <option value="Femenino" class="form-gender--option" selected>
+                                                <option value="Femenino" class="form-gender--option text-left bg-amber-950 text-lg" selected>
                                                     Femenino
                                                 </option>
-                                                <option value="Masculino" class="form-gender--option">Masculino</option>
-                                                <option value="Embarazada" class="form-gender--option">
+                                                <option value="Masculino" class="text-left bg-amber-950 text-lg">
+                                                    Masculino
+                                                </option>
+                                                <option value="Embarazada" class="text-left bg-amber-950 text-lg">
                                                     Embarazada
                                                 </option>
-                                                <option value="Lactante" class="form-gender--option">
+                                                <option value="Lactante" class="text-left bg-amber-950 text-lg">
                                                     Fem Lactante
                                                 </option>
                                             </select>
+                                            <div
+                                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                                            >
+                                                <svg
+                                                    class="fill-current h-6 w-6"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 20 20"
+                                                >
+                                                    <path d="M7 10l5 5 5-5H7z" />
+                                                </svg>
+                                            </div>
                                         </label>
                                         <input type="hidden" name="gender" id="gender" required />
                                     </div>
@@ -585,8 +588,8 @@
                                 </table> -->
                             </div>
                         </form>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
 
             <!-- Card-2 Tabla clases sociales ------------------------------------------>

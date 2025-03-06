@@ -72,12 +72,7 @@
     .card-rent-in {
         width: 97.5%;
     }
-
-    .card__svg--reset {
-        top: 0rem;
-    }
-
-   
+     
     header {
         margin-bottom: 1.25rem;
     }
@@ -89,11 +84,7 @@
         box-shadow: 0px 0px 10px 4px #ff5500;
     }      
 
-    .index-data-txt {
-        /* font-size: 1.3rem; */
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
+   
 
     .nav-link {
         font-size: 1.5rem;
@@ -109,11 +100,7 @@
         font-size: 0.8rem;
     } 
 
-    #canasta-main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  
 }
 
 @media ((min-width: 600px) and (max-width: 767px)) {
