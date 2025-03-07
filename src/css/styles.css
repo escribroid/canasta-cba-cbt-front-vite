@@ -664,43 +664,43 @@ tfoot {
     font-size: var(--font-size-24_1-5);
 } */
 
-.form-age-container {
+/* .form-age-container {
     display: flex;
     width: 48%;
     gap: 0.125rem;
     align-items: center;
-}
+} */
 
-.card-rent-in {
+/* .card-rent-in {
     width: 95%;
-}
+} */
 
 .rent_in_past {
     width: 100%;
     margin-bottom: 0.5rem;
 }
 
-.form-age {
+/* .form-age {
     width: calc(100% - 3.2rem);
-}
+} */
 
-.form__select-age {
+/* .form__select-age {
     width: calc(100% - 0px);
-}
+} */
 
-#card-total-rent {
+/* #card-total-rent {
     width: 50%;
-}
+} */
 
-.card-rent-in:disabled {
+/* .card-rent-in:disabled {
     text-align: center;
     border-color: #4caf5055;
     background-color: #4caf5011;
-}
+} */
 
-.card-rent-in::placeholder {
+/* .card-rent-in::placeholder {
     text-align: center;
-}
+} */
 
 .error-message-age {
     background-color: #493333;

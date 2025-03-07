@@ -129,14 +129,14 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="card__table__rent flex pb-3">
-                                <label class="w-1/2">
+                            <div class="card__table__rent inline-flex pb-3 w-full">
+                                <label class="w-1/2 mr-3 relative">
                                     <select
                                         aria-label="canasta-rent"
                                         name="canasta-rent"
                                         id="card__select-rent"
                                         title="Seleccioná si ALquilas o No ALquilas."
-                                        class="card__select-rent block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
+                                        class="card__select-rent w-full block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
                                     >
                                         <option class="card-rent--option text-white" value="siAlquilo">
                                             Alquilada
@@ -172,16 +172,27 @@
                                             == Datos Promedio Rosario ▼▼
                                         </option>
                                     </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                                    >
+                                        <svg
+                                            class="fill-current h-6 w-6"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path d="M7 10l5 5 5-5H7z" />
+                                        </svg>
+                                    </div>
                                 </label>
-                                <div id="card-total-rent" class="">
-                                    <label class="flex justify-end">
+                                <div id="card-total-rent " class="w-1/2">
+                                    <label class=" ">
                                         <input
                                             type="text"
                                             inputmode="numeric"
                                             pattern="\d*"
                                             name="card-rent-in"
                                             id="card-rent-in"
-                                            class="card-partial-add card-rent-in form-control w-full p-2 block h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
+                                            class="card-partial-add card-rent-in block w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
                                             value=""
                                             placeholder="$ Valor Alquiler"
                                             title="Si alquilas, ingresá el monto del alquiler."
@@ -192,8 +203,8 @@
                         </div>
 
                         <form id="form " class="border-t border-neutral-600">
-                            <div class="flex flex-col my-4 px-2">
-                                <div class="form-family flex flex-row mb-3 items-center">
+                            <div class="flex flex-col my-3 px-2">
+                                <div class="form-family flex flex-row mb-2 items-center">
                                     <!-- SVG PERSON -->
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -222,16 +233,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="fieldset flex mb-2 relative">
+                                <div class="fieldset flex w-full mb-2 relative">
                                     <div class="form-gender w-1/2 mr-3">
                                         <!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
 
                                         <label class="relative">
                                             <select
+                                                class="form__select-gender block w-full h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline mt-1 focus:shadow-outline p-2 pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
                                                 aria-label="form__select-gender"
                                                 name="form__select-gender"
                                                 id="form__select-gender"
-                                                class="form__select-gender w-full mt-1 focus:shadow-outline p-2 block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
                                                 title="Ingresá el género, si está embarazada o amamanta"
                                             >
                                                 <!-- <option value="" class="form-gender--option" selected disabled>
@@ -279,14 +290,14 @@
                                         <input type="hidden" name="gender" id="gender" required />
                                     </div>
 
-                                    <div class="form-age-container">
-                                        <div class="form-age">
-                                            <label for="form__select-age " class="block">
+                                    <div class="form-age-container flex w-1/2">
+                                        <div class="form-age mr-2">
+                                            <label for="form__select-age " class="flex relative">
                                                 <select
                                                     aria-label="form__select-age"
                                                     name="form__select-age"
                                                     id="form__select-age"
-                                                    class="form__select-age mt-1 focus:shadow-outline block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
+                                                    class="form__select-age mt-1 block w-full p-2 h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
                                                     title="Ingresá la edad de la persona"
                                                 >
                                                     <option
@@ -605,6 +616,17 @@
                                                         100 a 122
                                                     </option>
                                                 </select>
+                                                <div
+                                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                                                >
+                                                    <svg
+                                                        class="fill-current h-6 w-6"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 20 20"
+                                                    >
+                                                        <path d="M7 10l5 5 5-5H7z" />
+                                                    </svg>
+                                                </div>
                                             </label>
                                             <input type="hidden" name="age" id="age" required />
                                             <!-- message error -->
@@ -616,7 +638,7 @@
                                         <button
                                             id="form-submit"
                                             type="submit"
-                                            class="form-submit absolute right-0 bg-blue-500 hover:bg-blue-700 text-white font-bold p-0 rounded focus:outline-none focus:shadow-outline transition-all ease-in-out"
+                                            class="form-submit bg-blue-500 hover:bg-blue-700 text-white font-bold p-0 rounded focus:outline-none focus:shadow-outline transition-all ease-in-out"
                                             aria-label="Person"
                                             name="btn-add-person"
                                             title="Agregar Familiar"
@@ -625,8 +647,8 @@
                                                 <!-- SVG ADD PERSON -->
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
-                                                    width="2.75rem"
-                                                    height="2.75rem"
+                                                    width="2.5rem"
+                                                    height="2.5rem"
                                                     class="icon-svg-add shadow rounded bg-neutral-800 hover:bg-neutral-700 focus:outline-2 focus:outline-offset-2 fill-amber-600 focus:outline-neutral-500 active:bg-neutral-600 hover:fill-amber-500"
                                                     viewBox="0 0 16 16"
                                                 >
@@ -697,19 +719,34 @@
                                             <th
                                                 class="w-1/3 p-2 text-center text-neutral-300 font-semibold rounded-bl-2xl"
                                             >
-                                                <select
-                                                    name="table-canastas__select"
-                                                    id="table-canastas__select"
-                                                    title="Seleccione el detalle personal"
-                                                    class="w-full p-2 bg-neutral-700 text-neutral-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-                                                >
-                                                    <option value="" disabled>Detalle individual ▼▼</option>
-                                                    <option value="indigencia">• CBA - Linea de indigencia</option>
-                                                    <option value="pobreza" selected>• CBT - Linea de pobreza</option>
-                                                    <option value="clase_baja">• Clase Baja</option>
-                                                    <option value="clase_media_fragil">• Clase Media Fragil</option>
-                                                    <option value="clase_media">• Clase Media</option>
-                                                </select>
+                                                <label for="" class="relative">
+                                                    <select
+                                                        name="table-canastas__select"
+                                                        id="table-canastas__select"
+                                                        title="Seleccione el detalle personal"
+                                                        class="w-full p-2 bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
+                                                    >
+                                                        <option value="" disabled>Detalle individual ▼▼</option>
+                                                        <option value="indigencia">• CBA - Linea de indigencia</option>
+                                                        <option value="pobreza" selected>
+                                                            • CBT - Linea de pobreza
+                                                        </option>
+                                                        <option value="clase_baja">• Clase Baja</option>
+                                                        <option value="clase_media_fragil">• Clase Media Fragil</option>
+                                                        <option value="clase_media">• Clase Media</option>
+                                                    </select>
+                                                    <div
+                                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                                                    >
+                                                        <svg
+                                                            class="fill-current h-6 w-6"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20"
+                                                        >
+                                                            <path d="M7 10l5 5 5-5H7z" />
+                                                        </svg>
+                                                    </div>
+                                                </label>
                                             </th>
                                             <th class="w-1/12 p-2 text-center"></th>
                                             <th id="total-canasta" class="p-2 text-center"></th>
@@ -990,32 +1027,59 @@
                     </div>
                     <div class="flex flex-col">
                         <div class="table-compare-month-container mt-2 mb-4">
-                            <select
-                                id="table-compare-month"
-                                class="table-compare-month block w-35 shadow appearance-none border rounded text-gray-300 leading-tight focus:outline-none focus:shadow-outline border-gray-300 text-center"
-                                aria-label="Month"
-                            >
-                                <option class="table-compare-month-option" value="month" selected disabled>Mes</option>
-                                <option class="table-compare-month-option" value="1">Enero</option>
-                                <option class="table-compare-month-option" value="2">Febrero</option>
-                                <option class="table-compare-month-option" value="3">Marzo</option>
-                                <option class="table-compare-month-option" value="4">Abril</option>
-                                <option class="table-compare-month-option" value="5">Mayo</option>
-                                <option class="table-compare-month-option" value="6">Junio</option>
-                                <option class="table-compare-month-option" value="7">Julio</option>
-                                <option class="table-compare-month-option" value="8">Agosto</option>
-                                <option class="table-compare-month-option" value="9">Septiembre</option>
-                                <option class="table-compare-month-option" value="10">Octubre</option>
-                                <option class="table-compare-month-option" value="11">Noviembre</option>
-                                <option class="table-compare-month-option" value="12">Diciembre</option>
-                            </select>
+                            <label for="" class="relative">
+                                <select
+                                    id="table-compare-month"
+                                    class="table-compare-month block w-35 shadow appearance-none border rounded text-gray-300 leading-tight focus:outline-none focus:shadow-outline border-gray-300 text-center"
+                                    aria-label="Month"
+                                >
+                                    <option class="table-compare-month-option" value="month" selected disabled>
+                                        Mes
+                                    </option>
+                                    <option class="table-compare-month-option" value="1">Enero</option>
+                                    <option class="table-compare-month-option" value="2">Febrero</option>
+                                    <option class="table-compare-month-option" value="3">Marzo</option>
+                                    <option class="table-compare-month-option" value="4">Abril</option>
+                                    <option class="table-compare-month-option" value="5">Mayo</option>
+                                    <option class="table-compare-month-option" value="6">Junio</option>
+                                    <option class="table-compare-month-option" value="7">Julio</option>
+                                    <option class="table-compare-month-option" value="8">Agosto</option>
+                                    <option class="table-compare-month-option" value="9">Septiembre</option>
+                                    <option class="table-compare-month-option" value="10">Octubre</option>
+                                    <option class="table-compare-month-option" value="11">Noviembre</option>
+                                    <option class="table-compare-month-option" value="12">Diciembre</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                                >
+                                    <svg
+                                        class="fill-current h-6 w-6"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path d="M7 10l5 5 5-5H7z" />
+                                    </svg>
+                                </div>
+                            </label>
 
-                            <label for="table-compare-year "></label>
-                            <select
-                                id="table-compare-year"
-                                class="table-compare-year w-35 block shadow appearance-none border rounded-2xl text-gray-300 leading-tight focus:outline-none focus:shadow-outline border-gray-300 text-center"
-                                aria-label="Year"
-                            ></select>
+                            <label for="table-compare-year " class="relative">
+                                <select
+                                    id="table-compare-year"
+                                    class="table-compare-year w-35 block shadow appearance-none border rounded-2xl text-gray-300 leading-tight focus:outline-none focus:shadow-outline border-gray-300 text-center"
+                                    aria-label="Year"
+                                ></select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                                >
+                                    <svg
+                                        class="fill-current h-6 w-6"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path d="M7 10l5 5 5-5H7z" />
+                                    </svg>
+                                </div>
+                            </label>
 
                             <span class="flex items-center absolute right-2">
                                 <div class="tooltip-custom-container relative">
