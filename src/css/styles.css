@@ -312,14 +312,14 @@ option:disabled {
 }
 
 .icon-svg-add {
-    fill: #ff5500;
+    /* fill: #ff5500; */
 }
 
 .icon-svg-add:active {
-    fill: #ff5500;
+    /* fill: #ff5500;
     border-radius: var(--spacing-5_0-3125);
     font-weight: bold;
-    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
+    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500; */
 }
 
 .info_site {
@@ -679,7 +679,7 @@ tfoot {
 }
 
 .card__select-rent {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .card-rent-in {
@@ -698,51 +698,35 @@ tfoot {
 .card__select-rent,
 .card-rent-in,
 .rent_in_past {
-    background-color: #4caf5022;
-    border-color: #4caf5055;
-}
-
-.card__select-rent,
-.form__select-gender {
-}
-
-.card__select-rent:focus,
-.card-rent-in:focus,
-.rent_in_past:focus {
-    box-shadow: 0 0 0.3125rem 0.2rem #4caf50aa;
-    border-color: #4caf5033;
+    /* background-color: #4caf5022; */
+    /* border-color: #4caf5055; */
 }
 
 .form__select-age {
     width: calc(100% - 0px);
 }
 
-.form__select-age:focus,
-.form__select-gender:focus {
-    box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
-    border-color: #ff550066;
-}
 
 #card-total-rent {
     width: 50%;
 }
 
 .card-rent--option:enabled {
-    display: block;
+    /* display: block;
     margin-right: var(--spacing-50_3-125);
-    background-color: #295935;
+    background-color: #295935; */
 }
 
 .card-rent--option:disabled {
-    display: block;
+    /* display: block;
     margin-right: var(--spacing-50_3-125);
-    background-color: #000;
+    background-color: #000; */
 }
 
 .card-rent--option:hover:focus {
-    display: block;
+    /* display: block;
     margin-right: var(--spacing-50_3-125);
-    background: #a42929;
+    background: #a42929; */
 }
 
 .card-rent-in:disabled {

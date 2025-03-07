@@ -86,7 +86,7 @@
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="35"
                                     height="35"
-                                    fill="#4CAF50"
+                                    fill="#059669"
                                     class="card-svg-house"
                                     viewBox="0 0 16 16"
                                 >
@@ -96,7 +96,7 @@
                                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
                                 </svg>
                                 <p
-                                    class="card-vivienda__txt w-full ml-3 pl-3 text-base border-l-3 border-green-600/80 h-8 content-center"
+                                    class="card-vivienda__txt w-full ml-3 pl-3 text-base border-l-3 border-l-emerald-600 h-8 content-center"
                                 >
                                     Vivienda
                                 </p>
@@ -136,35 +136,39 @@
                                         name="canasta-rent"
                                         id="card__select-rent"
                                         title="Seleccioná si ALquilas o No ALquilas."
-                                        class="card__select-rent block h-10 shadow appearance-none border text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 border-gray-300 rounded"
+                                        class="card__select-rent block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
                                     >
-                                        <option class="card-rent--option" value="siAlquilo">Alquilada</option>
-                                        <option class="card-rent--option" value="noAlquilo">No Alquilada</option>
-                                        <option class="card-rent--option" value="" disabled>
+                                        <option class="card-rent--option text-white" value="siAlquilo">
+                                            Alquilada
+                                        </option>
+                                        <option class="card-rent--option text-white" value="noAlquilo">
+                                            No Alquilada
+                                        </option>
+                                        <option class="card-rent--option text-neutral-400" value="" disabled>
                                             == Datos Promedio CABA ▼▼
                                         </option>
-                                        <option class="card-rent--option" value="AlquilerProm3amb">
+                                        <option class="card-rent--option text-white" value="AlquilerProm3amb">
                                             CABA Alquiler promedio 3 Amb
                                         </option>
-                                        <option class="card-rent--option" value="AlquilerProm2amb">
+                                        <option class="card-rent--option text-white" value="AlquilerProm2amb">
                                             CABA Alquiler promedio 2 Amb
                                         </option>
-                                        <option class="card-rent--option" value="AlquilerProm1amb">
+                                        <option class="card-rent--option text-white" value="AlquilerProm1amb">
                                             CABA Alquiler promedio 1 Amb
                                         </option>
-                                        <option class="card-rent--option" value="" disabled>
+                                        <option class="card-rent--option text-neutral-400" value="" disabled>
                                             == Datos Promedio GBA Norte ▼▼
                                         </option>
-                                        <option class="card-rent--option" value="" disabled>
+                                        <option class="card-rent--option text-neutral-400" value="" disabled>
                                             == Datos Promedio GBA Oeste ▼▼
                                         </option>
-                                        <option class="card-rent--option" value="" disabled>
+                                        <option class="card-rent--option text-neutral-400" value="" disabled>
                                             == Datos Promedio GBA Sur ▼▼
                                         </option>
-                                        <option class="card-rent--option" value="" disabled>
+                                        <option class="card-rent--option text-neutral-400" value="" disabled>
                                             == Datos Promedio Cordoba ▼▼
                                         </option>
-                                        <option class="card-rent--option" value="" disabled>
+                                        <option class="card-rent--option text-neutral-400" value="" disabled>
                                             == Datos Promedio Rosario ▼▼
                                         </option>
                                     </select>
@@ -177,7 +181,7 @@
                                             pattern="\d*"
                                             name="card-rent-in"
                                             id="card-rent-in"
-                                            class="card-partial-add card-rent-in form-control w-full p-2 border border-gray-300 rounded"
+                                            class="card-partial-add card-rent-in form-control w-full p-2 block h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
                                             value=""
                                             placeholder="$ Valor Alquiler"
                                             title="Si alquilas, ingresá el monto del alquiler."
@@ -195,7 +199,7 @@
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="2.75rem"
                                         height="2.75rem"
-                                        fill="#FF5500"
+                                        fill="#3b82f6"
                                         class="icon-svg-person"
                                         viewBox="0 0 16 16"
                                     >
@@ -204,7 +208,7 @@
                                         />
                                     </svg>
                                     <p
-                                        class="card-family-txt ml-3 pl-3 text-base w-full border-l-3 border-orange-500 h-8 content-center"
+                                        class="card-family-txt ml-2 pl-2 text-base w-full border-l-3 border-blue-500 h-8 content-center"
                                     >
                                         Agregá el grupo familiar
                                     </p>
@@ -227,7 +231,7 @@
                                                 aria-label="form__select-gender"
                                                 name="form__select-gender"
                                                 id="form__select-gender"
-                                                class="form__select-gender bg-black block w-full mt-1 shadow appearance-none border border-gray-300 pl-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline p-2 rounded"
+                                                class="form__select-gender w-full mt-1 focus:shadow-outline p-2 block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
                                                 title="Ingresá el género, si está embarazada o amamanta"
                                             >
                                                 <!-- <option value="" class="form-gender--option" selected disabled>
@@ -236,26 +240,26 @@
 
                                                 <option
                                                     value="Femenino"
-                                                    class="form-gender--option text-left bg-amber-950 text-lg"
+                                                    class="form-gender--option text-left text-white"
                                                     selected
                                                 >
                                                     Femenino
                                                 </option>
                                                 <option
                                                     value="Masculino"
-                                                    class="form-gender--option text-left bg-amber-950 text-lg"
+                                                    class="form-gender--option text-left text-white"
                                                 >
                                                     Masculino
                                                 </option>
                                                 <option
                                                     value="Embarazada"
-                                                    class="form-gender--option text-left bg-amber-950 text-lg"
+                                                    class="form-gender--option text-left text-white"
                                                 >
                                                     Embarazada
                                                 </option>
                                                 <option
                                                     value="Lactante"
-                                                    class="form-gender--option text-left bg-amber-950 text-lg"
+                                                    class="form-gender--option text-left text-white"
                                                 >
                                                     Fem Lactante
                                                 </option>
@@ -282,622 +286,322 @@
                                                     aria-label="form__select-age"
                                                     name="form__select-age"
                                                     id="form__select-age"
-                                                    class="form__select-age block mt-1 shadow appearance-none rounded py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline border border-orange-900 bg-orange-950"
+                                                    class="form__select-age mt-1 focus:shadow-outline block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
                                                     title="Ingresá la edad de la persona"
                                                 >
                                                     <option
                                                         value=""
-                                                        class="form-age--option-selected"
+                                                        class="form-age--option-selected text-center text-neutral-400"
                                                         selected
                                                         disabled
                                                     >
                                                         Edad
                                                     </option>
-                                                    <option
-                                                        value="0"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="0" class="form-age--option text-center text-white">
                                                         0 a 12 meses
                                                     </option>
-                                                    <option
-                                                        value="2"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="2" class="form-age--option text-center text-white">
                                                         2 años
                                                     </option>
-                                                    <option
-                                                        value="1"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="1" class="form-age--option text-center text-white">
                                                         1 año
                                                     </option>
-                                                    <option
-                                                        value="3"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="3" class="form-age--option text-center text-white">
                                                         3 años
                                                     </option>
-                                                    <option
-                                                        value="4"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="4" class="form-age--option text-center text-white">
                                                         4 años
                                                     </option>
-                                                    <option
-                                                        value="5"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="5" class="form-age--option text-center text-white">
                                                         5 años
                                                     </option>
-                                                    <option
-                                                        value="6"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="6" class="form-age--option text-center text-white">
                                                         6 años
                                                     </option>
-                                                    <option
-                                                        value="7"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="7" class="form-age--option text-center text-white">
                                                         7 años
                                                     </option>
-                                                    <option
-                                                        value="8"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="8" class="form-age--option text-center text-white">
                                                         8 años
                                                     </option>
-                                                    <option
-                                                        value="9"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="9" class="form-age--option text-center text-white">
                                                         9 años
                                                     </option>
                                                     <option
                                                         value="10"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
+                                                        class="form-age--option text-center text-white"
                                                         selected
                                                     >
                                                         10 años
                                                     </option>
-                                                    <option
-                                                        value="11"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="11" class="form-age--option text-center text-white">
                                                         11 años
                                                     </option>
-                                                    <option
-                                                        value="12"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="12" class="form-age--option text-center text-white">
                                                         12 años
                                                     </option>
-                                                    <option
-                                                        value="13"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="13" class="form-age--option text-center text-white">
                                                         13 años
                                                     </option>
-                                                    <option
-                                                        value="14"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="14" class="form-age--option text-center text-white">
                                                         14 años
                                                     </option>
-                                                    <option
-                                                        value="15"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="15" class="form-age--option text-center text-white">
                                                         15 años
                                                     </option>
-                                                    <option
-                                                        value="16"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="16" class="form-age--option text-center text-white">
                                                         16 años
                                                     </option>
-                                                    <option
-                                                        value="17"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="17" class="form-age--option text-center text-white">
                                                         17 años
                                                     </option>
-                                                    <option
-                                                        value="18"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="18" class="form-age--option text-center text-white">
                                                         18 años
                                                     </option>
-                                                    <option
-                                                        value="19"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="19" class="form-age--option text-center text-white">
                                                         19 años
                                                     </option>
-                                                    <option
-                                                        value="20"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="20" class="form-age--option text-center text-white">
                                                         20 años
                                                     </option>
-                                                    <option
-                                                        value="21"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="21" class="form-age--option text-center text-white">
                                                         21 años
                                                     </option>
-                                                    <option
-                                                        value="22"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="22" class="form-age--option text-center text-white">
                                                         22 años
                                                     </option>
-                                                    <option
-                                                        value="23"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="23" class="form-age--option text-center text-white">
                                                         23 años
                                                     </option>
-                                                    <option
-                                                        value="24"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="24" class="form-age--option text-center text-white">
                                                         24 años
                                                     </option>
-                                                    <option
-                                                        value="25"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="25" class="form-age--option text-center text-white">
                                                         25 años
                                                     </option>
-                                                    <option
-                                                        value="26"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="26" class="form-age--option text-center text-white">
                                                         26 años
                                                     </option>
-                                                    <option
-                                                        value="27"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="27" class="form-age--option text-center text-white">
                                                         27 años
                                                     </option>
-                                                    <option
-                                                        value="28"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="28" class="form-age--option text-center text-white">
                                                         28 años
                                                     </option>
-                                                    <option
-                                                        value="29"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="29" class="form-age--option text-center text-white">
                                                         29 años
                                                     </option>
-                                                    <option
-                                                        value="30"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="30" class="form-age--option text-center text-white">
                                                         30 años
                                                     </option>
-                                                    <option
-                                                        value="31"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="31" class="form-age--option text-center text-white">
                                                         31 años
                                                     </option>
-                                                    <option
-                                                        value="32"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="32" class="form-age--option text-center text-white">
                                                         32 años
                                                     </option>
-                                                    <option
-                                                        value="33"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="33" class="form-age--option text-center text-white">
                                                         33 años
                                                     </option>
-                                                    <option
-                                                        value="34"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="34" class="form-age--option text-center text-white">
                                                         34 años
                                                     </option>
-                                                    <option
-                                                        value="35"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="35" class="form-age--option text-center text-white">
                                                         35 años
                                                     </option>
-                                                    <option
-                                                        value="36"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="36" class="form-age--option text-center text-white">
                                                         36 años
                                                     </option>
-                                                    <option
-                                                        value="37"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="37" class="form-age--option text-center text-white">
                                                         37 años
                                                     </option>
-                                                    <option
-                                                        value="38"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="38" class="form-age--option text-center text-white">
                                                         38 años
                                                     </option>
-                                                    <option
-                                                        value="39"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="39" class="form-age--option text-center text-white">
                                                         39 años
                                                     </option>
-                                                    <option
-                                                        value="40"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="40" class="form-age--option text-center text-white">
                                                         40 años
                                                     </option>
-                                                    <option
-                                                        value="41"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="41" class="form-age--option text-center text-white">
                                                         41 años
                                                     </option>
-                                                    <option
-                                                        value="42"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="42" class="form-age--option text-center text-white">
                                                         42 años
                                                     </option>
-                                                    <option
-                                                        value="43"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="43" class="form-age--option text-center text-white">
                                                         43 años
                                                     </option>
-                                                    <option
-                                                        value="44"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="44" class="form-age--option text-center text-white">
                                                         44 años
                                                     </option>
-                                                    <option
-                                                        value="45"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="45" class="form-age--option text-center text-white">
                                                         45 años
                                                     </option>
-                                                    <option
-                                                        value="46"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="46" class="form-age--option text-center text-white">
                                                         46 años
                                                     </option>
-                                                    <option
-                                                        value="47"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="47" class="form-age--option text-center text-white">
                                                         47 años
                                                     </option>
-                                                    <option
-                                                        value="48"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="48" class="form-age--option text-center text-white">
                                                         48 años
                                                     </option>
-                                                    <option
-                                                        value="49"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="49" class="form-age--option text-center text-white">
                                                         49 años
                                                     </option>
-                                                    <option
-                                                        value="50"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="50" class="form-age--option text-center text-white">
                                                         50 años
                                                     </option>
-                                                    <option
-                                                        value="51"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="51" class="form-age--option text-center text-white">
                                                         51 años
                                                     </option>
-                                                    <option
-                                                        value="52"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="52" class="form-age--option text-center text-white">
                                                         52 años
                                                     </option>
-                                                    <option
-                                                        value="53"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="53" class="form-age--option text-center text-white">
                                                         53 años
                                                     </option>
-                                                    <option
-                                                        value="54"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="54" class="form-age--option text-center text-white">
                                                         54 años
                                                     </option>
-                                                    <option
-                                                        value="55"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="55" class="form-age--option text-center text-white">
                                                         55 años
                                                     </option>
-                                                    <option
-                                                        value="56"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="56" class="form-age--option text-center text-white">
                                                         56 años
                                                     </option>
-                                                    <option
-                                                        value="57"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="57" class="form-age--option text-center text-white">
                                                         57 años
                                                     </option>
-                                                    <option
-                                                        value="58"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="58" class="form-age--option text-center text-white">
                                                         58 años
                                                     </option>
-                                                    <option
-                                                        value="59"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="59" class="form-age--option text-center text-white">
                                                         59 años
                                                     </option>
-                                                    <option
-                                                        value="60"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="60" class="form-age--option text-center text-white">
                                                         60 años
                                                     </option>
-                                                    <option
-                                                        value="61"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="61" class="form-age--option text-center text-white">
                                                         61 años
                                                     </option>
-                                                    <option
-                                                        value="62"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="62" class="form-age--option text-center text-white">
                                                         62 años
                                                     </option>
-                                                    <option
-                                                        value="63"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="63" class="form-age--option text-center text-white">
                                                         63 años
                                                     </option>
-                                                    <option
-                                                        value="64"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="64" class="form-age--option text-center text-white">
                                                         64 años
                                                     </option>
-                                                    <option
-                                                        value="65"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="65" class="form-age--option text-center text-white">
                                                         65 años
                                                     </option>
-                                                    <option
-                                                        value="66"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="66" class="form-age--option text-center text-white">
                                                         66 años
                                                     </option>
-                                                    <option
-                                                        value="67"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="67" class="form-age--option text-center text-white">
                                                         67 años
                                                     </option>
-                                                    <option
-                                                        value="68"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="68" class="form-age--option text-center text-white">
                                                         68 años
                                                     </option>
-                                                    <option
-                                                        value="69"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="69" class="form-age--option text-center text-white">
                                                         69 años
                                                     </option>
-                                                    <option
-                                                        value="70"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="70" class="form-age--option text-center text-white">
                                                         70 años
                                                     </option>
-                                                    <option
-                                                        value="71"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="71" class="form-age--option text-center text-white">
                                                         71 años
                                                     </option>
-                                                    <option
-                                                        value="72"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="72" class="form-age--option text-center text-white">
                                                         72 años
                                                     </option>
-                                                    <option
-                                                        value="73"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="73" class="form-age--option text-center text-white">
                                                         73 años
                                                     </option>
-                                                    <option
-                                                        value="74"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="74" class="form-age--option text-center text-white">
                                                         74 años
                                                     </option>
-                                                    <option
-                                                        value="75"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="75" class="form-age--option text-center text-white">
                                                         75 años
                                                     </option>
-                                                    <option
-                                                        value="76"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="76" class="form-age--option text-center text-white">
                                                         76 años
                                                     </option>
-                                                    <option
-                                                        value="77"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="77" class="form-age--option text-center text-white">
                                                         77 años
                                                     </option>
-                                                    <option
-                                                        value="78"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="78" class="form-age--option text-center text-white">
                                                         78 años
                                                     </option>
-                                                    <option
-                                                        value="79"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="79" class="form-age--option text-center text-white">
                                                         79 años
                                                     </option>
-                                                    <option
-                                                        value="80"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="80" class="form-age--option text-center text-white">
                                                         80 años
                                                     </option>
-                                                    <option
-                                                        value="81"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="81" class="form-age--option text-center text-white">
                                                         81 años
                                                     </option>
-                                                    <option
-                                                        value="82"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="82" class="form-age--option text-center text-white">
                                                         82 años
                                                     </option>
-                                                    <option
-                                                        value="83"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="83" class="form-age--option text-center text-white">
                                                         83 años
                                                     </option>
-                                                    <option
-                                                        value="84"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="84" class="form-age--option text-center text-white">
                                                         84 años
                                                     </option>
-                                                    <option
-                                                        value="85"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="85" class="form-age--option text-center text-white">
                                                         85 años
                                                     </option>
-                                                    <option
-                                                        value="86"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="86" class="form-age--option text-center text-white">
                                                         86 años
                                                     </option>
-                                                    <option
-                                                        value="87"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="87" class="form-age--option text-center text-white">
                                                         87 años
                                                     </option>
-                                                    <option
-                                                        value="88"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="88" class="form-age--option text-center text-white">
                                                         88 años
                                                     </option>
-                                                    <option
-                                                        value="89"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="89" class="form-age--option text-center text-white">
                                                         89 años
                                                     </option>
-                                                    <option
-                                                        value="90"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="90" class="form-age--option text-center text-white">
                                                         90 años
                                                     </option>
-                                                    <option
-                                                        value="91"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="91" class="form-age--option text-center text-white">
                                                         91 años
                                                     </option>
-                                                    <option
-                                                        value="92"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="92" class="form-age--option text-center text-white">
                                                         92 años
                                                     </option>
-                                                    <option
-                                                        value="93"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="93" class="form-age--option text-center text-white">
                                                         93 años
                                                     </option>
-                                                    <option
-                                                        value="94"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="94" class="form-age--option text-center text-white">
                                                         94 años
                                                     </option>
-                                                    <option
-                                                        value="95"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="95" class="form-age--option text-center text-white">
                                                         95 años
                                                     </option>
-                                                    <option
-                                                        value="96"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="96" class="form-age--option text-center text-white">
                                                         96 años
                                                     </option>
-                                                    <option
-                                                        value="97"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="97" class="form-age--option text-center text-white">
                                                         97 años
                                                     </option>
-                                                    <option
-                                                        value="98"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="98" class="form-age--option text-center text-white">
                                                         98 años
                                                     </option>
-                                                    <option
-                                                        value="99"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="99" class="form-age--option text-center text-white">
                                                         99 años
                                                     </option>
-                                                    <option
-                                                        value="100"
-                                                        class="form-age--option text-center bg-amber-950 text-lg"
-                                                    >
+                                                    <option value="100" class="form-age--option text-center text-white">
                                                         100 a 122
                                                     </option>
                                                 </select>
@@ -923,8 +627,7 @@
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     width="2.75rem"
                                                     height="2.75rem"
-                                                    fill="#FF8800dd "
-                                                    class="icon-svg-add"
+                                                    class="icon-svg-add shadow rounded bg-neutral-800 hover:bg-neutral-700 focus:outline-2 focus:outline-offset-2 fill-amber-600 focus:outline-neutral-500 active:bg-neutral-600 hover:fill-amber-500"
                                                     viewBox="0 0 16 16"
                                                 >
                                                     <path
@@ -983,7 +686,7 @@
 
                                     <tfoot class="bg-neutral-900">
                                         <tr>
-                                            <th class="w-1/4 p-2 text-center text-neutral-300 font-semibold">
+                                            <th class="table-canastas-rent w-1/4 p-2 text-center text-neutral-300 font-semibold">
                                                 Alquiler
                                             </th>
                                             <th class="p-2"></th>
