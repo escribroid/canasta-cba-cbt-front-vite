@@ -1037,6 +1037,4 @@ window.addEventListener("dataJsonFront", function (even) {
             }, 200);
         }
     });
-
-    
 });

@@ -2,14 +2,12 @@
     .logo {
         font-size: var(--font-size-32_2rem);
     }
-    
 }
 
 @media (max-width: 331px) {
     .logo {
         font-size: var(--font-size-30_1-875);
     }
-    
 }
 
 @media (min-width: 767px) {
@@ -39,7 +37,7 @@
         box-shadow: 0px 0px 10px 4px #ff3366;
     }
 
-        .card-header {
+    .card-header {
         height: 100%;
     }
 
@@ -72,7 +70,7 @@
     .card-rent-in {
         width: 97.5%;
     }
-     
+
     header {
         margin-bottom: 1.25rem;
     }
@@ -82,9 +80,7 @@
         /* border-radius: 5px; */
         /* font-weight: bold;
         box-shadow: 0px 0px 10px 4px #ff5500; */
-    }      
-
-   
+    }
 
     .nav-link {
         font-size: 1.5rem;
@@ -98,9 +94,7 @@
     .table-classes-alta-max-info,
     .table-classes-info {
         font-size: 0.8rem;
-    } 
-
-  
+    }
 }
 
 @media ((min-width: 600px) and (max-width: 767px)) {
@@ -108,16 +102,13 @@
         max-width: 600px;
         margin: 0 auto;
     }
- 
 }
 
 @media ((min-width: 767px) and (max-width: 960px)) {
-  
 }
 
 @media ((min-width: 961px)) {
     body {
         max-width: 960px;
     }
-    
 }

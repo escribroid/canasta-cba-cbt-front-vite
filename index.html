@@ -23,9 +23,9 @@
     </head>
 
     <body class="bg-neutral-500 text-orange-50">
-        <!-- Contenedor principal shadow-xl shadow-neutral-950/70-->
+        <!-- Contenedor principal shadow-xl shadow-neutral-950/80-->
         <div
-            class="index-container bg-neutral-800 flex justify-around items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-xl shadow-neutral-950/70 border-b border-x border-neutral-800"
+            class="index-container bg-neutral-800 flex justify-around items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-xl shadow-neutral-950/80 border-b border-x border-neutral-900 border-x-neutral-700"
         >
             <div class="index-top">
                 <span class="index-data-txt">ipc </span>
@@ -45,7 +45,7 @@
 
         <!-- Header -->
         <header
-            class="mx-2 p-2 mb-6 bg-neutral-800 rounded-2xl shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+            class="mx-2 p-2 mb-6 bg-neutral-800 rounded-2xl shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
         >
             <!-- Navbar -->
             <nav class="flex justify-between">
@@ -72,7 +72,7 @@
         <main id="canasta-main" class="mx-2">
             <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
-                class="card_main bg-neutral-800 rounded-2xl mb-6 w-full shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="card_main bg-neutral-800 rounded-2xl mb-6 w-full shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
             >
                 <div class="">
                     <div class="flex flex-col">
@@ -647,9 +647,7 @@
 
                             <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
                             <div class="flex justify-center overflow-auto rounded-2xl border border-neutral-500/50">
-                                <table
-                                    class="min-w-full table-auto bg-neutral-800 shadow-lg shadow-neutral-950/70 border border-neutral-700/50"
-                                >
+                                <table class="min-w-full table-auto border border-neutral-700/50">
                                     <thead class="bg-neutral-900">
                                         <tr class="border">
                                             <th
@@ -686,7 +684,9 @@
 
                                     <tfoot class="bg-neutral-900">
                                         <tr>
-                                            <th class="table-canastas-rent w-1/4 p-2 text-center text-neutral-300 font-semibold">
+                                            <th
+                                                class="table-canastas-rent w-1/4 p-2 text-center text-neutral-300 font-semibold"
+                                            >
                                                 Alquiler
                                             </th>
                                             <th class="p-2"></th>
@@ -712,7 +712,7 @@
                                                 </select>
                                             </th>
                                             <th class="w-1/12 p-2 text-center"></th>
-                                            <th id="total-canasta text-center" class="p-2"></th>
+                                            <th id="total-canasta" class="p-2 text-center"></th>
                                             <th class="w-1/12 p-2 rounded-br-2xl text-center"></th>
                                         </tr>
                                     </tfoot>
@@ -814,11 +814,11 @@
 
             <!-- Card-2 Tabla clases sociales ------------------------------------------>
             <div
-                class="card rounded-2xl card-classes mb-5 bg-neutral-800 shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="card rounded-2xl card-classes mb-6 bg-neutral-800 shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
             >
                 <div class="pt-2 mt-1 text-center table-classes">
                     <div class="flex flex-col mb-2 p-0 w-full border-b-1 border-b-gray-700">
-                        <div class="text-center table-classes--txt pb-2 text-shadow">Tu Clase Social Hoy</div>
+                        <div class="text-center table-classes--txt pb-2">Tu Clase Social Hoy</div>
                     </div>
 
                     <!-- ingresar salario ------------------------------------------>
@@ -837,7 +837,9 @@
                                     />
                                 </label>
                                 <div class="tooltip-custom-container relative">
-                                    <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                    <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">
+                                        i
+                                    </button>
                                     <div
                                         class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
@@ -850,9 +852,7 @@
                     </div>
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-indigencia">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-indigencia-min"></div>
-                        <div
-                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-indigencia-row"
-                        >
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-indigencia-row">
                             <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Indigente<span
                                 class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
@@ -863,9 +863,7 @@
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-pobreza">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-pobreza-min"></div>
-                        <div
-                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-pobreza-row"
-                        >
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-pobreza-row">
                             <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Pobreza<span
                                 class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
@@ -876,7 +874,7 @@
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-baja">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-baja-min"></div>
-                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-baja-row">
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-baja-row">
                             <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Clase Baja<span
                                 class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
@@ -887,9 +885,7 @@
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-media-fragil">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-media-fragil-min"></div>
-                        <div
-                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-fragil-row"
-                        >
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-media-fragil-row">
                             <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media frágil<span
                                 class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
@@ -900,7 +896,7 @@
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-media">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-media-min"></div>
-                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-row">
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-media-row">
                             <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media<span
                                 class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
@@ -911,9 +907,7 @@
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-media-alta">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-media-alta-min"></div>
-                        <div
-                            class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-alta-row"
-                        >
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-media-alta-row">
                             <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media alta<span
                                 class="text-center h-full flex items-center mayor-menor"
                                 >&lt;</span
@@ -924,7 +918,7 @@
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-alta">
                         <div class="m-0 p-0 flex justify-center items-center table-classes-alta--min"></div>
-                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-alta-row">
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-alta-row">
                             <span class="pr-0 h-full flex justify-center items-center text-center mayor-menor">≤</span
                             >Alta baja<span class="text-center h-full flex items-center mayor-menor">&lt;</span>
                         </div>
@@ -932,18 +926,14 @@
                     </div>
 
                     <div class="flex flex-wrap m-0 p-0 w-full table-classes-acomodada">
-                        <div
-                            class="flex flex-1 m-0 p-0 py-1 justify-center items-center text-shadow class-acomodada-row"
-                        >
+                        <div class="flex flex-1 m-0 p-0 py-1 justify-center items-center class-acomodada-row">
                             Acomodada
                         </div>
                     </div>
 
                     <div class="flex flex-wrap w-full text-gray-500 relative">
                         <div class="m-0 p-0 pl-4 py-2 bg-black table-classes-alta-min-info">Min</div>
-                        <div
-                            class="flex-1 m-0 p-0 bg-black flex justify-between items-center text-shadow table-classes-info"
-                        >
+                        <div class="flex-1 m-0 p-0 bg-black flex justify-between items-center table-classes-info">
                             <span class="bg-black pr-0 h-full flex justify-center items-center text-center mayor-menor"
                                 >≤</span
                             >Clase social<span class="bg-black text-center h-full flex items-center mayor-menor"
@@ -953,7 +943,10 @@
                         <div class="m-0 p-0 pr-4 bg-black flex items-center table-classes-alta-max-info">Max</div>
                         <span class="flex absolute items-center right-2">
                             <div class="tooltip-custom-container relative">
-                                <button class="tooltip-button info-btn text-green-50" style="background: #165f07">
+                                <button
+                                    class="tooltip-button info-btn text-green-50 w-6 h-6"
+                                    style="background: #165f07"
+                                >
                                     i
                                 </button>
                                 <div
@@ -970,22 +963,24 @@
 
             <!-- Card-3 Compare clase social antes +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
-                class="rounded-2xl mb-6 bg-neutral-800 shadow-xl shadow-neutral-950/70 border border-neutral-700/50 relative"
+                class="rounded-2xl mb-6 bg-neutral-800 shadow-xl shadow-neutral-950/80 border border-neutral-700/50 relative"
             >
                 <div class="pt-2 mt-1 table-classes">
                     <div class="flex justify-center mb-2 p-0 w-full border-b-1 border-b-gray-700 card-compare__header">
                         <!-- <div class="form-switch compare__switch">
-                        <input class="form-check-input border border-2 border-primary" type="checkbox" role="switch"
+                        <input class="form-check-input border-2 border-primary" type="checkbox" role="switch"
                             id="SwitchCompareCba" />
                         <label class="form-check-label" for="SwitchCompareCba" aria-label="Switch"></label>
                     </div> -->
 
-                        <div class="card-compare__title pb-2 text-shadow">Tu Clase Social Ayer</div>
+                        <div class="card-compare__title pb-2">Tu Clase Social Ayer</div>
 
                         <span class="flex items-center absolute right-2">
                             <div class="tooltip-custom-container relative">
-                                <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                <!-- OVER AQUI -->
+                                <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">i</button>
                                 <div
+                                    id="aclaracion-date--over"
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
                                     Agrega tu grupo familiar.
@@ -994,17 +989,6 @@
                         </span>
                     </div>
                     <div class="flex flex-col">
-                        <!--  <li class="d-flex justify-content-center text-center p-1">
-                            <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cba"
-                                >cba</span
-                            >
-                            <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cbt"
-                                >cbt</span
-                            >
-                            <span class="col-3 border-2 border-primary border rounded-4 mx-1 canasta_compare_cbaja"
-                                >c_Baja</span
-                            >
-                        </li> -->
                         <div class="table-compare-month-container mt-2 mb-4">
                             <select
                                 id="table-compare-month"
@@ -1035,7 +1019,9 @@
 
                             <span class="flex items-center absolute right-2">
                                 <div class="tooltip-custom-container relative">
-                                    <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                    <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">
+                                        i
+                                    </button>
                                     <div
                                         class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
@@ -1063,7 +1049,9 @@
                                 </label>
                                 <span class="absolute ml-60">
                                     <div class="tooltip-custom-container relative">
-                                        <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                        <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">
+                                            i
+                                        </button>
                                         <div
                                             class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
@@ -1088,7 +1076,9 @@
                                 </label>
                                 <span class="absolute ml-60">
                                     <div class="tooltip-custom-container relative">
-                                        <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                        <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">
+                                            i
+                                        </button>
                                         <div
                                             class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
@@ -1108,7 +1098,7 @@
                                     class="m-0 p-0 flex justify-center items-center table-classes-indigencia-min-past"
                                 ></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-indigencia-row class-indigencia-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-indigencia-row class-indigencia-row-past"
                                 >
                                     <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Indigente<span
                                         class="text-center h-full flex items-center mayor-menor"
@@ -1124,7 +1114,7 @@
                                     class="m-0 p-0 flex justify-center items-center table-classes-pobreza-min-past"
                                 ></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-pobreza-row class-pobreza-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-pobreza-row class-pobreza-row-past"
                                 >
                                     <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Pobreza<span
                                         class="text-center h-full flex items-center mayor-menor"
@@ -1139,7 +1129,7 @@
                             <div class="flex flex-wrap m-0 p-0 w-full table-classes-baja table-classes-baja-past">
                                 <div class="m-0 p-0 flex justify-center items-center table-classes-baja-min-past"></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-baja-row class-baja-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-baja-row class-baja-row-past"
                                 >
                                     <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Clase Baja<span
                                         class="text-center h-full flex items-center mayor-menor"
@@ -1156,7 +1146,7 @@
                                     class="m-0 p-0 flex justify-center items-center table-classes-media-fragil-min-past"
                                 ></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-fragil-row class-media-fragil-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-media-fragil-row class-media-fragil-row-past"
                                 >
                                     <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media frágil<span
                                         class="text-center h-full flex items-center mayor-menor"
@@ -1173,7 +1163,7 @@
                                     class="m-0 p-0 flex justify-center items-center table-classes-media-min-past"
                                 ></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-row class-media-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-media-row class-media-row-past"
                                 >
                                     <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media<span
                                         class="text-center h-full flex items-center mayor-menor"
@@ -1192,7 +1182,7 @@
                                     class="m-0 p-0 flex justify-center items-center table-classes-media-alta-min-past"
                                 ></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-media-alta-row class-media-alta-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-media-alta-row class-media-alta-row-past"
                                 >
                                     <span class="pr-0 h-full flex items-center mayor-menor">≤</span>Media alta<span
                                         class="text-center h-full flex items-center mayor-menor"
@@ -1207,7 +1197,7 @@
                             <div class="flex flex-wrap m-0 p-0 w-full table-classes-alta table-classes-alta-past">
                                 <div class="m-0 p-0 flex justify-center items-center table-classes-alta-min-past"></div>
                                 <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center text-shadow class-alta-row class-alta-row-past"
+                                    class="flex flex-1 m-0 p-0 py-1 justify-between items-center class-alta-row class-alta-row-past"
                                 >
                                     <span class="pr-0 h-full flex justify-center items-center text-center mayor-menor"
                                         >≤</span
@@ -1219,9 +1209,7 @@
                             <div
                                 class="flex flex-wrap m-0 p-0 w-full table-classes-acomodada table-classes-acomodada-past"
                             >
-                                <div
-                                    class="flex flex-1 m-0 p-0 py-1 justify-center items-center text-shadow class-media-alta-row"
-                                >
+                                <div class="flex flex-1 m-0 p-0 py-1 justify-center items-center class-media-alta-row">
                                     Acomodada
                                 </div>
                             </div>
@@ -1229,7 +1217,7 @@
                             <div class="flex flex-wrap w-full text-gray-500 relative">
                                 <div class="m-0 p-0 pl-4 py-2 bg-black table-classes-alta-min-info">Min</div>
                                 <div
-                                    class="flex-1 m-0 p-0 bg-black flex justify-between items-center text-shadow table-classes-info"
+                                    class="flex-1 m-0 p-0 bg-black flex justify-between items-center table-classes-info"
                                 >
                                     <span
                                         class="bg-black pr-0 h-full flex justify-center items-center text-center mayor-menor"
@@ -1244,7 +1232,7 @@
                                 <span class="flex absolute items-center right-2">
                                     <div class="tooltip-custom-container relative">
                                         <button
-                                            class="tooltip-button info-btn text-green-50"
+                                            class="tooltip-button info-btn text-green-50 w-6 h-6"
                                             style="background: #165f07"
                                         >
                                             i
@@ -1266,7 +1254,7 @@
             <!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
                 id="card-canastas-1"
-                class="rounded-2xl card-canastas-1 mb-6 p-0.5 bg-neutral-800 shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="rounded-2xl card-canastas-1 mb-6 p-0.5 bg-neutral-800 shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
             >
                 <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-canastas-header-title">Canastas para Hogar "Tipo"</h2>
@@ -1281,7 +1269,7 @@
             <!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
                 id="card-canasta-cba"
-                class="rounded-2xl card-cba card-canastas-2 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="rounded-2xl card-cba card-canastas-2 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
             >
                 <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Alimentaria</h2>
@@ -1289,7 +1277,7 @@
                         • CBA - Linea de indigencia
                         <span>
                             <div class="tooltip-custom-container relative">
-                                <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">i</button>
                                 <div
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
@@ -1313,7 +1301,7 @@
             <!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
                 id="card-canasta-cbt"
-                class="rounded-2xl card-cbt card-canastas-3 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="rounded-2xl card-cbt card-canastas-3 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
             >
                 <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Total</h2>
@@ -1321,7 +1309,7 @@
                         • CBT - Línea de Pobreza
                         <span>
                             <div class="tooltip-custom-container relative">
-                                <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">i</button>
                                 <div
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
@@ -1346,7 +1334,7 @@
             <!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
             <div
                 id="card-canasta-cbta"
-                class="rounded-2xl card-cbta card-canastas-4 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/70 border border-neutral-700/50"
+                class="rounded-2xl card-cbta card-canastas-4 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/80 border border-neutral-700/50"
             >
                 <div class="max-w-sm mx-auto">
                     <h2 class="text-2xl font-bold mb-2 card-cb-title">
@@ -1356,7 +1344,7 @@
                         • Línea Pobreza Alquilando
                         <span>
                             <div class="tooltip-custom-container relative">
-                                <button class="tooltip-button info-btn" style="background: #165f07">i</button>
+                                <button class="tooltip-button info-btn w-6 h-6" style="background: #165f07">i</button>
                                 <div
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >

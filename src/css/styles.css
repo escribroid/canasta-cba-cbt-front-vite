@@ -162,13 +162,6 @@ option:disabled {
     -o-border-radius: var(--spacing-5_0-3125);
 }
 
-/* .card-header {
-    padding: var(--bs-card-cap-padding-y) 0.5rem;
-    color: var(--bs-card-cap-color);
-    background-color: #20141988 !important;
-    border: 0;
-} */
-
 .card-header h2 {
     font-weight: 400;
     font-family: var(--font-primary);
@@ -678,10 +671,6 @@ tfoot {
     align-items: center;
 }
 
-.card__select-rent {
-    /* width: 100%; */
-}
-
 .card-rent-in {
     width: 95%;
 }
@@ -695,38 +684,12 @@ tfoot {
     width: calc(100% - 3.2rem);
 }
 
-.card__select-rent,
-.card-rent-in,
-.rent_in_past {
-    /* background-color: #4caf5022; */
-    /* border-color: #4caf5055; */
-}
-
 .form__select-age {
     width: calc(100% - 0px);
 }
 
-
 #card-total-rent {
     width: 50%;
-}
-
-.card-rent--option:enabled {
-    /* display: block;
-    margin-right: var(--spacing-50_3-125);
-    background-color: #295935; */
-}
-
-.card-rent--option:disabled {
-    /* display: block;
-    margin-right: var(--spacing-50_3-125);
-    background-color: #000; */
-}
-
-.card-rent--option:hover:focus {
-    /* display: block;
-    margin-right: var(--spacing-50_3-125);
-    background: #a42929; */
 }
 
 .card-rent-in:disabled {

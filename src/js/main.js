@@ -58,7 +58,7 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
             tooltip.style.right = "auto";
         }
 
-        const tooltipCenter = (tooltipHeight - 26)/2;
+        const tooltipCenter = (tooltipHeight - 26) / 2;
 
         // Ajustar verticalmente si es necesario
         let tooltipBottom = tooltipRect.bottom;
@@ -70,14 +70,11 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         console.log("tooltipATop", tooltipATop);
         console.log("tooltipHeight", tooltipHeight);
         console.log("tooltipCenter", tooltipCenter);
-        
-        
 
         if (tooltipBottom > windowHeight - 24) {
             //tooltip.style.top = "auto";
             //tooltip.style.bottom = "auto";
-            tooltip.style.top = `${-tooltipCenter}px`; 
-            
+            tooltip.style.top = `${-tooltipCenter}px`;
         } else {
             //tooltip.style.top = "auto";
             //tooltip.style.bottom = "auto";
