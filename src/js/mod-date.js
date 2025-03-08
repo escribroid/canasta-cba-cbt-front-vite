@@ -3,7 +3,6 @@ const API_URL_IPC = import.meta.env.VITE_API_URL_IPC;
 // console.log("API_URL", API_URL); // Usará la URL correcta según el entorno
 // console.log("API_URL_IPC", API_URL_IPC); // Usará la URL correcta según el entorno
 
-
 export const yearGet = new Date().getFullYear();
 
 let monthGet = new Date().getMonth() + 1;
@@ -150,7 +149,7 @@ for (let i = 0; i <= yearGet; i++) {
 
 let str_years = array_years.join("");
 canasta_year_select.innerHTML = `
-<option class="canasta_date_option" value="year" selected disabled>Año</option> + ${str_years}`;
+<option class="canasta_date_option bg-neutral-950 text-neutral-400 " value="year" selected disabled>Año</option> + ${str_years}`;
 
 let monthSelected = false;
 let yearSelected = false;

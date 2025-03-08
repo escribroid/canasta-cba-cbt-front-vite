@@ -1,9 +1,3 @@
-/* == Tags =============================================== */
-
-option:disabled {
-    background-color: #121212;
-}
-
 /* == Classes ========================================= */
 .aclaracion-edades,
 .aclaracion-family,
@@ -25,6 +19,10 @@ option:disabled {
     border-radius: 50%;
     border: 0;
     transition: all 0.5s ease;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 .aclaracion-classes {
@@ -101,29 +99,16 @@ option:disabled {
     border-radius: 0.75rem;
 }
 
-.card__btn--reset {
-    display: flex;
-    background-color: #1e1e1e;
-    border: 0;
-    transition: all 1s ease-in-out;
-    box-shadow: 0 0 0.2rem #000;
-}
-
-.form-submit:active,
-.card__btn--reset:active {
-    transform: scale(1.3);
-    -webkit-transform: scale(1.3);
-    -moz-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -o-transform: scale(1.3);
-}
-
 .canasta_compare_input_month {
     width: 220px;
     padding: 0.625rem;
     font-size: var(--font-size-16_1rem);
     color: #f2f4f7;
     border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
 }
 
 .canasta_compare_input_month:focus {
@@ -217,13 +202,6 @@ option:disabled {
     height: 100%;
 }
 
-.card__svg--reset:active {
-    fill: #ff3366;
-    border-radius: var(--spacing-5_0-3125);
-    font-weight: bold;
-    box-shadow: 0 0 var(--spacing-10_0-625) #ff3366;
-}
-
 .cards_nota {
     display: flex;
     width: 80%;
@@ -236,13 +214,10 @@ option:disabled {
 
 .card__svg--reset {
     display: none;
-    position: absolute;
-    top: 0.675rem;
-    right: 0.5rem;
+    top: 0.625rem;
     transform: translateX(2rem);
     opacity: 0;
     margin-top: -0.5rem;
-    background-color: #000;
 }
 
 .card-main-table-all-classes {
@@ -289,30 +264,9 @@ option:disabled {
     margin-bottom: 0.5rem;
 }
 
-.form-submit {
-    background-color: #1e1e1e;
-    /* border: 0; */
-    /* padding: 0; */
-    /* margin-left: var(--spacing-5_0-3125); */
-    /* margin-right: 0rem; */
-    transition: all 0.1s ease;
-    /* box-shadow: 0 0 0.2rem #000; */
-}
-
 .indices-date {
     color: #ff5500;
     text-shadow: var(--spacing-1_0-0625) var(--spacing-1_0-0625) var(--spacing-1_0-0625) #000;
-}
-
-.icon-svg-add {
-    /* fill: #ff5500; */
-}
-
-.icon-svg-add:active {
-    /* fill: #ff5500;
-    border-radius: var(--spacing-5_0-3125);
-    font-weight: bold;
-    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500; */
 }
 
 .info_site {
@@ -520,47 +474,6 @@ tfoot {
     pointer-events: none; /* Evita interferencias con la interacción del usuario */
 }
 
-.table-compare-month-container {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    gap: 0.5rem;
-    /* padding: 0.5rem 0 0.5rem 0; */
-}
-
-.table-compare-month,
-.table-compare-year {
-    font-size: var(--font-size-18_1-125);
-    cursor: pointer;
-    height: 2.75rem;
-    background-color: #331c16;
-    border-color: #ff550066 !important;
-}
-
-.table-compare-year {
-    background-color: #ff8800;
-}
-
-.table-compare-month:focus,
-.table-compare-year:focus {
-    box-shadow: 0 0 0.3125rem 0.2rem #ff5500;
-    border-color: #ff550066;
-    outline: 0;
-}
-
-.table-compare-month-option:enabled,
-.table-compare-year:enabled {
-    background-color: #331c16;
-    border-color: #ff550066;
-}
-
-.table-compare-month-option:disabled,
-.table-compare-year:disabled {
-    display: block;
-    margin-right: var(--spacing-50_3-125);
-    background-color: #000;
-}
-
 .table-compare-income-in {
     background-color: #ff880022;
     cursor: pointer;
@@ -607,14 +520,14 @@ tfoot {
 .tooltip-custom {
     position: absolute;
     top: -125px;
-    right: 120%;
+    right: 130%;
     font-size: 1rem;
     background-color: black;
     color: white;
     padding: 8px;
-    border-radius: 5px;
-    width: 275px;
-    max-width: 275px;
+    border-radius: 0.25rem;
+    width: 250px;
+    max-width: 250px;
     white-space: normal;
     visibility: hidden;
     opacity: 0;
@@ -625,6 +538,10 @@ tfoot {
     -moz-transition: all ease-in-out 0.51s;
     -ms-transition: all ease-in-out 0.51s;
     -o-transition: all ease-in-out 0.51s;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    -ms-border-radius: 0.25rem;
+    -o-border-radius: 0.25rem;
 }
 
 .tooltip-button {
@@ -636,8 +553,11 @@ tfoot {
     font-family: var(--font-mono);
     background-color: #ff4f0066;
     border-radius: 50%;
-    border: 0;
     transition: all 0.5s ease;
+    -webkit-border-radius: 50%rem;
+    -moz-border-radius: 50%rem;
+    -ms-border-radius: 50%rem;
+    -o-border-radius: 50%rem;
 }
 
 /* ############################################################## */
@@ -656,51 +576,10 @@ tfoot {
     font-size: var(--font-size-6_0-375);
 }
 
-/* .form-age--option:enabled,
-.form-gender--option:enabled,
-.card-rent--option:enabled {
-    text-align: start;
-    background-color: #693015;
-    font-size: var(--font-size-24_1-5);
-} */
-
-/* .form-age-container {
-    display: flex;
-    width: 48%;
-    gap: 0.125rem;
-    align-items: center;
-} */
-
-/* .card-rent-in {
-    width: 95%;
-} */
-
 .rent_in_past {
     width: 100%;
     margin-bottom: 0.5rem;
 }
-
-/* .form-age {
-    width: calc(100% - 3.2rem);
-} */
-
-/* .form__select-age {
-    width: calc(100% - 0px);
-} */
-
-/* #card-total-rent {
-    width: 50%;
-} */
-
-/* .card-rent-in:disabled {
-    text-align: center;
-    border-color: #4caf5055;
-    background-color: #4caf5011;
-} */
-
-/* .card-rent-in::placeholder {
-    text-align: center;
-} */
 
 .error-message-age {
     background-color: #493333;
@@ -710,9 +589,7 @@ tfoot {
     width: var(--spacing-30_1-875);
 }
 
-/* ============================================================== */
-/* == IDs == */
-/* ============================================================== */
+/* == IDs ================================================================ */
 #foot {
     color: #f2f4f7;
     text-align: center;
