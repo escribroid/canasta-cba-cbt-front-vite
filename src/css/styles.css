@@ -213,11 +213,11 @@
 }
 
 .card__svg--reset {
-    display: none;
-    top: 0.625rem;
     transform: translateX(2rem);
-    opacity: 0;
-    margin-top: -0.5rem;
+    -webkit-transform: translateX(2rem);
+    -moz-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    -o-transform: translateX(2rem);
 }
 
 .card-main-table-all-classes {
@@ -551,13 +551,7 @@ tfoot {
     font-size: var(--font-size-16_1rem);
     font-weight: bold;
     font-family: var(--font-mono);
-    background-color: #ff4f0066;
-    border-radius: 50%;
     transition: all 0.5s ease;
-    -webkit-border-radius: 50%rem;
-    -moz-border-radius: 50%rem;
-    -ms-border-radius: 50%rem;
-    -o-border-radius: 50%rem;
 }
 
 /* ############################################################## */
