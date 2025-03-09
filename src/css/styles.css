@@ -149,17 +149,6 @@
 
 .card-header h2 {
     font-weight: 400;
-    font-family: var(--font-primary);
-}
-
-.card-cb-subtitle {
-    display: flex;
-    justify-content: space-between;
-    font-size: var(--font-size-16_1rem);
-    font-family: var(--font-secondary);
-    margin-left: 0.5rem;
-    gap: var(--spacing-10_0-625);
-    align-items: center;
 }
 
 .card-canastas-header-txt {
@@ -167,10 +156,10 @@
     font-size: var(--font-size-14_0-875);
 }
 
-.card-cb-title {
+/* .card-cb-title {
     margin-bottom: 1rem;
     margin-top: 0.5rem;
-}
+} */
 
 .card-canastas-header-title {
     text-align: center;
@@ -186,13 +175,13 @@
 }
 
 .card-cb-txt {
-    color: #f2f4f7;
-    display: flex;
-    margin-left: 1rem;
-    padding: 0.5rem 0 0 0;
-    font-size: var(--font-size-16_1rem);
-    align-items: center;
-    justify-content: space-between;
+    /* color: #f2f4f7; */
+    /* display: flex; */
+    /* margin-left: 1rem; */
+    /* padding: 0.5rem 0 0 0; */
+    /* font-size: var(--font-size-16_1rem); */
+    /* align-items: center; */
+    /* justify-content: space-between; */
 }
 
 .cards_linea_vineta {
@@ -560,14 +549,6 @@ tfoot {
     width: 100%;
     text-shadow: var(--spacing-1_0-0625) var(--spacing-1_0-0625) var(--spacing-1_0-0625) #000;
     font-size: var(--font-size-16_1rem);
-}
-
-.view-cba,
-.view-cbt,
-.view-cbta,
-.view-cbt-rent-3amb {
-    color: #f2f4f7;
-    font-size: var(--font-size-6_0-375);
 }
 
 .rent_in_past {

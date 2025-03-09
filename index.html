@@ -10,10 +10,17 @@
             content="CBA, CBT, IPC, Canasta Básica Alimentaria, Canasta Básica Total, Canasta Básica Total mas Alquiler, Canasta Básica Alimentaria mas Alquiler, Linea de pobreza, linea de indigencia, linea de clase media"
         />
         <meta name="author" content="escribroid" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#262626" />
         <!-- Metaetiqueta para cambiar el color de la barra de navegación en iOS -->
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <title>CANASTAS</title>
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
 
         <!-- Tailwind CSS -->
         <link href="/src/css/twcss.css" rel="stylesheet" />
@@ -22,7 +29,7 @@
         <link href="src/css/media-desktop.css" rel="stylesheet" />
     </head>
 
-    <body class="bg-neutral-500 text-orange-50">
+    <body class="font-inter bg-neutral-500 text-neutral-50">
         <!-- Contenedor principal shadow-xl shadow-neutral-950/80-->
         <div
             class="index-container bg-neutral-800 flex justify-around items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-xl shadow-neutral-950/85 border-b border-x border-neutral-900 border-x-neutral-700"
@@ -53,7 +60,7 @@
                     <img class="h-12 mr-2" src="src/img/iso_logo.svg" alt="Logo" />
                 </a>
                 <a class="flex items-center font-bold" href="./index.html">
-                    <h1 class="w-full text-4xl md:text-5xl">CANASTAS</h1>
+                    <h1 class="w-full font-inter text-4xl md:text-5xl">CANASTAS</h1>
                 </a>
                 <button class="text-white focus:outline-none">
                     <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,8 +117,7 @@
                                     <div
                                         class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
-                                        Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
-                                        género y edad, para calcular tu Canasta Verdadera.
+                                        Selecciona si tu Casa es Propia. Si es Alquilada, el valor del alquiler.
                                     </div>
                                 </div>
 
@@ -248,7 +254,7 @@
                                     <p
                                         class="card-family-txt ml-2 pl-2 text-base w-full border-l-3 border-blue-500 h-8 content-center"
                                     >
-                                        Agregá el grupo familiar
+                                        Grupo familiar
                                     </p>
                                     <div class="tooltip-custom-container relative">
                                         <button
@@ -259,7 +265,7 @@
                                         <div
                                             class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                         >
-                                            Agrega presionando el [+] de color naranja, a cada miembro de tu hogar, su
+                                            Agrega presionando el [+] de color azul, a cada miembro de tu hogar, su
                                             género y edad, para calcular tu Canasta Verdadera.
                                         </div>
                                     </div>
@@ -921,9 +927,9 @@
                                         i
                                     </button>
                                     <div
-                                        class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
+                                        class="tooltip-custom absolute text-start bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
-                                        Ingresá el dinero mensual del que disponen en tu hogar, y se coloreará tu sector
+                                        Ingresá el dinero mensual del que disponen en tu hogar, y Resaltará tu sector
                                         socioeconómico.
                                     </div>
                                 </div>
@@ -1029,10 +1035,10 @@
                                     i
                                 </button>
                                 <div
-                                    class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
+                                    class="tooltip-custom absolute text-start bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
                                     Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final el
-                                    ingreso máximo para pertenecer a ese sector socioeconómico.
+                                    ingreso máximo, de cada sector socioeconómico.
                                 </div>
                             </div>
                         </span>
@@ -1144,8 +1150,8 @@
                                     <div
                                         class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                     >
-                                        Tu Clase Social hace 2 años, ¿era mejor? ¿peor? Ingresa Mes y Año y obtendrás tu
-                                        canasta en esa fecha. Tienes que saber tu salario en ese momento solamente.
+                                        Tu Clase Social Antes, ¿mejor? ¿peor? Ingresa Mes, Año y obtendrás tu canasta en
+                                        esa fecha. Tenes que saber tu salario en ese momento solamente.
                                     </div>
                                 </div>
                             </span>
@@ -1352,21 +1358,6 @@
                                 <div class="m-0 p-0 pr-4 bg-black flex items-center table-classes-alta-max-info">
                                     Max
                                 </div>
-                                <span class="flex absolute items-center right-2">
-                                    <div class="tooltip-custom-container relative">
-                                        <button
-                                            class="tooltip-button info-btn bg-neutral-700 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-                                        >
-                                            i
-                                        </button>
-                                        <div
-                                            class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
-                                        >
-                                            Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al
-                                            final el ingreso máximo para pertenecer a ese sector socioeconómico.
-                                        </div>
-                                    </div>
-                                </span>
                             </div>
                         </div>
                     </div>
@@ -1394,8 +1385,8 @@
                 class="rounded-2xl card-cba card-canastas-2 mb-6 p-0.5 px-2 bg-neutral-800 shadow-xl shadow-neutral-950/85 border border-neutral-700/50"
             >
                 <div class="max-w-sm mx-auto">
-                    <h2 class="text-2xl font-bold mb-2 card-cb-title">Canasta Básica Alimentaria</h2>
-                    <h3 class="text-xl font-semibold mb-2 card-cb-subtitle">
+                    <h2 class="card-cb-title text-2xl font-bold mb-4 mt-2 text-center">Canasta Básica Alimentaria</h2>
+                    <h3 class="card-cb-subtitle flex justify-between text-lg font-semibold mb-2">
                         • CBA - Linea de indigencia
                         <span>
                             <div class="tooltip-custom-container relative">
@@ -1407,20 +1398,20 @@
                                 <div
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
-                                    CBA es la Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Este
-                                    valor es para un hogar modelo de 4 miembros del indec. La Canasta real de tu hogar
-                                    la podés calcular <a href="#canasta-main">aquí</a>.
+                                    CBA: Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Valor para
+                                    un hogar modelo. La Canasta real de tu hogar la podés calcular
+                                    <a class="font-bold text-blue-600" href="#canasta-main">aquí</a>.
                                 </div>
                             </div>
                         </span>
                     </h3>
-                    <div class="py-1 pb-0 card-cb-txt">
+                    <div class="py-1 pb-0 card-cb-txt flex justify-between">
                         • Con Casa Propia
                         <div class="view-cba"></div>
                     </div>
                 </div>
-                <ul class="flex m-1">
-                    <li class="linea-indigencia justify-items-center m-2 border-t pt-1"></li>
+                <ul class="flex">
+                    <li class="linea-indigencia justify-items-center text-sm text-neutral-300 m-2 border-t pt-2"></li>
                 </ul>
             </div>
 
@@ -1443,10 +1434,9 @@
                                 <div
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
-                                    CBT es la Canasta Básica Total, es el umbral de la Línea de pobreza. Este valor es
-                                    para un hogar modelo de 4 miembros del INDEC. La canasta real de tu hogar la podés
-                                    calcular
-                                    <a href="#canasta-main">aquí</a>.
+                                    CBT: Canasta Básica Total, es el umbral de la Línea de pobreza. Valor para hogar
+                                    modelo. La canasta real de tu hogar la podés calcular
+                                    <a class="font-bold text-blue-600" href="#canasta-main">aquí</a>.
                                 </div>
                             </div>
                         </span>
@@ -1482,10 +1472,10 @@
                                 <div
                                     class="tooltip-custom absolute bg-gray-800 text-white p-2 rounded shadow-xl shadow-black inset-shadow-sm inset-shadow-black ring-2 ring-green-950"
                                 >
-                                    CBT+A es la Canasta Básica Total más Alquiler promedio de 3 ambientes, marca el
-                                    umbral de la Línea de pobreza alquilando. Este valor es para un hogar modelo de 4
-                                    miembros del indec. La Canasta real de tu hogar la podés calcular
-                                    <a href="#canasta-main">aquí</a>.
+                                    CBT+A: Canasta Básica Total más Alquiler promedio, es el umbral de la Línea de
+                                    pobreza alquilando. Valor para hogar modelo. La Canasta real de tu hogar la podés
+                                    calcular
+                                    <a class="font-bold text-blue-600" href="#canasta-main">aquí</a>.
                                 </div>
                             </div>
                         </span>
@@ -1500,12 +1490,9 @@
                     <li class="linea-pobreza-renting justify-items-center m-2 border-t pt-1"></li>
                 </ul>
             </div>
-
-            <!-- </div> -->
         </main>
 
-        <!-- FOOTER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-
+        <!-- FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <footer
             id="foot"
             class="foot rounded-t-2xl p-1 bg-neutral-900 shadow-xl shadow-neutral-350 border-t border-x border-neutral-700 bg-gradient-to-b from-neutral-800 to-neutral-900"
@@ -1517,13 +1504,7 @@
             </div>
         </footer>
 
-        <!-- JS ------------------------------------------------------------------------>
-        <!-- BOOTSTRAP -->
-        <!--  <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"
-        ></script> -->
+        <!-- JavaScript ----------------------------------------------------------------->
         <script type="module" src="src/js/main.js"></script>
         <!-- <script type="module" src="./js/shared.js"></script> -->
         <script type="module" src="src/js/app.js"></script>
@@ -1532,7 +1513,6 @@
         <script type="module" src="src/js/utils.js"></script>
         <script type="module" src="src/js/can_past.js"></script>
         <script type="module" src="src/js/theme.js"></script>
-
         <!-- <script type="module" src="./js/mod-canasta-custom.js"></script> -->
     </body>
 </html>
