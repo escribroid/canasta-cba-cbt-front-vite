@@ -53,29 +53,12 @@
         width: 49%;
     }
 
-    .card-classes {
-        width: 49%;
-        height: auto;
-        justify-content: flex-start;
-    }
-
     .card-compare {
         width: 49%;
     }
 
-    .card-rent-in {
-        width: 97.5%;
-    }
-
     header {
         margin-bottom: 1.25rem;
-    }
-
-    .icon-svg-add:hover {
-        /* fill: #ff5500; */
-        /* border-radius: 5px; */
-        /* font-weight: bold;
-        box-shadow: 0px 0px 10px 4px #ff5500; */
     }
 
     .nav-link {
@@ -84,12 +67,6 @@
 
     .table-canastas {
         width: 98%;
-    }
-
-    .table-classes-alta-min-info,
-    .table-classes-alta-max-info,
-    .table-classes-info {
-        font-size: 0.8rem;
     }
 }
 

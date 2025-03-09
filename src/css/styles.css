@@ -128,11 +128,6 @@
     }
 }
 
-.card-compare__title {
-    color: #fffaf0;
-    font-size: var(--font-size-22_1-375);
-}
-
 .card-cba_value {
     color: #ff8800;
     font-weight: var(--font-weight-700-bold);
@@ -263,29 +258,10 @@
     padding: 0;
 }
 
-.income__input {
-    background-color: #ff880022;
-    cursor: pointer;
-    height: 2.75rem;
-    max-width: 12rem;
-    margin-right: var(--spacing-5_0-3125);
-    border: 0.0625rem solid #ff880099;
-}
-
-.income__input:focus {
-    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
-    border-color: #ff550066;
-}
-
 .navbar--img {
     margin-right: var(--spacing-8_0-5);
     width: var(--spacing-40_2-5);
     filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%);
-}
-
-.mayor-menor {
-    font-size: var(--font-size-18_1-125);
-    font-size: var(--font-size-18_1-125);
 }
 
 .modal-body {
@@ -329,13 +305,6 @@
     margin: 0;
 }
 
-.table-classes-indigencia,
-.table-classes-baja,
-.table-classes-media,
-.table-classes-alta {
-    background-color: #090909;
-}
-
 .table-canastas__select {
     display: flex;
     width: 100%;
@@ -364,69 +333,6 @@
     align-items: center;
     margin-bottom: 1rem;
     gap: 0.5rem;
-}
-
-.table-classes-indigencia {
-    border-top: 0.0625rem solid #2c2f33;
-}
-
-.table-classes-alta {
-    border-bottom: 0.0625rem solid #2c2f33;
-}
-
-.table-classes-pobreza,
-.table-classes-media-fragil,
-.table-classes-media-alta,
-.table-classes-acomodada {
-    background-color: #252529;
-}
-
-.table-classes-indigencia-min,
-.table-classes-indigencia-max,
-.table-classes-pobreza-min,
-.table-classes-pobreza-max,
-.table-classes-baja-min,
-.table-classes-baja-max,
-.table-classes-media-fragil-min,
-.table-classes-media-fragil-max,
-.table-classes-media-min,
-.table-classes-media-max,
-.table-classes-media-alta-min,
-.table-classes-media-alta-max,
-.table-classes-alta--min,
-.table-classes-alta-max,
-.table-classes-alta-min-info,
-.table-classes-alta-max-info,
-.table-classes-indigencia-min-past,
-.table-classes-indigencia-max-past,
-.table-classes-pobreza-min-past,
-.table-classes-pobreza-max-past,
-.table-classes-baja-min-past,
-.table-classes-baja-max-past,
-.table-classes-media-fragil-min-past,
-.table-classes-media-fragil-max-past,
-.table-classes-media-min-past,
-.table-classes-media-max-past,
-.table-classes-media-alta-min-past,
-.table-classes-media-alta-max-past,
-.table-classes-alta-min-past,
-.table-classes-alta-max-past {
-    width: 31%;
-    font-size: var(--font-size-18_1-125);
-}
-
-.table-classes-alta-max-info {
-    border-radius: 0 0 1rem 0;
-}
-
-.table-classes-alta-min-info {
-    display: inline-flex;
-    border-radius: 0 0 0 1rem;
-    justify-content: center;
-}
-
-.table-classes--txt {
-    font-size: var(--font-size-22_1-375);
 }
 
 .table-canastas__select {
