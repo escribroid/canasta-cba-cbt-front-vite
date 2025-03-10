@@ -30,27 +30,8 @@
         padding: 0.2em 0.2em;
     }
 
-    /* .card__svg--reset:hover {
-        fill: #ff3366;
-        border-radius: 5px;
-        font-weight: bold;
-        box-shadow: 0px 0px 10px 4px #ff3366;
-    } */
-
     .card-header {
         height: 100%;
-    }
-
-    .card-canastas-1 {
-        width: 49%;
-    }
-
-    .card-canastas-3 {
-        width: 49%;
-    }
-
-    .card-canastas-4 {
-        width: 49%;
     }
 
     .card-compare {

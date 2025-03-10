@@ -151,32 +151,10 @@
     font-size: var(--font-size-14_0-875);
 }
 
-/* .card-cb-title {
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-} */
-
-.card-canastas-header-title {
-    text-align: center;
-    font-weight: 500;
-    margin-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
 .card-canastas-header-subtitle {
     text-align: center;
     padding-bottom: 0.5rem;
     color: #919191;
-}
-
-.card-cb-txt {
-    /* color: #f2f4f7; */
-    /* display: flex; */
-    /* margin-left: 1rem; */
-    /* padding: 0.5rem 0 0 0; */
-    /* font-size: var(--font-size-16_1rem); */
-    /* align-items: center; */
-    /* justify-content: space-between; */
 }
 
 .cards_linea_vineta {
@@ -280,19 +258,6 @@
     text-align: center;
 }
 
-.rent-past {
-    background-color: #ff880022;
-    cursor: pointer;
-    height: 2rem;
-    max-width: 12rem;
-    border: 0.0625rem solid #ff550066;
-}
-
-.rent-past:focus {
-    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
-    border-color: #ff550066;
-}
-
 .row {
     display: flex;
     justify-content: space-around;
@@ -367,19 +332,6 @@ tfoot {
     border-radius: 0.5rem;
     border: 0.125rem solid #141414;
     pointer-events: none; /* Evita interferencias con la interacción del usuario */
-}
-
-.table-compare-income-in {
-    background-color: #ff880022;
-    cursor: pointer;
-    height: 2rem;
-    max-width: 12rem;
-    border: 0.0625rem solid #ff550066;
-}
-
-.table-compare-income-in:focus {
-    box-shadow: 0 0 var(--spacing-5_0-3125) 0.2rem #ff5500;
-    border-color: #ff550066;
 }
 
 .table-classes-past {
