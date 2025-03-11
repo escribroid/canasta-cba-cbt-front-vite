@@ -146,16 +146,7 @@
     font-weight: 400;
 }
 
-.card-canastas-header-txt {
-    text-align: center;
-    font-size: var(--font-size-14_0-875);
-}
 
-.card-canastas-header-subtitle {
-    text-align: center;
-    padding-bottom: 0.5rem;
-    color: #919191;
-}
 
 .cards_linea_vineta {
     font-weight: bold;
@@ -169,10 +160,7 @@
     width: 80%;
 }
 
-.cards_nota_txt {
-    font-size: var(--font-size-14_0-875);
-    text-align: center;
-}
+
 
 .card__svg--reset {
     transform: translateX(2rem);
@@ -332,10 +320,6 @@ tfoot {
     border-radius: 0.5rem;
     border: 0.125rem solid #141414;
     pointer-events: none; /* Evita interferencias con la interacción del usuario */
-}
-
-.table-classes-past {
-    display: block;
 }
 
 .table-canastas,

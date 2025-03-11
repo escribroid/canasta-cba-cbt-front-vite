@@ -74,17 +74,17 @@ window.addEventListener("dataJsonFront", function (even) {
 
     function lineaIndigencia() {
         const lineaIndigencia = document.querySelector(".linea-indigencia");
-        lineaIndigencia.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Indigencia con Casa Propia: ingreso mensual menor a $ ${cba}</span></div>`;
+        lineaIndigencia.innerHTML = `<div class="cards_nota"><span >» Indigencia con Casa Propia: ingreso mensual menor a $ ${cba}</span></div>`;
     }
 
     function lineaPobreza() {
         const lineaPobreza = document.querySelector(".linea-pobreza");
-        lineaPobreza.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Pobreza con Casa Propia: ingreso mensual menor a $ ${cbt}</span></div>`;
+        lineaPobreza.innerHTML = `<div class="cards_nota"><span >» Pobreza con Casa Propia: ingreso mensual menor a $ ${cbt}</span></div>`;
     }
 
     function linea_pobreza_alquilando() {
         const linea_pobreza_alquilando = document.querySelector(".linea-pobreza-renting");
-        linea_pobreza_alquilando.innerHTML = `<div class="cards_nota"><span class="cards_nota_txt">» Pobreza ALQUILANDO: ingreso mensual menor a $ ${cbt_alquiler_3amb}</span></div>`;
+        linea_pobreza_alquilando.innerHTML = `<div class="cards_nota"><span >» Pobreza ALQUILANDO: ingreso mensual menor a $ ${cbt_alquiler_3amb}</span></div>`;
     }
 
     calcular_cba();
@@ -517,7 +517,7 @@ window.addEventListener("dataJsonFront", function (even) {
         document.querySelector(".table-classes-media-alta-min").textContent = clase_media_add_group_alquilando;
         document.querySelector(".table-classes-media-alta-max").textContent = clase_media_alta_add_group_alquilando;
 
-        document.querySelector(".table-classes-alta--min").textContent = clase_media_alta_add_group_alquilando;
+        document.querySelector(".table-classes-alta-min").textContent = clase_media_alta_add_group_alquilando;
         document.querySelector(".table-classes-alta-max").textContent = clase_alta_add_group_baja_alquilando;
         return suma_indigencia_alquilando;
     }
