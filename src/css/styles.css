@@ -1,74 +1,8 @@
 /* == Classes ========================================= */
-.aclaracion-edades,
-.aclaracion-family,
-.aclaracion-ingresos,
-.aclaracion-classes,
-.aclaracion-date,
-.aclaracion-date-card,
-.aclaracion-rent-past,
-.aclaracion-vivienda {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-16_1rem);
-    font-weight: bold;
-    font-family: var(--font-mono);
-    background-color: #ff4f0066;
-    width: var(--spacing-26_1-625);
-    height: var(--spacing-26_1-625);
-    border-radius: 50%;
-    border: 0;
-    transition: all 0.5s ease;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
 
-.aclaracion-classes {
-    width: var(--spacing-24_1-5);
-    height: var(--spacing-24_1-5);
-}
 
-.aclaracion-date,
-.aclaracion-date-card,
-.aclaracion-rent-past,
-.aclaracion-ingresos {
-    position: absolute;
-    right: 0.4rem;
-}
 
-.aclaracion-family {
-    position: absolute;
-    right: 0.95rem;
-}
-
-.aclaracion-vivienda {
-    position: absolute;
-    right: 0.45rem;
-}
-
-.aclaracion-classes {
-    display: flex;
-    position: absolute;
-    left: 0.25rem;
-}
-
-.aclaracion-date {
-    margin-top: 0.5rem;
-}
-
-.aclaracion-edades:hover,
-.aclaracion-ingresos:hover,
-.aclaracion-classes:hover,
-.aclaracion-date:hover,
-.aclaracion-rent-past:hover {
-    transform: scale(1.1);
-    border-radius: var(--spacing-10_0-625);
-    background-color: #ff4f00bb;
-}
-
-.aclaracion-date--over {
+.tooltip-date--over {
     top: 0;
     left: 0;
     position: absolute;
@@ -79,43 +13,6 @@
     z-index: 20;
 }
 
-.aclaracion-icons {
-    display: inline-flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-16_1rem);
-    width: var(--spacing-30_1-875);
-    height: var(--spacing-30_1-875);
-    border: 0;
-    transition: all 5s ease;
-}
-
-.btn-close {
-    font-size: var(--font-size-30_1-875);
-    width: 2em;
-    height: 1.6em;
-    padding: 0.2em 0.2em;
-    border-radius: 0.75rem;
-}
-
-.canasta_compare_input_month {
-    width: 220px;
-    padding: 0.625rem;
-    font-size: var(--font-size-16_1rem);
-    color: #f2f4f7;
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
-}
-
-.canasta_compare_input_month:focus {
-    border-color: #ff5733;
-    outline: none;
-    box-shadow: 0 0 var(--spacing-10_0-625) #ff5500;
-}
 
 @keyframes parpadeo {
     0%,
@@ -129,7 +26,7 @@
 }
 
 .card-cba_value {
-    color: #ff8800;
+    color: #10731a;
     font-weight: var(--font-weight-700-bold);
     margin-left: var(--spacing-10_0-625);
     background: linear-gradient(#140803, #0f0703);
@@ -142,26 +39,6 @@
     -o-border-radius: var(--spacing-5_0-3125);
 }
 
-.card-header h2 {
-    font-weight: 400;
-}
-
-
-
-.cards_linea_vineta {
-    font-weight: bold;
-    border-radius: 50%;
-    margin: 0 var(--spacing-10_0-625) 0 var(--spacing-10_0-625);
-    height: 100%;
-}
-
-.cards_nota {
-    display: flex;
-    width: 80%;
-}
-
-
-
 .card__svg--reset {
     transform: translateX(2rem);
     -webkit-transform: translateX(2rem);
@@ -170,20 +47,11 @@
     -o-transform: translateX(2rem);
 }
 
-.card-main-table-all-classes {
-    font-size: var(--font-size-10_0-625) !important;
-    border: 0.0625rem solid #141414;
-    border-radius: 0.5rem;
-    width: 100%;
-    margin: 0;
-    background-color: #ff880033;
-}
 
-.compare__switch {
-    position: absolute;
-    top: 0.8125rem;
-    left: 0.5rem;
-}
+
+
+
+
 
 .detalles_delete {
     padding: 0;
@@ -192,9 +60,6 @@
 
 .detalles_delete_body {
     cursor: pointer;
-}
-
-.detalles_delete_body {
     stroke: #000000;
 }
 
@@ -208,21 +73,12 @@
     stroke: #ce2331;
 }
 
-.form-container {
-    padding: 0.1rem 0.5rem 0 0.5rem;
-    border-bottom: var(--spacing-2_0-125) solid #2c2f33;
-    margin-bottom: 0.5rem;
-}
 
-.indices-date {
-    color: #ff5500;
-    text-shadow: var(--spacing-1_0-0625) var(--spacing-1_0-0625) var(--spacing-1_0-0625) #000;
-}
 
-.info_site {
-    margin: 0;
-    padding: 0;
-}
+
+
+
+
 
 .navbar--img {
     margin-right: var(--spacing-8_0-5);
@@ -386,12 +242,7 @@ tfoot {
 }
 
 /* ############################################################## */
-.version {
-    color: #f2f4f7;
-    width: 100%;
-    text-shadow: var(--spacing-1_0-0625) var(--spacing-1_0-0625) var(--spacing-1_0-0625) #000;
-    font-size: var(--font-size-16_1rem);
-}
+
 
 .rent_in_past {
     width: 100%;
@@ -407,8 +258,3 @@ tfoot {
 }
 
 /* == IDs ================================================================ */
-#foot {
-    color: #f2f4f7;
-    text-align: center;
-    font-size: var(--font-size-16_1rem);
-}
