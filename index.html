@@ -692,19 +692,27 @@
                             <span> Cuidado</span><span> Dias</span>
 
                             <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
-                            <div class="flex justify-center overflow-auto rounded-2xl border border-neutral-500/50">
-                                <table class="min-w-full table-auto border border-neutral-700/50">
+                            <div class="flex justify-center overflow-auto rounded-2xl">
+                                <table class="min-w-full table-auto">
                                     <thead class="bg-neutral-900">
-                                        <tr class="border">
+                                        <tr class="border border-neutral-700">
                                             <th
-                                                class="w-1/3 p-2 text-center text-neutral-300 font-semibold rounded-tl-2xl border"
+                                                class="w-1/3 p-2 text-center text-neutral-300 font-semibold rounded-tl-2xl border border-neutral-700"
                                             >
                                                 Género
                                             </th>
-                                            <th class="w-1/12 p-2 text-center text-neutral-300 font-semibold">Edad</th>
-                                            <th class="p-2 text-center text-neutral-300 font-semibold">$</th>
                                             <th
-                                                class="w-1/12 p-2 text-center text-neutral-300 font-semibold rounded-tr-2xl"
+                                                class="w-1/12 p-2 text-center text-neutral-300 font-semibold border border-neutral-700"
+                                            >
+                                                Edad
+                                            </th>
+                                            <th
+                                                class="p-2 text-center text-neutral-300 font-semibold border border-neutral-700"
+                                            >
+                                                $
+                                            </th>
+                                            <th
+                                                class="w-1/12 p-2 text-center text-neutral-300 font-semibold rounded-tr-2xl border border-neutral-700"
                                                 title="Eliminar"
                                             >
                                                 <!-- SVG DELETE -->
@@ -731,53 +739,21 @@
                                     <tfoot class="bg-neutral-900">
                                         <tr>
                                             <th
-                                                class="table-canastas-rent w-1/4 p-2 text-center text-neutral-300 font-semibold"
+                                                class="table-canastas-rent w-1/4 p-2 text-center text-neutral-300 font-semibold border border-neutral-700"
                                             >
                                                 Alquiler
                                             </th>
-                                            <th class="p-2"></th>
-                                            <th id="card-main-rent-out" class="w-3/4 p-2"></th>
-                                            <th class="p-2"></th>
+                                            <th class="p-2 border border-neutral-700"></th>
+                                            <th
+                                                id="card-main-rent-out "
+                                                class="w-3/4 p-2 border border-neutral-700"
+                                            ></th>
+                                            <th class="p-2 border border-neutral-700"></th>
                                         </tr>
                                         <tr>
                                             <th
                                                 class="w-1/3 p-2 text-center text-neutral-300 font-semibold rounded-bl-2xl"
-                                            >
-                                                <label for="table-canastas__select" class="relative">
-                                                    <select
-                                                        name="table-canastas__select"
-                                                        id="table-canastas__select"
-                                                        title="Seleccione el detalle personal"
-                                                        class="w-full p-2 bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
-                                                    >
-                                                        <option
-                                                            value=""
-                                                            class="bg-neutral-950 text-neutral-400"
-                                                            disabled
-                                                        >
-                                                            Detalle individual ▼▼
-                                                        </option>
-                                                        <option value="indigencia">• CBA - Linea de indigencia</option>
-                                                        <option value="pobreza" selected>
-                                                            • CBT - Linea de pobreza
-                                                        </option>
-                                                        <option value="clase_baja">• Clase Baja</option>
-                                                        <option value="clase_media_fragil">• Clase Media Fragil</option>
-                                                        <option value="clase_media">• Clase Media</option>
-                                                    </select>
-                                                    <div
-                                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-                                                    >
-                                                        <svg
-                                                            class="fill-current h-6 w-6"
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 20 20"
-                                                        >
-                                                            <path d="M7 10l5 5 5-5H7z" />
-                                                        </svg>
-                                                    </div>
-                                                </label>
-                                            </th>
+                                            ></th>
                                             <th class="w-1/12 p-2 text-center"></th>
                                             <th id="total-canasta" class="p-2 text-center"></th>
                                             <th class="w-1/12 p-2 rounded-br-2xl text-center"></th>
@@ -787,6 +763,30 @@
                             </div>
                         </form>
                     </div>
+                    <label class="relative flex w-60 m-auto items-center" for="table-canastas__select">
+                        <select
+                            name="table-canastas__select"
+                            id="table-canastas__select"
+                            title="Seleccione el detalle personal"
+                            class="my-2 p-2 w-full bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
+                        >
+                            <option value="" class="bg-neutral-950 text-neutral-400" disabled>
+                                Detalle individual ▼▼
+                            </option>
+                            <option value="indigencia">• CBA - Linea de indigencia</option>
+                            <option value="pobreza" selected>• CBT - Linea de pobreza</option>
+                            <option value="clase_baja">• Clase Baja</option>
+                            <option value="clase_media_fragil">• Clase Media Fragil</option>
+                            <option value="clase_media">• Clase Media</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                        >
+                            <svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M7 10l5 5 5-5H7z" />
+                            </svg>
+                        </div>
+                    </label>
                 </div>
             </div>
 
@@ -919,7 +919,7 @@
                                     >≤</span
                                 >
                                 <span class="w-[10ch]">Acomodada</span>
-                                <span class="mayor-menor w-[1ch] text-center h-full flex items-center">&lt;</span>
+                                <span class="mayor-menor w-[1ch] text-center h-full flex items-center"></span>
                             </div>
                             <div class="table-classes-acomodada-max m-0 p-0 flex justify-center items-center"></div>
                         </div>
@@ -1122,9 +1122,9 @@
                         </div>
 
                         <!-- Tabla clases sociales pasadas------------------------------->
-                        <div class="table-classes-past pt-0 mt-2 text-center">
+                        <div class="table-classes-past pt-0 mt-2 text-center rounded-b-2xl bg-neutral-900">
                             <div
-                                class="table-classes-indigencia table-classes-indigencia-past flex flex-wrap m-0 mb-0 p-0 w-full"
+                                class="table-classes-indigencia table-classes-indigencia-past flex flex-wrap m-0 mb-0 p-0 w-full bg-neutral-950"
                             >
                                 <div
                                     class="table-classes-indigencia-min-past m-0 p-0 flex justify-center items-center"
@@ -1158,7 +1158,9 @@
                                 ></div>
                             </div>
 
-                            <div class="table-classes-baja table-classes-baja-past flex flex-wrap m-0 p-0 w-full">
+                            <div
+                                class="table-classes-baja table-classes-baja-past bg-neutral-950 flex flex-wrap m-0 p-0 w-full"
+                            >
                                 <div class="table-classes-baja-min-past m-0 p-0 flex justify-center items-center"></div>
                                 <div
                                     class="class-baja-row class-baja-row-past flex flex-1 m-0 p-0 py-1 justify-between items-center"
@@ -1190,7 +1192,9 @@
                                 ></div>
                             </div>
 
-                            <div class="table-classes-media table-classes-media-past flex flex-wrap m-0 p-0 w-full">
+                            <div
+                                class="table-classes-media table-classes-media-past bg-neutral-950 flex flex-wrap m-0 p-0 w-full"
+                            >
                                 <div
                                     class="table-classes-media-min-past m-0 p-0 flex justify-center items-center"
                                 ></div>
@@ -1229,7 +1233,7 @@
                             <div class="table-classes-alta table-classes-alta-past flex flex-wrap m-0 p-0 w-full">
                                 <div class="table-classes-alta-min-past m-0 p-0 flex justify-center items-center"></div>
                                 <div
-                                    class="class-alta-row class-alta-row-past flex flex-1 m-0 p-0 py-1 justify-between items-center"
+                                    class="class-alta-row class-alta-row-past bg-neutral-950 flex flex-1 m-0 p-0 py-1 justify-between items-center"
                                 >
                                     <span class="text-center mayor-menor pr-0 h-full flex justify-center items-center"
                                         >≤</span
@@ -1239,28 +1243,33 @@
                             </div>
 
                             <div
-                                class="table-classes-acomodada table-classes-acomodada-past flex flex-wrap m-0 p-0 w-full"
+                                class="table-classes-acomodada table-classes-acomodada-past justify-center flex flex-wrap m-0 p-0 w-full"
                             >
-                                <div class="class-media-alta-row flex flex-1 m-0 p-0 py-1 justify-center items-center">
-                                    Acomodada
+                                <div
+                                    class="class-acomodada-row class-acomodada-row-past flex m-0 p-0 py-1 justify-between items-center"
+                                >
+                                    <span
+                                        class="mayor-menor w-[1ch] pr-0 h-full flex justify-center items-center text-center"
+                                        >≤</span
+                                    >
+                                    <span class="w-[10ch]">Acomodada</span>
+                                    <span class="mayor-menor w-[1ch] text-center h-full flex items-center"></span>
                                 </div>
                             </div>
 
-                            <div class="flex flex-wrap w-full text-gray-500 relative">
-                                <div class="table-classes-alta-min-info m-0 p-0 pl-4 py-2 bg-black">Min</div>
-                                <div
-                                    class="table-classes-info flex-1 m-0 p-0 bg-black flex justify-between items-center"
-                                >
+                            <div
+                                class="flex flex-wrap justify-center w-full bg-neutral-950 text-gray-500 relative rounded-b-2xl"
+                            >
+                                <div class="table-classes-alta-min-info m-auto justify-center p-0 py-2">Min</div>
+                                <div class="table-classes-info justify-center flex items-center">
                                     <span
-                                        class="mayor-menor bg-black pr-0 h-full flex justify-center items-center text-center"
+                                        class="mayor-menor w-[1ch] pr-0 h-full flex justify-center items-center text-center"
                                         >≤</span
-                                    >Clase social<span class="mayor-menor bg-black text-center h-full flex items-center"
-                                        >&lt;</span
                                     >
+                                    <span class="w-[10ch]">Clase social</span>
+                                    <span class="mayor-menor w-[1ch] text-center h-full flex items-center">&lt;</span>
                                 </div>
-                                <div class="table-classes-alta-max-info m-0 p-0 pr-4 bg-black flex items-center">
-                                    Max
-                                </div>
+                                <div class="table-classes-alta-max-info m-auto p-0 flex items-center">Max</div>
                             </div>
                         </div>
                     </div>
