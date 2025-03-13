@@ -1,7 +1,4 @@
 /* == Classes ========================================= */
-
-
-
 .tooltip-date--over {
     top: 0;
     left: 0;
@@ -12,7 +9,6 @@
     opacity: 0.6;
     z-index: 20;
 }
-
 
 @keyframes parpadeo {
     0%,
@@ -45,157 +41,6 @@
     -moz-transform: translateX(2rem);
     -ms-transform: translateX(2rem);
     -o-transform: translateX(2rem);
-}
-
-
-
-
-
-
-
-.detalles_delete {
-    padding: 0;
-    margin: 0;
-}
-
-.detalles_delete_body {
-    cursor: pointer;
-    stroke: #000000;
-}
-
-.detalles_delete_body:active {
-    fill: #ce2331;
-    stroke: #ce2331;
-    transform: scale(1.5);
-}
-
-.detalles_delete_body:active .svg-path {
-    stroke: #ce2331;
-}
-
-
-
-
-
-
-
-
-.navbar--img {
-    margin-right: var(--spacing-8_0-5);
-    width: var(--spacing-40_2-5);
-    filter: invert(55%) sepia(90%) saturate(5600%) hue-rotate(0deg) brightness(100%) contrast(105%);
-}
-
-.modal-body {
-    position: relative;
-    flex: 1 1 auto;
-    padding: 0.3rem;
-}
-
-.person-form-select,
-.person-select-age {
-    margin-top: 0;
-}
-
-.person-add-title {
-    margin: var(--spacing-10_0-625) 0 var(--spacing-14_0-875) 0;
-    text-align: center;
-}
-
-.row {
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    width: 90%;
-}
-
-.subtitle {
-    text-align: center;
-    margin: 0;
-}
-
-.table-canastas__select {
-    display: flex;
-    width: 100%;
-    height: 2.25rem;
-    font-size: var(--font-size-18_1-125);
-    background-color: #ff880055;
-    border: 0;
-}
-
-.table-canastas__select:focus-visible {
-    outline: none;
-    font-size: var(--font-size-18_1-125);
-    border: 0;
-    background-color: #ff880022;
-}
-
-.table-canastas__select--option {
-    background-color: #3f3224;
-    border-radius: 0.5rem;
-}
-
-.table-compare-rent {
-    display: flex;
-    max-width: 220px;
-    margin: 0 auto;
-    align-items: center;
-    margin-bottom: 1rem;
-    gap: 0.5rem;
-}
-
-.table-canastas__select {
-    font-size: var(--font-size-16_1rem);
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-}
-
-.table-canastas__select td,
-th,
-tbody,
-thead,
-tfoot {
-    border: 0.0625rem solid #3c3f43;
-}
-
-.table-canastas__select {
-    position: relative;
-    border: 0;
-    border-radius: 0.5rem;
-}
-
-.table-canastas__select::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    bottom: -1px;
-    left: -1px;
-    border-radius: 0.5rem;
-    border: 0.125rem solid #141414;
-    pointer-events: none; /* Evita interferencias con la interacción del usuario */
-}
-
-.table-canastas,
-.table-canastas-head,
-.table-canastas-header {
-    text-align: center;
-}
-
-.table-canastas-foot th {
-    border: none;
-    font-weight: 400;
-}
-
-.text-bg-dark {
-    color: #f2f4f7 !important;
-    background: none !important;
-}
-
-.text--shadow {
-    text-shadow: var(--spacing-2_0-125) var(--spacing-2_0-125) var(--spacing-5_0-3125) rgba(0, 0, 0, 0.5);
 }
 
 /* ############################################################## */
@@ -242,13 +87,6 @@ tfoot {
 }
 
 /* ############################################################## */
-
-
-.rent_in_past {
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
 .error-message-age {
     background-color: #493333;
     color: #f2f4f7;

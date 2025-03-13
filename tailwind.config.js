@@ -10,7 +10,7 @@ module.exports = {
     },
     plugins: [],
     corePlugins: {
-        preflight: true, // Asegúrate de que preflight esté habilitado
+        preflight: true, 
     },
 };
 
