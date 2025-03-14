@@ -1,68 +1,48 @@
 @media (max-width: 351px) {
-    .logo {
-        font-size: var(--font-size-32_2rem);
-    }
+	.logo {
+		font-size: var(--font-size-32_2rem);
+	}
 }
 
 @media (max-width: 331px) {
-    .logo {
-        font-size: var(--font-size-30_1-875);
-    }
+	.logo {
+		font-size: var(--font-size-30_1-875);
+	}
 }
 
 @media (min-width: 767px) {
-    :root {
-        /* font-size: 16px; */
-        font-size: 22px;
-    }
-    /* .aclaracion-classes {
+	:root {
+		/* font-size: 16px; */
+		font-size: 22px;
+	}
+	/* .aclaracion-classes {
         left: 0.4rem;
     } */
-    body {
-        margin: 0 auto;
-        width: 960px;
-        max-width: 960px;
-    }
+	body {
+		margin: 0 auto;
+		width: 960px;
+		max-width: 960px;
+	}
 
-    .btn-close {
-        width: 2em;
-        height: 1.6em !important;
-        padding: 0.2em 0.2em;
-    }
-
-    .card-header {
-        height: 100%;
-    }
-
-    .card-compare {
-        width: 49%;
-    }
-
-    header {
-        margin-bottom: 1.25rem;
-    }
-
-    .nav-link {
-        font-size: 1.5rem;
-    }
-
-    .table-canastas {
-        width: 98%;
-    }
+	.btn-close {
+		width: 2em;
+		height: 1.6em !important;
+		padding: 0.2em 0.2em;
+	}
 }
 
 @media ((min-width: 600px) and (max-width: 767px)) {
-    body {
-        max-width: 600px;
-        margin: 0 auto;
-    }
+	body {
+		max-width: 600px;
+		margin: 0 auto;
+	}
 }
 
 @media ((min-width: 767px) and (max-width: 960px)) {
 }
 
 @media ((min-width: 961px)) {
-    body {
-        max-width: 960px;
-    }
+	body {
+		max-width: 960px;
+	}
 }
