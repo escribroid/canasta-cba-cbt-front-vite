@@ -39,20 +39,19 @@
 	position: absolute;
 	top: -125px;
 	right: 130%;
-	font-size: 1rem;
-	background-color: black;
-	color: white;
-	padding: 8px;
+	/*background-color: black;
+	*//*color: white;
+	*/padding: 8px;
 	border-radius: 0.25rem;
-	width: 250px;
-	max-width: 250px;
+	width: 220px;
+	max-width: 220px;
 	white-space: normal;
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 	z-index: 9999;
-	/* transition: all ease-in-out 0.5s; */
-	-webkit-transition: all ease-in-out 0.5s;
+	/*transition: all ease-in-out 0.5s;
+	*/-webkit-transition: all ease-in-out 0.5s;
 	-moz-transition: all ease-in-out 0.5s;
 	-ms-transition: all ease-in-out 0.5s;
 	-o-transition: all ease-in-out 0.5s;
