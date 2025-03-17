@@ -40,7 +40,8 @@
 	top: -125px;
 	right: 130%;
 	/*background-color: black;
-	*//*color: white;
+	*/
+	/color: white;
 	*/padding: 8px;
 	border-radius: 0.25rem;
 	width: 220px;
@@ -51,7 +52,8 @@
 	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 	z-index: 9999;
 	/*transition: all ease-in-out 0.5s;
-	*/-webkit-transition: all ease-in-out 0.5s;
+	*/
+	-webkit-transition: all ease-in-out 0.5s;
 	-moz-transition: all ease-in-out 0.5s;
 	-ms-transition: all ease-in-out 0.5s;
 	-o-transition: all ease-in-out 0.5s;
@@ -78,4 +80,8 @@
 	display: none;
 	height: 6rem;
 	width: var(--spacing-30_1-875);
+}
+
+.aclaracion-date--over {
+    z-index: 10;
 }
