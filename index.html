@@ -90,7 +90,7 @@
                 </div>
                     
 
-				<div class="card-vivienda-container px-2 relative">
+				<div class="card-vivienda-container px-2 relative ">
 					<div class="card-vivienda flex flex-row ml-2 my-4 items-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="card__table__rent inline-flex pb-3 w-full">
+					<div class="card__table__rent inline-flex pb-3 w-full ">
 						<label class="w-1/2 mr-3 relative">
 							<select
 								aria-label="canasta-rent"
@@ -461,7 +461,7 @@
 					<span> Dias</span>
 
 					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
-					<div class="flex justify-center overflow-auto rounded-2xl">
+					<div class="flex justify-center overflow-auto rounded-2xl mx-2">
 						<table class="min-w-full table-auto">
 							<thead class="bg-neutral-900">
 								<tr class="border border-neutral-700">
@@ -557,19 +557,19 @@
 				class="card card-classes rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
 			>
 				<div class="table-classes   text-center ">
-					<div class="flex flex-col rounded-t-2xl bg-blue-400 text-neutral-900 p-0 w-full ">
-						<div class="table-classes--txt text-xl font-semibold text-center py-2 border-b border-gray-500">Tu Clase Social Hoy</div>
+					<div class="flex flex-col rounded-t-2xl  bg-blue-900/50  text-neutral-200 p-0 w-full ">
+						<div class="table-classes--txt text-xl font-semibold text-center py-2 border-b border-blue-900">Tu Clase Social Hoy</div>
 					</div>
 
 					<!-- ingresar salario ------------------------------------------>
-					<div class="py-2">
-						<div class="flex justify-center flex-col w-full">
+					<div class="">
+						<div class="flex justify-center flex-col  w-full">
 							<!-- <span class="pb-1 text-center fs-6">Opcional: Ingresar Salario</span> -->
-							<div class="flex justify-center items-center pb-2">
+							<div class="flex justify-center items-center py-3">
 								<label>
 									<input
 										id="income__input"
-										class="form-control income__input me-2 text-center w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
+										class="form-control income__input  text-center w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline px-3 bg-neutral-700 border border-neutral-600   rounded-md focus:ring-2 focus:ring-blue-600"
 										type="number"
 										pattern="\d+"
 										placeholder="$ Ingreso Familiar"
@@ -594,118 +594,118 @@
 							</div>
 						</div>
 					</div>
-					<div class="text-neutral-100 text-center border border-l-0 border-r-0 border-b-0  border-t-blue-500">
-						<div class="table-classes-indigencia flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full">
+					<div class="text-neutral-100 text-center mx-1 mb-1 rounded-2xl">
+						<div class="table-classes-indigencia rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
 							<div
 								class="table-classes-indigencia-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-indigencia-row flex m-0 py-0.5 items-center">
+							<div class="class-indigencia-row flex m-0  items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Indigente</span
 								><span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-indigencia-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-indigencia-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
-						<div class="table-classes-pobreza flex justify-center m-0 p-0 bg-neutral-700/50 max-w-full">
+						<div class="table-classes-pobreza flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full">
 							<div
 								class="table-classes-pobreza-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-pobreza-row flex m-0 py-0.5 items-center">
+							<div class="class-pobreza-row flex m-0  items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Pobreza</span>
 								<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-pobreza-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-pobreza-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
-						<div class="table-classes-baja flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full">
+						<div class="table-classes-baja flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
 							<div
 								class="table-classes-baja-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-baja-row flex m-0 py-0.5 items-center">
+							<div class="class-baja-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]"> Clase Baja</span>
 								<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-baja-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-baja-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
 						<div
-							class="table-classes-media-fragil flex justify-center m-0 p-0 bg-neutral-700/50 max-w-full"
+							class="table-classes-media-fragil flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
 						>
 							<div
 								class="table-classes-media-fragil-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-media-fragil-row flex m-0 py-0.5 items-center">
+							<div class="class-media-fragil-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]"> Media frágil</span
 								><span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-media-fragil-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-media-fragil-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
-						<div class="table-classes-media flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full">
+						<div class="table-classes-media flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
 							<div
 								class="table-classes-media-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-media-row flex m-0 py-0.5 items-center">
+							<div class="class-media-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Media</span>
 								<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-media-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-media-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
-						<div class="table-classes-media-alta flex justify-center m-0 p-0 max-w-full bg-neutral-700/50">
+						<div class="table-classes-media-alta flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50">
 							<div
 								class="table-classes-media-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-media-alta-row flex m-0 py-0.5 items-center">
+							<div class="class-media-alta-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]"> Media alta</span>
 								<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-media-alta-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-media-alta-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
-						<div class="table-classes-alta flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full">
+						<div class="table-classes-alta flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
 							<div
 								class="table-classes-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-alta-row flex m-0 py-0.5 items-center">
+							<div class="class-alta-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]"> Alta baja</span
 								><span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-alta-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-alta-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
-						<div class="table-classes-acomodada flex justify-center m-0 p-0 max-w-full bg-neutral-700/50">
+						<div class="table-classes-acomodada flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50">
 							<div
 								class="table-classes-acomodada-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-acomodada-row flex m-0 py-0.5 items-center">
+							<div class="class-acomodada-row flex m-0  items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Acomodada</span>
 								<span class="mayor-menor w-[1ch] flex items-center"></span>
 							</div>
 							<div
-								class="table-classes-acomodada-max flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-acomodada-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
@@ -745,10 +745,10 @@
 				class="rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950   relative"
 			>
 				<div class="table-classes ">
-					<div class="card-compare__header flex flex-col justify-center rounded-t-2xl bg-emerald-400 text-neutral-900 p-0 w-full ">
-						<div class="card-compare__title text-xl font-semibold text-center py-2 border-b border-gray-500">Tu Clase Social Ayer</div>
+					<div class="card-compare__header flex flex-col justify-center rounded-t-2xl bg-emerald-900/50 text-neutral-200 p-0 w-full ">
+						<div class="card-compare__title text-xl font-semibold text-center py-2 border-b border-emerald-900">Tu Clase Social Ayer</div>
 
-						<span class="flex items-center absolute right-4">
+						<span class="flex items-center absolute  right-4">
 							<div class="tooltip-custom-container relative ">
 								<!-- OVER AQUI -->
 								<button
@@ -845,7 +845,7 @@
 							</span>
 						</div>
 
-						<div class="relative w-full mb-3">
+						<div class="relative w-full mb-3 ">
 							<div class="flex justify-center items-center w-full relative">
 								<label class="flex justify-end">
 									<input
@@ -877,7 +877,7 @@
 							</div>
 						</div>
 
-						<div class="relative w-full mb-1">
+						<div class="relative w-full mb-1 ">
 							<div class="flex justify-center items-center w-full relative">
 								<label>
 									<input
@@ -907,9 +907,9 @@
 						</div>
 
 						<!-- Tabla clases sociales pasadas------------------------------->
-						<div class="table-classes-past pt-0 mt-2 border border-l-0 border-r-0 border-b-0  border-t-emerald-500   text-center rounded-b-2xl bg-neutral-900">
+						<div class="table-classes-past pt-0 mt-2 m-1    text-center rounded-2xl bg-neutral-900">
 							<div
-								class="table-classes-indigencia table-classes-indigencia-past flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full"
+								class="table-classes-indigencia rounded-t-2xl table-classes-indigencia-past flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full"
 							>
 								<div class="table-classes-indigencia-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 								<div
