@@ -39,27 +39,23 @@
 	position: absolute;
 	top: -125px;
 	right: 140%;
-	/*background-color: black;*/
-	/*color: white;	*/
-	padding: 8px;
-	border-radius: 0.25rem;
+	padding: .5rem 0.5rem .5rem 0.5rem;
+	border-radius: 0.5rem;
 	width: 200px;
-	max-width: 200px;
+	text-align: center;
 	white-space: normal;
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 	z-index: 9999;
-	/*transition: all ease-in-out 0.5s;
-	*/
 	-webkit-transition: all ease-in-out 0.5s;
 	-moz-transition: all ease-in-out 0.5s;
 	-ms-transition: all ease-in-out 0.5s;
 	-o-transition: all ease-in-out 0.5s;
-	-webkit-border-radius: 0.25rem;
-	-moz-border-radius: 0.25rem;
-	-ms-border-radius: 0.25rem;
-	-o-border-radius: 0.25rem;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+	-ms-border-radius: 0.5rem;
+	-o-border-radius: 0.5rem;
 }
 
 .tooltip-button {

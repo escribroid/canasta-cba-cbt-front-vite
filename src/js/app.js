@@ -74,17 +74,17 @@ window.addEventListener("dataJsonFront", function (even) {
 
 	function lineaIndigencia() {
 		const lineaIndigencia = document.querySelector(".linea-indigencia");
-		lineaIndigencia.innerHTML = `<div class="cards_nota"><span >» Indigencia con Casa Propia: ingreso mensual menor a $ ${cba}</span></div>`;
+		lineaIndigencia.innerHTML = `<div class="cards_nota text-center mx-4"><span >» Indigencia con Casa Propia: ingreso mensual menor a $ ${cba}</span></div>`;
 	}
 
 	function lineaPobreza() {
 		const lineaPobreza = document.querySelector(".linea-pobreza");
-		lineaPobreza.innerHTML = `<div class="cards_nota"><span >» Pobreza con Casa Propia: ingreso mensual menor a $ ${cbt}</span></div>`;
+		lineaPobreza.innerHTML = `<div class="cards_nota text-center mx-4"><span >» Pobreza con Casa Propia: ingreso mensual menor a $ ${cbt}</span></div>`;
 	}
 
 	function linea_pobreza_alquilando() {
 		const linea_pobreza_alquilando = document.querySelector(".linea-pobreza-renting");
-		linea_pobreza_alquilando.innerHTML = `<div class="cards_nota"><span >» Pobreza ALQUILANDO: ingreso mensual menor a $ ${cbt_alquiler_3amb}</span></div>`;
+		linea_pobreza_alquilando.innerHTML = `<div class="cards_nota text-center mx-4"><span >» Pobreza ALQUILANDO: ingreso mensual menor a $ ${cbt_alquiler_3amb}</span></div>`;
 	}
 
 	calcular_cba();
