@@ -32,7 +32,7 @@
 	<body class="font-inter bg-neutral-500 text-neutral-50 text-base">
 		<!-- Contenedor principal shadow-xl shadow-neutral-950/80-->
 		<div
-			class="index-container bg-neutral-800 flex text-sm text-neutral-100 justify-evenly items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-lg shadow-neutral-950 border-b border-x border-neutral-900 border-x-neutral-700"
+			class="index-container bg-neutral-800 flex text-sm text-neutral-100 justify-evenly items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-lg shadow-neutral-950 border-b border-x border-neutral-950 border-x-neutral-950"
 		>
 			<div class="index-top">
 				<span class="index-data-txt">ipc </span>
@@ -52,7 +52,7 @@
 
 		<!-- Header -->
 		<header
-			class="mx-2 p-2 mb-6 bg-neutral-800 rounded-2xl shadow-lg shadow-neutral-950 border border-neutral-700/50"
+			class="mx-2 p-2 mb-6 bg-neutral-800 rounded-2xl shadow-lg shadow-neutral-950 border border-neutral-950"
 			data-header=""
 		>
 			<!-- Navbar -->
@@ -81,7 +81,7 @@
 			<!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				data-card-main=""
-				class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-950"
 			>
 				<!-- <div class=""> -->
 				<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
@@ -462,9 +462,9 @@
 
 					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
 					<div class="flex justify-center overflow-auto rounded-2xl mx-2">
-						<table class="min-w-full table-auto">
+						<table class="min-w-full table-auto border border-neutral-700">
 							<thead class="bg-neutral-900">
-								<tr class="border border-neutral-700">
+								<tr class="border">
 									<th
 										class="w-1/3 p-2 text-center text-neutral-300 font-semibold rounded-tl-2xl border border-neutral-700"
 									>
@@ -518,11 +518,11 @@
 								</tr>
 								<tr>
 									<th
-										class="w-1/3 p-2 text-center text-neutral-300 font-semibold rounded-bl-2xl"
+										class="w-1/3 p-2 border border-neutral-700 text-center text-neutral-300 font-semibold rounded-bl-2xl"
 									></th>
-									<th class="w-1/12 p-2 text-center"></th>
-									<th id="total-canasta" class="p-2 text-center"></th>
-									<th class="w-1/12 p-2 rounded-br-2xl text-center"></th>
+									<th class="w-1/12 p-2 border border-neutral-700 text-center"></th>
+									<th id="total-canasta" class="p-2 border border-neutral-700 text-center"></th>
+									<th class="w-1/12 p-2 border border-neutral-700 rounded-br-2xl text-center"></th>
 								</tr>
 							</tfoot>
 						</table>
@@ -534,7 +534,7 @@
 						name="table-canastas__select"
 						id="table-canastas__select"
 						title="Seleccione el detalle personal"
-						class="my-2 p-2 w-full bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
+						class="my-3 p-2 w-full bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
 					>
 						<option value="" class="bg-neutral-950 text-neutral-400" disabled>Detalle individual ▼▼</option>
 						<option value="indigencia">• CBA - Linea de indigencia</option>
@@ -554,7 +554,7 @@
 
 			<!-- Card-2 Tabla clases sociales ------------------------------------------>
 			<div
-				class="card card-classes rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-classes rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
 			>
 				<div class="table-classes text-center">
 					<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
@@ -754,7 +754,7 @@
 			<!-- Card-3 Compare clase social antes +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="aclaracion-date--over"
-				class="rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 relative"
+				class="rounded-2xl mb-6 bg-neutral-800 border border-neutral-950 shadow-lg shadow-neutral-950 relative"
 			>
 				<div class="table-classes">
 					<div
@@ -1075,12 +1075,12 @@
 			<!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canastas-1"
-				class="card card-canastas-1 rounded-2xl mb-6 pb-3 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-canastas-1 rounded-2xl mb-6 pb-3 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
 			>
-				<div class="max-w-sm mx-auto">
-					<div class="card_title border-b border-b-neutral-400 py-1 rounded-t-2xl">
+				<div class="mx-auto">
+					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
 						<h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-emerald-400">
-							Canastas para Hogar Tipo
+							Canastas del Hogar Tipo
 							<label for="" class="relative">
 								<select
 									name=""
@@ -1105,14 +1105,14 @@
 							</label>
 						</h2>
 					</div>
-					<div class="card_body mx-2">
-						<h3 class="card-canastas-header-subtitle font-semibold my-2 text-center text-blue-300">
+					<div class="card_body">
+						<h3 class="card-canastas-header-subtitle font-semibold my-3 text-lg text-center text-blue-300">
 							De <span class=""> 4 </span> integrantes del indec:
 						</h3>
-						<h4 class="card-canastas-header-txt text-center text-sm mb-1.5">
-							| Varón 35 años | Mujer 31 años |
+						<h4 class="card-canastas-header-txt font-mono text-center mb-1.5">
+							Varón 35 años • Mujer 31 años
 						</h4>
-						<h4 class="card-canastas-header-txt text-center text-sm">| Niña 8 años | Niño 6 años |</h4>
+						<h4 class="card-canastas-header-txt font-mono text-center">Niña 8 años • Niño 6 años</h4>
 					</div>
 				</div>
 			</div>
@@ -1120,16 +1120,18 @@
 			<!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canasta-cba"
-				class="card card-canastas-2 rounded-2xl card-cba mb-6  bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-canastas-2 rounded-2xl card-cba mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
 			>
-				<div class="mx-auto ">
-					<div class="card_title border-b border-b-neutral-400 py-1 rounded-t-2xl">
+				<div class="mx-auto">
+					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
 						<h2 class="card-cb-title text-xl font-bold m-0 text-center text-emerald-400">
 							Canasta Básica Alimentaria
 						</h2>
 					</div>
-					<div class="card_body mx-2 items-center">
-						<h3 class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300">
+					<div class="card_body mx-3 items-center">
+						<h3
+							class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300"
+						>
 							• CBA - Linea de indigencia
 							<span class="absolute right-6">
 								<div class="tooltip-custom-container relative">
@@ -1155,10 +1157,10 @@
 						</div>
 					</div>
 
-					<div class="card_foot mx-2">
-						<ul class="flex ">
+					<div class="card_foot mx-3">
+						<ul class="flex">
 							<li
-								class="linea-indigencia py-2 justify-items-center text-sm text-center text-neutral-300 border-t border-emerald-900"
+								class="linea-indigencia py-2 justify-items-center text-sm text-center text-neutral-300 border-t border-neutral-600"
 							></li>
 						</ul>
 					</div>
@@ -1168,90 +1170,105 @@
 			<!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canasta-cbt"
-				class="card-canastas-3 card-cbt rounded-2xl mb-6 p-0.5 px-2 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-canastas-3 card-cbt rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
 			>
-				<div class="max-w-sm mx-auto">
-					<h2 class="card-cb-title text-xl font-bold m-3 text-center text-emerald-400">
-						Canasta Básica Total
-					</h2>
-					<h3 class="card-cb-subtitle font-semibold mb-2.5 text-blue-300">
-						• CBT - Línea de Pobreza
-						<span class="absolute right-6">
-							<div class="tooltip-custom-container relative">
-								<button
-									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-								>
-									i
-								</button>
-								<div
-									class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-								>
-									CBT: Canasta Básica Total, es el umbral de la Línea de pobreza. Valor para hogar
-									modelo. La canasta real de tu hogar la podés calcular
-									<a class="font-bold text-blue-600" href="#canasta-main">aquí</a>.
+				<div class="mx-auto">
+					<div class="card_head border-b bg-neutral-700 border-b-neutral-600 py-1.5 rounded-t-2xl">
+						<h2 class="card-cb-title text-xl font-bold text-center text-emerald-400">
+							Canasta Básica Total
+						</h2>
+					</div>
+					<div class="card_body mx-3 items-center">
+						<h3
+							class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300"
+						>
+							• CBT - Línea de Pobreza
+							<span class="absolute right-6">
+								<div class="tooltip-custom-container relative">
+									<button
+										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+									>
+										i
+									</button>
+									<div
+										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+									>
+										CBT: Canasta Básica Total, es el umbral de la Línea de pobreza. Valor para hogar
+										modelo. La canasta real de tu hogar la podés calcular
+										<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+									</div>
 								</div>
-							</div>
-						</span>
-					</h3>
-					<div class="text-base py-1 pb-0 card-cb-txt flex justify-between mb-2.5 text-center text-blue-200">
-						• Con Casa Propia
-						<div class="view-cbt"></div>
+							</span>
+						</h3>
+						<div class="text-base mb-2.5 card-cb-txt flex justify-between text-blue-200">
+							• Con Casa Propia
+							<div class="view-cbt"></div>
+						</div>
+					</div>
+
+					<div class="card_foot">
+						<ul class="flex">
+							<li
+								class="linea-pobreza justify-items-center py-2 text-sm text-center text-neutral-300 border-t border-neutral-600"
+							></li>
+						</ul>
 					</div>
 				</div>
-				<ul class="flex m-1">
-					<li
-						class="linea-pobreza justify-items-center m-2 border-t pt-1 text-sm text-center text-neutral-300"
-					></li>
-				</ul>
 			</div>
 
 			<!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canasta-cbta"
-				class="card-canastas-4 card-cbta rounded-2xl mb-6 p-0.5 px-2 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-canastas-4 card-cbta rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
 			>
-				<div class="max-w-sm mx-auto">
-					<h2 class="card-cb-title text-xl font-bold m-3 text-center text-emerald-400">
-						Canasta Básica Total <span class="text-sm">+ Alquiler</span>
-					</h2>
-					<h3 class="card-cb-subtitle mb-2.5 text-blue-300">
-						• Línea Pobreza Alquilando
-						<span class="absolute right-6">
-							<div class="tooltip-custom-container relative">
-								<button
-									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-								>
-									i
-								</button>
-								<div
-									class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-								>
-									CBT+A: Canasta Básica Total más Alquiler promedio, es el umbral de la Línea de
-									pobreza alquilando. Valor para hogar modelo. La Canasta real de tu hogar la podés
-									calcular
-									<a class="font-bold text-blue-500" href="#canasta-main">aquí</a>.
+				<div class="mx-auto">
+					<div class="card_head border-b bg-neutral-700 border-b-neutral-600 py-1.5 rounded-t-2xl">
+						<h2 class="card_title card-cb-title text-xl font-bold text-center text-emerald-400">
+							Canasta Básica Total <span class="text-sm">+ Alquiler</span>
+						</h2>
+					</div>
+					<div class="card_body mx-3 items-center">
+						<h3 class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300">
+							• Línea Pobreza Alquilando
+							<span class="absolute right-6">
+								<div class="tooltip-custom-container relative">
+									<button
+										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+									>
+										i
+									</button>
+									<div
+										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+									>
+										CBT+A: Canasta Básica Total más Alquiler promedio, es el umbral de la Línea de
+										pobreza alquilando. Valor para hogar modelo. La Canasta real de tu hogar la
+										podés calcular
+										<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+									</div>
 								</div>
-							</div>
-						</span>
-					</h3>
-					<div class="card-cb-txt text-blue-200 py-1 pb-0 flex justify-between">
-						• 3 amb Promedio
-						<div class="view-cbt-rent-3amb"></div>
+							</span>
+						</h3>
+						<div class="card-cb-txt text-blue-200 mb-2.5 flex justify-between">
+							• 3 amb Promedio
+							<div class="view-cbt-rent-3amb"></div>
+						</div>
+					</div>
+
+					<div class="card_foot">
+						<ul class="flex">
+							<li
+								class="linea-pobreza-renting justify-items-center border-t py-2 text-sm text-center text-neutral-300"
+							></li>
+						</ul>
 					</div>
 				</div>
-				<ul class="flex m-1">
-					<li class="-acordion p-0"></li>
-					<li
-						class="linea-pobreza-renting justify-items-center m-2 border-t pt-1 text-sm text-center text-neutral-300"
-					></li>
-				</ul>
 			</div>
 		</main>
 
 		<!-- FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 		<footer
 			id="foot"
-			class="foot text-center rounded-t-2xl p-1 bg-neutral-900 shadow-xl shadow-neutral-950 border-t border-x border-neutral-700 bg-gradient-to-b from-neutral-800 to-neutral-900"
+			class="foot text-center rounded-t-2xl p-1 bg-neutral-900 shadow-xl shadow-neutral-950 border-t border-x border-neutral-950 bg-gradient-to-b from-neutral-800 to-neutral-900"
 		>
 			<div class="max-w-7xl mx-auto p-2">
 				<span class="indices-date m-1 text-center text-sm"></span>
