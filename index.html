@@ -24,7 +24,7 @@
 
 		<!-- Tailwind CSS -->
 		<link href="/src/css/twcss.css" rel="stylesheet" />
-		<!-- Estilos personalizados -->
+		<!-- Styles custom -->
 		<link href="/src/css/styles.css" rel="stylesheet" />
 		<link href="src/css/media-desktop.css" rel="stylesheet" />
 	</head>
@@ -84,13 +84,13 @@
 				class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-700/50"
 			>
 				<!-- <div class=""> -->
-				<div class="flex flex-col rounded-t-2xl bg-blue-400 text-neutral-900 p-0 w-full">
-                    <h2 class="card__title text-center py-2 text-2xl font-semibold border-b border-gray-500">Canasta Personalizada</h2>
+				<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
+					<h2 class="card__title text-center py-1.5 text-2xl font-semibold border-b border-blue-900/60">
+						Canasta Personalizada
+					</h2>
+				</div>
 
-                </div>
-                    
-
-				<div class="card-vivienda-container px-2 relative ">
+				<div class="card-vivienda-container px-2 relative">
 					<div class="card-vivienda flex flex-row ml-2 my-4 items-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="card__table__rent inline-flex pb-3 w-full ">
+					<div class="card__table__rent inline-flex pb-3 w-full">
 						<label class="w-1/2 mr-3 relative">
 							<select
 								aria-label="canasta-rent"
@@ -556,20 +556,24 @@
 			<div
 				class="card card-classes rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
 			>
-				<div class="table-classes   text-center ">
-					<div class="flex flex-col rounded-t-2xl  bg-blue-900/50  text-neutral-200 p-0 w-full ">
-						<div class="table-classes--txt text-xl font-semibold text-center py-2 border-b border-blue-900">Tu Clase Social Hoy</div>
+				<div class="table-classes text-center">
+					<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
+						<div
+							class="table-classes--txt text-xl font-semibold text-center py-1.5 border-b border-blue-900/60"
+						>
+							Tu Clase Social Hoy
+						</div>
 					</div>
 
 					<!-- ingresar salario ------------------------------------------>
 					<div class="">
-						<div class="flex justify-center flex-col  w-full">
+						<div class="flex justify-center flex-col w-full">
 							<!-- <span class="pb-1 text-center fs-6">Opcional: Ingresar Salario</span> -->
-							<div class="flex justify-center items-center py-3">
+							<div class="flex justify-center items-center py-4">
 								<label>
 									<input
 										id="income__input"
-										class="form-control income__input  text-center w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline px-3 bg-neutral-700 border border-neutral-600   rounded-md focus:ring-2 focus:ring-blue-600"
+										class="form-control income__input text-center w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline px-3 bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-blue-600"
 										type="number"
 										pattern="\d+"
 										placeholder="$ Ingreso Familiar"
@@ -595,11 +599,13 @@
 						</div>
 					</div>
 					<div class="text-neutral-100 text-center mx-1 mb-1 rounded-2xl">
-						<div class="table-classes-indigencia rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
+						<div
+							class="table-classes-indigencia rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+						>
 							<div
 								class="table-classes-indigencia-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-indigencia-row flex m-0  items-center">
+							<div class="class-indigencia-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Indigente</span
 								><span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
@@ -609,11 +615,13 @@
 							></div>
 						</div>
 
-						<div class="table-classes-pobreza flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full">
+						<div
+							class="table-classes-pobreza flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
+						>
 							<div
 								class="table-classes-pobreza-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-pobreza-row flex m-0  items-center">
+							<div class="class-pobreza-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Pobreza</span>
 								<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
@@ -667,7 +675,9 @@
 							></div>
 						</div>
 
-						<div class="table-classes-media-alta flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50">
+						<div
+							class="table-classes-media-alta flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
+						>
 							<div
 								class="table-classes-media-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
@@ -695,11 +705,13 @@
 							></div>
 						</div>
 
-						<div class="table-classes-acomodada flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50">
+						<div
+							class="table-classes-acomodada flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
+						>
 							<div
 								class="table-classes-acomodada-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
-							<div class="class-acomodada-row flex m-0  items-center">
+							<div class="class-acomodada-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Acomodada</span>
 								<span class="mayor-menor w-[1ch] flex items-center"></span>
@@ -742,17 +754,23 @@
 			<!-- Card-3 Compare clase social antes +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="aclaracion-date--over"
-				class="rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950   relative"
+				class="rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 relative"
 			>
-				<div class="table-classes ">
-					<div class="card-compare__header flex flex-col justify-center rounded-t-2xl bg-emerald-900/50 text-neutral-200 p-0 w-full ">
-						<div class="card-compare__title text-xl font-semibold text-center py-2 border-b border-emerald-900">Tu Clase Social Ayer</div>
+				<div class="table-classes">
+					<div
+						class="card-compare__header flex flex-col justify-center rounded-t-2xl bg-emerald-900/40 text-neutral-200 p-0 w-full"
+					>
+						<div
+							class="card-compare__title text-xl font-semibold text-center py-1.5 border-b border-emerald-900"
+						>
+							Tu Clase Social Ayer
+						</div>
 
-						<span class="flex items-center absolute  right-4">
-							<div class="tooltip-custom-container relative ">
+						<span class="flex items-center absolute right-4">
+							<div class="tooltip-custom-container relative">
 								<!-- OVER AQUI -->
 								<button
-									class="tooltip-button  info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 								>
 									i
 								</button>
@@ -767,12 +785,12 @@
 					</div>
 					<div class="flex flex-col">
 						<div
-							class="table-compare-month-container w-full flex justify-center gap-x-2 items-center relative mt-2 mb-4"
+							class="table-compare-month-container w-full flex justify-center gap-x-2 items-center relative my-4"
 						>
 							<label for="table-compare-month" class="relative">
 								<select
 									id="table-compare-month"
-									class="table-compare-month pl-2 py-2 focus:shadow-outline text-left w-30 h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
+									class="table-compare-month pl-2 focus:shadow-outline text-left w-30 h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
 									aria-label="Month"
 								>
 									<option
@@ -812,7 +830,7 @@
 							<label for="table-compare-year" class="relative">
 								<select
 									id="table-compare-year"
-									class="table-compare-year w-30 focus:shadow-outline pl-2 py-2 focus:shadow-outline text-left h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
+									class="table-compare-year w-30 focus:shadow-outline pl-2 focus:shadow-outline text-left h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
 									aria-label="Year"
 								></select>
 								<div
@@ -845,7 +863,7 @@
 							</span>
 						</div>
 
-						<div class="relative w-full mb-3 ">
+						<div class="relative w-full mb-4">
 							<div class="flex justify-center items-center w-full relative">
 								<label class="flex justify-end">
 									<input
@@ -854,7 +872,7 @@
 										pattern="\d*"
 										name="rent-past"
 										id="rent-past"
-										class="card-partial-add rent-past w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-emerald-600"
+										class="card-partial-add rent-past w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 rounded-md focus:ring-2 focus:ring-emerald-600"
 										value=""
 										placeholder="$ Alquiler en 02/2022"
 										title="Si alquilas, ingresá el monto del alquiler."
@@ -877,12 +895,12 @@
 							</div>
 						</div>
 
-						<div class="relative w-full mb-1 ">
+						<div class="relative w-full mb-4">
 							<div class="flex justify-center items-center w-full relative">
 								<label>
 									<input
 										id="table-compare-income-in"
-										class="table-compare-income-in text-center w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-neutral-700 border border-neutral-600 px-3 py-2 rounded-md focus:ring-2 focus:ring-blue-600"
+										class="table-compare-income-in text-center w-full h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 px-3 rounded-md focus:ring-2 focus:ring-emerald-600"
 										type="number"
 										pattern="\d+"
 										placeholder="$ Ingresos en 02/2022"
@@ -907,11 +925,13 @@
 						</div>
 
 						<!-- Tabla clases sociales pasadas------------------------------->
-						<div class="table-classes-past pt-0 mt-2 m-1    text-center rounded-2xl bg-neutral-900">
+						<div class="table-classes-past pt-0 mt-0 m-1 text-center rounded-2xl bg-neutral-900">
 							<div
 								class="table-classes-indigencia rounded-t-2xl table-classes-indigencia-past flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full"
 							>
-								<div class="table-classes-indigencia-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
+								<div
+									class="table-classes-indigencia-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								></div>
 								<div
 									class="class-indigencia-row class-indigencia-row-past flex m-0 py-0.5 items-center"
 								>
@@ -929,9 +949,7 @@
 								<div
 									class="table-classes-pobreza-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 								></div>
-								<div
-									class="class-pobreza-row class-pobreza-row-past flex m-0 py-0.5 items-center"
-								>
+								<div class="class-pobreza-row class-pobreza-row-past flex m-0 py-0.5 items-center">
 									<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 									<span class="w-[10ch]">Pobreza</span>
 									<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
@@ -1057,80 +1075,94 @@
 			<!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canastas-1"
-				class="card-canastas-1 rounded-2xl mb-6 p-0.5 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-canastas-1 rounded-2xl mb-6 pb-3 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
 			>
 				<div class="max-w-sm mx-auto">
-					<h2 class="card-canastas-header-title text-xl text-center font-bold m-3 text-emerald-400">
-						Canastas para Hogar Tipo
-						<label for="" class="relative">
-							<select
-								name=""
-								id=""
-								class="border border-emerald-400 rounded-md pl-2 pr-5 bg-emerald-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
-							>
-								<option class="text-left" value="1">1</option>
-								<option class="text-left" value="2">2</option>
-								<option class="text-left" value="3">3</option>
-							</select>
-							<div
-								class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-0 text-gray-400"
-							>
-								<svg
-									class="fill-current h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
+					<div class="card_title border-b border-b-neutral-400 py-1 rounded-t-2xl">
+						<h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-emerald-400">
+							Canastas para Hogar Tipo
+							<label for="" class="relative">
+								<select
+									name=""
+									id=""
+									class="h-6 border border-emerald-400 rounded-md m-0 pl-2 pr-5 text-base bg-emerald-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
 								>
-									<path d="M7 10l5 5 5-5H7z" />
-								</svg>
-							</div>
-						</label>
-					</h2>
-					<h3 class="card-canastas-header-subtitle font-semibold mb-2.5 text-center text-blue-300">
-						De <span class=""> 4 </span> integrantes del indec:
-					</h3>
-					<h4 class="card-canastas-header-txt text-center text-sm mb-1">| Varón 35 años | Mujer 31 años |</h4>
-					<h4 class="card-canastas-header-txt text-center text-sm mb-1 x">| Niña 8 años | Niño 6 años |</h4>
+									<option class="text-left" value="1">1</option>
+									<option class="text-left" value="2">2</option>
+									<option class="text-left" value="3">3</option>
+								</select>
+								<div
+									class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-0 text-gray-400"
+								>
+									<svg
+										class="fill-current h-6 w-6"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 20 20"
+									>
+										<path d="M7 10l5 5 5-5H7z" />
+									</svg>
+								</div>
+							</label>
+						</h2>
+					</div>
+					<div class="card_body mx-2">
+						<h3 class="card-canastas-header-subtitle font-semibold my-2 text-center text-blue-300">
+							De <span class=""> 4 </span> integrantes del indec:
+						</h3>
+						<h4 class="card-canastas-header-txt text-center text-sm mb-1.5">
+							| Varón 35 años | Mujer 31 años |
+						</h4>
+						<h4 class="card-canastas-header-txt text-center text-sm">| Niña 8 años | Niño 6 años |</h4>
+					</div>
 				</div>
 			</div>
 
 			<!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canasta-cba"
-				class="card-canastas-2 rounded-2xl card-cba mb-6 p-0.5 px-2 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
+				class="card card-canastas-2 rounded-2xl card-cba mb-6  bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-700/50"
 			>
-				<div class="max-w-sm mx-auto">
-					<h2 class="card-cb-title text-xl font-bold m-3 text-center text-emerald-400">
-						Canasta Básica Alimentaria
-					</h2>
-					<h3 class="card-cb-subtitle flex justify-between font-semibold mb-2 text-blue-300">
-						• CBA - Linea de indigencia
-						<span class="absolute right-6">
-							<div class="tooltip-custom-container relative">
-								<button
-									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-								>
-									i
-								</button>
-								<div
-									class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-								>
-									CBA: Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Valor para
-									un hogar modelo. La Canasta real de tu hogar la podés calcular
-									<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+				<div class="max-w-sm mx-auto ">
+					<div class="card_title border-b border-b-neutral-400 py-1 rounded-t-2xl">
+						<h2 class="card-cb-title text-xl font-bold m-0 text-center text-emerald-400">
+							Canasta Básica Alimentaria
+						</h2>
+					</div>
+					<div class="card_body mx-2 items-center">
+						<h3 class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300">
+							• CBA - Linea de indigencia
+							<span class="absolute right-6">
+								<div class="tooltip-custom-container relative">
+									<button
+										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+									>
+										i
+									</button>
+									<div
+										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+									>
+										CBA: Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Valor
+										para un hogar modelo. La Canasta real de tu hogar la podés calcular
+										<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+									</div>
 								</div>
-							</div>
-						</span>
-					</h3>
-					<div class="card-cb-txt py-1 pb-0 flex justify-between text-blue-200">
-						• Con Casa Propia
-						<div class="view-cba"></div>
+							</span>
+						</h3>
+
+						<div class="card-cb-txt mb-2.5 flex items-center justify-between text-blue-200">
+							• Con Casa Propia
+							<div class="view-cba"></div>
+						</div>
+					</div>
+
+					<div class="card_foot mx-2">
+						<ul class="flex ">
+							<li
+								class="linea-indigencia py-2 justify-items-center text-sm text-center text-neutral-300 border-t border-emerald-900"
+							></li>
+						</ul>
 					</div>
 				</div>
-				<ul class="flex">
-					<li
-						class="linea-indigencia justify-items-center text-sm text-center text-neutral-300 m-2 border-t pt-2"
-					></li>
-				</ul>
 			</div>
 
 			<!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
