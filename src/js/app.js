@@ -59,17 +59,17 @@ window.addEventListener("dataJsonFront", function (even) {
 	// Calculos cba, cbt, cbt_alquiler_2amb, cbt_alquiler_3amb ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	function calcular_cba() {
 		const view_cba = document.querySelector(".view-cba");
-		view_cba.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold ml-2.5 bg-neutral-900 p-1 rounded-md">  $ ${cba} </span>`;
+		view_cba.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold">  $ ${cba} </span>`;
 	}
 
 	function calcular_cbt() {
 		const view_cbt = document.querySelector(".view-cbt");
-		view_cbt.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold ml-2.5 bg-neutral-900 p-1 rounded-md">  $ ${cbt} </span>`;
+		view_cbt.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold">  $ ${cbt} </span>`;
 	}
 
 	function calcular_cbt_y_alquiler(personas, edad) {
 		const view_cbt_alquiler_3amb = document.querySelector(".view-cbt-rent-3amb");
-		view_cbt_alquiler_3amb.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold ml-2.5 bg-neutral-900 p-1 rounded-md ">  $ ${cbt_alquiler_3amb} </span>`;
+		view_cbt_alquiler_3amb.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold">  $ ${cbt_alquiler_3amb} </span>`;
 	}
 
 	function lineaIndigencia() {
