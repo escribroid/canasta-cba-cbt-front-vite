@@ -1,6 +1,5 @@
 //
-const table_members_model_1 = `<table class="min-w-full table-auto">
-								<thead class=" ">
+const table_members_model_1 = `<table class="w-full table-auto rounded-xl border border-neutral-600 bg-neutral-900								<thead class="">
 									<tr class="border border-neutral-600">
 										<th class="border-r-4 border-blue-500 font-semibold px-2 py-2 text-left">Integrante</th>
 										<th class="font-normal border border-neutral-600 px-1 py-2 text-center">Mujer</th>
@@ -17,7 +16,7 @@ const table_members_model_1 = `<table class="min-w-full table-auto">
 								</thead>
 							</table>`;
 
-const table_members_model_2 = `<table class="min-w-full table-auto">
+const table_members_model_2 = `<table class="min-w-full table-auto rounded-xl border border-neutral-600 bg-neutral-900">
 							<thead class=" ">
 								<tr class=" py-5 border border-neutral-600">
 									<th class="border-r-3 border-blue-500 font-semibold px-2 py-2 text-left">Integrante</th>
@@ -36,7 +35,7 @@ const table_members_model_2 = `<table class="min-w-full table-auto">
 							</thead>
 						</table>`;
 
-const table_members_model_3 = `<table class="min-w-full table-auto">
+const table_members_model_3 = `<table class="min-w-full table-auto rounded-xl border border-neutral-600 bg-neutral-900">
 								<thead class=" ">
 									<tr class="border border-neutral-600">
 										<th class="border-r-4 border-blue-500 text-white font-semibold p-1 text-left">Integrante</th>
