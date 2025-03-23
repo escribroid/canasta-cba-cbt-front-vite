@@ -25,3 +25,9 @@ document.addEventListener("click", (event) => {
         }, 2000);
     }
 });
+
+
+
+
+
+

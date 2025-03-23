@@ -784,68 +784,75 @@
 						</span>
 					</div>
 					<div class="flex flex-col">
-						<div
-							class="table-compare-month-container w-full flex justify-center gap-x-2 items-center relative my-4"
-						>
-							<label for="table-compare-month" class="relative">
-								<select
-									id="table-compare-month"
-									class="table-compare-month pl-2 focus:shadow-outline text-left w-30 h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
-									aria-label="Month"
-								>
-									<option
-										class="table-compare-month-option bg-neutral-950 text-neutral-400"
-										value="month"
-										selected
-										disabled
+						<div class="w-full justify-center items-center flex relative">
+							<div
+								class="table-compare-month-container w-8/12 flex justify-center gap-x-2 items-center relative my-4"
+							>
+								<label class="w-1/2 relative" for="table-compare-month" >
+									<select
+										id="table-compare-month"
+										class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center  shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
+										aria-label="Month"
 									>
-										Mes
-									</option>
-									<option class="table-compare-month-option text-left" value="1">Enero</option>
-									<option class="table-compare-month-option text-left" value="2">Febrero</option>
-									<option class="table-compare-month-option text-left" value="3">Marzo</option>
-									<option class="table-compare-month-option text-left" value="4">Abril</option>
-									<option class="table-compare-month-option text-left" value="5">Mayo</option>
-									<option class="table-compare-month-option text-left" value="6">Junio</option>
-									<option class="table-compare-month-option text-left" value="7">Julio</option>
-									<option class="table-compare-month-option text-left" value="8">Agosto</option>
-									<option class="table-compare-month-option text-left" value="9">Septiembre</option>
-									<option class="table-compare-month-option text-left" value="10">Octubre</option>
-									<option class="table-compare-month-option text-left" value="11">Noviembre</option>
-									<option class="table-compare-month-option text-left" value="12">Diciembre</option>
-								</select>
-								<div
-									class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-								>
-									<svg
-										class="fill-current h-6 w-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 20 20"
+										<option
+											class="table-compare-month-option bg-neutral-950 text-neutral-400"
+											value="month"
+											selected
+											disabled
+										>
+											Mes
+										</option>
+										<option class="table-compare-month-option text-left" value="1">Enero</option>
+										<option class="table-compare-month-option text-left" value="2">Febrero</option>
+										<option class="table-compare-month-option text-left" value="3">Marzo</option>
+										<option class="table-compare-month-option text-left" value="4">Abril</option>
+										<option class="table-compare-month-option text-left" value="5">Mayo</option>
+										<option class="table-compare-month-option text-left" value="6">Junio</option>
+										<option class="table-compare-month-option text-left" value="7">Julio</option>
+										<option class="table-compare-month-option text-left" value="8">Agosto</option>
+										<option class="table-compare-month-option text-left" value="9">
+											Septiembre
+										</option>
+										<option class="table-compare-month-option text-left" value="10">Octubre</option>
+										<option class="table-compare-month-option text-left" value="11">
+											Noviembre
+										</option>
+										<option class="table-compare-month-option text-left" value="12">
+											Diciembre
+										</option>
+									</select>
+									<div
+										class="pointer-events-none absolute inset-y-0 right-0 bottom-1 flex items-center px-1 text-gray-400"
 									>
-										<path d="M7 10l5 5 5-5H7z" />
-									</svg>
-								</div>
-							</label>
+										<svg
+											class="fill-current h-6 w-6"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 20 20"
+										>
+											<path d="M7 10l5 5 5-5H7z" />
+										</svg>
+									</div>
+								</label>
 
-							<label for="table-compare-year" class="relative">
-								<select
-									id="table-compare-year"
-									class="table-compare-year w-30 focus:shadow-outline pl-2 focus:shadow-outline text-left h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
-									aria-label="Year"
-								></select>
-								<div
-									class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-								>
-									<svg
-										class="fill-current h-6 w-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 20 20"
+								<label class="w-1/2 relative" for="table-compare-year">
+									<select
+										id="table-compare-year"
+										class="table-compare-year w-full focus:shadow-outline pr-2 focus:shadow-outline text-center h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
+										aria-label="Year"
+									></select>
+									<div
+										class="pointer-events-none absolute inset-y-0 right-0 bottom-1 flex items-center px-1 text-gray-400"
 									>
-										<path d="M7 10l5 5 5-5H7z" />
-									</svg>
-								</div>
-							</label>
-
+										<svg
+											class="fill-current h-6 w-6"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 20 20"
+										>
+											<path d="M7 10l5 5 5-5H7z" />
+										</svg>
+									</div>
+								</label>
+							</div>
 							<span class="flex items-center absolute right-4">
 								<div class="tooltip-custom-container relative">
 									<button
@@ -865,7 +872,7 @@
 
 						<div class="relative w-full mb-4">
 							<div class="flex justify-center items-center w-full relative">
-								<label class="flex justify-end">
+								<label class="flex justify-end w-8/12">
 									<input
 										type="text"
 										inputmode="numeric"
@@ -897,7 +904,7 @@
 
 						<div class="relative w-full mb-4">
 							<div class="flex justify-center items-center w-full relative">
-								<label>
+								<label class="w-8/12">
 									<input
 										id="table-compare-income-in"
 										class="table-compare-income-in text-center w-full h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 px-3 rounded-md focus:ring-2 focus:ring-emerald-600"
@@ -1075,9 +1082,10 @@
 			<!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				id="card-canastas-1"
-				class="card card-canastas-1 rounded-2xl mb-6 pb-3 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+				class="card card-canastas-1 flex flex-col rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+				data-card-high="card-cba-models"
 			>
-				<div class="mx-auto">
+				<div class="mx-auto w-full">
 					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
 						<h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-emerald-400">
 							Canasta indec de Hogar
@@ -1106,19 +1114,15 @@
 							</label>
 						</h2>
 					</div>
-					<div class="card_body">
-						<!-- <h3 class="card-canastas-header-subtitle font-semibold my-3 text-lg text-center text-blue-300">
-							De <span class=""> 4 </span> integrantes:
-						</h3> -->
-						<!-- <h4 class="card-canastas-header-txt font-mono text-center mb-1.5">
-							Varón 35 años • Mujer 31 años
-						</h4>
-						<h4 class="card-canastas-header-txt font-mono text-center">Niña 8 años • Niño 6 años • Joven 16 años</h4> -->
-
-						<div class="flex justify-center rounded-xl overflow-auto mt-3 mx-1 border border-neutral-500" data-table="table_members">
-							
-						</div>
-					</div>
+				</div>
+				<div class="flex flex-col my-auto items-center" data-table="table_container_members">
+					<h3 class="my-3 font-semibold text-blue-300">
+						<span class="font-bold" data-members-num="members-num"></span> integrantes
+					</h3>
+					<div
+						class="rounded-xl overflow-auto w-full mx-1 mb-3 border border-neutral-500"
+						data-table="table_members"
+					></div>
 				</div>
 			</div>
 
@@ -1126,6 +1130,7 @@
 			<div
 				id="card-canasta-cba"
 				class="card card-canastas-2 rounded-2xl card-cba mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+				data-card-high="card-cba-high"
 			>
 				<div class="mx-auto">
 					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
@@ -1134,7 +1139,7 @@
 						</h2>
 					</div>
 					<div class="card_body mx-3 items-center">
-						<h3 class="card-cb-subtitle flex items-center font-semibold mt-3 mb-1.5 text-blue-300">
+						<h3 class="card-cb-subtitle flex items-center font-semibold text-blue-300 mt-3 mb-1.5">
 							CBA - Linea de indigencia
 							<span class="absolute right-6">
 								<div class="tooltip-custom-container relative">
