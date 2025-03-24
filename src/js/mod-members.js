@@ -71,7 +71,7 @@ if (selectMembers.value === "2") {
 document.querySelector('[data-select="select-models-families"]').addEventListener("change", function () {
 	if (selectMembers.value === "1") {
 		members.innerHTML = table_members_model_1;
-		members_num.innerHTML = 3;
+		members_num.innerHTML = "1 > 3";
 	} else if (selectMembers.value === "2") {
 		members.innerHTML = table_members_model_2;
 		members_num.innerHTML = 4;
