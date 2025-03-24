@@ -91,7 +91,7 @@
 				</div>
 
 				<div class="card-vivienda-container px-2 relative">
-					<div class="card-vivienda flex flex-row ml-2 my-4 items-center">
+					<div class="card-vivienda flex flex-row ml-2 mb-4 mt-6 items-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="2.75rem"
@@ -122,7 +122,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="card__table__rent inline-flex pb-3 w-full">
+					<div class="card__table__rent inline-flex pb-4 w-full">
 						<label class="w-1/2 mr-3 relative">
 							<select
 								aria-label="canasta-rent"
@@ -193,7 +193,7 @@
 
 				<form id="form " class="border-t border-neutral-600 m-0 p-0">
 					<div class="flex flex-col px-2 relative">
-						<div class="form-family flex flex-row ml-2 my-4 items-center">
+						<div class="form-family flex flex-row ml-2 mt-6 mb-4 items-center">
 							<!-- SVG PERSON -->
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@
 								/>
 							</svg>
 						</div>
-						<div class="fieldset flex w-full mb-2 relative">
+						<div class="fieldset flex w-full mb-4 relative">
 							<div class="form-gender w-1/2 mr-3">
 								<!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
 
@@ -282,7 +282,7 @@
 								<input type="hidden" name="gender" id="gender" required />
 							</div>
 
-							<div class="form-age-container flex w-1/2">
+							<div class="form-age-container flex w-1/2 m-0 p-0">
 								<div class="form-age w-full justify-between mr-2">
 									<label for="form__select-age" class="flex relative">
 										<select
@@ -451,16 +451,17 @@
 						</div>
 					</div>
 
-					<span> Cuidado</span>
+					<span class=""> Cuidado</span>
 					<input
 						type="text"
 						data-prueba="clasePrueba"
 						data-prueba-number="151"
-						class="bg-amber-900 text-white p-1 mb-4 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
+						class="bg-amber-900 text-white p-1 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
 					/>
 					<span> Dias</span>
 
 					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
+					<div class="border-t border-neutral-600 my-4"></div>
 					<div class="flex justify-center overflow-auto rounded-2xl mx-2">
 						<table class="min-w-full table-auto border border-neutral-700">
 							<thead class="bg-neutral-900">
@@ -529,7 +530,7 @@
 					</div>
 				</form>
 				<!-- </div> -->
-				<label class="relative flex w-60 m-auto items-center" for="table-canastas__select">
+				<label class="relative flex w-8/12 m-auto items-center" for="table-canastas__select">
 					<select
 						name="table-canastas__select"
 						id="table-canastas__select"
@@ -537,7 +538,7 @@
 						class="my-3 p-2 w-full bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
 					>
 						<option value="" class="bg-neutral-950 text-neutral-400" disabled>Detalle individual ▼▼</option>
-						<option value="indigencia">• CBA - Linea de indigencia</option>
+						<option value="indigencia">• CBA - Linea indigencia</option>
 						<option value="pobreza" selected>• CBT - Linea de pobreza</option>
 						<option value="clase_baja">• Clase Baja</option>
 						<option value="clase_media_fragil">• Clase Media Fragil</option>
@@ -569,8 +570,8 @@
 					<div class="">
 						<div class="flex justify-center flex-col w-full">
 							<!-- <span class="pb-1 text-center fs-6">Opcional: Ingresar Salario</span> -->
-							<div class="flex justify-center items-center py-4">
-								<label>
+							<div class="flex justify-center items-center pt-6 pb-4">
+								<label class="w-8/12">
 									<input
 										id="income__input"
 										class="form-control income__input text-center w-full p-2 h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline px-3 bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-blue-600"
@@ -786,12 +787,12 @@
 					<div class="flex flex-col">
 						<div class="w-full justify-center items-center flex relative">
 							<div
-								class="table-compare-month-container w-8/12 flex justify-center gap-x-2 items-center relative my-4"
+								class="table-compare-month-container w-8/12 flex justify-center gap-x-2 items-center relative mt-6 mb-4"
 							>
-								<label class="w-1/2 relative" for="table-compare-month" >
+								<label class="w-1/2 relative" for="table-compare-month">
 									<select
 										id="table-compare-month"
-										class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center  shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
+										class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-neutral-700 border border-neutral-600 rounded-md focus:ring-2 focus:ring-emerald-600"
 										aria-label="Month"
 									>
 										<option
@@ -1086,18 +1087,18 @@
 				data-card-high="card-cba-models"
 			>
 				<div class="mx-auto w-full">
-					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
-						<h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-emerald-400">
+					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1 rounded-t-2xl">
+						<h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-emerald-500">
 							Canasta indec de Hogar
 							<label for="" class="relative">
 								<select
 									name=""
 									id=""
-									class="h-6 border border-emerald-400 rounded-md m-0 pl-2 pr-5 text-base bg-emerald-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
+									class="h-8 border border-emerald-400 rounded-md m-0 pl-2 pr-5 text-base bg-emerald-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
 									data-select="select-models-families"
 								>
-									<option class="text-left" value="1" selected>1</option>
-									<option class="text-left" value="2">2</option>
+									<option class="text-left" value="1">1</option>
+									<option class="text-left" value="2" selected>2</option>
 									<option class="text-left" value="3">3</option>
 								</select>
 								<div
@@ -1115,12 +1116,12 @@
 						</h2>
 					</div>
 				</div>
-				<div class="flex flex-col my-auto w-full items-center" data-table="table_container_members">
-					<h3 class="my-3 font-semibold text-blue-300">
+				<div class="flex flex-col my-auto w-full items-center px-1" data-table="table_container_members">
+					<h3 class="mt-3 mb-3 font-semibold text-blue-300">
 						<span class="font-bold" data-members-num="members-num"></span> integrantes
 					</h3>
 					<div
-						class="rounded-xl w-full  px-1 mb-5 "
+						class="rounded-2xl border border-neutral-600 overflow-auto w-full px-0 mb-3.5"
 						data-table="table_members"
 					></div>
 				</div>
@@ -1139,7 +1140,7 @@
 						</h2>
 					</div>
 					<div class="card_body mx-3 items-center">
-						<h3 class="card-cb-subtitle flex items-center font-semibold text-blue-300 mt-3 mb-1.5">
+						<h3 class="card-cb-subtitle flex items-center font-semibold text-blue-300 mt-4 mb-1.5">
 							CBA - Linea de indigencia
 							<span class="absolute right-6">
 								<div class="tooltip-custom-container relative">
@@ -1159,7 +1160,7 @@
 							</span>
 						</h3>
 
-						<div class="card-cb-txt mb-2.5 flex items-center justify-between text-blue-200">
+						<div class="card-cb-txt mb-3 flex items-center justify-between text-blue-200">
 							Con Casa Propia:
 							<div class="view-cba"></div>
 						</div>
@@ -1188,7 +1189,7 @@
 					</div>
 					<div class="card_body mx-3 items-center">
 						<h3
-							class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300"
+							class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-300"
 						>
 							CBT - Línea de Pobreza
 							<span class="absolute right-6">
@@ -1208,7 +1209,7 @@
 								</div>
 							</span>
 						</h3>
-						<div class="text-base mb-2.5 card-cb-txt flex justify-between text-blue-200">
+						<div class="text-base mb-3 card-cb-txt flex justify-between text-blue-200">
 							Con Casa Propia:
 							<div class="view-cbt"></div>
 						</div>
@@ -1237,7 +1238,7 @@
 					</div>
 					<div class="card_body mx-3 items-center">
 						<h3
-							class="card-cb-subtitle flex justify-between items-center font-semibold mt-3 mb-1.5 text-blue-300"
+							class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-300"
 						>
 							Línea Pobreza Alquilando
 							<span class="absolute right-6">
@@ -1258,7 +1259,7 @@
 								</div>
 							</span>
 						</h3>
-						<div class="card-cb-txt text-blue-200 mb-2.5 flex justify-between">
+						<div class="card-cb-txt text-blue-200 mb-3 flex justify-between">
 							3 amb Promedio
 							<div class="view-cbt-rent-3amb"></div>
 						</div>
