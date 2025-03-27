@@ -161,7 +161,7 @@ window.addEventListener("dataJsonFront", function (even) {
 	let table_rows_person = [];
 	let table_rows_change_classes = [];
 	let coef_age_gender_array = [];
-	document.querySelector(".table-cba-rent").classList.add("hidden");
+	// document.querySelector(".table-cba-rent").classList.add("hidden");
 
 	// rent_in_show.style.display = "none";
 
