@@ -161,8 +161,9 @@ window.addEventListener("dataJsonFront", function (even) {
 	let table_rows_person = [];
 	let table_rows_change_classes = [];
 	let coef_age_gender_array = [];
+	document.querySelector(".table-cba-rent").classList.add("hidden");
 
-	rent_in_show.style.display = "none";
+	// rent_in_show.style.display = "none";
 
 	const form = document.getElementById("form");
 	let tableBody = document.getElementById("table-canastas__list");
@@ -527,18 +528,42 @@ window.addEventListener("dataJsonFront", function (even) {
 		return suma_indigencia_alquilando;
 	}
 
-	// Agregar un evento al select para cambiar el estado del input
-	vivienda.addEventListener("input", function () {
+	alquiler_in.addEventListener("input", function () {
 		vivienda = document.getElementById("card__select-rent");
 		alquiler_in = document.getElementById("card-rent-in");
 
-		if (vivienda.value === "siAlquilo") {
-			alquiler_in.value = "";
-			alquiler_in.enabled = true; // Habilitar el input
+		if (alquiler_in.value !== "") {
+			// alquiler_in.enabled = true; // Habilitar el input
 			alquiler_in.removeAttribute("disabled"); // Deshabilitar el input
 			alquiler_in.placeholder = "$ valor alquiler"; // Mostrar texto en el input
-			// document.querySelector(".table-canastas-rent").style.display = "block";
 			document.querySelector(".table-cba-rent").classList.remove("hidden");
+		} else {
+			document.querySelector(".table-cba-rent").classList.add("hidden");
+		}
+		// document.querySelector(".table-canastas-rent").style.display = "block";
+
+		// if (isNaN(alquiler_in.value)) {
+		// 	document.querySelector(".table-cba-rent").classList.remove("hidden");
+		// }
+	});
+
+	// Agregar un evento al select para cambiar el estado del input
+	vivienda.addEventListener("change", function () {
+		vivienda = document.getElementById("card__select-rent");
+		alquiler_in = document.getElementById("card-rent-in");
+		if (isNaN(alquiler_in.value)) {
+			document.querySelector(".table-cba-rent").classList.remove("hidden");
+		}
+
+		if (vivienda.value === "siAlquilo") {
+			alquiler_in.value = ""; // Limpiar el input
+			// alquiler_in.enabled = true; // Habilitar el input
+			alquiler_in.removeAttribute("disabled"); // Deshabilitar el input
+			alquiler_in.placeholder = "$ valor alquiler"; // Mostrar texto en el input
+			document.querySelector(".table-cba-rent").classList.add("hidden");
+			console.log("alquiler_in.value", alquiler_in.value);
+
+			// document.querySelector(".table-canastas-rent").style.display = "block";
 		} else if (vivienda.value === "noAlquilo") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = ""; // Limpiar el input
@@ -546,12 +571,11 @@ window.addEventListener("dataJsonFront", function (even) {
 			document.getElementById("card-main-rent-out").textContent = "";
 			document.querySelector(".table-cba-rent").classList.add("hidden");
 		} else if (vivienda.value === "AlquilerProm3amb") {
+			document.querySelector(".table-cba-rent").classList.remove("hidden");
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = `${indices_manuales.alquilerProm3amb}`;
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
 			// document.querySelector(".table-canastas-rent").style.display = "block";
-			document.querySelector(".table-cba-rent").classList.remove("hidden");
-
 		} else if (vivienda.value === "AlquilerProm2amb") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = `${indices_manuales.alquilerProm2amb}`;
@@ -570,7 +594,6 @@ window.addEventListener("dataJsonFront", function (even) {
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
 			// document.querySelector(".table-canastas-rent").style.display = "block";
 			document.querySelector(".table-cba-rent").classList.remove("hidden");
-
 		}
 
 		if (vivienda.value !== "siAlquilo" && vivienda.value !== "vivienda_slc" && vivienda.value !== "noAlquilo") {
@@ -823,7 +846,8 @@ window.addEventListener("dataJsonFront", function (even) {
 					document.querySelector(".card__svg--reset").style.transition = "transform 0.3s ease-in-out";
 					document.querySelector(".card__svg--reset").style.transform = "translatex(0)";
 					document.querySelector(".card__svg--reset").style.opacity = "1";
-					rent_in_show.style.display = "table-row";
+					// document.getElementById("table-cba-rent").classList.remove("hidden");
+					// rent_in_show.style.display = "block";
 				}, 400);
 			}
 		});
