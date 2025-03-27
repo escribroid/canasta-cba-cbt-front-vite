@@ -1,4 +1,7 @@
 //
+
+let dataJsonFront = [];
+
 const table_members_model_1 = `<table class="min-w-full table-auto rounded-xl border border-neutral-600 bg-neutral-900">
 								<thead class="">
 									<tr class="border border-neutral-600">
@@ -79,4 +82,15 @@ document.querySelector('[data-select="select-models-families"]').addEventListene
 		members.innerHTML = table_members_model_3;
 		members_num.innerHTML = 5;
 	}
+});
+
+/* card cba cbt cbta ############################################################## */
+
+// Escuchar el evento personalizado emitido desde a.js
+window.addEventListener("dataJsonFront", function (even) {
+	dataJsonFront = even.detail.dataJsonFront;		
+	
+	// console.log("dataaaa", dataJsonFront);
+	
+
 });

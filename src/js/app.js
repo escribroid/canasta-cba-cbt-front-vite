@@ -67,7 +67,7 @@ window.addEventListener("dataJsonFront", function (even) {
 		view_cbt.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold">  $ ${cbt} </span>`;
 	}
 
-	function calcular_cbt_y_alquiler(personas, edad) {
+	function calcular_cbt_y_alquiler() {
 		const view_cbt_alquiler_3amb = document.querySelector(".view-cbt-rent-3amb");
 		view_cbt_alquiler_3amb.innerHTML = `<span class="card-cba_value text-emerald-500 font-bold">  $ ${cbt_alquiler_3amb} </span>`;
 	}
@@ -369,16 +369,21 @@ window.addEventListener("dataJsonFront", function (even) {
 
 		table_rows_person.push(cb_table_cells_detail);
 
-		row.innerHTML = `<td class="p-1 text-start">${table_rows_person[array_count_person.length - 1][0]}</td>
-    <td class="col-1 p-1">${table_rows_person[array_count_person.length - 1][1]}</td>
-    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1">$ ${cb_table_cells_detail[2].toLocaleString(
+		const isEven = array_count_person.length % 2 === 0; // Verifica si el índice es par
+		const rowColorClass = isEven ? "bg-blue-500/10" : "bg-emerald-600/10"; // Alterna colores
+
+		row.innerHTML = `<td class="p-1 text-start ${rowColorClass} border border-neutral-600">${
+			table_rows_person[array_count_person.length - 1][0]
+		}</td>
+    <td class="p-1 ${rowColorClass} text-center">${table_rows_person[array_count_person.length - 1][1]}</td>
+    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1 ${rowColorClass} text-center border border-neutral-600">$ ${cb_table_cells_detail[2].toLocaleString(
 			"es-AR",
 			{
 				maximumFractionDigits: 0,
 			}
 		)}</td>
-    <td class=" p-0 m-0" id="person_${count_person}_detalles">
-    <svg id="testSvg" class="detalles_delete_body cursor-pointer" width="20px" height="20px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+    <td class=" p-0 m-0 mx-auto ${rowColorClass} border border-neutral-600" id="person_${count_person}_detalles">
+    <svg id="testSvg" class="detalles_delete_body cursor-pointer p-0 m-0 mx-auto " width="20px" height="20px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
         <path d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
     </td>`;
@@ -441,7 +446,7 @@ window.addEventListener("dataJsonFront", function (even) {
 
 		if (isNaN(alquiler_in_value)) {
 			alquiler_in_value = 0;
-			alquiler_out.textContent = "0";
+			alquiler_out.textContent = "";
 		} else if (alquiler_in_value < 0) {
 			alquiler_in_value = alquiler_in_value * -1;
 		}
@@ -532,25 +537,29 @@ window.addEventListener("dataJsonFront", function (even) {
 			alquiler_in.enabled = true; // Habilitar el input
 			alquiler_in.removeAttribute("disabled"); // Deshabilitar el input
 			alquiler_in.placeholder = "$ valor alquiler"; // Mostrar texto en el input
-			document.querySelector(".table-canastas-rent").style.display = "table-row";
+			// document.querySelector(".table-canastas-rent").style.display = "block";
+			document.querySelector(".table-cba-rent").classList.remove("hidden");
 		} else if (vivienda.value === "noAlquilo") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = ""; // Limpiar el input
 			alquiler_in.placeholder = "No alquilo"; // Mostrar texto en el input
-			document.getElementById("card-main-rent-out").textContent = "No";
-			document.querySelector(".table-canastas-rent").style.display = "none";
+			document.getElementById("card-main-rent-out").textContent = "";
+			document.querySelector(".table-cba-rent").classList.add("hidden");
 		} else if (vivienda.value === "AlquilerProm3amb") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = `${indices_manuales.alquilerProm3amb}`;
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
-			document.querySelector(".table-canastas-rent").style.display = "table-row";
+			// document.querySelector(".table-canastas-rent").style.display = "block";
+			document.querySelector(".table-cba-rent").classList.remove("hidden");
+
 		} else if (vivienda.value === "AlquilerProm2amb") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = `${indices_manuales.alquilerProm2amb}`;
 			parseInt(alquiler_in.value);
-
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
-			document.querySelector(".table-canastas-rent").style.display = "table-row";
+			// document.querySelector(".table-canastas-rent").style.display = "block";
+			document.querySelector(".table-cba-rent").classList.remove("hidden");
+
 			alquiler_in_value = alquiler_in.value;
 			suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler);
 			add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
@@ -558,9 +567,10 @@ window.addEventListener("dataJsonFront", function (even) {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
 			alquiler_in.value = `${indices_manuales.alquilerProm1amb}`;
 			parseInt(alquiler_in.value);
-
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
-			document.querySelector(".table-canastas-rent").style.display = "table-row";
+			// document.querySelector(".table-canastas-rent").style.display = "block";
+			document.querySelector(".table-cba-rent").classList.remove("hidden");
+
 		}
 
 		if (vivienda.value !== "siAlquilo" && vivienda.value !== "vivienda_slc" && vivienda.value !== "noAlquilo") {

@@ -43,7 +43,7 @@ let suma_clase_alta_baja_past;
 //const API_URL_IPC = "https://canasta-cba-cbt-back-express.vercel.app/api/v1/ipc/";
 
 // Función que realiza el fetch y devuelve los datos
-async function fetchDataFromAPI() {
+export async function fetchDataFromAPI() {
     try {
         const response = await fetch(API_URL);
 
@@ -52,6 +52,7 @@ async function fetchDataFromAPI() {
         }
 
         const data = await response.json();
+
         return data; // Devolvemos los datos para que la otra función los use
     } catch (error) {
         console.error("Error al obtener los datos de la API:", error);
@@ -59,13 +60,16 @@ async function fetchDataFromAPI() {
     }
 }
 
+// const datadata = await fetchDataFromAPI();
+// console.log("datadata", datadata);
+
+
 // Función usa fetchDataFromAPI para obtener datos, actualiza UI
 async function fetchDataAndUpdateUI() {
     try {
         const data = await fetchDataFromAPI(); // Llamamos a la función centralizada
         dataJsonFront = data;
         cba_top_process();
-        // console.log("dataJsonFront", dataJsonFront[101]);
 
         // Emitir un evento personalizado con el valor de ax
         const even = new CustomEvent("dataJsonFront", {
@@ -73,14 +77,23 @@ async function fetchDataAndUpdateUI() {
         });
         window.dispatchEvent(even); // Disparar el evento
 
+        return dataJsonFront;
+
         // ver cuantas comas tiene el string, borrar todas salvo la ultima
         // reemplazarla por un punto
     } catch (error) {
         console.error("Error al actualizar la UI:", error);
     }
 }
-// Llamamos a la función que actualiza la UI
+
 fetchDataAndUpdateUI();
+
+
+const dataF = await fetchDataAndUpdateUI();
+
+console.log("dataFront", dataF);
+
+// Llamamos a la función que actualiza la UI
 
 // Función que realiza el fetch y devuelve los datos IPC
 async function fetchDataApiIPC() {
