@@ -118,11 +118,3 @@ document.querySelectorAll(".tooltip-custom-container").forEach((container) => {
         hideTooltip();
     });
 });
-
-
-const data = document.querySelector("[data-prueba]");
-console.log("DATA", data.dataset.prueba);
-
-const dataNumber = document.querySelector("[data-prueba-number]");
-console.log("DATA NUMBER", dataNumber.dataset.pruebaNumber);
-

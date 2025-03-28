@@ -338,19 +338,6 @@ window.addEventListener("dataJsonFront", function (even) {
 			gender_show = "F. Lactante";
 		}
 
-		/* 
-        form__select-gender
-        document.querySelector(".table-compare-month-option[value='1']").setAttribute("disabled", true);
-                document.querySelector(".table-compare-month-option[value='2']").setAttribute("disabled", true);
-                document.querySelector(".table-compare-month-option[value='3']").setAttribute("disabled", true);
-                canasta_month_select.value = "4";
-                selectedMonth = canasta_month_select.value;
-                // canasta_compare_cba.innerHTML = `${selectedMonth}`;
-                canasta_compare_cba = `${selectedMonth}`;
-        */
-
-		// console.log("count_person", count_person);
-
 		if (select_canastas == "indigencia") {
 			cb_table_cells_detail = [gender_show, age_mostrar_table, cba_individual_indigencia];
 			// console.log("select_canastas", select_canastas);
@@ -371,12 +358,14 @@ window.addEventListener("dataJsonFront", function (even) {
 		table_rows_person.push(cb_table_cells_detail);
 
 		const isEven = array_count_person.length % 2 === 0; // Verifica si el índice es par
-		const rowColorClass = isEven ? "bg-blue-500/10" : "bg-emerald-600/10"; // Alterna colores
+		const rowColorClass = isEven ? "bg-blue-500/20" : "bg-emerald-500/20"; // Alterna colores
 
 		row.innerHTML = `<td class="p-1 text-start ${rowColorClass} border border-neutral-600">${
 			table_rows_person[array_count_person.length - 1][0]
 		}</td>
-    <td class="p-1 ${rowColorClass} text-center">${table_rows_person[array_count_person.length - 1][1]}</td>
+    <td class="p-1 ${rowColorClass} border border-neutral-600 text-center">${
+			table_rows_person[array_count_person.length - 1][1]
+		}</td>
     <td id="detalles_monto_person_${count_person}" class="add_Partials p-1 ${rowColorClass} text-center border border-neutral-600">$ ${cb_table_cells_detail[2].toLocaleString(
 			"es-AR",
 			{
