@@ -525,6 +525,8 @@ window.addEventListener("dataJsonFront", function (even) {
 
 		document.querySelector(".table-classes-alta-min").textContent = clase_media_alta_add_group_alquilando;
 		document.querySelector(".table-classes-alta-max").textContent = clase_alta_add_group_baja_alquilando;
+		document.querySelector(".table-classes-acomodada-min").textContent = clase_alta_add_group_baja_alquilando;
+
 		return suma_indigencia_alquilando;
 	}
 

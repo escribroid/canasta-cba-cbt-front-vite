@@ -111,7 +111,7 @@
 
 						<div class="tooltip-custom-container relative">
 							<button
-								class="tooltip-button info-btn mr-2 border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+								class="tooltip-button info-btn mr-2.5 border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 							>
 								i
 							</button>
@@ -210,7 +210,7 @@
 							</p>
 							<div class="tooltip-custom-container relative">
 								<button
-									class="tooltip-button info-btn mr-2 border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+									class="tooltip-button info-btn mr-2.5 border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 								>
 									i
 								</button>
@@ -451,16 +451,44 @@
 						</div>
 					</div>
 
-					<span class=""> Cuidado</span>
-					<input
-						type="text"
-						name="clasePrueba"
-						data-prueba="clasePrueba"
-						data-prueba-number="151"
-						class="bg-amber-900 text-white p-1 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
-					/>
-					<span> Dias</span>
+					<section class="flex justify-center items-center border border-blue-700 ">
+						<span class="mr-2"> Cuidado</span>
 
+						<select name="" id="" class="bg-neutral-500 text-neutral-50 font-semibold py-0.5 mr-2">
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+							<option value="">6</option>
+							<option value="">7</option>
+							<option value="">8</option>
+							<option value="">9</option>
+							<option value="">10</option>
+							<option value="">11</option>
+							<option value="">12</option>
+							<option value="">13</option>
+							<option value="">14</option>
+							<option value="">15</option>
+							<option value="">16</option>
+							<option value="">17</option>
+							<option value="">18</option>
+							<option value="">19</option>
+							<option value="">20</option>
+							<option value="">21</option>
+							<option value="">22</option>
+							<option value="">23</option>
+							<option value="">24</option>
+							<option value="">25</option>
+							<option value="">26</option>
+							<option value="">27</option>
+							<option value="">28</option>
+							<option value="">29</option>
+							<option value="">30</option>
+						</select>
+
+						<span> dias</span>
+					</section>
 					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
 					<div class="border-t border-neutral-600 my-4"></div>
 					<div class="flex justify-center mx-2">
@@ -523,7 +551,7 @@
 									></th>
 									<th class="border border-neutral-600 text-center"></th>
 									<th id="total-canasta" class="border border-neutral-600 text-center"></th>
-									<th class="border border-neutral-600 text-center "></th>
+									<th class="border border-neutral-600 text-center"></th>
 								</tr>
 							</tfoot>
 						</table>
@@ -581,10 +609,10 @@
 										title="Ingresa tu salario mensual familiar"
 									/>
 								</label>
-								<span class="absolute right-6">
+								<span class="absolute right-6.5">
 									<div class="tooltip-custom-container relative">
 										<button
-											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 										>
 											i
 										</button>
@@ -715,27 +743,27 @@
 							<div class="class-acomodada-row flex m-0 items-center">
 								<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 								<span class="w-[10ch]">Acomodada</span>
-								<span class="mayor-menor w-[1ch] flex items-center"></span>
+								<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 							</div>
 							<div
-								class="table-classes-acomodada-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								class="table-classes-acomodada-max text-base flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 							></div>
 						</div>
 
 						<div
-							class="flex flex-wrap w-full text-sm text-neutral-400 bg-neutral-950 justify-center items-center relative rounded-bl-2xl rounded-br-2xl"
+							class="flex w-full text-sm text-center text-neutral-400 bg-neutral-950 justify-center items-center relative rounded-bl-2xl rounded-br-2xl"
 						>
-							<div class="table-classes-alta-min-info flex m-auto text-center py-2">Min</div>
+							<div class="table-classes-alta-min-info text-left py-2 pl-5 mx-auto">Min</div>
 							<div class="table-classes-info m-0 p-0 flex items-center">
-								<span class="mayor-menor w-[1ch] h-full flex items-center">≤</span>
-								<span class="w-[10ch]">Clase social</span>
-								<span class="mayor-menor w-[1ch] h-full flex items-center">&lt;</span>
+								<span class="mayor-menor w-[1ch] h-full flex items-center text-base">≤</span>
+								<span class="w-[10ch] text-base">Clase social</span>
+								<span class="mayor-menor w-[1ch] h-full flex items-center text-base">&lt;</span>
 							</div>
-							<div class="table-classes-alta-max-info m-auto flex">Max</div>
-							<span class="absolute right-4">
+							<div class="table-classes-alta-max-info text-left py-2 pr-5 mx-auto">Max</div>
+							<span class="absolute right-3.5">
 								<div class="tooltip-custom-container relative">
 									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 									>
 										i
 									</button>
@@ -767,11 +795,11 @@
 							Tu Clase Social Ayer
 						</div>
 
-						<span class="flex items-center absolute right-4">
+						<span class="flex items-center absolute right-4.5">
 							<div class="tooltip-custom-container relative">
 								<!-- OVER AQUI -->
 								<button
-									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 								>
 									i
 								</button>
@@ -854,10 +882,10 @@
 									</div>
 								</label>
 							</div>
-							<span class="flex items-center absolute right-4">
+							<span class="flex items-center absolute right-4.5">
 								<div class="tooltip-custom-container relative">
 									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 									>
 										i
 									</button>
@@ -886,10 +914,10 @@
 										title="Si alquilas, ingresá el monto del alquiler."
 									/>
 								</label>
-								<span class="absolute right-4">
+								<span class="absolute right-4.5">
 									<div class="tooltip-custom-container relative">
 										<button
-											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 										>
 											i
 										</button>
@@ -915,10 +943,10 @@
 										title="Ingresa tu salario en ese mes y año."
 									/>
 								</label>
-								<span class="absolute right-4">
+								<span class="absolute right-4.5">
 									<div class="tooltip-custom-container relative">
 										<button
-											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-6 h-6 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
 										>
 											i
 										</button>
@@ -935,50 +963,51 @@
 						<!-- Tabla clases sociales pasadas------------------------------->
 						<div class="table-classes-past pt-0 mt-0 m-1 text-center rounded-2xl bg-neutral-900">
 							<div
-								class="table-classes-indigencia rounded-t-2xl table-classes-indigencia-past flex justify-center m-0 p-0 bg-neutral-950/80 max-w-full"
+								class="table-classes-indigencia table-classes-indigencia-past rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
 							>
 								<div
 									class="table-classes-indigencia-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 								></div>
 								<div
-									class="class-indigencia-row class-indigencia-row-past flex m-0 py-0.5 items-center"
+									class="class-indigencia-row class-indigencia-row-past flex m-0 items-center"
 								>
-									<span class="mayor-menor ww-[1ch] flex items-center">≤</span>
+									<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 									<span class="w-[10ch]">Indigente</span>
 									<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 								</div>
 								<div
-									class="table-classes-indigencia-max-past flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+									class="table-classes-indigencia-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 								></div>
 							</div>
+
 							<div
-								class="table-classes-pobreza table-classes-pobreza-past flex justify-center m-0 p-0 bg-neutral-700/50 max-w-full"
+								class="table-classes-pobreza table-classes-pobreza-past flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
 							>
 								<div
 									class="table-classes-pobreza-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 								></div>
-								<div class="class-pobreza-row class-pobreza-row-past flex m-0 py-0.5 items-center">
+								<div class="class-pobreza-row class-pobreza-row-past flex m-0 items-center">
 									<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 									<span class="w-[10ch]">Pobreza</span>
 									<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 								</div>
 								<div
-									class="table-classes-pobreza-max-past flex m-0 p-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+									class="table-classes-pobreza-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
 								></div>
 							</div>
 
 							<div
-								class="table-classes-baja table-classes-baja-past bg-neutral-950 flex justify-center flex-wrap m-0 p-0 w-full"
+								class="table-classes-baja table-classes-baja-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
 							>
-								<div class="table-classes-baja-min-past m-0 p-0 items-center"></div>
+								<div class="table-classes-baja-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 								<div
-									class="class-baja-row class-baja-row-past flex m-0 p-0 py-1 justify-between items-center"
+									class="class-baja-row class-baja-row-past flex m-0 items-center"
 								>
-									<span class="mayor-menor w-[1ch] pr-0 h-full flex items-center">≤</span>
+									<span class="mayor-menor w-[1ch] flex items-center">≤</span>
 									<span class="w-[10ch]">Clase Baja</span>
-									<span class="mayor-menor w-[1ch] text-center h-full flex items-center">&lt;</span>
+									<span class="mayor-menor w-[1ch] flex items-center">&lt;</span>
 								</div>
-								<div class="table-classes-baja-max-past m-0 p-0 flex justify-center items-center"></div>
+								<div class="table-classes-baja-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 							</div>
 
 							<div
@@ -1143,7 +1172,7 @@
 					<div class="card_body mx-3 items-center">
 						<h3 class="card-cb-subtitle flex items-center font-semibold text-blue-200 mt-4 mb-1.5">
 							CBA - Linea de indigencia
-							<span class="absolute right-6">
+							<span class="absolute right-5.5">
 								<div class="tooltip-custom-container relative">
 									<button
 										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
@@ -1191,7 +1220,7 @@
 							class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-200"
 						>
 							CBT - Línea de Pobreza
-							<span class="absolute right-6">
+							<span class="absolute right-5.5">
 								<div class="tooltip-custom-container relative">
 									<button
 										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
@@ -1240,7 +1269,7 @@
 							class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-200"
 						>
 							Línea Pobreza Alquilando
-							<span class="absolute right-6">
+							<span class="absolute right-5.5">
 								<div class="tooltip-custom-container relative">
 									<button
 										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
