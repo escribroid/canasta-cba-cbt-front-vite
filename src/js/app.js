@@ -431,7 +431,9 @@ window.addEventListener("dataJsonFront", function (even) {
 	suma_con_alquiler = 0;
 	function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
 		alquiler_in_value = parseInt(document.getElementById("card-rent-in").value);
-		alquiler_out = document.getElementById("card-main-rent-out");
+		alquiler_out = document.getElementById("card-main-rent-out").toLocaleString("es-AR", {
+			maximumFractionDigits: 0,
+		});
 		select_canastas = document.getElementById("table-canastas__select").value;
 
 		if (isNaN(alquiler_in_value)) {
@@ -817,9 +819,13 @@ window.addEventListener("dataJsonFront", function (even) {
 			}
 
 			if (isNaN(parseInt(document.getElementById("card-main-rent-out").value))) {
-				document.getElementById("card-main-rent-out").textContent = alquiler_in_value;
+				document.getElementById("card-main-rent-out").textContent = alquiler_in_value.toLocaleString("es-AR", {
+					maximumFractionDigits: 0,
+				});
 			} else {
-				document.getElementById("card-main-rent-out").textContent = alquiler_in_value;
+				document.getElementById("card-main-rent-out").textContent = alquiler_in_value.toLocaleString("es-AR", {
+			maximumFractionDigits: 0,
+		});
 			}
 
 			suma_con_alquiler = 0;
