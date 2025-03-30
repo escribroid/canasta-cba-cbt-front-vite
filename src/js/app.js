@@ -239,6 +239,10 @@ window.addEventListener("dataJsonFront", function (even) {
 				let existingCell = existingRow.cells[2];
 				existingCell.textContent = Math.round(array_cba_individual[i]);
 			}
+
+			console.log("suma_indigencia_alquilando", suma_indigencia_alquilando);
+			
+
 			document.getElementById("total-canasta").innerHTML = suma_indigencia_alquilando;
 
 			//console.log("table_rows_change_classes D-", table_rows_change_classes);
@@ -431,9 +435,7 @@ window.addEventListener("dataJsonFront", function (even) {
 	suma_con_alquiler = 0;
 	function suma_Total(cbt_add_group, alquiler_in_value, suma_con_alquiler) {
 		alquiler_in_value = parseInt(document.getElementById("card-rent-in").value);
-		alquiler_out = document.getElementById("card-main-rent-out").toLocaleString("es-AR", {
-			maximumFractionDigits: 0,
-		});
+		alquiler_out = document.getElementById("card-main-rent-out");
 		select_canastas = document.getElementById("table-canastas__select").value;
 
 		if (isNaN(alquiler_in_value)) {
@@ -521,6 +523,7 @@ window.addEventListener("dataJsonFront", function (even) {
 		return suma_indigencia_alquilando;
 	}
 
+	// Agregar un evento al input para cambiar el estado del input
 	alquiler_in.addEventListener("input", function () {
 		vivienda = document.getElementById("card__select-rent");
 		alquiler_in = document.getElementById("card-rent-in");
@@ -566,12 +569,16 @@ window.addEventListener("dataJsonFront", function (even) {
 		} else if (vivienda.value === "AlquilerProm3amb") {
 			document.querySelector(".table-cba-rent").classList.remove("hidden");
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
-			alquiler_in.value = `${indices_manuales.alquilerProm3amb}`;
+			alquiler_in.value = `$ ${indices_manuales.alquilerProm3amb.toLocaleString("es-AR", {
+				maximumFractionDigits: 0,
+			})}`;
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
 			// document.querySelector(".table-canastas-rent").style.display = "block";
 		} else if (vivienda.value === "AlquilerProm2amb") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
-			alquiler_in.value = `${indices_manuales.alquilerProm2amb}`;
+			alquiler_in.value = `$ ${indices_manuales.alquilerProm2amb.toLocaleString("es-AR", {
+				maximumFractionDigits: 0,
+			})}`;
 			parseInt(alquiler_in.value);
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
 			// document.querySelector(".table-canastas-rent").style.display = "block";
@@ -582,7 +589,9 @@ window.addEventListener("dataJsonFront", function (even) {
 			add_total_table(cba_add_group, cbt_add_group, alquiler_in_value, suma_con_alquiler);
 		} else if (vivienda.value === "AlquilerProm1amb") {
 			alquiler_in.setAttribute("disabled", "true"); // Deshabilitar el input
-			alquiler_in.value = `${indices_manuales.alquilerProm1amb}`;
+			alquiler_in.value = `$ ${indices_manuales.alquilerProm1amb.toLocaleString("es-AR", {
+				maximumFractionDigits: 0,
+			})}`;
 			parseInt(alquiler_in.value);
 			document.getElementById("card-main-rent-out").textContent = alquiler_in.value;
 			// document.querySelector(".table-canastas-rent").style.display = "block";
