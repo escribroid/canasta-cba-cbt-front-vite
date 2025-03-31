@@ -74,17 +74,17 @@ window.addEventListener("dataJsonFront", function (even) {
 
 	function lineaIndigencia() {
 		const lineaIndigencia = document.querySelector(".linea-indigencia");
-		lineaIndigencia.innerHTML = `<div class="cards_nota text-center mx-4"><span >» Indigencia con Casa Propia: ingreso mensual menor a $ ${cba}</span></div>`;
+		lineaIndigencia.innerHTML = `<div class="cards_nota text-center w-10/12">» Indigencia con Casa Propia: ingreso mensual menor a $ <span >${cba}</span></div>`;
 	}
 
 	function lineaPobreza() {
 		const lineaPobreza = document.querySelector(".linea-pobreza");
-		lineaPobreza.innerHTML = `<div class="cards_nota text-center mx-4"><span >» Pobreza con Casa Propia: ingreso mensual menor a $ ${cbt}</span></div>`;
+		lineaPobreza.innerHTML = `<div class="cards_nota text-center w-10/12">» Pobreza con Casa Propia: ingreso mensual menor a $ <span >${cbt}</span></div>`;
 	}
 
 	function linea_pobreza_alquilando() {
 		const linea_pobreza_alquilando = document.querySelector(".linea-pobreza-renting");
-		linea_pobreza_alquilando.innerHTML = `<div class="cards_nota text-center mx-4"><span >» Pobreza ALQUILANDO: ingreso mensual menor a $ ${cbt_alquiler_3amb}</span></div>`;
+		linea_pobreza_alquilando.innerHTML = `<div class="cards_nota text-center w-10/12">» Pobreza Sin Casa Propia: ingreso mensual menor a $ <span >${cbt_alquiler_3amb}</span></div>`;
 	}
 
 	calcular_cba();
@@ -241,7 +241,6 @@ window.addEventListener("dataJsonFront", function (even) {
 			}
 
 			console.log("suma_indigencia_alquilando", suma_indigencia_alquilando);
-			
 
 			document.getElementById("total-canasta").innerHTML = suma_indigencia_alquilando;
 
@@ -367,7 +366,7 @@ window.addEventListener("dataJsonFront", function (even) {
 		row.innerHTML = `<td class="p-1 text-start ${rowColorClass} border border-neutral-600">${
 			table_rows_person[array_count_person.length - 1][0]
 		}</td>
-    <td class="p-1 ${rowColorClass} border border-neutral-600 text-center">${
+    <td class="${rowColorClass} border border-neutral-600 text-center">${
 			table_rows_person[array_count_person.length - 1][1]
 		}</td>
     <td id="detalles_monto_person_${count_person}" class="add_Partials p-1 ${rowColorClass} text-center border border-neutral-600">$ ${cb_table_cells_detail[2].toLocaleString(
@@ -381,6 +380,89 @@ window.addEventListener("dataJsonFront", function (even) {
         <path d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
     </td>`;
+
+
+		/* ============================================================== */
+		/* == Dias en tabla para niños tenencia == */
+		/* ============================================================== */
+		if (table_rows_person[array_count_person.length - 1][1] < 18) {
+			// console.log("menor de edad", table_rows_person[array_count_person.length - 1][1]);
+
+			row.innerHTML = `<td class="p-1 text-start ${rowColorClass} border border-neutral-600">${
+				table_rows_person[array_count_person.length - 1][0]
+			}</td>
+    <td class="${rowColorClass} border border-neutral-600 text-center">${
+				table_rows_person[array_count_person.length - 1][1]
+			}</td>
+    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1 ${rowColorClass} text-center border border-neutral-600">$ ${cb_table_cells_detail[2].toLocaleString(
+				"es-AR",
+				{
+					maximumFractionDigits: 0,
+				}
+			)}</td>
+    <td class=" p-0 m-0 mx-auto ${rowColorClass} border border-neutral-600" id="person_${count_person}_detalles">
+    <svg id="testSvg" class="detalles_delete_body cursor-pointer p-0 m-0 mx-auto " width="20px" height="20px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    </td>
+
+		<td class="${rowColorClass} border border-neutral-600">
+
+		<select class="form-age--option block mx-auto my-auto bg-transparent text-center border-none outline-none" value="" min="1" max="30" step="1" id="age_${count_person}" name="age_${count_person}">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30" selected>30</option>
+		</select>`;
+		} else {
+			row.innerHTML = `<td class="p-1 text-start ${rowColorClass} border border-neutral-600">${
+				table_rows_person[array_count_person.length - 1][0]
+			}</td>
+    <td class="${rowColorClass} border border-neutral-600 text-center">${
+				table_rows_person[array_count_person.length - 1][1]
+			}</td>
+    <td id="detalles_monto_person_${count_person}" class="add_Partials p-1 ${rowColorClass} text-center border border-neutral-600">$ ${cb_table_cells_detail[2].toLocaleString(
+				"es-AR",
+				{
+					maximumFractionDigits: 0,
+				}
+			)}</td>
+    <td class=" p-0 m-0 mx-auto ${rowColorClass} border border-neutral-600" id="person_${count_person}_detalles">
+    <svg id="testSvg" class="detalles_delete_body cursor-pointer p-0 m-0 mx-auto " width="20px" height="20px" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+    </td>
+
+		<td class="${rowColorClass} border border-neutral-600">
+
+		`;
+		}
 
 		tableBody.appendChild(row);
 		return table_rows_person;
@@ -833,8 +915,8 @@ window.addEventListener("dataJsonFront", function (even) {
 				});
 			} else {
 				document.getElementById("card-main-rent-out").textContent = alquiler_in_value.toLocaleString("es-AR", {
-			maximumFractionDigits: 0,
-		});
+					maximumFractionDigits: 0,
+				});
 			}
 
 			suma_con_alquiler = 0;

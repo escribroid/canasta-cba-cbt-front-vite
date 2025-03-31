@@ -491,20 +491,53 @@
 
 					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
 					<div class="border-t border-neutral-600 mb-4"></div>
-					<div class="flex justify-center mx-2 rounded overflow-auto border border-neutral-600">
+					<div class="flex justify-center mx-0 rounded overflow-auto border border-neutral-600 mb-4">
 						<table class="min-w-full table-auto">
 							<thead class="bg-neutral-900">
-								<tr class="">
+								<tr>
+									<th colspan="5" class="m-0 p-0 bg-neutral-900">
+										<label class="relative flex w-8/12 py-0.5 m-auto items-center">
+											<select
+												name="table-canastas__select"
+												id="table-canastas__select"
+												title="Seleccione el detalle personal"
+												class="px-2 py-0.5 w-full bg-neutral-800 text-neutral-300 appearance-none focus:outline-none focus:ring-2 focus:ring-neutral-500"
+											>
+												<option value="" class="bg-neutral-950 text-neutral-400" disabled>
+													Detalle individual ▼▼
+												</option>
+												<option value="indigencia">• CBA - Linea indigencia</option>
+												<option value="pobreza" selected>• CBT - Linea de pobreza</option>
+												<option value="clase_baja">• Clase Baja</option>
+												<option value="clase_media_fragil">• Clase Media Fragil</option>
+												<option value="clase_media">• Clase Media</option>
+											</select>
+											<div
+												class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+											>
+												<svg
+													class="fill-current h-6 w-6"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 20 20"
+												>
+													<path d="M7 10l5 5 5-5H7z" />
+												</svg>
+											</div>
+										</label>
+									</th>
+								</tr>
+								<tr class="m-0 p-0 text-neutral-300 font-semibold border border-neutral-600">
 									<th
 										class="p-1 text-center text-neutral-300 font-semibold border border-neutral-600"
 									>
 										Género
 									</th>
 									<th
-										class="p-1 text-center text-neutral-300 font-semibold border border-neutral-600"
+										class="m-0 p-0 text-center text-neutral-300 font-semibold border border-neutral-600"
 									>
 										Edad
 									</th>
+
 									<th class="text-center text-neutral-300 font-semibold border border-neutral-600">
 										$
 									</th>
@@ -528,6 +561,9 @@
 											></path>
 										</svg>
 									</th>
+									<th class="m-0 p-0 text-neutral-300 font-semibold border border-neutral-600">
+										Dias
+									</th>
 								</tr>
 							</thead>
 
@@ -542,12 +578,15 @@
 										Alquiler ==&gt;
 									</th>
 									<th class="bg-black border-t border-neutral-600"></th>
-									<th id="card-main-rent-out" class="before:content-['$'] before:mr-1 border border-neutral-600 bg-black"></th>
+									<th
+										id="card-main-rent-out"
+										class="before:content-['$'] before:mr-1 border border-neutral-600 bg-black"
+									></th>
 									<th class="border border-neutral-600 bg-black"></th>
 								</tr>
-								<tr class="bg-blue-800/50 ">
+								<tr class="bg-blue-800/50">
 									<th
-										class="border border-neutral-600 text-center text-neutral-300 font-semibold "
+										class="border border-neutral-600 text-center text-neutral-300 font-semibold"
 									></th>
 									<th class="border border-neutral-600 text-center"></th>
 									<th id="total-canasta" class="border border-neutral-600 text-center"></th>
@@ -557,28 +596,6 @@
 						</table>
 					</div>
 				</form>
-				<!-- </div> -->
-				<label class="relative flex w-8/12 m-auto items-center">
-					<select
-						name="table-canastas__select"
-						id="table-canastas__select"
-						title="Seleccione el detalle personal"
-						class="my-3 p-2 w-full bg-neutral-700 text-neutral-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-green-500"
-					>
-						<option value="" class="bg-neutral-950 text-neutral-400" disabled>Detalle individual ▼▼</option>
-						<option value="indigencia">• CBA - Linea indigencia</option>
-						<option value="pobreza" selected>• CBT - Linea de pobreza</option>
-						<option value="clase_baja">• Clase Baja</option>
-						<option value="clase_media_fragil">• Clase Media Fragil</option>
-						<option value="clase_media">• Clase Media</option>
-					</select>
-					<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
-						<svg class="fill-current h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-							<path d="M7 10l5 5 5-5H7z" />
-						</svg>
-					</div>
-				</label>
-				<!-- </div> -->
 			</div>
 
 			<!-- Card-2 Tabla clases sociales ------------------------------------------>
@@ -751,15 +768,19 @@
 						</div>
 
 						<div
-							class="flex w-full text-sm text-center text-neutral-400 bg-neutral-950 justify-center items-center relative rounded-bl-2xl rounded-br-2xl"
+							class="flex w-full text-sm text-center text-neutral-400 bg-neutral-950 justify-center items-center relative rounded-bl-2xl rounded-br-2xl py-1"
 						>
-							<div class="table-classes-alta-min-info py-2  mx-auto flex m-0 px-1 w-[calc(50%-6ch)] justify-center items-center break-all">Min</div>
+							<div class="table-classes-alta-min-info flex m-0 w-[calc(50%-6ch)] break-all">
+								<span class="ml-[calc(50%-3ch)] w-full">Min</span>
+							</div>
 							<div class="table-classes-info flex m-0 items-center text-base">
 								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 								<span class="w-[10ch]">Clase social</span>
 								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
 							</div>
-							<div class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] justify-center items-center break-all">Max</div>
+							<div class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] items-center break-all">
+								<span class="ml-[calc(50%-3ch)]">Max</span>
+							</div>
 							<span class="absolute right-3.5">
 								<div class="tooltip-custom-container relative">
 									<button
@@ -1013,10 +1034,10 @@
 							<div
 								class="table-classes-media-fragil table-classes-media-fragil-past flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
 							>
-								<div class="table-classes-media-fragil-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 								<div
-									class="class-media-fragil-row class-media-fragil-row-past flex m-0 items-center"
-								>
+									class="table-classes-media-fragil-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								></div>
+								<div class="class-media-fragil-row class-media-fragil-row-past flex m-0 items-center">
 									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 									<span class="w-[10ch]"> Media frágil</span>
 									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
@@ -1029,10 +1050,10 @@
 							<div
 								class="table-classes-media table-classes-media-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
 							>
-								<div class="table-classes-media-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 								<div
-									class="class-media-row class-media-row-past flex m-0 items-center"
-								>
+									class="table-classes-media-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								></div>
+								<div class="class-media-row class-media-row-past flex m-0 items-center">
 									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 									<span class="w-[10ch]">Media</span>
 									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
@@ -1045,10 +1066,10 @@
 							<div
 								class="table-classes-media-alta table-classes-media-alta-past flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
 							>
-								<div class="table-classes-media-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 								<div
-									class="class-media-alta-row class-media-alta-row-past flex m-0 items-center"
-								>
+									class="table-classes-media-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								></div>
+								<div class="class-media-alta-row class-media-alta-row-past flex m-0 items-center">
 									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 									<span class="w-[10ch]">Media alta</span>
 									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
@@ -1061,30 +1082,24 @@
 							<div
 								class="table-classes-alta table-classes-alta-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
 							>
-								<div class="table-classes-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
 								<div
-									class="class-alta-row class-alta-row-past flex m-0 items-center"
-								>
-									<span
-										class="mayor-menor w-[1ch] flex items-center text-red-500"
-										>≤</span
-									>
+									class="table-classes-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								></div>
+								<div class="class-alta-row class-alta-row-past flex m-0 items-center">
+									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 									<span class="w-[10ch]">Alta</span>
 									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
 								</div>
-								<div class="table-classes-alta-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"></div>
+								<div
+									class="table-classes-alta-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+								></div>
 							</div>
 
 							<div
 								class="table-classes-acomodada table-classes-acomodada-past flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
 							>
-								<div
-									class="class-acomodada-row class-acomodada-row-past flex m-0 items-center"
-								>
-									<span
-										class="mayor-menor w-[1ch] flex items-center text-red-500"
-										>≤</span
-									>
+								<div class="class-acomodada-row class-acomodada-row-past flex m-0 items-center">
+									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 									<span class="w-[10ch]">Acomodada</span>
 									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
 								</div>
@@ -1093,16 +1108,21 @@
 							<div
 								class="flex justify-center w-full bg-neutral-950 text-sm text-neutral-400 relative rounded-b-2xl"
 							>
-								<div class="table-classes-alta-min-info py-2  mx-auto flex m-0 px-1 w-[calc(50%-6ch)] justify-center items-center break-all">Min</div>
+								<div
+									class="table-classes-alta-min-info py-2 mx-auto flex m-0 px-1 w-[calc(50%-6ch)] justify-center items-center break-all"
+								>
+									Min
+								</div>
 								<div class="table-classes-info flex m-0 items-center text-base">
-									<span
-										class="mayor-menor w-[1ch] flex items-center text-red-500"
-										>≤</span
-									>
+									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
 									<span class="w-[10ch]">Clase social</span>
 									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
 								</div>
-								<div class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] justify-center items-center break-all">Max</div>
+								<div
+									class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] justify-center items-center break-all"
+								>
+									Max
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1199,7 +1219,7 @@
 					<div class="card_foot mx-3">
 						<ul class="flex">
 							<li
-								class="linea-indigencia py-2 justify-items-center text-sm text-center text-neutral-300 border-t border-neutral-600"
+								class="linea-indigencia justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600 max-w-2xl mx-auto"
 							></li>
 						</ul>
 					</div>
@@ -1243,10 +1263,10 @@
 						</div>
 					</div>
 
-					<div class="card_foot">
+					<div class="card_foot mx-3">
 						<ul class="flex">
 							<li
-								class="linea-pobreza justify-items-center py-2 text-sm text-center text-neutral-300 border-t border-neutral-600"
+								class="linea-pobreza justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600"
 							></li>
 						</ul>
 					</div>
@@ -1293,10 +1313,10 @@
 						</div>
 					</div>
 
-					<div class="card_foot">
+					<div class="card_foot mx-3">
 						<ul class="flex">
 							<li
-								class="linea-pobreza-renting justify-items-center border-t border-neutral-600 py-2 text-sm text-center text-neutral-300"
+								class="linea-pobreza-renting justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600"
 							></li>
 						</ul>
 					</div>
