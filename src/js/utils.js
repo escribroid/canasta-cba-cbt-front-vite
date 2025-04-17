@@ -4,7 +4,7 @@ import version from "./mod-version"
 document.querySelector(".version").innerHTML = version;
 
 
-// Escuchar el evento de clic en el documento para detectar el clic en el enlace del tooltip
+// Escuchar el evento de click en el documento para detectar el click en el enlace del tooltip
 document.addEventListener("click", (event) => {
     // Verificar si el clic ocurrió en el enlace del tooltip
     if (event.target && event.target.id === "card-canastas-link") {
@@ -25,6 +25,31 @@ document.addEventListener("click", (event) => {
         }, 2000);
     }
 });
+
+
+// Limita input a 10 caracteres
+// Selecciona todos los inputs de la página
+const inputs = document.querySelectorAll('input[type="number"]');
+
+// Agrega el evento de restricción a cada input
+inputs.forEach(input => {
+    input.addEventListener('input', function () {
+        const maxLength = 15; // Define la longitud máxima permitida
+        if (this.value.length > maxLength) {
+            this.value = this.value.slice(0, maxLength); // Corta el exceso de caracteres
+        }
+    });
+});
+
+// inputs.forEach((input) => {
+//     input.addEventListener("focusin", () => {
+//       input.classList.add("ring-2", "ring-emerald-600");
+//     });
+  
+//     input.addEventListener("focusout", () => {
+//       input.classList.remove("ring-2", "ring-emerald-600");
+//     });
+//   });
 
 
 

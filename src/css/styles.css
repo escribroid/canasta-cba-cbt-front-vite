@@ -1,4 +1,15 @@
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+		box-shadow: 0 0 0px 1000px #404040 inset !important;
+    -webkit-text-fill-color: #f3f4f6 !important; 
+    color: #f3f4f6 !important;
+}
+
+
+
+
 
 /* == Classes ========================================= */
 .tooltip-date--over {
@@ -84,28 +95,11 @@
 	z-index: 10;
 }
 
-input {
+/* input {
 	-webkit-appearance: none !important;
-	background-color: #3f3f46 !important; /* Neutral 700 */
+	background-color: #3f3f46 !important; 
 	background-image: none !important;
-}
+} */
 
 
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #3f3f46 inset !important; /* Neutral 700 */
-    box-shadow: 0 0 0px 1000px #3f3f46 inset !important;
-    -webkit-text-fill-color: #f3f4f6 !important; /* Neutral 100 */
-    color: #f3f4f6 !important; /* Neutral 100 */
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #3f3f46 inset !important; /* Neutral 700 */
-		box-shadow: 0 0 0px 1000px #3f3f46 inset !important;
-    -webkit-text-fill-color: #f3f4f6 !important; /* Neutral 100 */
-    color: #f3f4f6 !important; /* Neutral 100 */
-}
