@@ -1,12 +1,10 @@
-
 /* Hacks ========================================================= */
 
 input:autofill {
-	-webkit-box-shadow: 0 0 0px 1000px #404040 inset !important;
-	-webkit-text-fill-color: #f3f4f6 !important; 
+	-webkit-box-shadow: 0 0 0px 1000px #022c22 inset !important;
+	-webkit-text-fill-color: #f3f4f6 !important;
 	color: #f3f4f6 !important;
 }
-
 
 .focus-ring {
 	position: relative;
@@ -15,11 +13,8 @@ input:autofill {
 }
 
 .select-ring-Zindex {
-	z-index: 9998;	
+	z-index: 9998;
 }
-
-
-
 
 /* == Classes ========================================= */
 .tooltip-date--over {
@@ -56,14 +51,13 @@ input:autofill {
 .tooltip-custom-container {
 	position: relative;
 	display: inline-block;
-	
 }
 
 .tooltip-custom {
 	position: absolute;
 	top: -125px;
 	right: 2.25rem;
-	padding: .5rem 0.5rem .5rem 0.5rem;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 	border-radius: 0.5rem;
 	width: 200px;
 	text-align: center;
@@ -110,6 +104,3 @@ input:autofill {
 	background-color: #3f3f46 !important; 
 	background-image: none !important;
 } */
-
-
-

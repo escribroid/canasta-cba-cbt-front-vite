@@ -81,7 +81,7 @@
 			<!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 			<div
 				data-card-main=""
-				class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-950"
+				class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-950 "
 			>
 				<!-- <div class=""> -->
 				<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
@@ -90,8 +90,8 @@
 					</h2>
 				</div>
 
-				<div class="card-vivienda-container px-2 relative">
-					<div class="card-vivienda flex flex-row ml-2 my-4 items-center">
+				<div class="card-vivienda-container px-2 ">
+					<div class="card-vivienda  flex flex-row pl-2 my-4 items-center py-1 rounded-2xl bg-neutral-900/60">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="2.75rem"
@@ -122,14 +122,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="card__table__rent inline-flex pb-4 w-full">
-						<label class="w-1/2 relative">
+					<div class="card__table__rent flex pb-4 w-full justify-center items-center">
+						<label class="relative w-5/12">
 							<select
 								aria-label="canasta-rent"
 								name="canasta-rent"
 								id="card__select-rent"
 								title="Seleccioná si ALquilas o No ALquilas."
-								class="card__select-rent w-full h-10 shadow appearance-none text-gray-300 leading-tight bg-emerald-900 px-3 py-2 rounded-l-2xl border border-emerald-600 focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
+								class="card__select-rent  h-10 shadow appearance-none text-gray-300 leading-tight bg-emerald-900 px-3 py-2 rounded-l-2xl border border-emerald-600 focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
 							>
 								<option class="card-rent--option text-white" value="siAlquilo">Alquilada</option>
 								<option class="card-rent--option text-white" value="noAlquilo">No Alquilada</option>
@@ -137,13 +137,13 @@
 									== Datos Promedio CABA ▼▼
 								</option>
 								<option class="card-rent--option text-white" value="AlquilerProm3amb">
-									CABA Alquiler promedio 3 Amb
+									3 Amb CABA Alquiler promedio
 								</option>
 								<option class="card-rent--option text-white" value="AlquilerProm2amb">
-									CABA Alquiler promedio 2 Amb
+									2 Amb CABA Alquiler promedio
 								</option>
 								<option class="card-rent--option text-white" value="AlquilerProm1amb">
-									CABA Alquiler promedio 1 Amb
+									1 Amb CABA Alquiler promedio
 								</option>
 								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
 									== Datos Promedio GBA Norte ▼▼
@@ -173,17 +173,22 @@
 								</svg>
 							</div>
 						</label>
-						<div id="card-total-rent " class="w-1/2">
-							<label class=" ">
+						<div id="card-total-rent " class="flex justify-center items-center">
+							<label class="flex justify-center items-center align-middle relative">
+								<span
+									class="flex min-w-fit  bg-emerald-950 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
+								>
+									$</span
+								>
 								<input
 									type="number"
 									inputmode="numeric"
 									pattern="\d*"
 									name="card-rent-in"
 									id="card-rent-in"
-									class="card-partial-add card-rent-in text-center w-full h-10 shadow appearance-none text-gray-50 leading-tight bg-emerald-950 border border-emerald-600 px-1 py-2 rounded-r-2xl focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
+									class="card-partial-add w-full card-rent-in text-center h-10 shadow appearance-none text-gray-50 leading-tight bg-emerald-950 border border-emerald-600 px-1 py-2 rounded-r-2xl focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
 									value=""
-									placeholder="$ Valor Alquiler"
+									placeholder="Valor Alquiler"
 									title="Si alquilas, ingresá el monto del alquiler."
 								/>
 							</label>
@@ -193,7 +198,9 @@
 
 				<form id="form " class="border-t border-neutral-600 m-0 p-0">
 					<div class="flex flex-col px-2 relative">
-						<div class="form-family flex flex-row ml-2 my-4 items-center">
+						<div
+							class="form-family flex flex-row my-4 items-center pl-2 py-1 rounded-2xl bg-neutral-900/60"
+						>
 							<!-- SVG PERSON -->
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +246,7 @@
 							</svg>
 						</div>
 						<div class="fieldset flex mb-4">
-							<div class="form-gender w-1/2">
+							<div class="form-gender w-9/12">
 								<!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
 
 								<label class="form__select-gender-label relative w-full">
@@ -282,14 +289,14 @@
 								<input type="hidden" name="gender" id="gender" required />
 							</div>
 
-							<div class="form-age-container flex w-1/2 m-0 p-0">
+							<div class="form-age-container flex w-full m-0 p-0">
 								<div class="form-age w-full justify-between mr-2">
 									<label class="flex relative">
 										<select
 											aria-label="form__select-age"
 											name="form__select-age"
 											id="form__select-age"
-											class="form__select-age w-full p-2 h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none text-left focus:shadow-outline pl-2 bg-blue-950 border border-blue-600 px-3 py-2 rounded-r-2xl focus:ring-2 focus:ring-blue-600"
+											class="form__select-age w-full p-2 h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none text-center focus:shadow-outline pl-2 bg-blue-950 border border-blue-600 px-3 py-2 rounded-r-2xl focus:ring-2 focus:ring-blue-600"
 											title="Ingresá la edad de la persona"
 										>
 											<option
@@ -450,7 +457,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
 					<div class="border-t border-neutral-600 mb-4"></div>
 					<div class="flex justify-center mx-0 rounded overflow-auto border border-neutral-600 mb-4">
@@ -858,7 +865,7 @@
 									</div>
 								</label>
 
-								<label class=" w-1/2 relative">
+								<label class="w-1/2 relative">
 									<select
 										id="table-compare-year"
 										class="table-compare-year w-full focus:shadow-outline pr-2 focus:shadow-outline text-center h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-blue-950 border border-blue-600 rounded-r-2xl focus:ring-2 focus:ring-emerald-600"
@@ -896,7 +903,12 @@
 
 						<div class="relative w-full mb-4">
 							<div class="flex justify-center items-center w-full relative">
-								<label class="flex justify-end w-8/12">
+								<label class="flex items-center w-8/12 relative">
+									<span
+										class="flex min-w-fit bg-emerald-950 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
+									>
+										$</span
+									>
 									<input
 										type="number"
 										inputmode="numeric"
@@ -905,7 +917,7 @@
 										id="rent-past"
 										class="card-partial-add rent-past w-full p-2 h-10 shadow appearance-none text-center text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-emerald-950 border border-emerald-600 px-3 rounded-2xl focus:ring-2 focus:ring-emerald-600"
 										value=""
-										placeholder="$ Alquiler en 02/2022"
+										placeholder="Alquiler valor en 02/2022"
 										title="Si alquilas, ingresá el monto del alquiler."
 									/>
 								</label>
@@ -928,13 +940,18 @@
 
 						<div class="relative w-full mb-4">
 							<div class="flex justify-center items-center w-full relative">
-								<label class="w-8/12">
+								<label class="flex w-8/12 relative justify-center items-center">
+									<span
+										class="flex min-w-fit bg-emerald-950 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
+									>
+										$</span
+									>
 									<input
 										id="table-compare-income-in"
 										class="table-compare-income-in text-center w-full h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline bg-emerald-950 border border-emerald-600 px-3 rounded-2xl focus:ring-2 focus:ring-emerald-600"
 										type="number"
 										pattern="\d+"
-										placeholder="$ Ingresos en 02/2022"
+										placeholder="Ingresos en 02/2022"
 										title="Ingresa tu salario en ese mes y año."
 									/>
 								</label>
