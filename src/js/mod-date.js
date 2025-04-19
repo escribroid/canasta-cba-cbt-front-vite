@@ -89,7 +89,7 @@ fetchDataAndUpdateUI();
 
 async function xMainAwait() {
 	const dataF = await fetchDataAndUpdateUI();
-	console.log("dataFront", dataF);
+	// console.log("dataFront", dataF);
 }
 xMainAwait();
 

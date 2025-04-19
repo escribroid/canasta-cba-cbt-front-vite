@@ -77,6 +77,18 @@ document.addEventListener("click", (event) => {
     }
 });
 
+const select_tableCompareYearLabel = document.querySelector(".table-compare-month-label");
+
+select_tableCompareYearLabel.addEventListener("click", (event) => {
+		event.stopPropagation(); // Previene que el evento se propague al documento
+		select_tableCompareYearLabel.classList.add("select-ring-Zindex");
+});
+
+document.addEventListener("click", (event) => {
+	if (!select_tableCompareYearLabel.contains(event.target)) {
+		select_tableCompareYearLabel.classList.remove("select-ring-Zindex");
+	}
+});
 
 
 
