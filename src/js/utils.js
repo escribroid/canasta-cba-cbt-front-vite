@@ -25,6 +25,7 @@ document.addEventListener("click", (event) => {
 	}
 });
 
+
 /* ##############################################################
  Limita input a 10 caracteres / Selecciona todos los inputs de la página */
 
