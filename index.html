@@ -123,7 +123,7 @@
 						</div>
 					</div>
 					<div class="card__table__rent flex mb-4 justify-center items-center relative">
-						<label class="relative">
+						<label class="relative card__select_rent_label">
 							<select
 								aria-label="canasta-rent"
 								name="canasta-rent"
@@ -232,10 +232,10 @@
 						<div class="card__btn--reset" id="card__btn--reset" title="Borrar Todo">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								width="2.5rem"
-								height="2.5rem"
-								class="card__svg--reset absolute transition-all duration-1000 ease-in right-2 fill-red-600 bg-red-950 focus:ring-2 focus:ring-red-700 focus:outline-red-500 shadow rounded-full hover:bg-red-950 border-2 border-red-600 focus:outline-2 focus:outline-offset-2 active:bg-red-900 active:scale-115 hover:fill-red-500 hover:ring-2 hover:ring-red-700 hover:shadow-md hover:shadow-red-600 opacity-0 top-[1rem] hidden"
-								viewBox="0 0 16 16"
+								width="2.625rem"
+								height="2.675rem"
+								class="card__svg--reset absolute transition-all duration-1000 ease-in right-2 fill-red-600 bg-red-950 focus:ring-2 focus:ring-red-700 focus:outline-red-500 shadow rounded-2xl hover:bg-red-950 border-2 border-red-600 focus:outline-2 focus:outline-offset-2 active:bg-red-900 active:scale-115 hover:fill-red-500 hover:ring-2 hover:ring-red-700 hover:shadow-md hover:shadow-red-600 opacity-0 top-[1rem] hidden"
+								viewBox="1 1 14 14"
 							>
 								<path
 									d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
@@ -426,7 +426,7 @@
 							<button
 								id="form-submit"
 								type="submit"
-								class="form-submit bg-neutral-800 hover:bg-blue-700 text-white font-bold content-between rounded focus:outline-none focus:shadow-outline transition-all ease-in-out ml-2"
+								class="form-submit bg-neutral-800 rounded-full hover:bg-blue-700 text-white font-bold content-between rounded focus:outline-none focus:shadow-outline transition-all ease-in-out ml-2"
 								aria-label="Person"
 								name="btn-add-person"
 								title="Agregar Familiar"
@@ -438,7 +438,7 @@
 										width="2.5rem"
 										height="2.5rem"
 										class="icon-svg-add shadow rounded-full bg-neutral-800 hover:bg-neutral-800 border-2 border-blue-500 focus:outline-2 focus:outline-offset-2 fill-blue-500 focus:outline-neutral-500 active:bg-neutral-700 active:scale-115 hover:fill-blue-400 hover:ring-2 hover:ring-blue-500 hover:shadow-lg hover:shadow-blue-500"
-										viewBox="0 0 16 16"
+										viewBox="1 1 14 14"
 									>
 										<path
 											d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
@@ -576,10 +576,18 @@
 						</div>
 					</div>
 
-					<!-- ingresar salario =================================-#############################################################################################################----------------------------------->
+					<!-- ingresar salario =================================-
+					 <div
+  class="w-32 h-32 bg-gray-300 rounded-md hover:ring-4 hover:ring-blue-500 focus:ring-4 focus:ring-blue-500 active:ring-4 active:ring-blue-500"
+  tabindex="0"
+>
+  Haz click aquí
+</div>#############################################################################################################----------------------------------->
 					<div class="py-4 px-2 w-full justify-center items-center relative">
 						<div class="flex w-full shadow-md items-center">
-							<div>
+							<div
+								class="in_salary_label rounded-l-2xl focus:ring-2 focus:ring-emerald-600 active:ring-2 active:ring-emerald-600"
+							>
 								<span
 									class="flex justify-center items-center bg-emerald-900 h-10 border-1 border-y-emerald-700 border-l-emerald-600 border-r-emerald-600 rounded-l-2xl w-[14ch]"
 									>Ingreso Familiar:</span
@@ -813,7 +821,7 @@
 								<label class="table-compare-month-label w-1/2 relative">
 									<select
 										id="table-compare-month"
-										class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-blue-900 border border-blue-600 rounded-l-2xl focus:ring-2 focus:ring-emerald-600"
+										class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-emerald-900 border border-emerald-600 rounded-l-2xl focus:ring-2 focus:ring-emerald-600"
 										aria-label="Month"
 									>
 										<option
@@ -859,7 +867,7 @@
 								<label class="w-1/2 relative">
 									<select
 										id="table-compare-year"
-										class="table-compare-year w-full focus:shadow-outline pr-2 focus:shadow-outline text-center h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-blue-950 border border-blue-600 rounded-r-2xl focus:ring-2 focus:ring-emerald-600"
+										class="table-compare-year w-full focus:shadow-outline pr-2 focus:shadow-outline text-center h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-emerald-950 border border-emerald-600 rounded-r-2xl focus:ring-2 focus:ring-emerald-600"
 										aria-label="Year"
 									></select>
 									<div
@@ -1129,6 +1137,7 @@
 						Hogar Modelo
 						<label class="relative">
 							<select
+								type="number"
 								name="select-models-families"
 								class="h-6 border border-blue-700 rounded-md m-0 pl-2 pr-5 text-base bg-blue-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
 								data-select="select-models-families"

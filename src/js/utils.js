@@ -90,6 +90,27 @@ document.addEventListener("click", (event) => {
 	}
 });
 
+const card__select_rent_label = document.querySelector(".card__select_rent_label");
+
+card__select_rent_label.addEventListener("click", (event) => {
+	event.stopPropagation(); // Previene que el evento se propague al documento
+	card__select_rent_label.classList.add("select-ring-Zindex");
+});
+
+const in_salary_label = document.querySelector(".in_salary_label");
+const income__input = document.querySelector(".income__input");
+
+in_salary_label.addEventListener("click", (event) => {
+	event.stopPropagation();
+	in_salary_label.classList.add("select-ring-Zindex");
+
+	setTimeout(() => {
+		income__input.focus(); // Enfocar el input al hacer clic en el label
+		income__input.classList.add("focus-ring"); // Agregar el focus ring al input
+	}, 100); // Esperar 700ms antes de eliminar la clase
+
+	
+});
 
 
 
