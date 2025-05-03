@@ -1,21 +1,21 @@
 {
-    "name": "canastas-cba-cbt-vite",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "description": "",
-    "dependencies": {
-        "@tailwindcss/vite": "^4.0.15",
-        "canastas-cba-cbt-vite": "file:",
-        "tailwindcss": "^4.0.15",
-        "vite": "^6.3.2"
-    }
+  "name": "canastas-cba-cbt-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.15",
+    "canastas-cba-cbt-vite": "file:",
+    "tailwindcss": "^4.0.15",
+    "vite": "^6.3.2"
+  }
 }

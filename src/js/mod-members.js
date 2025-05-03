@@ -9,7 +9,7 @@ const table_members_model_1 = `<table class="min-w-full table-auto rounded-xl bo
 										<th class="font-normal border border-neutral-600 px-1 py-1.5 text-center">Mujer</th>
 										<th class="font-normal border border-neutral-600 px-1 py-1.5 text-center">Varon</th>
 										<th class="font-normal border border-neutral-600 px-1 py-1.5 text-center">Mujer</th>
-										
+
 									</tr>
 									<tr class="rounded-ee-full border border-neutral-600">
 										<th class="border-r-3 border-blue-500 font-semibold px-2 py-1.5 text-left">Edad</th>
@@ -67,30 +67,30 @@ const selectMembers = document.querySelector('[data-select="select-models-famili
 const members_num = document.querySelector('[data-members-num="members-num"]');
 
 if (selectMembers.value === "2") {
-	members.innerHTML = table_members_model_2;
-	members_num.innerHTML = 4;
+    members.innerHTML = table_members_model_2;
+    members_num.innerHTML = 4;
 }
 
-document.querySelector('[data-select="select-models-families"]').addEventListener("change", function () {
-	if (selectMembers.value === "1") {
-		members.innerHTML = table_members_model_1;
-		members_num.innerHTML = 3;
-	} else if (selectMembers.value === "2") {
-		members.innerHTML = table_members_model_2;
-		members_num.innerHTML = 4;
-	} else if (selectMembers.value === "3") {
-		members.innerHTML = table_members_model_3;
-		members_num.innerHTML = 5;
-	}
-});
+document
+    .querySelector('[data-select="select-models-families"]')
+    .addEventListener("change", function () {
+        if (selectMembers.value === "1") {
+            members.innerHTML = table_members_model_1;
+            members_num.innerHTML = 3;
+        } else if (selectMembers.value === "2") {
+            members.innerHTML = table_members_model_2;
+            members_num.innerHTML = 4;
+        } else if (selectMembers.value === "3") {
+            members.innerHTML = table_members_model_3;
+            members_num.innerHTML = 5;
+        }
+    });
 
 /* card cba cbt cbta ############################################################## */
 
 // Escuchar el evento personalizado emitido desde a.js
 window.addEventListener("dataJsonFront", function (even) {
-	dataJsonFront = even.detail.dataJsonFront;		
-	
-	// console.log("dataaaa", dataJsonFront);
-	
+    dataJsonFront = even.detail.dataJsonFront;
 
+    // console.log("dataaaa", dataJsonFront);
 });

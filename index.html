@@ -1,614 +1,620 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<meta name="description" content="Canasta Básica Alimentaria y Canasta Básica Total" />
-		<meta
-			name="keywords"
-			content="CBA, CBT, IPC, Canasta Básica Alimentaria, Canasta Básica Total, Canasta Básica Total mas Alquiler, Canasta Básica Alimentaria mas Alquiler, Linea de pobreza, linea de indigencia, linea de clase media"
-		/>
-		<meta name="author" content="escribroid" />
-		<meta name="theme-color" content="#262626" />
-		<!-- Metaetiqueta para cambiar el color de la barra de navegación en iOS -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<title>CANASTAS</title>
-		<!-- FONT -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,100..900&display=swap"
-			rel="stylesheet"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Canasta Básica Alimentaria y Canasta Básica Total" />
+    <meta
+      name="keywords"
+      content="CBA, CBT, IPC, Canasta Básica Alimentaria, Canasta Básica Total, Canasta Básica Total mas Alquiler, Canasta Básica Alimentaria mas Alquiler, Linea de pobreza, linea de indigencia, linea de clase media"
+    />
+    <meta name="author" content="escribroid" />
+    <meta name="theme-color" content="#262626" />
+    <!-- Metaetiqueta para cambiar el color de la barra de navegación en iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>CANASTAS</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-		<!-- Tailwind CSS -->
-		<link href="/src/css/twcss.css" rel="stylesheet" />
-		<!-- Styles custom -->
-		<link href="/src/css/styles.css" rel="stylesheet" />
-		<link href="src/css/media-desktop.css" rel="stylesheet" />
-	</head>
+    <!-- Tailwind CSS -->
+    <link href="/src/css/twcss.css" rel="stylesheet" />
+    <!-- Styles custom -->
+    <link href="/src/css/styles.css" rel="stylesheet" />
+    <link href="src/css/media-desktop.css" rel="stylesheet" />
+  </head>
 
-	<body class="font-inter bg-neutral-500 text-neutral-50 text-base">
-		<!-- Contenedor principal shadow-xl shadow-neutral-950/80-->
-		<div
-			class="index-container bg-neutral-800 flex text-sm text-neutral-100 justify-evenly items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-lg shadow-neutral-950 border-b border-x border-neutral-950 border-x-neutral-950"
-		>
-			<div class="index-top">
-				<span class="index-data-txt">ipc </span>
-				<span class="index-data-ipc"> </span>
-			</div>
-			<span>|</span>
-			<div class="index-top">
-				<span class="index-data-txt">cba </span>
-				<span class="index-data-cba"></span>
-			</div>
-			<span>|</span>
-			<div class="index-top">
-				<span class="index-data-txt">cbt </span>
-				<span class="index-data-cbt"></span>
-			</div>
-		</div>
+  <body class="font-inter bg-neutral-500 text-neutral-50 text-base">
+    <!-- Contenedor principal shadow-xl shadow-neutral-950/80-->
+    <div
+      class="index-container bg-neutral-800 flex text-sm text-neutral-100 justify-evenly items-center rounded-b-2xl py-2 mb-6 bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-lg shadow-neutral-950 border-b border-x border-neutral-950 border-x-neutral-950"
+    >
+      <div class="index-top">
+        <span class="index-data-txt">ipc </span>
+        <span class="index-data-ipc"> </span>
+      </div>
+      <span>|</span>
+      <div class="index-top">
+        <span class="index-data-txt">cba </span>
+        <span class="index-data-cba"></span>
+      </div>
+      <span>|</span>
+      <div class="index-top">
+        <span class="index-data-txt">cbt </span>
+        <span class="index-data-cbt"></span>
+      </div>
+    </div>
 
-		<!-- Header -->
-		<header
-			class="mx-2 p-2 mb-6 bg-neutral-800/85 rounded-2xl shadow-lg shadow-neutral-950 border border-neutral-950"
-			data-header=""
-		>
-			<!-- Navbar -->
-			<nav class="flex justify-between">
-				<a class="flex items-center font-bold" href="./index.html">
-					<img class="h-12 mr-2" src="src/img/iso_logo.svg" alt="Logo" />
-				</a>
-				<a class="flex items-center font-bold" href="./index.html">
-					<h1 class="w-full text-4xl md:text-5xl">CANASTAS</h1>
-				</a>
-				<button class="text-neutral-300 hover:text-neutral-100 focus:outline-none">
-					<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16m-7 6h7"
-						></path>
-					</svg>
-				</button>
-			</nav>
-		</header>
+    <!-- Header -->
+    <header
+      class="mx-2 p-2 mb-6 bg-neutral-800/85 rounded-2xl shadow-lg shadow-neutral-950 border border-neutral-950"
+      data-header=""
+    >
+      <!-- Navbar -->
+      <nav class="flex justify-between">
+        <a class="flex items-center font-bold" href="./index.html">
+          <img class="h-12 mr-2" src="src/img/iso_logo.svg" alt="Logo" />
+        </a>
+        <a class="flex items-center font-bold" href="./index.html">
+          <h1 class="w-full text-4xl md:text-5xl">CANASTAS</h1>
+        </a>
+        <button class="text-neutral-300 hover:text-neutral-100 focus:outline-none">
+          <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
 
-		<!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<main id="canasta-main" class="mx-2" data-main="">
-			<!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div
-				data-card-main=""
-				class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-950"
-			>
-				<!-- <div class=""> -->
-				<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
-					<h2 class="card__title text-center py-1.5 text-2xl font-semibold border-b border-blue-900/60">
-						Canasta Personalizada
-					</h2>
-				</div>
+    <!-- MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <main id="canasta-main" class="mx-2" data-main="">
+      <!-- Card-1 Canasta persolalizada +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div
+        data-card-main=""
+        class="card_main card bg-neutral-800 rounded-2xl mb-6 w-full shadow-lg shadow-neutral-950 border border-neutral-950"
+      >
+        <!-- <div class=""> -->
+        <div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
+          <h2
+            class="card__title text-center py-1.5 text-2xl font-semibold border-b border-blue-900/60"
+          >
+            Canasta Personalizada
+          </h2>
+        </div>
 
-				<div class="card-vivienda-container px-2">
-					<div class="card-vivienda flex flex-row pl-2 my-4 items-center py-1 rounded-2xl bg-neutral-900/60">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="2.75rem"
-							class="card-svg-house fill-emerald-500"
-							viewBox="0 0 16 16"
-						>
-							<path
-								d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"
-							/>
-							<path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
-						</svg>
-						<p
-							class="card-vivienda__txt w-full ml-3 pl-3 text-lg border-l-3 border-l-emerald-500 h-8 content-center"
-						>
-							Vivienda
-						</p>
+        <div class="card-vivienda-container px-2">
+          <div
+            class="card-vivienda flex flex-row pl-2 my-4 items-center py-1 rounded-2xl bg-neutral-900/60"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2.75rem"
+              class="card-svg-house fill-emerald-500"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"
+              />
+              <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
+            </svg>
+            <p
+              class="card-vivienda__txt w-full ml-3 pl-3 text-lg border-l-3 border-l-emerald-500 h-8 content-center"
+            >
+              Vivienda
+            </p>
 
-						<div class="tooltip-custom-container relative">
-							<button
-								class="tooltip-button info-btn mr-2.5 border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-							>
-								i
-							</button>
-							<div
-								class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-							>
-								Selecciona si tu Casa es Propia. Si es Alquilada, el valor del alquiler.
-							</div>
-						</div>
-					</div>
-					<div class="card__table__rent flex mb-4 justify-center items-center relative">
-						<label class="relative card__select_rent_label">
-							<select
-								aria-label="canasta-rent"
-								name="canasta-rent"
-								id="card__select-rent"
-								title="Seleccioná si ALquilas o No ALquilas."
-								class="card__select-rent w-[14ch] h-10 shadow appearance-none text-gray-300 leading-tight bg-emerald-900 px-3 py-2 rounded-l-2xl border border-emerald-600 focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
-							>
-								<option class="card-rent--option text-white" value="siAlquilo">Alquilada</option>
-								<option class="card-rent--option text-white" value="noAlquilo">No Alquilada</option>
-								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
-									== Datos Promedio CABA ▼▼
-								</option>
-								<option class="card-rent--option text-white" value="AlquilerProm3amb">
-									3 Amb CABA Alquiler promedio
-								</option>
-								<option class="card-rent--option text-white" value="AlquilerProm2amb">
-									2 Amb CABA Alquiler promedio
-								</option>
-								<option class="card-rent--option text-white" value="AlquilerProm1amb">
-									1 Amb CABA Alquiler promedio
-								</option>
-								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
-									== Datos Promedio GBA Norte ▼▼
-								</option>
-								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
-									== Datos Promedio GBA Oeste ▼▼
-								</option>
-								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
-									== Datos Promedio GBA Sur ▼▼
-								</option>
-								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
-									== Datos Promedio Cordoba ▼▼
-								</option>
-								<option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
-									== Datos Promedio Rosario ▼▼
-								</option>
-							</select>
-							<div
-								class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-							>
-								<svg
-									class="fill-current h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-								>
-									<path d="M7 10l5 5 5-5H7z" />
-								</svg>
-							</div>
-						</label>
-						<div id="card-total-rent " class="flex justify-center items-center">
-							<label class="flex justify-center items-center align-middle relative">
-								<span
-									class="flex min-w-fit bg-emerald-950 text-emerald-100 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
-								>
-									$</span
-								>
-								<input
-									type="number"
-									inputmode="numeric"
-									pattern="\d*"
-									name="card-rent-in"
-									id="card-rent-in"
-									class="card-partial-add w-full card-rent-in text-center h-10 shadow appearance-none text-gray-50 leading-tight bg-emerald-950 border border-emerald-600 px-1 py-2 rounded-r-2xl focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
-									value=""
-									placeholder="Valor Alquiler"
-									title="Si alquilas, ingresá el monto del alquiler."
-								/>
-							</label>
-						</div>
-					</div>
-				</div>
+            <div class="tooltip-custom-container relative">
+              <button
+                class="tooltip-button info-btn mr-2.5 border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+              >
+                i
+              </button>
+              <div
+                class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+              >
+                Selecciona si tu Casa es Propia. Si es Alquilada, el valor del alquiler.
+              </div>
+            </div>
+          </div>
+          <div class="card__table__rent flex mb-4 justify-center items-center relative">
+            <label class="relative card__select_rent_label">
+              <select
+                aria-label="canasta-rent"
+                name="canasta-rent"
+                id="card__select-rent"
+                title="Seleccioná si ALquilas o No ALquilas."
+                class="card__select-rent w-[14ch] h-10 shadow appearance-none text-gray-300 leading-tight bg-emerald-900 px-3 py-2 rounded-l-2xl border border-emerald-600 focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
+              >
+                <option class="card-rent--option text-white" value="siAlquilo">Alquilada</option>
+                <option class="card-rent--option text-white" value="noAlquilo">No Alquilada</option>
+                <option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
+                  == Datos Promedio CABA ▼▼
+                </option>
+                <option class="card-rent--option text-white" value="AlquilerProm3amb">
+                  3 Amb CABA Alquiler promedio
+                </option>
+                <option class="card-rent--option text-white" value="AlquilerProm2amb">
+                  2 Amb CABA Alquiler promedio
+                </option>
+                <option class="card-rent--option text-white" value="AlquilerProm1amb">
+                  1 Amb CABA Alquiler promedio
+                </option>
+                <option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
+                  == Datos Promedio GBA Norte ▼▼
+                </option>
+                <option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
+                  == Datos Promedio GBA Oeste ▼▼
+                </option>
+                <option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
+                  == Datos Promedio GBA Sur ▼▼
+                </option>
+                <option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
+                  == Datos Promedio Cordoba ▼▼
+                </option>
+                <option class="card-rent--option bg-neutral-950 text-neutral-400" value="" disabled>
+                  == Datos Promedio Rosario ▼▼
+                </option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+              >
+                <svg
+                  class="fill-current h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M7 10l5 5 5-5H7z" />
+                </svg>
+              </div>
+            </label>
+            <div id="card-total-rent " class="flex justify-center items-center">
+              <label class="flex justify-center items-center align-middle relative">
+                <span
+                  class="flex min-w-fit bg-emerald-950 text-emerald-100 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
+                >
+                  $</span
+                >
+                <input
+                  type="number"
+                  inputmode="numeric"
+                  pattern="\d*"
+                  name="card-rent-in"
+                  id="card-rent-in"
+                  class="card-partial-add w-full card-rent-in text-center h-10 shadow appearance-none text-gray-50 leading-tight bg-emerald-950 border border-emerald-600 px-1 py-2 rounded-r-2xl focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-emerald-600"
+                  value=""
+                  placeholder="Valor Alquiler"
+                  title="Si alquilas, ingresá el monto del alquiler."
+                />
+              </label>
+            </div>
+          </div>
+        </div>
 
-				<form id="form " class="border-t border-neutral-600 m-0 p-0">
-					<div class="flex flex-col px-2 relative">
-						<div
-							class="form-family flex flex-row my-4 items-center pl-2 py-1 rounded-2xl bg-neutral-900/60"
-						>
-							<!-- SVG PERSON -->
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="2.75rem"
-								class="icon-svg-person fill-blue-500"
-								viewBox="0 0 16 16"
-							>
-								<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-							</svg>
-							<p
-								class="card-family-txt w-full ml-3 pl-3 text-lg border-l-3 border-blue-500 h-8 content-center"
-							>
-								Grupo familiar
-							</p>
-							<div class="tooltip-custom-container relative">
-								<button
-									class="tooltip-button info-btn mr-2.5 border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-								>
-									i
-								</button>
-								<div
-									class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-								>
-									Agrega presionando el [+] de color azul, a cada miembro de tu hogar, su género y
-									edad, para calcular tu Canasta Verdadera.
-								</div>
-							</div>
-						</div>
-						<div class="card__btn--reset" id="card__btn--reset" title="Borrar Todo">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="2.625rem"
-								height="2.675rem"
-								class="card__svg--reset absolute transition-all duration-1000 ease-in right-2 fill-red-600 bg-red-950 focus:ring-2 focus:ring-red-700 focus:outline-red-500 shadow rounded-2xl hover:bg-red-950 border-2 border-red-600 focus:outline-2 focus:outline-offset-2 active:bg-red-900 active:scale-115 hover:fill-red-500 hover:ring-2 hover:ring-red-700 hover:shadow-md hover:shadow-red-600 opacity-0 top-[1rem] hidden"
-								viewBox="1 1 14 14"
-							>
-								<path
-									d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-								/>
-								<path
-									d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-								/>
-							</svg>
-						</div>
-						<div class="fieldset flex mb-4 justify-between">
-							<div class="form-gender">
-								<!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
+        <form id="form " class="border-t border-neutral-600 m-0 p-0">
+          <div class="flex flex-col px-2 relative">
+            <div
+              class="form-family flex flex-row my-4 items-center pl-2 py-1 rounded-2xl bg-neutral-900/60"
+            >
+              <!-- SVG PERSON -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2.75rem"
+                class="icon-svg-person fill-blue-500"
+                viewBox="0 0 16 16"
+              >
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+              </svg>
+              <p
+                class="card-family-txt w-full ml-3 pl-3 text-lg border-l-3 border-blue-500 h-8 content-center"
+              >
+                Grupo familiar
+              </p>
+              <div class="tooltip-custom-container relative">
+                <button
+                  class="tooltip-button info-btn mr-2.5 border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                >
+                  i
+                </button>
+                <div
+                  class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                >
+                  Agrega presionando el [+] de color azul, a cada miembro de tu hogar, su género y
+                  edad, para calcular tu Canasta Verdadera.
+                </div>
+              </div>
+            </div>
+            <div class="card__btn--reset" id="card__btn--reset" title="Borrar Todo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2.625rem"
+                height="2.675rem"
+                class="card__svg--reset absolute transition-all duration-1000 ease-in right-2 fill-red-600 bg-red-950 focus:ring-2 focus:ring-red-700 focus:outline-red-500 shadow rounded-2xl hover:bg-red-950 border-2 border-red-600 focus:outline-2 focus:outline-offset-2 active:bg-red-900 active:scale-115 hover:fill-red-500 hover:ring-2 hover:ring-red-700 hover:shadow-md hover:shadow-red-600 opacity-0 top-[1rem] hidden"
+                viewBox="1 1 14 14"
+              >
+                <path
+                  d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                />
+                <path
+                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </div>
+            <div class="fieldset flex mb-4 justify-between">
+              <div class="form-gender">
+                <!-- SELECTs +++++++++++++++++++++++++++++++++++ -->
 
-								<label class="form__select-gender-label w-full relative">
-									<select
-										class="form__select-gender w-[14ch] block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline focus:shadow-outline bg-blue-900 border border-blue-600 px-3 py-2 rounded-l-2xl focus:ring-2 focus:ring-blue-600"
-										aria-label="form__select-gender"
-										name="form__select-gender"
-										id="form__select-gender"
-										title="Ingresá el género, si está embarazada o amamanta"
-									>
-										<option
-											value="Femenino"
-											class="form-gender--option text-left text-white"
-											selected
-										>
-											Femenino
-										</option>
-										<option value="Masculino" class="form-gender--option text-left text-white">
-											Masculino
-										</option>
-										<option value="Embarazada" class="form-gender--option text-left text-white">
-											Embarazada
-										</option>
-										<option value="Lactante" class="form-gender--option text-left text-white">
-											Fem Lactante
-										</option>
-									</select>
-									<div
-										class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-									>
-										<svg
-											class="fill-current h-6 w-6"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 20 20"
-										>
-											<path d="M7 10l5 5 5-5H7z" />
-										</svg>
-									</div>
-								</label>
-								<input type="hidden" name="gender" id="gender" required />
-							</div>
+                <label class="form__select-gender-label w-full relative">
+                  <select
+                    class="form__select-gender w-[14ch] block h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline focus:shadow-outline bg-blue-900 border border-blue-600 px-3 py-2 rounded-l-2xl focus:ring-2 focus:ring-blue-600"
+                    aria-label="form__select-gender"
+                    name="form__select-gender"
+                    id="form__select-gender"
+                    title="Ingresá el género, si está embarazada o amamanta"
+                  >
+                    <option
+                      value="Femenino"
+                      class="form-gender--option text-left text-white"
+                      selected
+                    >
+                      Femenino
+                    </option>
+                    <option value="Masculino" class="form-gender--option text-left text-white">
+                      Masculino
+                    </option>
+                    <option value="Embarazada" class="form-gender--option text-left text-white">
+                      Embarazada
+                    </option>
+                    <option value="Lactante" class="form-gender--option text-left text-white">
+                      Fem Lactante
+                    </option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                  >
+                    <svg
+                      class="fill-current h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M7 10l5 5 5-5H7z" />
+                    </svg>
+                  </div>
+                </label>
+                <input type="hidden" name="gender" id="gender" required />
+              </div>
 
-							<label class="w-full relative">
-								<select
-									aria-label="form__select-age"
-									name="form__select-age"
-									id="form__select-age"
-									class="form__select-age w-full h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none text-center focus:shadow-outline pl-2 bg-blue-950 border border-blue-600 px-3 py-2 rounded-r-2xl focus:ring-2 focus:ring-blue-600"
-									title="Ingresá la edad de la persona"
-								>
-									<option
-										value=""
-										class="form-age--option-selected text-neutral-400 bg-neutral-950"
-										selected
-										disabled
-									>
-										Edad
-									</option>
-									<option value="0" class="form-age--option text-white">0 a 12 meses</option>
-									<option value="1" class="form-age--option text-white">1 año</option>
-									<option value="2" class="form-age--option text-white">2 años</option>
+              <label class="w-full relative">
+                <select
+                  aria-label="form__select-age"
+                  name="form__select-age"
+                  id="form__select-age"
+                  class="form__select-age w-full h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none text-center focus:shadow-outline pl-2 bg-blue-950 border border-blue-600 px-3 py-2 rounded-r-2xl focus:ring-2 focus:ring-blue-600"
+                  title="Ingresá la edad de la persona"
+                >
+                  <option
+                    value=""
+                    class="form-age--option-selected text-neutral-400 bg-neutral-950"
+                    selected
+                    disabled
+                  >
+                    Edad
+                  </option>
+                  <option value="0" class="form-age--option text-white">0 a 12 meses</option>
+                  <option value="1" class="form-age--option text-white">1 año</option>
+                  <option value="2" class="form-age--option text-white">2 años</option>
 
-									<option value="3" class="form-age--option text-white">3 años</option>
-									<option value="4" class="form-age--option text-white">4 años</option>
-									<option value="5" class="form-age--option text-white">5 años</option>
-									<option value="6" class="form-age--option text-white">6 años</option>
-									<option value="7" class="form-age--option text-white">7 años</option>
-									<option value="8" class="form-age--option text-white">8 años</option>
-									<option value="9" class="form-age--option text-white">9 años</option>
-									<option value="10" class="form-age--option text-white" selected>10 años</option>
-									<option value="11" class="form-age--option text-white">11 años</option>
-									<option value="12" class="form-age--option text-white">12 años</option>
-									<option value="13" class="form-age--option text-white">13 años</option>
-									<option value="14" class="form-age--option text-white">14 años</option>
-									<option value="15" class="form-age--option text-white">15 años</option>
-									<option value="16" class="form-age--option text-white">16 años</option>
-									<option value="17" class="form-age--option text-white">17 años</option>
-									<option value="18" class="form-age--option text-white">18 años</option>
-									<option value="19" class="form-age--option text-white">19 años</option>
-									<option value="20" class="form-age--option text-white">20 años</option>
-									<option value="21" class="form-age--option text-white">21 años</option>
-									<option value="22" class="form-age--option text-white">22 años</option>
-									<option value="23" class="form-age--option text-white">23 años</option>
-									<option value="24" class="form-age--option text-white">24 años</option>
-									<option value="25" class="form-age--option text-white">25 años</option>
-									<option value="26" class="form-age--option text-white">26 años</option>
-									<option value="27" class="form-age--option text-white">27 años</option>
-									<option value="28" class="form-age--option text-white">28 años</option>
-									<option value="29" class="form-age--option text-white">29 años</option>
-									<option value="30" class="form-age--option text-white">30 años</option>
-									<option value="31" class="form-age--option text-white">31 años</option>
-									<option value="32" class="form-age--option text-white">32 años</option>
-									<option value="33" class="form-age--option text-white">33 años</option>
-									<option value="34" class="form-age--option text-white">34 años</option>
-									<option value="35" class="form-age--option text-white">35 años</option>
-									<option value="36" class="form-age--option text-white">36 años</option>
-									<option value="37" class="form-age--option text-white">37 años</option>
-									<option value="38" class="form-age--option text-white">38 años</option>
-									<option value="39" class="form-age--option text-white">39 años</option>
-									<option value="40" class="form-age--option text-white">40 años</option>
-									<option value="41" class="form-age--option text-white">41 años</option>
-									<option value="42" class="form-age--option text-white">42 años</option>
-									<option value="43" class="form-age--option text-white">43 años</option>
-									<option value="44" class="form-age--option text-white">44 años</option>
-									<option value="45" class="form-age--option text-white">45 años</option>
-									<option value="46" class="form-age--option text-white">46 años</option>
-									<option value="47" class="form-age--option text-white">47 años</option>
-									<option value="48" class="form-age--option text-white">48 años</option>
-									<option value="49" class="form-age--option text-white">49 años</option>
-									<option value="50" class="form-age--option text-white">50 años</option>
-									<option value="51" class="form-age--option text-white">51 años</option>
-									<option value="52" class="form-age--option text-white">52 años</option>
-									<option value="53" class="form-age--option text-white">53 años</option>
-									<option value="54" class="form-age--option text-white">54 años</option>
-									<option value="55" class="form-age--option text-white">55 años</option>
-									<option value="56" class="form-age--option text-white">56 años</option>
-									<option value="57" class="form-age--option text-white">57 años</option>
-									<option value="58" class="form-age--option text-white">58 años</option>
-									<option value="59" class="form-age--option text-white">59 años</option>
-									<option value="60" class="form-age--option text-white">60 años</option>
-									<option value="61" class="form-age--option text-white">61 años</option>
-									<option value="62" class="form-age--option text-white">62 años</option>
-									<option value="63" class="form-age--option text-white">63 años</option>
-									<option value="64" class="form-age--option text-white">64 años</option>
-									<option value="65" class="form-age--option text-white">65 años</option>
-									<option value="66" class="form-age--option text-white">66 años</option>
-									<option value="67" class="form-age--option text-white">67 años</option>
-									<option value="68" class="form-age--option text-white">68 años</option>
-									<option value="69" class="form-age--option text-white">69 años</option>
-									<option value="70" class="form-age--option text-white">70 años</option>
-									<option value="71" class="form-age--option text-white">71 años</option>
-									<option value="72" class="form-age--option text-white">72 años</option>
-									<option value="73" class="form-age--option text-white">73 años</option>
-									<option value="74" class="form-age--option text-white">74 años</option>
-									<option value="75" class="form-age--option text-white">75 años</option>
-									<option value="76" class="form-age--option text-white">76 años</option>
-									<option value="77" class="form-age--option text-white">77 años</option>
-									<option value="78" class="form-age--option text-white">78 años</option>
-									<option value="79" class="form-age--option text-white">79 años</option>
-									<option value="80" class="form-age--option text-white">80 años</option>
-									<option value="81" class="form-age--option text-white">81 años</option>
-									<option value="82" class="form-age--option text-white">82 años</option>
-									<option value="83" class="form-age--option text-white">83 años</option>
-									<option value="84" class="form-age--option text-white">84 años</option>
-									<option value="85" class="form-age--option text-white">85 años</option>
-									<option value="86" class="form-age--option text-white">86 años</option>
-									<option value="87" class="form-age--option text-white">87 años</option>
-									<option value="88" class="form-age--option text-white">88 años</option>
-									<option value="89" class="form-age--option text-white">89 años</option>
-									<option value="90" class="form-age--option text-white">90 años</option>
-									<option value="91" class="form-age--option text-white">91 años</option>
-									<option value="92" class="form-age--option text-white">92 años</option>
-									<option value="93" class="form-age--option text-white">93 años</option>
-									<option value="94" class="form-age--option text-white">94 años</option>
-									<option value="95" class="form-age--option text-white">95 años</option>
-									<option value="96" class="form-age--option text-white">96 años</option>
-									<option value="97" class="form-age--option text-white">97 años</option>
-									<option value="98" class="form-age--option text-white">98 años</option>
-									<option value="99" class="form-age--option text-white">99 años</option>
-									<option value="100" class="form-age--option text-white">100 a 122</option>
-								</select>
-								<div
-									class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-								>
-									<svg
-										class="fill-current h-6 w-6"
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 20 20"
-									>
-										<path d="M7 10l5 5 5-5H7z" />
-									</svg>
-								</div>
-							</label>
-							<input type="hidden" name="age" id="age" required />
-							<!-- message error -->
-							<div id="error-message-age" class="error-message-age"></div>
-							<button
-								id="form-submit"
-								type="submit"
-								class="form-submit bg-neutral-800 rounded-full hover:bg-blue-700 text-white font-bold content-between rounded focus:outline-none focus:shadow-outline transition-all ease-in-out ml-2"
-								aria-label="Person"
-								name="btn-add-person"
-								title="Agregar Familiar"
-							>
-								<span class="rounded-lg">
-									<!-- SVG ADD PERSON -->
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="2.5rem"
-										height="2.5rem"
-										class="icon-svg-add shadow rounded-full bg-neutral-800 hover:bg-neutral-800 border-2 border-blue-500 focus:outline-2 focus:outline-offset-2 fill-blue-500 focus:outline-neutral-500 active:bg-neutral-700 active:scale-115 hover:fill-blue-400 hover:ring-2 hover:ring-blue-500 hover:shadow-lg hover:shadow-blue-500"
-										viewBox="1 1 14 14"
-									>
-										<path
-											d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-										/>
-										<path
-											d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
-										/>
-									</svg>
-								</span>
-							</button>
-						</div>
-					</div>
+                  <option value="3" class="form-age--option text-white">3 años</option>
+                  <option value="4" class="form-age--option text-white">4 años</option>
+                  <option value="5" class="form-age--option text-white">5 años</option>
+                  <option value="6" class="form-age--option text-white">6 años</option>
+                  <option value="7" class="form-age--option text-white">7 años</option>
+                  <option value="8" class="form-age--option text-white">8 años</option>
+                  <option value="9" class="form-age--option text-white">9 años</option>
+                  <option value="10" class="form-age--option text-white" selected>10 años</option>
+                  <option value="11" class="form-age--option text-white">11 años</option>
+                  <option value="12" class="form-age--option text-white">12 años</option>
+                  <option value="13" class="form-age--option text-white">13 años</option>
+                  <option value="14" class="form-age--option text-white">14 años</option>
+                  <option value="15" class="form-age--option text-white">15 años</option>
+                  <option value="16" class="form-age--option text-white">16 años</option>
+                  <option value="17" class="form-age--option text-white">17 años</option>
+                  <option value="18" class="form-age--option text-white">18 años</option>
+                  <option value="19" class="form-age--option text-white">19 años</option>
+                  <option value="20" class="form-age--option text-white">20 años</option>
+                  <option value="21" class="form-age--option text-white">21 años</option>
+                  <option value="22" class="form-age--option text-white">22 años</option>
+                  <option value="23" class="form-age--option text-white">23 años</option>
+                  <option value="24" class="form-age--option text-white">24 años</option>
+                  <option value="25" class="form-age--option text-white">25 años</option>
+                  <option value="26" class="form-age--option text-white">26 años</option>
+                  <option value="27" class="form-age--option text-white">27 años</option>
+                  <option value="28" class="form-age--option text-white">28 años</option>
+                  <option value="29" class="form-age--option text-white">29 años</option>
+                  <option value="30" class="form-age--option text-white">30 años</option>
+                  <option value="31" class="form-age--option text-white">31 años</option>
+                  <option value="32" class="form-age--option text-white">32 años</option>
+                  <option value="33" class="form-age--option text-white">33 años</option>
+                  <option value="34" class="form-age--option text-white">34 años</option>
+                  <option value="35" class="form-age--option text-white">35 años</option>
+                  <option value="36" class="form-age--option text-white">36 años</option>
+                  <option value="37" class="form-age--option text-white">37 años</option>
+                  <option value="38" class="form-age--option text-white">38 años</option>
+                  <option value="39" class="form-age--option text-white">39 años</option>
+                  <option value="40" class="form-age--option text-white">40 años</option>
+                  <option value="41" class="form-age--option text-white">41 años</option>
+                  <option value="42" class="form-age--option text-white">42 años</option>
+                  <option value="43" class="form-age--option text-white">43 años</option>
+                  <option value="44" class="form-age--option text-white">44 años</option>
+                  <option value="45" class="form-age--option text-white">45 años</option>
+                  <option value="46" class="form-age--option text-white">46 años</option>
+                  <option value="47" class="form-age--option text-white">47 años</option>
+                  <option value="48" class="form-age--option text-white">48 años</option>
+                  <option value="49" class="form-age--option text-white">49 años</option>
+                  <option value="50" class="form-age--option text-white">50 años</option>
+                  <option value="51" class="form-age--option text-white">51 años</option>
+                  <option value="52" class="form-age--option text-white">52 años</option>
+                  <option value="53" class="form-age--option text-white">53 años</option>
+                  <option value="54" class="form-age--option text-white">54 años</option>
+                  <option value="55" class="form-age--option text-white">55 años</option>
+                  <option value="56" class="form-age--option text-white">56 años</option>
+                  <option value="57" class="form-age--option text-white">57 años</option>
+                  <option value="58" class="form-age--option text-white">58 años</option>
+                  <option value="59" class="form-age--option text-white">59 años</option>
+                  <option value="60" class="form-age--option text-white">60 años</option>
+                  <option value="61" class="form-age--option text-white">61 años</option>
+                  <option value="62" class="form-age--option text-white">62 años</option>
+                  <option value="63" class="form-age--option text-white">63 años</option>
+                  <option value="64" class="form-age--option text-white">64 años</option>
+                  <option value="65" class="form-age--option text-white">65 años</option>
+                  <option value="66" class="form-age--option text-white">66 años</option>
+                  <option value="67" class="form-age--option text-white">67 años</option>
+                  <option value="68" class="form-age--option text-white">68 años</option>
+                  <option value="69" class="form-age--option text-white">69 años</option>
+                  <option value="70" class="form-age--option text-white">70 años</option>
+                  <option value="71" class="form-age--option text-white">71 años</option>
+                  <option value="72" class="form-age--option text-white">72 años</option>
+                  <option value="73" class="form-age--option text-white">73 años</option>
+                  <option value="74" class="form-age--option text-white">74 años</option>
+                  <option value="75" class="form-age--option text-white">75 años</option>
+                  <option value="76" class="form-age--option text-white">76 años</option>
+                  <option value="77" class="form-age--option text-white">77 años</option>
+                  <option value="78" class="form-age--option text-white">78 años</option>
+                  <option value="79" class="form-age--option text-white">79 años</option>
+                  <option value="80" class="form-age--option text-white">80 años</option>
+                  <option value="81" class="form-age--option text-white">81 años</option>
+                  <option value="82" class="form-age--option text-white">82 años</option>
+                  <option value="83" class="form-age--option text-white">83 años</option>
+                  <option value="84" class="form-age--option text-white">84 años</option>
+                  <option value="85" class="form-age--option text-white">85 años</option>
+                  <option value="86" class="form-age--option text-white">86 años</option>
+                  <option value="87" class="form-age--option text-white">87 años</option>
+                  <option value="88" class="form-age--option text-white">88 años</option>
+                  <option value="89" class="form-age--option text-white">89 años</option>
+                  <option value="90" class="form-age--option text-white">90 años</option>
+                  <option value="91" class="form-age--option text-white">91 años</option>
+                  <option value="92" class="form-age--option text-white">92 años</option>
+                  <option value="93" class="form-age--option text-white">93 años</option>
+                  <option value="94" class="form-age--option text-white">94 años</option>
+                  <option value="95" class="form-age--option text-white">95 años</option>
+                  <option value="96" class="form-age--option text-white">96 años</option>
+                  <option value="97" class="form-age--option text-white">97 años</option>
+                  <option value="98" class="form-age--option text-white">98 años</option>
+                  <option value="99" class="form-age--option text-white">99 años</option>
+                  <option value="100" class="form-age--option text-white">100 a 122</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                >
+                  <svg
+                    class="fill-current h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M7 10l5 5 5-5H7z" />
+                  </svg>
+                </div>
+              </label>
+              <input type="hidden" name="age" id="age" required />
+              <!-- message error -->
+              <div id="error-message-age" class="error-message-age"></div>
+              <button
+                id="form-submit"
+                type="submit"
+                class="form-submit bg-neutral-800 rounded-full hover:bg-blue-700 text-white font-bold content-between rounded focus:outline-none focus:shadow-outline transition-all ease-in-out ml-2"
+                aria-label="Person"
+                name="btn-add-person"
+                title="Agregar Familiar"
+              >
+                <span class="rounded-lg">
+                  <!-- SVG ADD PERSON -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="2.5rem"
+                    height="2.5rem"
+                    class="icon-svg-add shadow rounded-full bg-neutral-800 hover:bg-neutral-800 border-2 border-blue-500 focus:outline-2 focus:outline-offset-2 fill-blue-500 focus:outline-neutral-500 active:bg-neutral-700 active:scale-115 hover:fill-blue-400 hover:ring-2 hover:ring-blue-500 hover:shadow-lg hover:shadow-blue-500"
+                    viewBox="1 1 14 14"
+                  >
+                    <path
+                      d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+                    />
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
 
-					<!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
-					<div class="border-t border-neutral-600 mb-4"></div>
-					<div class="flex justify-center mx-0 rounded overflow-auto border border-neutral-600 mb-4">
-						<table class="min-w-full table-auto">
-							<thead class="bg-neutral-900">
-								<tr>
-									<th colspan="5" class="m-0 p-0 bg-neutral-900">
-										<label class="relative flex w-8/12 py-0.5 m-auto items-center">
-											<select
-												name="table-canastas__select"
-												id="table-canastas__select"
-												title="Seleccione el detalle personal"
-												class="px-2 py-0.5 w-full border border-amber-900 bg-amber-950 text-neutral-300 appearance-none focus:outline-none focus:ring-2 focus:ring-neutral-500"
-											>
-												<option value="" class="bg-neutral-950 text-neutral-400" disabled>
-													Detalle individual ▼▼
-												</option>
-												<option value="indigencia">• CBA - Linea indigencia</option>
-												<option value="pobreza" selected>• CBT - Linea de pobreza</option>
-												<option value="clase_baja">• Clase Baja</option>
-												<option value="clase_media_fragil">• Clase Media Fragil</option>
-												<option value="clase_media">• Clase Media</option>
-											</select>
-											<div
-												class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
-											>
-												<svg
-													class="fill-current h-6 w-6"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 20 20"
-												>
-													<path d="M7 10l5 5 5-5H7z" />
-												</svg>
-											</div>
-										</label>
-									</th>
-								</tr>
-								<tr class="m-0 p-0 text-neutral-300 font-semibold border border-neutral-600">
-									<th
-										class="p-1 text-center text-neutral-300 font-semibold border border-neutral-600"
-									>
-										Género
-									</th>
-									<th
-										class="m-0 p-0 text-center text-neutral-300 font-semibold border border-neutral-600"
-									>
-										Edad
-									</th>
+          <!-- <h3 class="person-table-title">Tu Canasta Mensual</h3> -->
+          <div class="border-t border-neutral-600 mb-4"></div>
+          <div
+            class="flex justify-center mx-0 rounded overflow-auto border border-neutral-600 mb-4"
+          >
+            <table class="min-w-full table-auto">
+              <thead class="bg-neutral-900">
+                <tr>
+                  <th colspan="5" class="m-0 p-0 bg-neutral-900">
+                    <label class="relative flex w-8/12 py-0.5 m-auto items-center">
+                      <select
+                        name="table-canastas__select"
+                        id="table-canastas__select"
+                        title="Seleccione el detalle personal"
+                        class="px-2 py-0.5 w-full border border-amber-900 bg-amber-950 text-neutral-300 appearance-none focus:outline-none focus:ring-2 focus:ring-neutral-500"
+                      >
+                        <option value="" class="bg-neutral-950 text-neutral-400" disabled>
+                          Detalle individual ▼▼
+                        </option>
+                        <option value="indigencia">• CBA - Linea indigencia</option>
+                        <option value="pobreza" selected>• CBT - Linea de pobreza</option>
+                        <option value="clase_baja">• Clase Baja</option>
+                        <option value="clase_media_fragil">• Clase Media Fragil</option>
+                        <option value="clase_media">• Clase Media</option>
+                      </select>
+                      <div
+                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400"
+                      >
+                        <svg
+                          class="fill-current h-6 w-6"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M7 10l5 5 5-5H7z" />
+                        </svg>
+                      </div>
+                    </label>
+                  </th>
+                </tr>
+                <tr class="m-0 p-0 text-neutral-300 font-semibold border border-neutral-600">
+                  <th
+                    class="p-1 text-center text-neutral-300 font-semibold border border-neutral-600"
+                  >
+                    Género
+                  </th>
+                  <th
+                    class="m-0 p-0 text-center text-neutral-300 font-semibold border border-neutral-600"
+                  >
+                    Edad
+                  </th>
 
-									<th class="text-center text-neutral-300 font-semibold border border-neutral-600">
-										$
-									</th>
-									<th
-										class="text-center text-neutral-300 font-semibold border border-neutral-600"
-										title="Eliminar"
-									>
-										<!-- SVG DELETE -->
-										<svg
-											class="w-5 h-5 text-red-500 mx-auto"
-											viewBox="0 0 24 24"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16"
-												stroke="currentColor"
-												stroke-width="2"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											></path>
-										</svg>
-									</th>
-									<th class="m-0 p-0 text-neutral-300 font-semibold border border-neutral-600">
-										Dias
-									</th>
-								</tr>
-							</thead>
+                  <th class="text-center text-neutral-300 font-semibold border border-neutral-600">
+                    $
+                  </th>
+                  <th
+                    class="text-center text-neutral-300 font-semibold border border-neutral-600"
+                    title="Eliminar"
+                  >
+                    <!-- SVG DELETE -->
+                    <svg
+                      class="w-5 h-5 text-red-500 mx-auto"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 7V18C6 19.1046 6.89543 20 8 20H16C17.1046 20 18 19.1046 18 18V7M6 7H5M6 7H8M18 7H19M18 7H16M10 11V16M14 11V16M8 7V5C8 3.89543 8.89543 3 10 3H14C15.1046 3 16 3.89543 16 5V7M8 7H16"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </th>
+                  <th class="m-0 p-0 text-neutral-300 font-semibold border border-neutral-600">
+                    Dias
+                  </th>
+                </tr>
+              </thead>
 
-							<tbody id="table-canastas__list" class="bg-neutral-800"></tbody>
+              <tbody id="table-canastas__list" class="bg-neutral-800"></tbody>
 
-							<tfoot class="bg-neutral-900 border border-neutral-600">
-								<tr class="table-cba-rent bg-black p-1 items-center hidden">
-									<th
-										colspan="2"
-										class="table-canastas-rent bg-black text-start pl-1 flex items-center text-neutral-300 font-semibold border-l border-neutral-600"
-									>
-										Alquiler ==&gt;
-									</th>
-									<th class="bg-black border-t border-neutral-600"></th>
-									<th
-										id="card-main-rent-out"
-										class="before:content-['$'] before:mr-1 border border-neutral-600 bg-black"
-									></th>
-									<th class="border border-neutral-600 bg-black"></th>
-									<th class="border border-neutral-600 bg-black"></th>
-								</tr>
-								<tr class="bg-blue-800/50">
-									<th
-										class="border border-neutral-600 text-center text-neutral-300 font-semibold"
-									></th>
-									<th class="border border-neutral-600 text-center"></th>
-									<th id="total-canasta" class="border border-neutral-600 text-center"></th>
-									<th class="border border-neutral-600 text-center"></th>
-									<th class="border border-neutral-600 text-center"></th>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</form>
-			</div>
+              <tfoot class="bg-neutral-900 border border-neutral-600">
+                <tr class="table-cba-rent bg-black p-1 items-center hidden">
+                  <th
+                    colspan="2"
+                    class="table-canastas-rent bg-black text-start pl-1 flex items-center text-neutral-300 font-semibold border-l border-neutral-600"
+                  >
+                    Alquiler ==&gt;
+                  </th>
+                  <th class="bg-black border-t border-neutral-600"></th>
+                  <th
+                    id="card-main-rent-out"
+                    class="before:content-['$'] before:mr-1 border border-neutral-600 bg-black"
+                  ></th>
+                  <th class="border border-neutral-600 bg-black"></th>
+                  <th class="border border-neutral-600 bg-black"></th>
+                </tr>
+                <tr class="bg-blue-800/50">
+                  <th
+                    class="border border-neutral-600 text-center text-neutral-300 font-semibold"
+                  ></th>
+                  <th class="border border-neutral-600 text-center"></th>
+                  <th id="total-canasta" class="border border-neutral-600 text-center"></th>
+                  <th class="border border-neutral-600 text-center"></th>
+                  <th class="border border-neutral-600 text-center"></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </form>
+      </div>
 
-			<!-- Card-2 Tabla clases sociales ------------------------------------------>
-			<div
-				class="card card-classes rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
-			>
-				<div class="table-classes text-center">
-					<div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
-						<div
-							class="table-classes--txt text-xl font-semibold text-center py-1.5 border-b border-blue-900/60"
-						>
-							Tu Clase Social Hoy
-						</div>
-					</div>
+      <!-- Card-2 Tabla clases sociales ------------------------------------------>
+      <div
+        class="card card-classes rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+      >
+        <div class="table-classes text-center">
+          <div class="flex flex-col rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full">
+            <div
+              class="table-classes--txt text-xl font-semibold text-center py-1.5 border-b border-blue-900/60"
+            >
+              Tu Clase Social Hoy
+            </div>
+          </div>
 
-					<!-- ingresar salario =================================-
+          <!-- ingresar salario =================================-
 					 <div
   class="w-32 h-32 bg-gray-300 rounded-md hover:ring-4 hover:ring-blue-500 focus:ring-4 focus:ring-blue-500 active:ring-4 active:ring-blue-500"
   tabindex="0"
 >
   Haz click aquí
 </div>#############################################################################################################----------------------------------->
-					<div class="py-4 px-2 w-full justify-center items-center relative">
-						<div class="flex w-full shadow-md items-center">
-							<div
-								class="in_salary_label rounded-l-2xl focus:ring-2 focus:ring-emerald-600 active:ring-2 active:ring-emerald-600"
-							>
-								<span
-									class="flex justify-center items-center bg-emerald-900 h-10 border-1 border-y-emerald-700 border-l-emerald-600 border-r-emerald-600 rounded-l-2xl w-[14ch]"
-									>Ingreso Familiar:</span
-								>
-							</div>
-							<label class="relative flex w-full items-center" for="">
-								<span class="bg-emerald-950 text-emerald-100 p-0 absolute left-1 z-[9999]">$</span>
+          <div class="py-4 px-2 w-full justify-center items-center relative">
+            <div class="flex w-full shadow-md items-center">
+              <div
+                class="in_salary_label rounded-l-2xl focus:ring-2 focus:ring-emerald-600 active:ring-2 active:ring-emerald-600"
+              >
+                <span
+                  class="flex justify-center items-center bg-emerald-900 h-10 border-1 border-y-emerald-700 border-l-emerald-600 border-r-emerald-600 rounded-l-2xl w-[14ch]"
+                  >Ingreso Familiar:</span
+                >
+              </div>
+              <label class="relative flex w-full items-center" for="">
+                <span class="bg-emerald-950 text-emerald-100 p-0 absolute left-1 z-[9999]">$</span>
 
-								<input
-									for
-									id="income__input"
-									class="income__input w-full selection:bg-emerald-950 text-center h-10 appearance-none text-gray-50 leading-tight bg-emerald-950 border-1 border-y-emerald-600 border-s-0 border-r-emerald-600 rounded-r-2xl focus:outline-none focus:shadow-outline focus:bg-netral-700 focus:ring-2 focus:ring-emerald-600"
-									pattern="\d+"
-									type="number"
-									placeholder="Monto en Pesos"
-									title="Ingresa tu salario mensual familiar"
-									maxlength="10"
-								/>
-							</label>
-						</div>
-						<!-- <span class="absolute right-6.5">
+                <input
+                  for
+                  id="income__input"
+                  class="income__input w-full selection:bg-emerald-950 text-center h-10 appearance-none text-gray-50 leading-tight bg-emerald-950 border-1 border-y-emerald-600 border-s-0 border-r-emerald-600 rounded-r-2xl focus:outline-none focus:shadow-outline focus:bg-netral-700 focus:ring-2 focus:ring-emerald-600"
+                  pattern="\d+"
+                  type="number"
+                  placeholder="Monto en Pesos"
+                  title="Ingresa tu salario mensual familiar"
+                  maxlength="10"
+                />
+              </label>
+            </div>
+            <!-- <span class="absolute right-6.5">
 									<div class="tooltip-custom-container relative">
 										<button
 											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
@@ -623,719 +629,735 @@
 										</div>
 									</div>
 								</span> -->
-					</div>
-					<div class="text-neutral-100 text-center mx-1 mb-1 rounded-2xl">
-						<div
-							class="table-classes-indigencia rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
-						>
-							<div
-								class="table-classes-indigencia-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-indigencia-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]">Indigente</span
-								><span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-indigencia-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+          </div>
+          <div class="text-neutral-100 text-center mx-1 mb-1 rounded-2xl">
+            <div
+              class="table-classes-indigencia rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+            >
+              <div
+                class="table-classes-indigencia-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-indigencia-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]">Indigente</span
+                ><span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-indigencia-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div
-							class="table-classes-pobreza flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
-						>
-							<div
-								class="table-classes-pobreza-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-pobreza-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]">Pobreza</span>
-								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-pobreza-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-pobreza flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
+            >
+              <div
+                class="table-classes-pobreza-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-pobreza-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]">Pobreza</span>
+                <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-pobreza-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div class="table-classes-baja flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
-							<div
-								class="table-classes-baja-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-baja-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]"> Clase Baja</span>
-								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-baja-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-baja flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+            >
+              <div
+                class="table-classes-baja-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-baja-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]"> Clase Baja</span>
+                <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-baja-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div
-							class="table-classes-media-fragil flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
-						>
-							<div
-								class="table-classes-media-fragil-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-media-fragil-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]"> Media frágil</span
-								><span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-media-fragil-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-media-fragil flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
+            >
+              <div
+                class="table-classes-media-fragil-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-media-fragil-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]"> Media frágil</span
+                ><span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-media-fragil-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div class="table-classes-media flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
-							<div
-								class="table-classes-media-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-media-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]">Media</span>
-								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-media-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-media flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+            >
+              <div
+                class="table-classes-media-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-media-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]">Media</span>
+                <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-media-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div
-							class="table-classes-media-alta flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
-						>
-							<div
-								class="table-classes-media-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-media-alta-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]"> Media alta</span>
-								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-media-alta-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-media-alta flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
+            >
+              <div
+                class="table-classes-media-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-media-alta-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]"> Media alta</span>
+                <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-media-alta-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div class="table-classes-alta flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full">
-							<div
-								class="table-classes-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-alta-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]"> Alta baja</span
-								><span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-alta-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-alta flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+            >
+              <div
+                class="table-classes-alta-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-alta-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]"> Alta baja</span
+                ><span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-alta-max flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div
-							class="table-classes-acomodada flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
-						>
-							<div
-								class="table-classes-acomodada-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-							<div class="class-acomodada-row flex m-0 items-center">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]">Acomodada</span>
-								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div
-								class="table-classes-acomodada-max text-base flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-							></div>
-						</div>
+            <div
+              class="table-classes-acomodada flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
+            >
+              <div
+                class="table-classes-acomodada-min flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+              <div class="class-acomodada-row flex m-0 items-center">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]">Acomodada</span>
+                <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-acomodada-max text-base flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+              ></div>
+            </div>
 
-						<div
-							class="flex w-full text-sm text-center text-neutral-400 bg-neutral-950 justify-center items-center relative rounded-bl-2xl rounded-br-2xl py-1"
-						>
-							<div class="table-classes-alta-min-info flex m-0 w-[calc(50%-6ch)] break-all">
-								<span class="ml-[calc(50%-3ch)] w-full">Min</span>
-							</div>
-							<div class="table-classes-info flex m-0 items-center text-base">
-								<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-								<span class="w-[10ch]">Clase social</span>
-								<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-							</div>
-							<div class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] items-center break-all">
-								<span class="ml-[calc(50%-3ch)]">Max</span>
-							</div>
-							<span class="absolute right-3.5">
-								<div class="tooltip-custom-container relative">
-									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-									>
-										i
-									</button>
-									<div
-										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-									>
-										Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final
-										el ingreso máximo, de cada sector socioeconómico.
-									</div>
-								</div>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div
+              class="flex w-full text-sm text-center text-neutral-400 bg-neutral-950 justify-center items-center relative rounded-bl-2xl rounded-br-2xl py-1"
+            >
+              <div class="table-classes-alta-min-info flex m-0 w-[calc(50%-6ch)] break-all">
+                <span class="ml-[calc(50%-3ch)] w-full">Min</span>
+              </div>
+              <div class="table-classes-info flex m-0 items-center text-base">
+                <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                <span class="w-[10ch]">Clase social</span>
+                <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+              </div>
+              <div
+                class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] items-center break-all"
+              >
+                <span class="ml-[calc(50%-3ch)]">Max</span>
+              </div>
+              <span class="absolute right-3.5">
+                <div class="tooltip-custom-container relative">
+                  <button
+                    class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                  >
+                    i
+                  </button>
+                  <div
+                    class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                  >
+                    Cada fila indica un sector socioeconómico, adelante el ingreso mínimo y al final
+                    el ingreso máximo, de cada sector socioeconómico.
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<!-- Card-3 Compare clase social antes +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div
-				id="aclaracion-date--over"
-				class="rounded-2xl mb-6 bg-neutral-800 border border-neutral-950 shadow-lg shadow-neutral-950 relative"
-			>
-				<div class="table-classes">
-					<div
-						class="card-compare__header flex flex-col justify-center rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full"
-					>
-						<div
-							class="card-compare__title text-xl font-semibold text-center py-1.5 border-b border-blue-900/60"
-						>
-							Tu Clase Social Ayer
-						</div>
+      <!-- Card-3 Compare clase social antes +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div
+        id="aclaracion-date--over"
+        class="rounded-2xl mb-6 bg-neutral-800 border border-neutral-950 shadow-lg shadow-neutral-950 relative"
+      >
+        <div class="table-classes">
+          <div
+            class="card-compare__header flex flex-col justify-center rounded-t-2xl bg-blue-900/40 text-neutral-200 p-0 w-full"
+          >
+            <div
+              class="card-compare__title text-xl font-semibold text-center py-1.5 border-b border-blue-900/60"
+            >
+              Tu Clase Social Ayer
+            </div>
 
-						<span class="flex items-center absolute right-4.5">
-							<div class="tooltip-custom-container relative">
-								<!-- OVER AQUI -->
-								<button
-									class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-								>
-									i
-								</button>
-								<div
-									id="tooltip-date--over"
-									class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-								>
-									Agrega tu grupo familiar.
-								</div>
-							</div>
-						</span>
-					</div>
-					<div class="flex flex-col">
-						<div class="w-full justify-center items-center flex relative">
-							<div
-								class="table-compare-month-container w-8/12 flex justify-center items-center relative my-4"
-							>
-								<label class="table-compare-month-label w-1/2 relative">
-									<select
-										id="table-compare-month"
-										class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-emerald-900 border border-emerald-600 rounded-l-2xl focus:ring-2 focus:ring-emerald-600"
-										aria-label="Month"
-									>
-										<option
-											class="table-compare-month-option bg-neutral-950 text-neutral-400"
-											value="month"
-											selected
-											disabled
-										>
-											Mes
-										</option>
-										<option class="table-compare-month-option text-left" value="1">Enero</option>
-										<option class="table-compare-month-option text-left" value="2">Febrero</option>
-										<option class="table-compare-month-option text-left" value="3">Marzo</option>
-										<option class="table-compare-month-option text-left" value="4">Abril</option>
-										<option class="table-compare-month-option text-left" value="5">Mayo</option>
-										<option class="table-compare-month-option text-left" value="6">Junio</option>
-										<option class="table-compare-month-option text-left" value="7">Julio</option>
-										<option class="table-compare-month-option text-left" value="8">Agosto</option>
-										<option class="table-compare-month-option text-left" value="9">
-											Septiembre
-										</option>
-										<option class="table-compare-month-option text-left" value="10">Octubre</option>
-										<option class="table-compare-month-option text-left" value="11">
-											Noviembre
-										</option>
-										<option class="table-compare-month-option text-left" value="12">
-											Diciembre
-										</option>
-									</select>
-									<div
-										class="pointer-events-none absolute inset-y-0 right-0 bottom-1 flex items-center px-1 text-gray-400"
-									>
-										<svg
-											class="fill-current h-6 w-6"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 20 20"
-										>
-											<path d="M7 10l5 5 5-5H7z" />
-										</svg>
-									</div>
-								</label>
+            <span class="flex items-center absolute right-4.5">
+              <div class="tooltip-custom-container relative">
+                <!-- OVER AQUI -->
+                <button
+                  class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                >
+                  i
+                </button>
+                <div
+                  id="tooltip-date--over"
+                  class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                >
+                  Agrega tu grupo familiar.
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="flex flex-col">
+            <div class="w-full justify-center items-center flex relative">
+              <div
+                class="table-compare-month-container w-8/12 flex justify-center items-center relative my-4"
+              >
+                <label class="table-compare-month-label w-1/2 relative">
+                  <select
+                    id="table-compare-month"
+                    class="table-compare-month pr-2 w-full h-10 focus:shadow-outline text-center shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-emerald-900 border border-emerald-600 rounded-l-2xl focus:ring-2 focus:ring-emerald-600"
+                    aria-label="Month"
+                  >
+                    <option
+                      class="table-compare-month-option bg-neutral-950 text-neutral-400"
+                      value="month"
+                      selected
+                      disabled
+                    >
+                      Mes
+                    </option>
+                    <option class="table-compare-month-option text-left" value="1">Enero</option>
+                    <option class="table-compare-month-option text-left" value="2">Febrero</option>
+                    <option class="table-compare-month-option text-left" value="3">Marzo</option>
+                    <option class="table-compare-month-option text-left" value="4">Abril</option>
+                    <option class="table-compare-month-option text-left" value="5">Mayo</option>
+                    <option class="table-compare-month-option text-left" value="6">Junio</option>
+                    <option class="table-compare-month-option text-left" value="7">Julio</option>
+                    <option class="table-compare-month-option text-left" value="8">Agosto</option>
+                    <option class="table-compare-month-option text-left" value="9">
+                      Septiembre
+                    </option>
+                    <option class="table-compare-month-option text-left" value="10">Octubre</option>
+                    <option class="table-compare-month-option text-left" value="11">
+                      Noviembre
+                    </option>
+                    <option class="table-compare-month-option text-left" value="12">
+                      Diciembre
+                    </option>
+                  </select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 bottom-1 flex items-center px-1 text-gray-400"
+                  >
+                    <svg
+                      class="fill-current h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M7 10l5 5 5-5H7z" />
+                    </svg>
+                  </div>
+                </label>
 
-								<label class="w-1/2 relative">
-									<select
-										id="table-compare-year"
-										class="table-compare-year w-full focus:shadow-outline pr-2 focus:shadow-outline text-center h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-emerald-950 border border-emerald-600 rounded-r-2xl focus:ring-2 focus:ring-emerald-600"
-										aria-label="Year"
-									></select>
-									<div
-										class="pointer-events-none absolute inset-y-0 right-0 bottom-1 flex items-center px-1 text-gray-400"
-									>
-										<svg
-											class="fill-current h-6 w-6"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 20 20"
-										>
-											<path d="M7 10l5 5 5-5H7z" />
-										</svg>
-									</div>
-								</label>
-							</div>
-							<span class="flex items-center absolute right-4.5">
-								<div class="tooltip-custom-container relative">
-									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-									>
-										i
-									</button>
-									<div
-										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-									>
-										Tu Clase Social Antes, ¿mejor? ¿peor? Ingresa Mes, Año y obtendrás tu canasta en
-										esa fecha. Tenes que saber tu salario en ese momento solamente.
-									</div>
-								</div>
-							</span>
-						</div>
+                <label class="w-1/2 relative">
+                  <select
+                    id="table-compare-year"
+                    class="table-compare-year w-full focus:shadow-outline pr-2 focus:shadow-outline text-center h-10 shadow appearance-none text-gray-300 leading-tight focus:outline-none focus:shadow-outline bg-emerald-950 border border-emerald-600 rounded-r-2xl focus:ring-2 focus:ring-emerald-600"
+                    aria-label="Year"
+                  ></select>
+                  <div
+                    class="pointer-events-none absolute inset-y-0 right-0 bottom-1 flex items-center px-1 text-gray-400"
+                  >
+                    <svg
+                      class="fill-current h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M7 10l5 5 5-5H7z" />
+                    </svg>
+                  </div>
+                </label>
+              </div>
+              <span class="flex items-center absolute right-4.5">
+                <div class="tooltip-custom-container relative">
+                  <button
+                    class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                  >
+                    i
+                  </button>
+                  <div
+                    class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                  >
+                    Tu Clase Social Antes, ¿mejor? ¿peor? Ingresa Mes, Año y obtendrás tu canasta en
+                    esa fecha. Tenes que saber tu salario en ese momento solamente.
+                  </div>
+                </div>
+              </span>
+            </div>
 
-						<div class="relative w-full mb-4">
-							<div class="flex justify-center items-center w-full relative">
-								<label class="flex items-center w-8/12 relative">
-									<span
-										class="flex min-w-fit bg-emerald-950 text-emerald-100 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
-									>
-										$</span
-									>
-									<input
-										type="number"
-										inputmode="numeric"
-										pattern="\d*"
-										name="rent-past"
-										id="rent-past"
-										class="card-partial-add rent-past w-full p-2 h-10 shadow appearance-none text-center text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-emerald-950 border border-emerald-600 px-3 rounded-2xl focus:ring-2 focus:ring-emerald-600"
-										value=""
-										placeholder="Alquiler valor en 02/2022"
-										title="Si alquilas, ingresá el monto del alquiler."
-									/>
-								</label>
-								<span class="absolute right-4.5">
-									<div class="tooltip-custom-container relative">
-										<button
-											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-										>
-											i
-										</button>
-										<div
-											class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-										>
-											Ingresá el monto de alquiler, si alquilabas en esa fecha.
-										</div>
-									</div>
-								</span>
-							</div>
-						</div>
+            <div class="relative w-full mb-4">
+              <div class="flex justify-center items-center w-full relative">
+                <label class="flex items-center w-8/12 relative">
+                  <span
+                    class="flex min-w-fit bg-emerald-950 text-emerald-100 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
+                  >
+                    $</span
+                  >
+                  <input
+                    type="number"
+                    inputmode="numeric"
+                    pattern="\d*"
+                    name="rent-past"
+                    id="rent-past"
+                    class="card-partial-add rent-past w-full p-2 h-10 shadow appearance-none text-center text-gray-50 leading-tight focus:outline-none focus:shadow-outline pl-3 bg-emerald-950 border border-emerald-600 px-3 rounded-2xl focus:ring-2 focus:ring-emerald-600"
+                    value=""
+                    placeholder="Alquiler valor en 02/2022"
+                    title="Si alquilas, ingresá el monto del alquiler."
+                  />
+                </label>
+                <span class="absolute right-4.5">
+                  <div class="tooltip-custom-container relative">
+                    <button
+                      class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                    >
+                      i
+                    </button>
+                    <div
+                      class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                    >
+                      Ingresá el monto de alquiler, si alquilabas en esa fecha.
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
 
-						<div class="relative w-full mb-4">
-							<div class="flex justify-center items-center w-full relative">
-								<label class="flex w-8/12 relative justify-center items-center">
-									<span
-										class="flex min-w-fit bg-emerald-950 text-emerald-100 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
-									>
-										$</span
-									>
-									<input
-										id="table-compare-income-in"
-										class="table-compare-income-in text-center w-full h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline bg-emerald-950 border border-emerald-600 px-3 rounded-2xl focus:ring-2 focus:ring-emerald-600"
-										type="number"
-										pattern="\d+"
-										placeholder="Ingresos en 02/2022"
-										title="Ingresa tu salario en ese mes y año."
-									/>
-								</label>
-								<span class="absolute right-4.5">
-									<div class="tooltip-custom-container relative">
-										<button
-											class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-										>
-											i
-										</button>
-										<div
-											class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-										>
-											Agregá el ingreso mensual del hogar en el mes y año que elegiste.
-										</div>
-									</div>
-								</span>
-							</div>
-						</div>
+            <div class="relative w-full mb-4">
+              <div class="flex justify-center items-center w-full relative">
+                <label class="flex w-8/12 relative justify-center items-center">
+                  <span
+                    class="flex min-w-fit bg-emerald-950 text-emerald-100 p-0 border-0 border-y-emerald-600 border-l-emerald-600 border-e-0 absolute left-1 z-[9999]"
+                  >
+                    $</span
+                  >
+                  <input
+                    id="table-compare-income-in"
+                    class="table-compare-income-in text-center w-full h-10 shadow appearance-none text-gray-50 leading-tight focus:outline-none focus:shadow-outline bg-emerald-950 border border-emerald-600 px-3 rounded-2xl focus:ring-2 focus:ring-emerald-600"
+                    type="number"
+                    pattern="\d+"
+                    placeholder="Ingresos en 02/2022"
+                    title="Ingresa tu salario en ese mes y año."
+                  />
+                </label>
+                <span class="absolute right-4.5">
+                  <div class="tooltip-custom-container relative">
+                    <button
+                      class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                    >
+                      i
+                    </button>
+                    <div
+                      class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                    >
+                      Agregá el ingreso mensual del hogar en el mes y año que elegiste.
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
 
-						<!-- Tabla clases sociales pasadas------------------------------->
-						<div class="table-classes-past pt-0 mt-0 m-1 text-center rounded-2xl bg-neutral-900">
-							<div
-								class="table-classes-indigencia table-classes-indigencia-past rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
-							>
-								<div
-									class="table-classes-indigencia-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-indigencia-row class-indigencia-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Indigente</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-indigencia-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+            <!-- Tabla clases sociales pasadas------------------------------->
+            <div class="table-classes-past pt-0 mt-0 m-1 text-center rounded-2xl bg-neutral-900">
+              <div
+                class="table-classes-indigencia table-classes-indigencia-past rounded-t-2xl flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+              >
+                <div
+                  class="table-classes-indigencia-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div class="class-indigencia-row class-indigencia-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Indigente</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-indigencia-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-pobreza table-classes-pobreza-past flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
-							>
-								<div
-									class="table-classes-pobreza-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-pobreza-row class-pobreza-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Pobreza</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-pobreza-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+              <div
+                class="table-classes-pobreza table-classes-pobreza-past flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
+              >
+                <div
+                  class="table-classes-pobreza-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div class="class-pobreza-row class-pobreza-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Pobreza</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-pobreza-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-baja table-classes-baja-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
-							>
-								<div
-									class="table-classes-baja-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-baja-row class-baja-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Clase Baja</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-baja-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+              <div
+                class="table-classes-baja table-classes-baja-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+              >
+                <div
+                  class="table-classes-baja-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div class="class-baja-row class-baja-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Clase Baja</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-baja-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-media-fragil table-classes-media-fragil-past flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
-							>
-								<div
-									class="table-classes-media-fragil-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-media-fragil-row class-media-fragil-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]"> Media frágil</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-media-fragil-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+              <div
+                class="table-classes-media-fragil table-classes-media-fragil-past flex justify-center m-0 p-0 py-1 bg-neutral-700/50 max-w-full"
+              >
+                <div
+                  class="table-classes-media-fragil-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div
+                  class="class-media-fragil-row class-media-fragil-row-past flex m-0 items-center"
+                >
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]"> Media frágil</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-media-fragil-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-media table-classes-media-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
-							>
-								<div
-									class="table-classes-media-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-media-row class-media-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Media</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-media-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+              <div
+                class="table-classes-media table-classes-media-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+              >
+                <div
+                  class="table-classes-media-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div class="class-media-row class-media-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Media</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-media-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-media-alta table-classes-media-alta-past flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
-							>
-								<div
-									class="table-classes-media-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-media-alta-row class-media-alta-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Media alta</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-media-alta-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+              <div
+                class="table-classes-media-alta table-classes-media-alta-past flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
+              >
+                <div
+                  class="table-classes-media-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div class="class-media-alta-row class-media-alta-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Media alta</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-media-alta-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-alta table-classes-alta-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
-							>
-								<div
-									class="table-classes-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-								<div class="class-alta-row class-alta-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Alta</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-alta-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
-								></div>
-							</div>
+              <div
+                class="table-classes-alta table-classes-alta-past flex justify-center m-0 p-0 py-1 bg-neutral-950/80 max-w-full"
+              >
+                <div
+                  class="table-classes-alta-min-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+                <div class="class-alta-row class-alta-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Alta</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-alta-max-past flex m-0 px-1 w-[calc(50%-6ch)] flex-wrap justify-center items-center break-all"
+                ></div>
+              </div>
 
-							<div
-								class="table-classes-acomodada table-classes-acomodada-past flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
-							>
-								<div class="class-acomodada-row class-acomodada-row-past flex m-0 items-center">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Acomodada</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-							</div>
+              <div
+                class="table-classes-acomodada table-classes-acomodada-past flex justify-center m-0 p-0 py-1 max-w-full bg-neutral-700/50"
+              >
+                <div class="class-acomodada-row class-acomodada-row-past flex m-0 items-center">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Acomodada</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+              </div>
 
-							<div
-								class="flex justify-center w-full bg-neutral-950 text-sm text-neutral-400 relative rounded-b-2xl"
-							>
-								<div
-									class="table-classes-alta-min-info py-2 mx-auto flex m-0 px-1 w-[calc(50%-6ch)] justify-center items-center break-all"
-								>
-									Min
-								</div>
-								<div class="table-classes-info flex m-0 items-center text-base">
-									<span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
-									<span class="w-[10ch]">Clase social</span>
-									<span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
-								</div>
-								<div
-									class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] justify-center items-center break-all"
-								>
-									Max
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+              <div
+                class="flex justify-center w-full bg-neutral-950 text-sm text-neutral-400 relative rounded-b-2xl"
+              >
+                <div
+                  class="table-classes-alta-min-info py-2 mx-auto flex m-0 px-1 w-[calc(50%-6ch)] justify-center items-center break-all"
+                >
+                  Min
+                </div>
+                <div class="table-classes-info flex m-0 items-center text-base">
+                  <span class="mayor-menor w-[1ch] flex items-center text-red-500">≤</span>
+                  <span class="w-[10ch]">Clase social</span>
+                  <span class="mayor-menor w-[1ch] flex items-center text-green-500">&lt;</span>
+                </div>
+                <div
+                  class="table-classes-alta-max-info flex m-0 w-[calc(50%-6ch)] justify-center items-center break-all"
+                >
+                  Max
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-			<!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div
-				id="card-canastas-1"
-				class="card card-canastas-1 flex flex-col rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
-				data-card-high="card-cba-models"
-			>
-				<div class="mx-auto w-full">
-					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1 rounded-t-2xl">
-						<h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-blue-300">
-							Canastas del Indec
-						</h2>
-					</div>
-				</div>
-				<div class="flex flex-col my-auto w-full items-center px-1" data-table="table_container_members">
-					<h3 class="mt-3 mb-3 font-semibold text-blue-200">
-						Hogar Modelo
-						<label class="relative">
-							<select
-								type="number"
-								name="select-models-families"
-								class="h-6 border border-blue-700 rounded-md m-0 pl-2 pr-5 text-base bg-blue-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
-								data-select="select-models-families"
-							>
-								<option class="text-left" value="1">1</option>
-								<option class="text-left" value="2" selected>2</option>
-								<option class="text-left" value="3">3</option>
-							</select>
-							<div
-								class="pointer-events-none absolute inset-y-0 right-1 bottom-1 flex items-center px-0 text-gray-400"
-							>
-								<svg
-									class="fill-current h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-								>
-									<path d="M7 10l5 5 5-5H7z" />
-								</svg>
-							</div>
-						</label>
-						=&gt;
-						<span class="font-bold" data-members-num="members-num"></span> integrantes
-					</h3>
-					<div
-						class="rounded-lg border border-neutral-600 overflow-auto w-full px-0 mb-3.5"
-						data-table="table_members"
-					></div>
-				</div>
-			</div>
+      <!-- Card-4 titulo Canastas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div
+        id="card-canastas-1"
+        class="card card-canastas-1 flex flex-col rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+        data-card-high="card-cba-models"
+      >
+        <div class="mx-auto w-full">
+          <div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1 rounded-t-2xl">
+            <h2 class="card-canastas-header-title text-xl text-center font-bold m-0 text-blue-300">
+              Canastas del Indec
+            </h2>
+          </div>
+        </div>
+        <div
+          class="flex flex-col my-auto w-full items-center px-1"
+          data-table="table_container_members"
+        >
+          <h3 class="mt-3 mb-3 font-semibold text-blue-200">
+            Hogar Modelo
+            <label class="relative">
+              <select
+                type="number"
+                name="select-models-families"
+                class="h-6 border border-blue-700 rounded-md m-0 pl-2 pr-5 text-base bg-blue-950 text-white appearance-none focus:outline-none focus:border-emerald-600 focus:shadow-outline"
+                data-select="select-models-families"
+              >
+                <option class="text-left" value="1">1</option>
+                <option class="text-left" value="2" selected>2</option>
+                <option class="text-left" value="3">3</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-1 bottom-1 flex items-center px-0 text-gray-400"
+              >
+                <svg
+                  class="fill-current h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M7 10l5 5 5-5H7z" />
+                </svg>
+              </div>
+            </label>
+            =&gt;
+            <span class="font-bold" data-members-num="members-num"></span>
+            integrantes
+          </h3>
+          <div
+            class="rounded-lg border border-neutral-600 overflow-auto w-full px-0 mb-3.5"
+            data-table="table_members"
+          ></div>
+        </div>
+      </div>
 
-			<!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div
-				id="card-canasta-cba"
-				class="card card-canastas-2 rounded-2xl card-cba mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
-				data-card-high="card-cba-high"
-			>
-				<div class="mx-auto">
-					<div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
-						<h2 class="card-cb-title text-xl font-bold m-0 text-center text-blue-300">
-							Canasta Básica Alimentaria
-						</h2>
-					</div>
-					<div class="card_body mx-3 items-center">
-						<h3 class="card-cb-subtitle flex items-center font-semibold text-blue-200 mt-4 mb-1.5">
-							CBA - Linea de indigencia
-							<span class="absolute right-5.5">
-								<div class="tooltip-custom-container relative">
-									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-									>
-										i
-									</button>
-									<div
-										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-200 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-									>
-										CBA: Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Valor
-										para un hogar modelo. La Canasta real de tu hogar la podés calcular
-										<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
-									</div>
-								</div>
-							</span>
-						</h3>
+      <!-- Card-5 Canasta Básica Alimentaria +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div
+        id="card-canasta-cba"
+        class="card card-canastas-2 rounded-2xl card-cba mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+        data-card-high="card-cba-high"
+      >
+        <div class="mx-auto">
+          <div class="card_title bg-neutral-700 border-b border-b-neutral-600 py-1.5 rounded-t-2xl">
+            <h2 class="card-cb-title text-xl font-bold m-0 text-center text-blue-300">
+              Canasta Básica Alimentaria
+            </h2>
+          </div>
+          <div class="card_body mx-3 items-center">
+            <h3 class="card-cb-subtitle flex items-center font-semibold text-blue-200 mt-4 mb-1.5">
+              CBA - Linea de indigencia
+              <span class="absolute right-5.5">
+                <div class="tooltip-custom-container relative">
+                  <button
+                    class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                  >
+                    i
+                  </button>
+                  <div
+                    class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-200 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                  >
+                    CBA: Canasta Básica Alimentaria, es el umbral de la Linea de indigencia. Valor
+                    para un hogar modelo. La Canasta real de tu hogar la podés calcular
+                    <a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+                  </div>
+                </div>
+              </span>
+            </h3>
 
-						<div class="card-cb-txt mb-4 flex items-center justify-between text-blue-200">
-							Con Casa Propia:
-							<div class="view-cba"></div>
-						</div>
-					</div>
+            <div class="card-cb-txt mb-4 flex items-center justify-between text-blue-200">
+              Con Casa Propia:
+              <div class="view-cba"></div>
+            </div>
+          </div>
 
-					<div class="card_foot mx-3">
-						<ul class="flex">
-							<li
-								class="linea-indigencia justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600 max-w-2xl mx-auto"
-							></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+          <div class="card_foot mx-3">
+            <ul class="flex">
+              <li
+                class="linea-indigencia justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600 max-w-2xl mx-auto"
+              ></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-			<!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div
-				id="card-canasta-cbt"
-				class="card card-canastas-3 card-cbt rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
-			>
-				<div class="mx-auto">
-					<div class="card_head border-b bg-neutral-700 border-b-neutral-600 py-1.5 rounded-t-2xl">
-						<h2 class="card-cb-title text-xl font-bold text-center text-blue-300">Canasta Básica Total</h2>
-					</div>
-					<div class="card_body mx-3 items-center">
-						<h3
-							class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-200"
-						>
-							CBT - Línea de Pobreza
-							<span class="absolute right-5.5">
-								<div class="tooltip-custom-container relative">
-									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-									>
-										i
-									</button>
-									<div
-										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-									>
-										CBT: Canasta Básica Total, es el umbral de la Línea de pobreza. Valor para hogar
-										modelo. La canasta real de tu hogar la podés calcular
-										<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
-									</div>
-								</div>
-							</span>
-						</h3>
-						<div class="text-base mb-4 card-cb-txt flex justify-between text-blue-200">
-							Con Casa Propia:
-							<div class="view-cbt"></div>
-						</div>
-					</div>
+      <!-- Card-6 Canasta Básica Total +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div
+        id="card-canasta-cbt"
+        class="card card-canastas-3 card-cbt rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+      >
+        <div class="mx-auto">
+          <div class="card_head border-b bg-neutral-700 border-b-neutral-600 py-1.5 rounded-t-2xl">
+            <h2 class="card-cb-title text-xl font-bold text-center text-blue-300">
+              Canasta Básica Total
+            </h2>
+          </div>
+          <div class="card_body mx-3 items-center">
+            <h3
+              class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-200"
+            >
+              CBT - Línea de Pobreza
+              <span class="absolute right-5.5">
+                <div class="tooltip-custom-container relative">
+                  <button
+                    class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                  >
+                    i
+                  </button>
+                  <div
+                    class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                  >
+                    CBT: Canasta Básica Total, es el umbral de la Línea de pobreza. Valor para hogar
+                    modelo. La canasta real de tu hogar la podés calcular
+                    <a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+                  </div>
+                </div>
+              </span>
+            </h3>
+            <div class="text-base mb-4 card-cb-txt flex justify-between text-blue-200">
+              Con Casa Propia:
+              <div class="view-cbt"></div>
+            </div>
+          </div>
 
-					<div class="card_foot mx-3">
-						<ul class="flex">
-							<li
-								class="linea-pobreza justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600"
-							></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+          <div class="card_foot mx-3">
+            <ul class="flex">
+              <li
+                class="linea-pobreza justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600"
+              ></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-			<!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-			<div
-				id="card-canasta-cbta"
-				class="card card-canastas-4 card-cbta rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
-			>
-				<div class="mx-auto">
-					<div class="card_head border-b bg-neutral-700 border-b-neutral-600 py-1.5 rounded-t-2xl">
-						<h2 class="card_title card-cb-title text-xl font-bold text-center text-blue-300">
-							Canasta Básica Total <span class="text-sm">+ Alquiler</span>
-						</h2>
-					</div>
-					<div class="card_body mx-3 items-center">
-						<h3
-							class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-200"
-						>
-							Línea Pobreza Alquilando
-							<span class="absolute right-5.5">
-								<div class="tooltip-custom-container relative">
-									<button
-										class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
-									>
-										i
-									</button>
-									<div
-										class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
-									>
-										CBT+A: Canasta Básica Total más Alquiler promedio, es el umbral de la Línea de
-										pobreza alquilando. Valor para hogar modelo. La Canasta real de tu hogar la
-										podés calcular
-										<a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
-									</div>
-								</div>
-							</span>
-						</h3>
-						<div class="card-cb-txt text-blue-200 mb-4 flex justify-between">
-							3 amb Promedio
-							<div class="view-cbt-rent-3amb"></div>
-						</div>
-					</div>
+      <!-- Card-7 Canasta Basica Total + Alquiler +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+      <div
+        id="card-canasta-cbta"
+        class="card card-canastas-4 card-cbta rounded-2xl mb-6 bg-neutral-800 shadow-lg shadow-neutral-950 border border-neutral-950"
+      >
+        <div class="mx-auto">
+          <div class="card_head border-b bg-neutral-700 border-b-neutral-600 py-1.5 rounded-t-2xl">
+            <h2 class="card_title card-cb-title text-xl font-bold text-center text-blue-300">
+              Canasta Básica Total <span class="text-sm">+ Alquiler</span>
+            </h2>
+          </div>
+          <div class="card_body mx-3 items-center">
+            <h3
+              class="card-cb-subtitle flex justify-between items-center font-semibold mt-4 mb-1.5 text-blue-200"
+            >
+              Línea Pobreza Alquilando
+              <span class="absolute right-5.5">
+                <div class="tooltip-custom-container relative">
+                  <button
+                    class="tooltip-button info-btn border border-neutral-500 text-neutral-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-neutral-600 hover:text-white transition"
+                  >
+                    i
+                  </button>
+                  <div
+                    class="tooltip-custom absolute text-sm bg-neutral-900 text-neutral-300 shadow-xl shadow-neutral-950 ring-2 ring-neutral-950"
+                  >
+                    CBT+A: Canasta Básica Total más Alquiler promedio, es el umbral de la Línea de
+                    pobreza alquilando. Valor para hogar modelo. La Canasta real de tu hogar la
+                    podés calcular
+                    <a class="font-bold text-blue-400" href="#canasta-main">aquí</a>.
+                  </div>
+                </div>
+              </span>
+            </h3>
+            <div class="card-cb-txt text-blue-200 mb-4 flex justify-between">
+              3 amb Promedio
+              <div class="view-cbt-rent-3amb"></div>
+            </div>
+          </div>
 
-					<div class="card_foot mx-3">
-						<ul class="flex">
-							<li
-								class="linea-pobreza-renting justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600"
-							></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</main>
+          <div class="card_foot mx-3">
+            <ul class="flex">
+              <li
+                class="linea-pobreza-renting justify-items-center py-2 text-sm text-neutral-300 border-t border-neutral-600"
+              ></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-		<!-- FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-		<footer
-			id="foot"
-			class="foot text-center rounded-t-2xl p-1 bg-neutral-900 shadow-xl shadow-neutral-950 border-t border-x border-neutral-950 bg-gradient-to-b from-neutral-800 to-neutral-900"
-		>
-			<div class="max-w-7xl mx-auto p-2">
-				<span class="indices-date m-1 text-center text-sm"></span>
-				<span></span>
-				<span class="version"></span>
-			</div>
-		</footer>
+    <!-- FOOTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <footer
+      id="foot"
+      class="foot text-center rounded-t-2xl p-1 bg-neutral-900 shadow-xl shadow-neutral-950 border-t border-x border-neutral-950 bg-gradient-to-b from-neutral-800 to-neutral-900"
+    >
+      <div class="max-w-7xl mx-auto p-2">
+        <span class="indices-date m-1 text-center text-sm"></span>
+        <span></span>
+        <span class="version"></span>
+      </div>
+    </footer>
 
-		<!-- JavaScript ----------------------------------------------------------------->
-		<script type="module" src="src/js/main.js"></script>
-		<!-- <script type="module" src="./js/shared.js"></script> -->
-		<script type="module" src="src/js/app.js"></script>
-		<script type="module" src="src/js/fetch-data.js"></script>
-		<script type="module" src="src/js/mod-date.js"></script>
-		<script type="module" src="src/js/utils.js"></script>
-		<script type="module" src="src/js/mod-members.js"></script>
-		<script type="module" src="src/js/theme.js"></script>
-		<!-- <script type="module" src="./js/mod-canasta-custom.js"></script> -->
-	</body>
+    <!-- JavaScript ----------------------------------------------------------------->
+    <script type="module" src="src/js/main.js"></script>
+    <!-- <script type="module" src="./js/shared.js"></script> -->
+    <script type="module" src="src/js/app.js"></script>
+    <script type="module" src="src/js/fetch-data.js"></script>
+    <script type="module" src="src/js/mod-date.js"></script>
+    <script type="module" src="src/js/utils.js"></script>
+    <script type="module" src="src/js/mod-members.js"></script>
+    <script type="module" src="src/js/theme.js"></script>
+    <!-- <script type="module" src="./js/mod-canasta-custom.js"></script> -->
+  </body>
 </html>
