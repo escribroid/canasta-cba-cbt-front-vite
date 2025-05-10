@@ -30,5 +30,4 @@ export default indices_manuales;
 # Medio frágil: hogares cuyo ingreso total mensual es de al menos la CT y no alcanza 1,25 veces la CT del Sistema de Canastas de Consumo. (1.2*1.25 = 1.5)
 # Medio "clase media": hogares cuyo ingreso total mensual es de al menos 1,25 veces la CT y no alcanza 4 veces la CT del Sistema de Canastas de Consumo. (1.2*4.5 = 5.4)
 # Media Alta, Sector acomodado: hogares cuyo ingreso mensual es de 4 veces o más la CT del Sistema de Canastas de Consumo.
-
 */
