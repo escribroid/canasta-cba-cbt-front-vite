@@ -235,7 +235,7 @@ window.addEventListener("dataJsonFront", function (even) {
     document.getElementById("table-canastas__select").addEventListener("change", function () {
         select_canastas = document.getElementById("table-canastas__select").value;
 
-        if (select_canastas == "indigencia") {
+        if (select_canastas === "indigencia") {
             // console.log("indigencia");
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_cba_individual[i];
@@ -249,7 +249,7 @@ window.addEventListener("dataJsonFront", function (even) {
             document.getElementById("total-canasta").innerHTML = suma_indigencia_alquilando;
 
             //console.log("table_rows_change_classes D-", table_rows_change_classes);
-        } else if (select_canastas == "pobreza") {
+        } else if (select_canastas === "pobreza") {
             // console.log("pobreza");
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_cbt_individual[i];
@@ -258,7 +258,7 @@ window.addEventListener("dataJsonFront", function (even) {
                 existingCell.textContent = Math.round(array_cbt_individual[i]);
             }
             document.getElementById("total-canasta").innerHTML = suma_pobreza_alquilando;
-        } else if (select_canastas == "clase_baja") {
+        } else if (select_canastas === "clase_baja") {
             // console.log("clase_baja");
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_clase_baja[i];
@@ -267,7 +267,7 @@ window.addEventListener("dataJsonFront", function (even) {
                 existingCell.textContent = Math.round(array_clase_baja[i]);
             }
             document.getElementById("total-canasta").innerHTML = clase_baja_add_group_alquilando;
-        } else if (select_canastas == "clase_media_fragil") {
+        } else if (select_canastas === "clase_media_fragil") {
             // console.log("clase_media_fragil");
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_clase_media_fragil[i];
@@ -277,7 +277,7 @@ window.addEventListener("dataJsonFront", function (even) {
             }
             document.getElementById("total-canasta").innerHTML =
                 clase_media_fragil_add_group_alquilando;
-        } else if (select_canastas == "clase_media") {
+        } else if (select_canastas === "clase_media") {
             // console.log("clase_media");
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_clase_media[i];
@@ -286,7 +286,7 @@ window.addEventListener("dataJsonFront", function (even) {
                 existingCell.textContent = Math.round(array_clase_media[i]);
             }
             document.getElementById("total-canasta").innerHTML = clase_media_add_group_alquilando;
-        } else if (select_canastas == "clase_media_alta") {
+        } else if (select_canastas === "clase_media_alta") {
             // console.log("clase_media_alta");
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_clase_media_alta[i];
@@ -296,7 +296,7 @@ window.addEventListener("dataJsonFront", function (even) {
             }
             document.getElementById("total-canasta").innerHTML =
                 clase_media_alta_add_group_alquilando;
-        } else if (select_canastas == "clase_alta") {
+        } else if (select_canastas === "clase_alta") {
             for (let i = 0; i < table_rows_change_classes.length; i++) {
                 table_rows_change_classes[i][2] = array_clase_alta[i];
                 let existingRow = tableBody.rows[i];
@@ -348,28 +348,28 @@ window.addEventListener("dataJsonFront", function (even) {
             gender_show = "F. Lactante";
         }
 
-        if (select_canastas == "indigencia") {
+        if (select_canastas === "indigencia") {
             cb_table_cells_detail = [gender_show, age_mostrar_table, cba_individual_indigencia];
             // console.log("select_canastas", select_canastas);
-        } else if (select_canastas == "pobreza") {
+        } else if (select_canastas === "pobreza") {
             cb_table_cells_detail = [gender_show, age_mostrar_table, cbt_individual_pobreza];
-        } else if (select_canastas == "clase_baja") {
+        } else if (select_canastas === "clase_baja") {
             cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_baja_individual];
-        } else if (select_canastas == "clase_media_fragil") {
+        } else if (select_canastas === "clase_media_fragil") {
             cb_table_cells_detail = [
                 gender_show,
                 age_mostrar_table,
                 cb_clase_media_fragil_individual,
             ];
-        } else if (select_canastas == "clase_media") {
+        } else if (select_canastas === "clase_media") {
             cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_media_individual];
-        } else if (select_canastas == "clase_media_alta") {
+        } else if (select_canastas === "clase_media_alta") {
             cb_table_cells_detail = [
                 gender_show,
                 age_mostrar_table,
                 cb_clase_media_alta_individual,
             ];
-        } else if (select_canastas == "clase_alta") {
+        } else if (select_canastas === "clase_alta") {
             cb_table_cells_detail = [gender_show, age_mostrar_table, cb_clase_alta_individual];
         }
 
@@ -519,7 +519,7 @@ window.addEventListener("dataJsonFront", function (even) {
 
         if (
             array_cba_individual.length === 0 &&
-            (vivienda.value == "vivienda_slc" || vivienda.value == "noAlquilo")
+            (vivienda.value === "vivienda_slc" || vivienda.value === "noAlquilo")
         ) {
             document.querySelector(".card__svg--reset").style.transition =
                 "transform 0.3s ease-in-out";
@@ -545,19 +545,19 @@ window.addEventListener("dataJsonFront", function (even) {
             alquiler_in_value = alquiler_in_value * -1;
         }
 
-        if (select_canastas == "indigencia") {
+        if (select_canastas === "indigencia") {
             suma_con_alquiler = alquiler_in_value + cba_add_group;
-        } else if (select_canastas == "pobreza") {
+        } else if (select_canastas === "pobreza") {
             suma_con_alquiler = alquiler_in_value + cbt_add_group;
-        } else if (select_canastas == "clase_baja") {
+        } else if (select_canastas === "clase_baja") {
             suma_con_alquiler = alquiler_in_value + clase_baja_add_group;
-        } else if (select_canastas == "clase_media_fragil") {
+        } else if (select_canastas === "clase_media_fragil") {
             suma_con_alquiler = alquiler_in_value + clase_media_fragil_add_group;
-        } else if (select_canastas == "clase_media") {
+        } else if (select_canastas === "clase_media") {
             suma_con_alquiler = alquiler_in_value + clase_media_add_group;
-        } else if (select_canastas == "clase_media_alta") {
+        } else if (select_canastas === "clase_media_alta") {
             suma_con_alquiler = alquiler_in_value + clase_media_alta_add_group;
-        } else if (select_canastas == "clase_alta") {
+        } else if (select_canastas === "clase_alta") {
             suma_con_alquiler = alquiler_in_value + clase_alta_add_group;
         }
 

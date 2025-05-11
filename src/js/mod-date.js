@@ -39,8 +39,8 @@ import {fetchDataFromAPI} from "./fetch-data.js";
 // Función usa fetchDataFromAPI para obtener datos, actualiza UI
 async function fetchDataAndUpdateUI() {
     try {
-        const data = await fetchDataFromAPI(); // Llamamos a la función centralizada
-        dataJsonFront = data;
+         // Llamamos a la función centralizada
+        dataJsonFront = await fetchDataFromAPI();
         cba_top_process();
 
         // Emitir un evento personalizado con el valor de ax
@@ -77,8 +77,7 @@ async function fetchDataApiIPC() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json();
-        return data; // Devolvemos los datos para que la otra función los use
+        return await response.json(); // Devolvemos los datos para que la otra función los use
     } catch (error) {
         console.error("Error al obtener los datos de la API:", error);
         throw error; // Volvemos a lanzar el error para que sea manejado donde se llame esta función
@@ -88,8 +87,8 @@ async function fetchDataApiIPC() {
 // Función usa fetchDataFromAPI para obtener datos, actualiza UI
 async function fetchDataIpcUpdateUI() {
     try {
-        const data = await fetchDataApiIPC(); // Llamamos a la función centralizada
-        dataJsonIpc = data;
+         // Llamamos a la función centralizada
+        dataJsonIpc = await fetchDataApiIPC();
         ipc_top_process();
         //console.log("dataJsonIpc", dataJsonIpc);
 
